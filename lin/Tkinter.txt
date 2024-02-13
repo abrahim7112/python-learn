@@ -1,0 +1,3349 @@
+
+برنامج بايثون تكينتر التعليمي
+مستوى الصعوبة: سهل
+آخر تحديث: ٢٨ مارس ٢٠٢١
+Tkinter هي المكتبة الأكثر استخدامًا لتطوير واجهة المستخدم الرسومية (GUI) في Python. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. نظرًا لأن Tk و Tkinter متاحان في معظم منصات Unix وكذلك على نظام Windows ، فإن تطوير تطبيقات واجهة المستخدم الرسومية باستخدام Tkinter يصبح الأسرع والأسهل.
+
+Tkinter
+
+سيساعد برنامج Tkinter التعليمي هذا في تعلم Tkinter من الأساسيات لتعزيز تطوير واجهة المستخدم الرسومية ، بما في ذلك جميع الوظائف الضرورية الموضحة بالتفصيل.
+
+جدول المحتويات
+
+مقدمة
+الحاجيات
+الحاجيات الأساسية
+الحاجيات ذات المستوى الأعلى
+إدارة الهندسة
+وظائف الربط
+العمل مع الصور في تكينتير
+تقدم Tkinter
+التطبيقات والمشاريع
+المقالات الأخيرة عن Python TKinter!
+
+مقدمة
+مقدمة إلى Tkinter
+ما هي الأدوات في Tkinter؟
+أهلاً بالعالم في تكننتر
+قم بإنشاء أول تطبيق GUI باستخدام Python-Tkinter
+Python GUI - نظرة عامة على tkinter
+الحاجيات
+الحاجيات الأساسية
+
+إنشاء زر في tkinter
+إضافة نمط إلى زر tkinter
+أضف الصورة على زر Tkinter
+القطعة التسمية في Tkinter
+قم بإنشاء LabelFrame وإضافة عناصر واجهة مستخدم إليه
+RadioButton في Tkinter
+Checkbutton في Tkinter
+القطعة قماش
+قم بإنشاء أشكال مختلفة باستخدام فئة Canvas
+قم بإنشاء نوع مختلف من الخطوط باستخدام فئة Canvas
+تحريك الكائنات باستخدام طريقة Canvas.move ()
+القطعة Combobox في tkinter
+اضبط الحجم الأقصى للجذر
+اضبط الحجم الأدنى للجذر
+تغيير حجم الجذر في Tkinter
+أداة الدخول
+قراءة فقط إدخال القطعة
+القطعة النصية
+القطعة الرسالة
+القطعة القائمة في Tkinter
+أداة Menubutton
+أداة SpinBox
+أداة شريط التقدم في Tkinter
+أداة شريط التمرير في Tkinter
+القطعة ScrolledText
+أداة ListBox
+ListBox القابل للتمرير في Python-tkinter
+القطعة الإطار
+إطارات قابلة للتمرير في Tkinter
+كيفية عمل إطار شريط تمرير مزدوج مناسب في Tkinter
+القطعة مقياس
+أداة استعراض الشجرة الهرمية
+أداة التمرير Treeview في Tkinter
+الحاجيات ذات المستوى الأعلى
+
+أداة المستوى الأعلى
+حوار Askopenfile في Tkinter
+حوار Asksaveasfile في Tkinter
+حوار Askquestion في Tkinter
+أداة MessageBox
+قم بإنشاء مربع رسالة نعم / لا
+قم بتغيير حجم MessageBox
+أنواع مختلفة من MessageBox في Tkinter
+تغيير أيقونة Tkinter MessageBox
+اختر لون الحوار
+قائمة منبثقة في Tkinter
+إدارة الهندسة
+طريقة المكان () في تكينتير
+طريقة Grid () في Tkinter
+احصل على الموقع والعدد الإجمالي للشبكات في Tkinter
+طريقة Pack () في Tkinter
+قم بإلغاء تعيين أي عنصر واجهة مستخدم من الشاشة أو المستوى الأعلى
+القطعة PanedWindow في Tkinter
+اضبط أبعاد نافذة Tkinter
+تحديد موضع تسميات TKinter
+وظائف الربط
+وظيفة الربط في Tkinter
+وظيفة الربط مع النقر المزدوج مع Tkinter ListBox
+انقر بزر الماوس الأيمن على القائمة باستخدام Tkinter
+العمل مع الصور في تكينتير
+قراءة الصور ببايثون - Tkinter
+قم بتعيين رمز شريط العنوان لأي نافذة tkinter / toplevel
+تحميل الصور في Tkinter باستخدام PIL
+تقدم Tkinter
+الحصول على ارتفاع وعرض الشاشة باستخدام Tkinter
+كيفية تغيير نص Checkbutton ديناميكيًا
+ضع التركيز على القطعة المرغوبة
+سلسلة البحث في النص
+مربع تحرير وسرد تلقائي في Python-Tkinter
+إخفاء تلقائي لأشرطة التمرير
+التحقق من الدخول المصغر
+تتبع متغيرات Tkinter في بايثون
+تحديد واسترجاع قيم متغير تكينتير
+إضافة نمط إلى نص الإدخال باستخدام أداة ttk.Entry
+بعد الطريقة في تكينتير
+تدمير الحاجيات في تكينتير
+كشف النص باستخدام بايثون
+تحقق مما إذا كانت الأداة المحددة مرئية أم لا
+جزء قابل للطي في Tkinter
+إنشاء اختيار متعدد باستخدام Tkinter
+إنشاء القطعة المبوبة مع Python-Tkinter
+افتح نافذة جديدة بزر في Python-Tkinter
+تشفير واجهة المستخدم الرسومية باستخدام بيثون
+التطبيقات والمشاريع
+آلة حاسبة بسيطة باستخدام واجهة المستخدم الرسومية Tkinter
+إنشاء الجدول باستخدام Tkinter
+تقويم واجهة المستخدم الرسومية باستخدام Tkinter
+مستكشف الملفات في Python باستخدام Tkinter
+تطبيق ToDo GUI باستخدام Tkinter
+تحويل الوزن واجهة المستخدم الرسومية باستخدام Tkinter
+العمر حاسبة باستخدام Tkinter
+قم بإنشاء Marksheet GUI باستخدام Tkinter
+حاسبة القرض باستخدام Tkinter
+قم بإنشاء ساعة رقمية باستخدام Tkinter
+جعل المفكرة باستخدام Tkinter
+لعبة ملونة باستخدام Tkinter في Python
+بسيطة لعبة لهب باستخدام Tkinter
+استمارة تسجيل بسيطة باستخدام Tkinter
+كيف تُنشئ COVID19 GUI لتمثيل البيانات؟
+ 
+
+>>>>>>>>>>>>>>>>>
+
+
+>>>>>>>>>>>>>>>>>
+مقدمة إلى Tkinter
+مستوى الصعوبة: سهل
+آخر تحديث: 22 مايو 2020
+واجهة المستخدم الرسومية (GUI) هي شكل من أشكال واجهة المستخدم التي تسمح للمستخدمين بالتفاعل مع أجهزة الكمبيوتر من خلال المؤشرات المرئية باستخدام عناصر مثل الرموز والقوائم والنوافذ وما إلى ذلك ، ولها مزايا على واجهة سطر الأوامر (CLI) حيث يتفاعل المستخدمون مع أجهزة الكمبيوتر عن طريق كتابة أوامر باستخدام لوحة المفاتيح فقط والتي يكون استخدامها أكثر صعوبة من واجهة المستخدم الرسومية.
+
+ما هو Tkinter؟
+Tkinter هي وحدة بيثون تحمل في ثناياه عوامل تستخدم لإنشاء تطبيقات واجهة المستخدم الرسومية. إنها واحدة من الوحدات النمطية الأكثر استخدامًا لإنشاء تطبيقات واجهة المستخدم الرسومية في Python لأنها بسيطة وسهلة العمل معها. لا داعي للقلق بشأن تثبيت وحدة Tkinter بشكل منفصل لأنها تأتي مع Python بالفعل. يعطي واجهة كائنية التوجه لمجموعة أدوات Tk GUI.
+
+بعض مكتبات Python الأخرى المتاحة لإنشاء تطبيقات GUI الخاصة بنا هي
+
+كيفي
+بايثون كيو تي
+wxPython
+من بين جميع Tkinter هو الأكثر استخدامًا
+
+ما هي الأدوات؟
+عناصر واجهة المستخدم في Tkinter هي عناصر تطبيق واجهة المستخدم الرسومية التي توفر عناصر تحكم متنوعة (مثل الملصقات والأزرار وصناديق التحرير والسرد وخانات الاختيار وأشرطة القوائم وأزرار الراديو وغيرها الكثير) للمستخدمين للتفاعل مع التطبيق.
+
+الهيكل الأساسي لبرنامج tkinter أدوات Tkinter
+
+
+
+الأساسية:
+
+الحاجيات	وصف
+ملصق	يتم استخدامه لعرض نص أو صورة على الشاشة
+زر	يتم استخدامه لإضافة أزرار إلى التطبيق الخاص بك
+اللوحة القماشية	يتم استخدامه لرسم الصور والتخطيطات الأخرى مثل النصوص والرسومات وما إلى ذلك.
+صندوق التحرير	يحتوي على سهم لأسفل للاختيار من قائمة الخيارات المتاحة
+زر الاختيار	يعرض عددًا من الخيارات للمستخدم كأزرار تبديل يمكن للمستخدم من خلالها تحديد أي عدد من الخيارات.
+RadiButton	يتم استخدامه لتنفيذ اختيار واحد من بين العديد لأنه يسمح بتحديد خيار واحد فقط
+دخول	يتم استخدامه لإدخال إدخال نص سطر واحد من المستخدم
+إطار	يتم استخدامه كحاوية لعقد وتنظيم الحاجيات
+رسالة	إنه يعمل بنفس طريقة التسمية ويشير إلى نص متعدد الأسطر وغير قابل للتحرير
+مقياس	يتم استخدامه لتوفير شريط تمرير رسومي يسمح بتحديد أي قيمة من هذا المقياس
+شريط التمرير	يتم استخدامه للتمرير إلى أسفل المحتويات. يوفر وحدة تحكم الشريحة.
+مربع الدوران	يسمح للمستخدم بالاختيار من بين مجموعة معينة من القيم
+نص	يسمح للمستخدم بتحرير نص متعدد الأسطر وتنسيق طريقة عرضه
+قائمة	يتم استخدامه لإنشاء جميع أنواع القوائم التي يستخدمها التطبيق
+مثال
+
+from tkinter import * 
+from tkinter.ttk import *
+    
+# writing code needs to
+# create the main window of 
+# the application creating 
+# main window object named root
+root = Tk()
+  
+# giving title to the main window
+root.title("First_Program")
+  
+# Label is what output will be 
+# show on the window
+label = Label(root, text ="Hello World !").pack()
+  
+# calling mainloop method which is used
+# when your application is ready to run
+# and it tells the code to keep displaying 
+root.mainloop()
+انتاج |
+
+
+>>>>>>>>>>>>>>>>>
+
+ما هي الأدوات في Tkinter؟
+مستوى الصعوبة: سهل
+آخر تحديث: 22 مايو 2020
+Tkinter هي حزمة Python القياسية GUI (واجهة المستخدم الرسومية). يوفر لنا tkinter مجموعة متنوعة من عناصر واجهة المستخدم الرسومية الشائعة التي يمكننا استخدامها لإنشاء واجهة - مثل الأزرار والقوائم وأنواع مختلفة من حقول الإدخال ومناطق العرض. نسمي هذه العناصر Widgets .
+
+الحاجيات 
+بشكل عام ،   يعد Widget أحد عناصر واجهة المستخدم الرسومية (GUI) التي تعرض / توضح المعلومات أو توفر طريقة للمستخدم للتفاعل مع نظام التشغيل. في Tkinter ، تعد W idgets كائنات ؛ مثيلات الفئات التي تمثل الأزرار والإطارات وما إلى ذلك.  
+
+كل عنصر واجهة مستخدم منفصل هو كائن Python. عند إنشاء عنصر واجهة مستخدم ، يجب أن تمرر العنصر الرئيسي الخاص به كمعامل لوظيفة إنشاء عنصر واجهة المستخدم. الاستثناء الوحيد هو نافذة "الجذر" ، وهي نافذة المستوى الأعلى التي ستحتوي على كل شيء آخر وليس لها أحد الوالدين. 
+
+مثال : 
+
+from tkinter import *
+  
+  
+# create root window
+root = Tk()                           
+  
+# frame inside root window
+frame = Frame(root)                  
+  
+# geometry method
+frame.pack()                          
+  
+# button inside frame which is 
+# inside root
+button = Button(frame, text ='Geek')  
+button.pack()                         
+  
+# Tkinter event loop
+root.mainloop()                       
+انتاج : 
+
+
+
+فئات القطعة 
+يدعم Tkinter الحاجيات الأساسية المذكورة أدناه -
+
+الحاجيات	وصف
+ملصق	يتم استخدامه لعرض نص أو صورة على الشاشة
+زر	يتم استخدامه لإضافة أزرار إلى التطبيق الخاص بك
+اللوحة القماشية	يتم استخدامه لرسم الصور والتخطيطات الأخرى مثل النصوص والرسومات وما إلى ذلك.
+صندوق التحرير	يحتوي على سهم لأسفل للاختيار من قائمة الخيارات المتاحة
+زر الاختيار	يعرض عددًا من الخيارات للمستخدم كأزرار تبديل يمكن للمستخدم من خلالها تحديد أي عدد من الخيارات.
+RadiButton	يتم استخدامه لتنفيذ اختيار واحد من بين العديد لأنه يسمح بتحديد خيار واحد فقط
+دخول	يتم استخدامه لإدخال إدخال نص سطر واحد من المستخدم
+إطار	يتم استخدامه كحاوية لعقد وتنظيم الحاجيات
+رسالة	إنه يعمل بنفس طريقة التسمية ويشير إلى نص متعدد الأسطر وغير قابل للتحرير
+مقياس	يتم استخدامه لتوفير شريط تمرير رسومي يسمح بتحديد أي قيمة من هذا المقياس
+شريط التمرير	يتم استخدامه للتمرير إلى أسفل المحتويات. يوفر وحدة تحكم الشريحة.
+مربع الدوران	يسمح للمستخدم بالاختيار من بين مجموعة معينة من القيم
+نص	يسمح للمستخدم بتحرير نص متعدد الأسطر وتنسيق طريقة عرضه
+قائمة	يتم استخدامه لإنشاء جميع أنواع القوائم التي يستخدمها التطبيق
+إدارة الهندسة
+لا يعني إنشاء أداة جديدة أنها ستظهر على الشاشة. لعرضه ، نحتاج إلى استدعاء طريقة خاصة: إما شبكة ، أو حزمة (المثال أعلاه) ، أو مكان . 
+
+طريقة	وصف
+رزمة()	يحزم مدير هندسة الحزمة عناصر واجهة المستخدم في صفوف أو أعمدة.
+جريد()	يضع مدير هندسة الشبكة عناصر واجهة المستخدم في جدول ثنائي الأبعاد. 
+يتم تقسيم عنصر واجهة المستخدم الرئيسي إلى عدد من الصفوف والأعمدة ، ويمكن أن تحتوي كل "خلية" في الجدول الناتج على عنصر واجهة مستخدم.
+مكان()	يعد مدير هندسة  المكان أبسط من بين مديري الهندسة العامة الثلاثة المتوفرة في Tkinter. يسمح لك بتعيين موضع النافذة وحجمها بشكل صريح ، إما بالقيمة المطلقة أو بالنسبة إلى نافذة أخرى.
+
+>>>>>>>>>>>>>>>>>
+
+بايثون | إنشاء زر في tkinter
+مستوى الصعوبة: أساسي
+آخر تحديث: 16 فبراير 2021
+Tkinter هي حزمة Python القياسية GUI (واجهة المستخدم الرسومية). إنها واحدة من أكثر الحزم استخدامًا لتطبيقات واجهة المستخدم الرسومية والتي تأتي مع Python نفسها. دعونا نرى كيفية إنشاء زر باستخدام Tkinter.
+ 
+
+اتبع الخطوات التالية: 
+
+استيراد وحدة tkinter # Tkinter في Python 2.x. (ملاحظة كابيتال تي)
+إنشاء النافذة الرئيسية (root = Tk ())
+إضافة العديد من الحاجيات كما تريد. 
+ 
+استيراد وحدة tkinter هو نفسه استيراد أي وحدة أخرى. 
+ 
+
+استيراد tkinter # في Python 3.x
+
+استيراد Tkinter # في بيثون 2.x. (ملاحظة كابيتال تي)
+توفر الوحدة النمطية tkinter.ttk وصولاً إلى مجموعة عناصر واجهة المستخدم Tk-themed ، المقدمة في Tk 8.5. إذا لم يتم تجميع Python مقابل Tk 8.5 ، فلا يزال من الممكن الوصول إلى هذه الوحدة إذا تم تثبيت Tile . توفر الطريقة السابقة باستخدام Tk 8.5 مزايا إضافية بما في ذلك عرض الخطوط المصقولة تحت X11 وشفافية النافذة.
+الفكرة الأساسية لـ tkinter.ttk هي الفصل ، إلى أقصى حد ممكن ، الكود الذي ينفذ سلوك عنصر واجهة المستخدم عن الكود الذي ينفذ مظهره. يتم استخدام tkinter.ttk لإنشاء تطبيقات GUI (واجهة المستخدم الرسومية) التي لا يمكن تحقيقها بواسطة tkinter نفسه.
+ 
+
+كود # 1: إنشاء زر باستخدام Tkinter. 
+
+# import everything from tkinter module
+from tkinter import *   
+ 
+# create a tkinter window
+root = Tk()             
+ 
+# Open window having dimension 100x100
+root.geometry('100x100')
+ 
+# Create a Button
+btn = Button(root, text = 'Click me !', bd = '5',
+                          command = root.destroy)
+ 
+# Set the position of button on the top of window.  
+btn.pack(side = 'top')   
+ 
+root.mainloop()
+انتاج: 
+
+
+
+مشغل فديوهات
+
+00:00
+00:07
+
+
+ 
+
+  
+إنشاء زر دون استخدام عنصر واجهة المستخدم tk . 
+ 
+
+إنشاء زر باستخدام عنصر واجهة المستخدم tk (tkinter.ttk). سيعطيك هذا تأثيرات الرسومات الحديثة. ستتغير التأثيرات من نظام تشغيل إلى آخر لأنها أساسًا للمظهر.
+ 
+
+كود # 2: 
+ 
+
+# import tkinter module
+from tkinter import *       
+ 
+# Following will import tkinter.ttk module and
+# automatically override all the widgets
+# which are present in tkinter module.
+from tkinter.ttk import *
+ 
+# Create Object
+root = Tk()
+ 
+# Initialize tkinter window with dimensions 100x100            
+root.geometry('100x100')    
+ 
+btn = Button(root, text = 'Click me !',
+                command = root.destroy)
+ 
+# Set the position of button on the top of window
+btn.pack(side = 'top')    
+ 
+root.mainloop()
+انتاج: 
+
+
+
+ 
+
+مشغل فديوهات
+
+00:00
+00:05
+
+
+ملاحظة: انظر في إخراج كل من الكود ، BORDER غير موجود في الإخراج الثاني لأن tkinter.ttk لا يدعم الحدود. أيضًا ، عند تحريك الماوس فوق كلا الزرين ، سيغير الزر لونه ويصبح أزرق فاتح (قد تتغير التأثيرات من نظام تشغيل إلى آخر) لأنه يدعم الرسومات الحديثة بينما في حالة الزر البسيط لن يتغير اللون لأنه لا يدعم الرسومات الحديثة.
+ 
+
+
+>>>>>>>>>>>>>>>>>
+بيثون تكينتير - التسمية
+مستوى الصعوبة: متوسط
+آخر تحديث: 04 سبتمبر 2020
+
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، Tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع Tkinter هي الطريقة الأسرع والأسهل لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام Tkinter مهمة سهلة باستخدام الأدوات. الأدوات هي عناصر واجهة مستخدم رسومية قياسية ، مثل الأزرار والقوائم.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+أداة التسمية
+Tkinter Label هي أداة تُستخدم لتنفيذ مربعات العرض حيث يمكنك وضع نص أو صور. يمكن للمطور تغيير النص الذي تعرضه هذه الأداة في أي وقت تريده. يتم استخدامه أيضًا لأداء مهام مثل تسطير جزء من النص وتمديد النص عبر أسطر متعددة. من المهم ملاحظة أن التسمية يمكن أن تستخدم خطًا واحدًا فقط في كل مرة لعرض النص. لاستخدام تسمية ، عليك فقط تحديد ما تريد عرضه فيه (يمكن أن يكون نصًا أو صورة نقطية أو صورة).
+
+بناء الجملة:
+
+w = Label (رئيسي ، خيار ، ...)
+
+حدود:
+
+رئيسي: هذا يمثل النافذة الأصلية
+الخيارات: فيما يلي قائمة بالخيارات الأكثر استخدامًا لهذه الأداة. يمكن استخدام هذه الخيارات كأزواج مفتاح-قيمة مفصولة بفواصل:
+الخيارات المختلفة هي:
+
+الارتساء: تُستخدم هذه الخيارات للتحكم في موضع النص إذا كانت مساحة الأداة أكبر من المساحة المطلوبة للنص. الإعداد الافتراضي هو anchor = CENTER ، والذي يقوم بتوسيط النص في المساحة المتاحة.
+bg: يُستخدم هذا الخيار لضبط الخلفية العادية المعروضة خلف الملصق والمؤشر.
+الارتفاع: يستخدم هذا الخيار لضبط البعد الرأسي للإطار الجديد.
+العرض: عرض التسمية بالأحرف (وليس بالبكسل!). إذا لم يتم تعيين هذا الخيار ، فسيتم تغيير حجم الملصق ليناسب محتوياته.
+bd: يُستخدم هذا الخيار لتعيين حجم الحد حول المؤشر. تم تعيين قيمة bd الافتراضية على 2 بكسل.
+الخط: إذا كنت تعرض نصًا في الملصق (مع خيار النص أو textvariable) ، فسيتم استخدام خيار الخط لتحديد الخط الذي سيتم عرض هذا النص في التسمية.
+المؤشر: يتم استخدامه لتحديد المؤشر الذي سيتم إظهاره عند تحريك الماوس فوق الملصق. الافتراضي هو استخدام المؤشر القياسي.
+textvariable: كما يوحي الاسم ، فهو مرتبط بمتغير Tkinter (عادةً StringVar) مع التسمية. إذا تم تغيير المتغير ، يتم تحديث نص التسمية.
+الصورة النقطية: تُستخدم لتعيين الصورة النقطية على الكائن الرسومي المحدد بحيث يمكن أن تمثل التسمية الرسومات بدلاً من النص.
+fg: التسمية clior ، المستخدمة في تسميات النص والصور النقطية. الافتراضي هو نظام محدد. إذا كنت تعرض صورة نقطية ، فهذا هو clior الذي سيظهر في موضع 1 بت في الصورة النقطية.
+صورة: يستخدم هذا الخيار لعرض صورة ثابتة في أداة التسمية.
+padx: يستخدم هذا الخيار لإضافة مسافات إضافية بين يسار ويمين النص داخل الملصق ، القيمة الافتراضية لهذا الخيار هي 1.
+pady: يستخدم هذا الخيار لإضافة مسافات إضافية بين أعلى وأسفل النص داخل الملصق ، القيمة الافتراضية لهذا الخيار هي 1.
+ضبط : يستخدم هذا الخيار لتحديد كيفية محاذاة عدة أسطر من النص. استخدم LEFT أو RIGHT أو CENTER كقيم لها. لاحظ أنه لوضع النص داخل الأداة ، استخدم خيار الارتساء. القيمة الافتراضية لضبط هي CENTER.
+الإغاثة: يستخدم هذا الخيار لتحديد مظهر الحدود الزخرفية حول الملصق. القيمة الافتراضية لهذا الخيار هي FLAT.
+تسطير: هذا
+الطول الملتف : بدلاً من وجود سطر واحد فقط كنص التسمية ، يمكن تقسيمه إلى عدد الأسطر حيث يحتوي كل سطر على عدد الأحرف المحددة لهذا الخيار.
+مثال:
+
+from tkinter import * 
+  
+  
+top = Tk()   
+top.geometry("450x300")  
+    
+# the label for user_name 
+user_name = Label(top, 
+                  text = "Username").place(x = 40,
+                                           y = 60)  
+    
+# the label for user_password  
+user_password = Label(top, 
+                      text = "Password").place(x = 40,
+                                               y = 100)  
+    
+submit_button = Button(top, 
+                       text = "Submit").place(x = 40,
+                                              y = 130)
+    
+user_name_input_area = Entry(top,
+                             width = 30).place(x = 110,
+                                               y = 60)  
+    
+user_password_entry_area = Entry(top,
+                                 width = 30).place(x = 110,
+                                                   y = 100)  
+      
+top.mainloop() 
+>>>>>>>>>>>>>>>>>
+RadioButton في Tkinter | بايثون
+مستوى الصعوبة: صعب
+آخر تحديث: 16 فبراير 2021
+Radiobutton هو عنصر واجهة مستخدم Tkinter قياسي يستخدم لتنفيذ تحديدات واحدة من عدة اختيارات . يمكن أن تحتوي الأزرار الراديوية على نص أو صور ، ويمكنك ربط وظيفة أو طريقة Python بكل زر. عند الضغط على الزر ، يستدعي Tkinter هذه الوظيفة أو الطريقة تلقائيًا.
+بناء الجملة: 
+ 
+
+button = Radiobutton (رئيسي ، نص = "الاسم على الزر" ، متغير = "متغير مشترك" ، القيمة = "قيم كل زر" ، خيارات = قيم ، ...)
+متغير مشترك = متغير Tkinter مشترك بين جميع 
+قيمة أزرار الراديو = كل يجب أن يكون للزر الراديوي قيمة مختلفة وإلا فسيتم اختيار أكثر من زر راديوي واحد. 
+ 
+
+الرمز # 1: 
+أزرار الاختيار ، ولكن ليس في شكل أزرار ، في شكل مربع زر . لعرض مربع الزر ، يجب ضبط خيار  المؤشر / المؤشر على 0.
+ 
+
+# Importing Tkinter module
+from tkinter import *
+# from tkinter.ttk import *
+ 
+# Creating master Tkinter window
+master = Tk()
+master.geometry("175x175")
+ 
+# Tkinter string variable
+# able to store any string value
+v = StringVar(master, "1")
+ 
+# Dictionary to create multiple buttons
+values = {"RadioButton 1" : "1",
+          "RadioButton 2" : "2",
+          "RadioButton 3" : "3",
+          "RadioButton 4" : "4",
+          "RadioButton 5" : "5"}
+ 
+# Loop is used to create multiple Radiobuttons
+# rather than creating each button separately
+for (text, value) in values.items():
+    Radiobutton(master, text = text, variable = v,
+                value = value, indicator = 0,
+                background = "light blue").pack(fill = X, ipady = 5)
+ 
+# Infinite loop can be terminated by
+# keyboard or mouse interrupt
+# or by any predefined function (destroy())
+mainloop()
+انتاج: 
+ 
+
+مشغل فديوهات
+
+00:00
+00:10
+
+
+
+خلفية مربعات الأزرار هذه باللون الأزرق الفاتح. يتم تحديد مربعات الأزرار ذات الخلفيات البيضاء وكذلك الغارقة.
+ 
+
+
+
+  
+كود # 2: تغيير مربعات الأزرار إلى أزرار اختيار قياسية. لهذا الخيار إزالة المؤشر. 
+ 
+
+# Importing Tkinter module
+from tkinter import *
+from tkinter.ttk import *
+ 
+# Creating master Tkinter window
+master = Tk()
+master.geometry("175x175")
+ 
+# Tkinter string variable
+# able to store any string value
+v = StringVar(master, "1")
+ 
+# Dictionary to create multiple buttons
+values = {"RadioButton 1" : "1",
+        "RadioButton 2" : "2",
+        "RadioButton 3" : "3",
+        "RadioButton 4" : "4",
+        "RadioButton 5" : "5"}
+ 
+# Loop is used to create multiple Radiobuttons
+# rather than creating each button separately
+for (text, value) in values.items():
+    Radiobutton(master, text = text, variable = v,
+        value = value).pack(side = TOP, ipady = 5)
+ 
+# Infinite loop can be terminated by
+# keyboard or mouse interrupt
+# or by any predefined function (destroy())
+mainloop()
+انتاج: 
+
+
+
+ 
+
+مشغل فديوهات
+
+00:00
+00:07
+
+
+يتم إنشاء هذه الأزرار الراديوية باستخدام tkinter.ttk وهذا هو سبب عدم توفر خيار الخلفية ولكن يمكننا استخدام فئة النمط للقيام بالتصميم. 
+ 
+رمز # 3: إضافة نمط إلى زر الراديو باستخدام فئة النمط. 
+ 
+
+# Importing Tkinter module
+from tkinter import *
+from tkinter.ttk import *
+ 
+# Creating master Tkinter window
+master = Tk()
+master.geometry('175x175')
+ 
+# Tkinter string variable
+# able to store any string value
+v = StringVar(master, "1")
+ 
+# Style class to add style to Radiobutton
+# it can be used to style any ttk widget
+style = Style(master)
+style.configure("TRadiobutton", background = "light green",
+                foreground = "red", font = ("arial", 10, "bold"))
+ 
+# Dictionary to create multiple buttons
+values = {"RadioButton 1" : "1",
+          "RadioButton 2" : "2",
+          "RadioButton 3" : "3",
+          "RadioButton 4" : "4",
+          "RadioButton 5" : "5"}
+ 
+# Loop is used to create multiple Radiobuttons
+# rather than creating each button separately
+for (text, value) in values.items():
+    Radiobutton(master, text = text, variable = v,
+                value = value).pack(side = TOP, ipady = 5)
+ 
+# Infinite loop can be terminated by
+# keyboard or mouse interrupt
+# or by any predefined function (destroy())
+mainloop()
+انتاج: 
+
+
+
+ 
+
+مشغل فديوهات
+
+00:00
+00:06
+
+
+قد تلاحظ أن نمط الخط قد تم تغييره بالإضافة إلى تغيير ألوان الخلفية والمقدمة أيضًا. هنا ، يتم استخدام TRadiobutton في فئة النمط ، ويتم تطبيق التصميم تلقائيًا على جميع الأزرار الراديوية المتاحة.
+ 
+
+
+
+>>>>>>>>>>>>>>>>>
+Python Tkinter - أداة Checkbutton
+مستوى الصعوبة: سهل
+آخر تحديث: 26 مارس 2020
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، Tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع Tkinter هي الطريقة الأسرع والأسهل لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام Tkinter مهمة سهلة.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+أداة Checkbutton
+عنصر واجهة المستخدم Checkbutton هو عنصر واجهة مستخدم Tkinter قياسي يُستخدم لتنفيذ تحديدات التشغيل / الإيقاف. يمكن أن تحتوي أزرار الاختيار على نص أو صور. عند الضغط على الزر ، تستدعي Tkinter تلك الوظيفة أو الطريقة.
+
+بناء الجملة:
+يرد أدناه بناء الجملة لاستخدام زر الاختيار.
+
+w = Checkbutton (رئيسي ، خيارات)
+حدود:
+
+رئيسي : تُستخدم هذه المعلمة لتمثيل النافذة الأصلية.
+الخيارات : هناك العديد من الخيارات المتاحة ويمكن استخدامها كأزواج مفتاح - قيمة مفصولة بفواصل.
+الخيارات:
+فيما يلي شائعة الاستخدام يمكن استخدام الخيار مع هذه الأداة: -
+
+activebackground: يستخدم هذا الخيار لتمثيل لون الخلفية عندما يكون زر الاختيار تحت المؤشر.
+Activeforeground: يستخدم هذا الخيار لتمثيل لون المقدمة عندما يكون زر الاختيار تحت المؤشر.
+bg: يُستخدم هذا الخيار لتمثيل لون الخلفية العادي المعروض خلف التسمية والمؤشر.
+الصورة النقطية: يستخدم هذا الخيار لعرض صورة أحادية اللون على زر.
+bd: يستخدم هذا الخيار لتمثيل حجم الحد حول المؤشر والقيمة الافتراضية هي 2 بكسل.
+الأمر: يرتبط هذا الخيار بوظيفة يتم استدعاؤها عند تغيير حالة زر الاختيار.
+المؤشر: باستخدام هذا الخيار ، سيتغير مؤشر الماوس إلى هذا النمط عندما يكون فوق زر الاختيار.
+تعطيل المقدمة: اللون الأمامي المستخدم لعرض نص زر اختيار معطل. الافتراضي هو نسخة منقطة من لون المقدمة الافتراضي.
+الخط: يستخدم هذا الخيار لتمثيل الخط المستخدم في النص.
+fg: يستخدم هذا الخيار لتمثيل اللون المستخدم لتقديم النص.
+الارتفاع: يستخدم هذا الخيار لتمثيل عدد سطور النص على زر الاختيار والقيمة الافتراضية هي 1.
+لون التمييز: يستخدم هذا الخيار لتمثيل لون تمييز التركيز عندما يكون التركيز على زر الاختيار.
+image: يستخدم هذا الخيار لعرض صورة بيانية على الزر.
+ضبط : يستخدم هذا الخيار للتحكم في كيفية ضبط النص: CENTER أو LEFT أو RIGHT.
+offvalue: يتم تعيين متغير التحكم المرتبط على 0 افتراضيًا إذا لم يتم تحديد الزر. يمكننا تغيير حالة المتغير غير المحدد إلى متغير آخر.
+onvalue: يتم تعيين متغير التحكم المرتبط على 1 افتراضيًا إذا تم تحديد الزر. يمكننا تغيير حالة المتغير المحدد إلى متغير آخر.
+padx: يُستخدم هذا الخيار لتمثيل مقدار المساحة التي يجب تركها إلى يسار ويمين زر الاختيار والنص. القيمة الافتراضية هي 1 بكسل.
+pady: يستخدم هذا الخيار لتمثيل مقدار المساحة التي يجب تركها أعلى وأسفل زر الاختيار والنص. القيمة الافتراضية هي 1 بكسل.
+الإغاثة: نوع حد زر الاختيار. يتم تعيين القيمة الافتراضية الخاصة به على FLAT.
+selectcolor: يستخدم هذا الخيار لتمثيل لون زر الاختيار عند تعيينه. الافتراضي هو selectcolor = ”red”.
+selectimage: يتم عرض الصورة على زر الاختيار عند تعيينها.
+الحالة: تمثل حالة زر الاختيار. بشكل افتراضي ، يتم تعيينه على الوضع العادي. يمكننا تغييره إلى "معطل" لجعل زر الاختيار غير مستجيب. تكون حالة زر الاختيار نشطة عندما يكون تحت التركيز.
+النص: استخدم هذا الخيار استخدام الأسطر الجديدة ("\ n") لعرض عدة أسطر من النص.
+تسطير: يستخدم هذا الخيار لتمثيل فهرس الحرف في النص الذي سيتم تسطيره. تبدأ الفهرسة بصفر في النص.
+متغير: يستخدم هذا الخيار لتمثيل المتغير المرتبط الذي يتتبع حالة زر الاختيار.
+العرض: يستخدم هذا الخيار لتمثيل عرض زر الاختيار. وأيضًا تتمثل في عدد الأحرف التي يتم تمثيلها في شكل نصوص.
+فاف الطول: هذا الخيار سيقسم النص إلى عدد القطع.
+الأساليب:
+الأساليب المستخدمة في هذه الأدوات هي كما يلي:
+
+إلغاء تحديد (): تسمى هذه الطريقة لإيقاف تشغيل زر الاختيار.
+flash (): يومض زر الاختيار بين الألوان النشطة والعادية.
+استدعاء (): هذه الطريقة ستستدعي الطريقة المرتبطة بزر الاختيار.
+حدد (): تسمى هذه الطريقة لتشغيل زر الاختيار.
+toggle (): تُستخدم هذه الطريقة للتبديل بين أزرار الاختيار المختلفة.
+مثال:
+
+from tkinter import * 
+  
+root = Tk()
+root.geometry("300x200")
+  
+w = Label(root, text ='GeeksForGeeks', font = "50") 
+w.pack()
+  
+Checkbutton1 = IntVar()  
+Checkbutton2 = IntVar()  
+Checkbutton3 = IntVar()
+  
+Button1 = Checkbutton(root, text = "Tutorial", 
+                      variable = Checkbutton1,
+                      onvalue = 1,
+                      offvalue = 0,
+                      height = 2,
+                      width = 10)
+  
+Button2 = Checkbutton(root, text = "Student",
+                      variable = Checkbutton2,
+                      onvalue = 1,
+                      offvalue = 0,
+                      height = 2,
+                      width = 10)
+  
+Button3 = Checkbutton(root, text = "Courses",
+                      variable = Checkbutton3,
+                      onvalue = 1,
+                      offvalue = 0,
+                      height = 2,
+                      width = 10)  
+    
+Button1.pack()  
+Button2.pack()  
+Button3.pack()
+  
+mainloop() 
+انتاج:
+
+
+>>>>>>>>>>>>>>>>>
+Python Tkinter - قطعة قماش
+مستوى الصعوبة: صعب
+آخر تحديث: 31 أغسطس 2021
+Tkinter عبارة عن مجموعة أدوات واجهة المستخدم الرسومية المستخدمة في لغة python لإنشاء واجهات رسومية سهلة الاستخدام. Tkinter هو أكثر إطار عمل واجهة المستخدم الرسومية شيوعًا والأكثر أساسية متاحًا في Python. يستخدم Tkinter نهجًا موجهًا للكائنات لإنشاء واجهات رسومية.
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+القطعة قماش
+تتيح لنا أداة Canvas عرض رسومات مختلفة على التطبيق. يمكن استخدامه لرسم أشكال بسيطة لرسوم بيانية معقدة. يمكننا أيضًا عرض أنواع مختلفة من الأدوات المصغّرة المخصصة وفقًا لاحتياجاتنا.
+
+بناء الجملة: 
+
+C = قماش (الجذر ، الارتفاع ، العرض ، bd ، bg ، ..)
+معلمات اختيارية: 
+
+الجذر = نافذة الجذر.
+الارتفاع = ارتفاع القطعة القماشية.
+العرض = عرض القطعة القماشية.
+bg = لون الخلفية للقماش.
+bd = حدود نافذة القماش.
+تم تحديد مجموعة التمرير (w ، n ، e ، s) كمنطقة للتمرير إلى اليسار والأعلى والأسفل واليمين.
+لون التظليل يظهر في التركيز البؤري.
+المؤشر يمكن تعريفه على أنه مؤشر للوحة القماشية يمكن أن يكون دائرة ، أو عمل ، أو سهم ، إلخ.
+يحدد التحديد ما إذا كان يمكن الوصول إلى لوحة الرسم خارج منطقة التمرير.
+نوع الإغاثة من الحدود التي يمكن أن تكون مشرقة ومرتفعة و GROOVE و RIDGE. 
+ 
+بعض طرق الرسم الشائعة :
+خلق شكل بيضاوي
+الشكل البيضاوي = C.create_oval (x0 ، y0 ، x1 ، y1 ، خيارات)
+خلق قوس
+القوس = C.create_arc (20 ، 50 ، 190 ، 240 ، البدء = 0 ، المدى = 110 ، التعبئة = "أحمر")
+إنشاء خط
+السطر = C. إنشاء_خط (x0 ، y0 ، x1 ، y1 ، ... ، xn ، yn ، خيارات)
+إنشاء مضلع
+البيضاوي = جيم إنشاء_المضلع (x0 ، y0 ، x1 ، y1 ، ... xn ، yn ، خيارات)
+مثال 1: رسم أشكال بسيطة 
+
+بايثون 3
+from tkinter import *
+ 
+ 
+root = Tk()
+ 
+C = Canvas(root, bg="yellow",
+           height=250, width=300)
+ 
+line = C.create_line(108, 120,
+                     320, 40,
+                     fill="green")
+ 
+arc = C.create_arc(180, 150, 80,
+                   210, start=0,
+                   extent=220,
+                   fill="red")
+ 
+oval = C.create_oval(80, 30, 140,
+                     150,
+                     fill="blue")
+ 
+C.pack()
+mainloop()
+انتاج:
+ 
+
+بيثون-تكينتير-قماش
+
+مثال 2: تطبيق Simple Paint 
+
+بايثون 3
+from tkinter import *
+ 
+ 
+root = Tk()
+ 
+# Create Title
+root.title(  "Paint App ")
+ 
+# specify size
+root.geometry("500x350")
+ 
+# define function when 
+# mouse double click is enabled
+def paint( event ):
+    
+    # Co-ordinates.
+    x1, y1, x2, y2 = ( event.x - 3 ),( event.y - 3 ), ( event.x + 3 ),( event.y + 3 )
+     
+    # Colour
+    Colour = "#000fff000"
+     
+    # specify type of display
+    w.create_line( x1, y1, x2,
+                  y2, fill = Colour )
+ 
+ 
+# create canvas widget.
+w = Canvas(root, width = 400, height = 250)
+ 
+# call function when double
+# click is enabled.
+w.bind( "<B1-Motion>", paint )
+ 
+# create label.
+l = Label( root, text = "Double Click and Drag to draw." )
+l.pack()
+w.pack()
+ 
+mainloop()
+انتاج: 
+>>>>>>>>>>>>>>>>>
+القطعة Combobox في tkinter | بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: 23 يناير 2020
+توفر Python مجموعة متنوعة من أنواع واجهة المستخدم الرسومية (GUI) مثل PyQT و Tkinter و Kivy و WxPython و PySide. من بينها ، tkinterوحدة واجهة المستخدم الرسومية الأكثر استخدامًا في Python لأنها بسيطة وسهلة الفهم. تأتي كلمة Tkinter من واجهة Tk. تتوفر وحدة tkinter في مكتبة Python القياسية والتي يجب استيرادها أثناء كتابة برنامج في Python لإنشاء واجهة مستخدم رسومية.
+
+ملحوظة: Tkinter (حرف T) يختلف عن tkinter. يُستخدم Tkinter في Python2.x ويتم تغييره إلى tkinter في Python.3x.
+
+Combobox عبارة عن مجموعة من Listbox وحقل إدخال. إنها إحدى أدوات Tkinter حيث تحتوي على سهم لأسفل للاختيار من قائمة الخيارات. يساعد المستخدمين على الاختيار وفقًا لقائمة الخيارات المعروضة. عندما ينقر المستخدم على سهم القائمة المنسدلة في حقل الإدخال ، يتم عرض نافذة منبثقة من مربع القائمة الذي تم تمريره أسفل حقل الإدخال. سيتم عرض الخيار المحدد في حقل الإدخال فقط عند تحديد خيار من Listbox.
+
+بناء الجملة:
+
+combobox = ttk.Combobox (رئيسي ، خيار = قيمة ، ...)
+مثال 1: عنصر واجهة مستخدم Combobox بدون تعيين قيمة افتراضية.
+
+# python program demonstrating
+# Combobox widget using tkinter
+  
+  
+import tkinter as tk
+from tkinter import ttk
+  
+# Creating tkinter window
+window = tk.Tk()
+window.title('Combobox')
+window.geometry('500x250')
+  
+# label text for title
+ttk.Label(window, text = "GFG Combobox Widget", 
+          background = 'green', foreground ="white", 
+          font = ("Times New Roman", 15)).grid(row = 0, column = 1)
+  
+# label
+ttk.Label(window, text = "Select the Month :",
+          font = ("Times New Roman", 10)).grid(column = 0,
+          row = 5, padx = 10, pady = 25)
+  
+# Combobox creation
+n = tk.StringVar()
+monthchoosen = ttk.Combobox(window, width = 27, textvariable = n)
+  
+# Adding combobox drop down list
+monthchoosen['values'] = (' January', 
+                          ' February',
+                          ' March',
+                          ' April',
+                          ' May',
+                          ' June',
+                          ' July',
+                          ' August',
+                          ' September',
+                          ' October',
+                          ' November',
+                          ' December')
+  
+monthchoosen.grid(column = 1, row = 5)
+monthchoosen.current()
+window.mainloop()
+انتاج:
+
+
+
+مثال 2: مربع تحرير وسرد بقيم افتراضية أولية.
+يمكننا أيضًا تعيين القيم الافتراضية الأولية في عنصر واجهة المستخدم Combobox كما هو موضح في نموذج التعليمات البرمجية أدناه.
+
+import tkinter as tk
+from tkinter import ttk
+  
+# Creating tkinter window
+window = tk.Tk()
+window.geometry('350x250')
+# Label
+ttk.Label(window, text = "Select the Month :", 
+        font = ("Times New Roman", 10)).grid(column = 0, 
+        row = 15, padx = 10, pady = 25)
+  
+n = tk.StringVar()
+monthchoosen = ttk.Combobox(window, width = 27, 
+                            textvariable = n)
+  
+# Adding combobox drop down list
+monthchoosen['values'] = (' January', 
+                          ' February',
+                          ' March',
+                          ' April',
+                          ' May',
+                          ' June', 
+                          ' July', 
+                          ' August', 
+                          ' September', 
+                          ' October', 
+                          ' November', 
+                          ' December')
+  
+monthchoosen.grid(column = 1, row = 15)
+  
+# Shows february as a default value
+monthchoosen.current(1) 
+window.mainloop()
+انتاج:
+
+
+>>>>>>>>>>>>>>>>>
+Python Tkinter - أداة الإدخال
+مستوى الصعوبة: متوسط
+آخر تحديث: 01 فبراير 2021
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، Tkinter هي الطريقة الأكثر استخدامًا. Python مع Tkinter هي الطريقة الأسرع والأسهل لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام Tkinter مهمة سهلة.
+في Python3 ، يأتي Tkinter مثبتًا مسبقًا ولكن يمكنك أيضًا تثبيته باستخدام الأمر: 
+ 
+
+نقطة تثبيت tkinter
+مثال: لنقم الآن بإنشاء نافذة بسيطة باستخدام Tkinter
+ 
+
+# creating a simple tkinter window
+# if you are using python2
+# use import Tkinter as tk 
+ 
+import tkinter as tk
+ 
+ 
+root = tk.Tk()
+root.title("First Tkinter Window")
+root.mainloop()
+انتاج :
+ 
+
+بيثون- tkinter1
+
+ 
+
+أداة الدخول
+أداة الإدخال هي أداة Tkinter المستخدمة لإدخال أو عرض سطر واحد من النص. 
+ 
+
+بناء الجملة : 
+
+الإدخال = tk.Entry (الأصل ، الخيارات)
+حدود: 
+ 
+
+1) الأصل: النافذة الأصلية أو الإطار الذي يتم فيه عرض عنصر واجهة المستخدم.
+2) الخيارات: الخيارات المختلفة التي توفرها أداة الإدخال هي: 
+ 
+
+bg: لون الخلفية العادي المعروض خلف الملصق والمؤشر. 
+bd: حجم الحد المحيط بالمؤشر. الافتراضي هو 2 بكسل. 
+الخط: الخط المستخدم في النص. 
+fg: اللون المستخدم لعرض النص. 
+ضبط : إذا كان النص يحتوي على عدة أسطر ، فإن هذا الخيار يتحكم في كيفية ضبط النص: CENTER أو LEFT أو RIGHT. 
+الإغاثة: بالقيمة الافتراضية ، الإغاثة = مسطحة. يمكنك ضبط هذا الخيار على أي من الأنماط الأخرى مثل: SUNKEN ، RIGID ، RAISED ، GROOVE 
+show: عادةً ، تظهر الأحرف التي يكتبها المستخدم في الإدخال. لجعل كلمة السر. الإدخال الذي يردد صدى كل حرف كنجمة ، قم بتعيين إظهار = ”*”. 
+textvariable: لكي تتمكن من استرداد النص الحالي من عنصر واجهة مستخدم الإدخال ، يجب عليك تعيين هذا الخيار على مثيل لفئة StringVar.
+الطرق: الطرق المختلفة التي توفرها أداة الإدخال هي: 
+
+get (): إرجاع النص الحالي للإدخال كسلسلة. 
+حذف (): يحذف الأحرف من الأداة 
+insert (index، 'name'): تُدرج السلسلة "name" قبل الحرف في الفهرس المحدد. 
+ 
+مثال: 
+ 
+
+# Program to make a simple
+# login screen 
+ 
+ 
+import tkinter as tk
+  
+root=tk.Tk()
+ 
+# setting the windows size
+root.geometry("600x400")
+  
+# declaring string variable
+# for storing name and password
+name_var=tk.StringVar()
+passw_var=tk.StringVar()
+ 
+  
+# defining a function that will
+# get the name and password and
+# print them on the screen
+def submit():
+ 
+    name=name_var.get()
+    password=passw_var.get()
+     
+    print("The name is : " + name)
+    print("The password is : " + password)
+     
+    name_var.set("")
+    passw_var.set("")
+     
+     
+# creating a label for
+# name using widget Label
+name_label = tk.Label(root, text = 'Username', font=('calibre',10, 'bold'))
+  
+# creating a entry for input
+# name using widget Entry
+name_entry = tk.Entry(root,textvariable = name_var, font=('calibre',10,'normal'))
+  
+# creating a label for password
+passw_label = tk.Label(root, text = 'Password', font = ('calibre',10,'bold'))
+  
+# creating a entry for password
+passw_entry=tk.Entry(root, textvariable = passw_var, font = ('calibre',10,'normal'), show = '*')
+  
+# creating a button using the widget
+# Button that will call the submit function
+sub_btn=tk.Button(root,text = 'Submit', command = submit)
+  
+# placing the label and entry in
+# the required position using grid
+# method
+name_label.grid(row=0,column=0)
+name_entry.grid(row=0,column=1)
+passw_label.grid(row=1,column=0)
+passw_entry.grid(row=1,column=1)
+sub_btn.grid(row=2,column=1)
+  
+# performing an infinite loop
+# for the window to display
+root.mainloop()
+انتاج : 
+ 
+pip install tkinter
+
+
+>>>>>>>>>>>>>>>>>
+
+Python Tkinter - أداة النص
+مستوى الصعوبة: سهل
+آخر تحديث: ٢٤ يناير ٢٠٢٢
+Tkinter عبارة عن مجموعة أدوات واجهة المستخدم الرسومية المستخدمة في لغة python لإنشاء واجهات رسومية سهلة الاستخدام. Tkinter هو أكثر إطار عمل واجهة المستخدم الرسومية شيوعًا والأكثر أساسية متاحًا في Python. يستخدم Tkinter نهجًا موجهًا للكائنات لإنشاء واجهات رسومية.
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+ 
+
+القطعة النصية
+يتم استخدام Text Widget حيث يريد المستخدم إدخال حقول نصية متعددة الأسطر. يمكن استخدام هذه الأداة لمجموعة متنوعة من التطبيقات التي تتطلب نصًا متعدد الأسطر مثل المراسلة أو إرسال المعلومات أو عرض المعلومات والعديد من المهام الأخرى. يمكننا إدراج ملفات الوسائط مثل الصور والروابط أيضًا في أداة النص.
+بناء الجملة: 
+ 
+
+T = نص (الجذر ، bg ، fg ، bd ، الارتفاع ، العرض ، الخط ، ..)
+معلمات اختيارية 
+ 
+
+الجذر - نافذة الجذر. 
+ 
+bg - لون الخلفية 
+ 
+fg - لون المقدمة 
+ 
+bd - حدود القطعة. 
+ 
+الارتفاع - ارتفاع القطعة. 
+ 
+العرض - عرض القطعة. 
+ 
+الخط - نوع خط النص. 
+ 
+المؤشر - نوع المؤشر الذي سيتم استخدامه. 
+ 
+insetofftime - الوقت بالمللي ثانية الذي يتم فيه إيقاف وميض المؤشر. 
+ 
+insertontime - الوقت بالمللي ثانية الذي يتم فيه تشغيل وميض المؤشر. 
+ 
+بادكس - الحشو الأفقي. 
+ 
+pady - الحشو الرأسي. 
+ 
+الحالة - تحدد ما إذا كانت الأداة ستستجيب لحركات الماوس أو لوحات المفاتيح. 
+ 
+سمك التظليل - يحدد سُمك تمييز التركيز البؤري. 
+ 
+عرض الإدراج - يحدد عرض حرف الإدراج. 
+ 
+الإغاثة - نوع الحدود التي يمكن أن تكون مشرقة ومرتفعة و GROOVE و RIDGE. 
+ 
+أمر yscroll - لجعل الأداة قابلة للتمرير عموديًا. 
+ 
+أمر xscroll - لجعل الأداة قابلة للتمرير أفقيًا. 
+ 
+بعض الطرق الشائعة
+ 
+
+index (index) - للحصول على الفهرس المحدد. 
+ 
+insert (index) - لإدراج سلسلة في فهرس محدد. 
+ 
+see (index) - للتحقق مما إذا كانت السلسلة مرئية أم لا في فهرس معين. 
+ 
+get (startindex، endindex) - للحصول على أحرف ضمن نطاق معين. 
+ 
+حذف (startindex، endindex) - حذف الأحرف ضمن النطاق المحدد.
+طرق التعامل مع العلامات 
+ 
+
+tag_delete (tagname) - لحذف علامة معينة. 
+ 
+tag_add (tagname، startindex، endindex) - لتمييز السلسلة في النطاق المحدد 
+ 
+tag_remove (tagname، startindex، endindex) - لإزالة علامة من النطاق المحدد 
+ 
+طرق التعامل مع العلامات 
+ 
+
+mark_names () - للحصول على جميع العلامات في النطاق المحدد. 
+ 
+فهرس (علامة) - للحصول على فهرس علامة. 
+ 
+mark_gravity () - للحصول على جاذبية علامة معينة.
+ 
+مثال 1: 
+ 
+
+import tkinter as tk
+ 
+ 
+root = Tk()
+ 
+# specify size of window.
+root.geometry("250x170")
+ 
+# Create text widget and specify size.
+T = Text(root, height = 5, width = 52)
+ 
+# Create label
+l = Label(root, text = "Fact of the Day")
+l.config(font =("Courier", 14))
+ 
+Fact = """A man can be arrested in
+Italy for wearing a skirt in public."""
+ 
+# Create button for next text.
+b1 = Button(root, text = "Next", )
+ 
+# Create an Exit button.
+b2 = Button(root, text = "Exit",
+            command = root.destroy)
+ 
+l.pack()
+T.pack()
+b1.pack()
+b2.pack()
+ 
+# Insert The Fact.
+T.insert(tk.END, Fact)
+ 
+tk.mainloop()
+انتاج | 
+ 
+
+نص بيثون tkinter
+
+مثال 2: حفظ النص وإجراء العمليات
+ 
+
+from tkinter import *
+ 
+root = Tk()
+root.geometry("300x300")
+root.title(" Q&A ")
+ 
+def Take_input():
+    INPUT = inputtxt.get("1.0", "end-1c")
+    print(INPUT)
+    if(INPUT == "120"):
+        Output.insert(END, 'Correct')
+    else:
+        Output.insert(END, "Wrong answer")
+     
+l = Label(text = "What is 24 * 5 ? ")
+inputtxt = Text(root, height = 10,
+                width = 25,
+                bg = "light yellow")
+ 
+Output = Text(root, height = 5,
+              width = 25,
+              bg = "light cyan")
+ 
+Display = Button(root, height = 2,
+                 width = 20,
+                 text ="Show",
+                 command = lambda:Take_input())
+ 
+l.pack()
+inputtxt.pack()
+Display.pack()
+Output.pack()
+ 
+mainloop()
+انتاج | 
+ 
+>>>>>>>>>>>>>>>>>
+بيثون تكينتير - رسالة
+مستوى الصعوبة: متوسط
+آخر تحديث: 26 مارس 2020
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، Tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع Tkinter هي الطريقة الأسرع والأسهل لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام Tkinter مهمة سهلة.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+القطعة الرسالة
+يتم استخدام عنصر واجهة المستخدم لإظهار الرسالة للمستخدم فيما يتعلق بسلوك تطبيق بيثون. نص الرسالة يحتوي على أكثر من سطر واحد.
+
+بناء الجملة:
+يرد أدناه بناء الجملة لاستخدام الرسالة.
+
+w = رسالة (رئيسي ، خيارات)
+حدود:
+
+رئيسي : تُستخدم هذه المعلمة لتمثيل النافذة الأصلية.
+الخيارات : هناك العديد من الخيارات المتاحة ويمكن استخدامها كأزواج مفتاح - قيمة مفصولة بفواصل.
+الخيارات:
+فيما يلي شائعة الاستخدام يمكن استخدام الخيار مع هذه الأداة: -
+
+الارتساء: يستخدم هذا الخيار لتحديد موضع النص بدقة داخل الفراغ ، قيمته الافتراضية هي CENTER.
+bg: يستخدم هذا الخيار لتمثيل لون الخلفية العادي.
+الصورة النقطية: يستخدم هذا الخيار لعرض صورة أحادية اللون.
+bd: يستخدم هذا الخيار لتمثيل حجم الحد والقيمة الافتراضية هي 2 بكسل.
+المؤشر: باستخدام هذا الخيار ، سيتغير مؤشر الماوس إلى هذا النمط عندما يكون فوق الكتابة.
+الخط: يستخدم هذا الخيار لتمثيل الخط المستخدم في النص.
+fg: يستخدم هذا الخيار لتمثيل اللون المستخدم لتقديم النص.
+الارتفاع: يستخدم هذا الخيار لتمثيل عدد سطور النص في الرسالة.
+صورة: يستخدم هذا الخيار لعرض صورة بيانية على عنصر واجهة المستخدم.
+ضبط : يستخدم هذا الخيار للتحكم في كيفية ضبط النص: CENTER أو LEFT أو RIGHT.
+padx: يُستخدم هذا الخيار لتمثيل مقدار المساحة التي يجب تركها إلى يسار ويمين عنصر واجهة المستخدم والنص. القيمة الافتراضية هي 1 بكسل.
+pady: يستخدم هذا الخيار لتمثيل مقدار المساحة التي يجب تركها أعلى الأداة وأسفلها. القيمة الافتراضية هي 1 بكسل.
+الإغاثة: نوع حدود الأداة. يتم تعيين القيمة الافتراضية الخاصة به على FLAT.
+النص: استخدم هذا الخيار استخدام الأسطر الجديدة ("\ n") لعرض عدة أسطر من النص.
+متغير: يستخدم هذا الخيار لتمثيل المتغير المرتبط الذي يتتبع حالة عنصر واجهة المستخدم.
+العرض: يستخدم هذا الخيار لتمثيل عرض الأداة. وأيضًا تتمثل في عدد الأحرف التي يتم تمثيلها في شكل نصوص.
+فاف الطول: هذا الخيار سيقسم النص إلى عدد القطع.
+مثال:
+
+from tkinter import *
+  
+root = Tk()
+root.geometry("300x200")
+  
+w = Label(root, text ='GeeksForGeeks', font = "50") 
+w.pack()
+    
+msg = Message( root, text = "A computer science portal for geeks")  
+    
+msg.pack()  
+  
+root.mainloop() 
+انتاج:
+
+>>>>>>>>>>>>>>>>>
+بايثون | القطعة القائمة في Tkinter
+مستوى الصعوبة: أساسي
+تاريخ التحديث الأخير: ١٢ أبريل ٢٠١٩
+Tkinter هي حزمة Python القياسية GUI (واجهة المستخدم الرسومية). إنها واحدة من أكثر الحزم استخدامًا لتطبيقات واجهة المستخدم الرسومية التي تأتي مع Python نفسها.
+
+القوائم هي الجزء المهم من أي واجهة المستخدم الرسومية. الاستخدام الشائع للقوائم هو توفير وصول ملائم لعمليات مختلفة مثل حفظ ملف أو فتحه أو إنهاء برنامج أو معالجة البيانات. يتم عرض قوائم المستوى الأعلى مباشرة أسفل شريط العنوان الخاص بالجذر أو أي نوافذ أخرى ذات مستوى أعلى.
+
+menu = قائمة (رئيسية ، ** خيارات)
+ 
+أدناه هو التنفيذ:
+
+# importing only  those functions 
+# which are needed
+from tkinter import * 
+from tkinter.ttk import * 
+from time import strftime
+  
+# creating tkinter window
+root = Tk()
+root.title('Menu Demonstration')
+  
+# Creating Menubar
+menubar = Menu(root)
+  
+# Adding File Menu and commands
+file = Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='File', menu = file)
+file.add_command(label ='New File', command = None)
+file.add_command(label ='Open...', command = None)
+file.add_command(label ='Save', command = None)
+file.add_separator()
+file.add_command(label ='Exit', command = root.destroy)
+  
+# Adding Edit Menu and commands
+edit = Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Edit', menu = edit)
+edit.add_command(label ='Cut', command = None)
+edit.add_command(label ='Copy', command = None)
+edit.add_command(label ='Paste', command = None)
+edit.add_command(label ='Select All', command = None)
+edit.add_separator()
+edit.add_command(label ='Find...', command = None)
+edit.add_command(label ='Find again', command = None)
+  
+# Adding Help Menu
+help_ = Menu(menubar, tearoff = 0)
+menubar.add_cascade(label ='Help', menu = help_)
+help_.add_command(label ='Tk Help', command = None)
+help_.add_command(label ='Demo', command = None)
+help_.add_separator()
+help_.add_command(label ='About Tk', command = None)
+  
+# display Menu
+root.config(menu = menubar)
+mainloop()
+انتاج:
+
+
+
+
+ملاحظة: في التطبيق أعلاه ، يتم تعيين الأوامر على "بلا" ولكن يمكن للمرء إضافة أوامر مختلفة إلى تسميات مختلفة لأداء المهمة المطلوبة.
+
+
+>>>>>>>>>>>>>>>>>
+
+Python Tkinter - SpinBox
+آخر تحديث: 26 مارس 2020
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، تعد tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع tkinter هي أسرع وأسهل طريقة لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام tkinter مهمة سهلة.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+القطعة Spinbox
+يتم استخدام عنصر واجهة مستخدم Spinbox للاختيار من بين عدد ثابت من القيم. إنها أداة إدخال بديلة وتوفر نطاقًا من القيم للمستخدم.
+
+بناء الجملة:
+يرد أدناه بناء الجملة لاستخدام Spinbox.
+
+w = Spinbox (رئيسي ، خيارات)
+حدود:
+
+رئيسي : تُستخدم هذه المعلمة لتمثيل النافذة الأصلية.
+الخيارات : هناك العديد من الخيارات المتاحة ويمكن استخدامها كأزواج مفتاح - قيمة مفصولة بفواصل.
+الخيارات:
+فيما يلي شائعة الاستخدام يمكن استخدام الخيار مع هذه الأداة: -
+
+activebackground: يستخدم هذا الخيار لتمثيل لون الخلفية عندما يكون المنزلق ورؤوس الأسهم تحت المؤشر.
+bg: يُستخدم هذا الخيار لتمثيل لون الخلفية العادي المعروض خلف التسمية والمؤشر.
+bd: يستخدم هذا الخيار لتمثيل حجم الحد حول المؤشر والقيمة الافتراضية هي 2 بكسل.
+الأمر: يرتبط هذا الخيار بوظيفة يتم استدعاؤها عند تغيير الحالة.
+المؤشر: باستخدام هذا الخيار ، سيتغير مؤشر الماوس إلى هذا النمط عندما يكون فوق النوع.
+Disableforeground: يستخدم هذا الخيار لتمثيل اللون الأمامي لعنصر واجهة المستخدم عند تعطيله ..
+تعطيل الخلفية: يستخدم هذا الخيار لتمثيل لون خلفية الأداة عند تعطيلها ..
+الخط: يستخدم هذا الخيار لتمثيل الخط المستخدم في النص.
+fg: يستخدم هذا الخيار لتمثيل اللون المستخدم لتقديم النص.
+التنسيق: يستخدم هذا الخيار لتنسيق السلسلة وليس لها قيمة افتراضية.
+from_: يستخدم هذا الخيار لتمثيل الحد الأدنى للقيمة.
+ضبط : يستخدم هذا الخيار للتحكم في كيفية ضبط النص: CENTER أو LEFT أو RIGHT.
+الإغاثة: يستخدم هذا الخيار لتمثيل نوع الحد ويتم تعيين قيمته الافتراضية على SUNKEN.
+تكرار التباطؤ: يُستخدم هذا الخيار للتحكم في التكرار التلقائي للزر وتكون قيمته الافتراضية بالمللي ثانية.
+تكرار الفترات: هذا الخيار مشابه للتأجيل المتكرر.
+الحالة: يستخدم هذا الخيار لتمثيل حالة الأداة وقيمتها الافتراضية هي NORMAL.
+متغير النص: يستخدم هذا الخيار للتحكم في سلوك نص عنصر واجهة المستخدم.
+إلى: تحديد الحد الأقصى لقيمة عنصر واجهة المستخدم. يتم تحديد الآخر بواسطة from_ option.
+التحقق من الصحة: يُستخدم هذا الخيار للتحكم في كيفية التحقق من قيمة عنصر واجهة المستخدم.
+validatecommand: يرتبط هذا الخيار بوظيفة رد الاتصال التي تُستخدم للتحقق من محتوى عنصر واجهة المستخدم.
+القيم: يستخدم هذا الخيار لتمثيل المجموعة التي تحتوي على قيم عنصر واجهة المستخدم هذا.
+vcmd: هذا الخيار مماثل لأمر التحقق من الصحة.
+العرض: يستخدم هذا الخيار لتمثيل عرض القطعة.
+التفاف: هذا الخيار يلتف لأعلى ولأسفل زر Spinbox.
+أمر xscroll: يتم تعيين هذه الخيارات على طريقة set () لشريط التمرير لجعل عنصر واجهة المستخدم هذا قابل للتمرير أفقيًا.
+الأساليب:
+الأساليب المستخدمة في هذه الأدوات هي كما يلي:
+
+حذف (startindex، endindex): تستخدم هذه الطريقة لحذف الأحرف الموجودة في النطاق المحدد.
+get (startindex، endindex): تُستخدم هذه الطريقة للحصول على الأحرف الموجودة في النطاق المحدد.
+تحديد (س ، ص): تُستخدم هذه الطريقة لتحديد عنصر عنصر واجهة المستخدم ضمن النطاق المحدد.
+الفهرس (الفهرس): تُستخدم هذه الطريقة للحصول على القيمة المطلقة للفهرس المحدد.
+إدراج (فهرس ، سلسلة): تستخدم هذه الطريقة لإدراج السلسلة في الفهرس المحدد.
+استدعاء (عنصر): تُستخدم هذه الطريقة لاستدعاء رد النداء المرتبط بالقطعة.
+مثال:
+
+from tkinter import *
+  
+root = Tk()
+root.geometry("300x200")
+  
+w = Label(root, text ='GeeksForGeeks', font = "50") 
+w.pack()
+  
+sp = Spinbox(root, from_= 0, to = 20)
+sp.pack()
+  
+root.mainloop() 
+انتاج:
+
+
+>>>>>>>>>>>>>>>>>
+عنصر واجهة مستخدم Progressbar في Tkinter | بايثون
+مستوى الصعوبة: سهل
+تاريخ التحديث الأخير: 01 مايو 2019
+الغرض من هذه الأداة هو طمأنة المستخدم بحدوث شيء ما. يمكن أن تعمل في أحد وضعين -
+في وضع التحديد ، تُظهر الأداة مؤشرًا ينتقل من البداية إلى النهاية تحت تحكم البرنامج.
+في الوضع غير المحدد ، يتم تحريك الأداة بحيث يعتقد المستخدم أن شيئًا ما قيد التقدم. في هذا الوضع ، يرتد المؤشر ذهابًا وإيابًا بين نهايات الأداة.
+
+بناء الجملة:
+
+widget_object = شريط التقدم (الأصل ، ** خيارات)
+ 
+كود # 1 في وضع التحديد
+
+# importing tkinter module
+from tkinter import * from tkinter.ttk import *
+  
+# creating tkinter window
+root = Tk()
+  
+# Progress bar widget
+progress = Progressbar(root, orient = HORIZONTAL,
+              length = 100, mode = 'determinate')
+  
+# Function responsible for the updation
+# of the progress bar value
+def bar():
+    import time
+    progress['value'] = 20
+    root.update_idletasks()
+    time.sleep(1)
+  
+    progress['value'] = 40
+    root.update_idletasks()
+    time.sleep(1)
+  
+    progress['value'] = 50
+    root.update_idletasks()
+    time.sleep(1)
+  
+    progress['value'] = 60
+    root.update_idletasks()
+    time.sleep(1)
+  
+    progress['value'] = 80
+    root.update_idletasks()
+    time.sleep(1)
+    progress['value'] = 100
+  
+progress.pack(pady = 10)
+  
+# This button will initialize
+# the progress bar
+Button(root, text = 'Start', command = bar).pack(pady = 10)
+  
+# infinite loop
+mainloop()
+انتاج:
+
+مشغل فديوهات
+
+00:00
+00:09
+
+
+
+ 
+كود # 2: في وضع غير محدد
+# importing tkinter module
+from tkinter import * from tkinter.ttk import *
+  
+# creating tkinter window
+root = Tk()
+  
+# Progress bar widget
+progress = Progressbar(root, orient = HORIZONTAL,
+            length = 100, mode = 'indeterminate')
+  
+# Function responsible for the updation
+# of the progress bar value
+def bar():
+    import time
+    progress['value'] = 20
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 40
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 50
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 60
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 80
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 100
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 80
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 60
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 50
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 40
+    root.update_idletasks()
+    time.sleep(0.5)
+  
+    progress['value'] = 20
+    root.update_idletasks()
+    time.sleep(0.5)
+    progress['value'] = 0
+      
+  
+progress.pack(pady = 10)
+  
+# This button will initialize
+# the progress bar
+Button(root, text = 'Start', command = bar).pack(pady = 10)
+  
+# infinite loop
+mainloop()
+انتاج:
+
+مشغل فديوهات
+
+00:00
+00:12
+
+
+
+>>>>>>>>>>>>>>>>>
+شريط التمرير Python-Tkinter
+آخر تحديث: 26 مارس 2020
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، Tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع Tkinter هي الطريقة الأسرع والأسهل لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام Tkinter مهمة سهلة.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+أداة شريط التمرير
+يتم استخدام أداة شريط التمرير للتمرير لأسفل المحتوى. يمكننا أيضًا إنشاء أشرطة التمرير الأفقية لعنصر واجهة المستخدم Entry.
+
+بناء الجملة:
+يرد أدناه بناء الجملة لاستخدام أداة شريط التمرير.
+
+w = شريط التمرير (رئيسي ، خيارات)
+حدود:
+
+رئيسي : تُستخدم هذه المعلمة لتمثيل النافذة الأصلية.
+الخيارات : هناك العديد من الخيارات المتاحة ويمكن استخدامها كأزواج مفتاح - قيمة مفصولة بفواصل.
+الخيارات:
+فيما يلي شائعة الاستخدام يمكن استخدام الخيار مع هذه الأداة: -
+
+activebackground : يُستخدم هذا الخيار لتمثيل لون خلفية الأداة عندما يكون التركيز عليها.
+bg : يُستخدم هذا الخيار لتمثيل لون خلفية الأداة.
+bd : يُستخدم هذا الخيار لتمثيل عرض حدود عنصر واجهة المستخدم.
+الأمر : يمكن ضبط هذا الخيار على الإجراء المرتبط بالقائمة التي يمكن استدعاؤها في كل مرة يتم فيها نقل شريط التمرير.
+المؤشر : في هذا الخيار ، يتم تغيير مؤشر الماوس إلى نوع المؤشر المعين على هذا الخيار والذي يمكن أن يكون سهمًا ، أو نقطة ، إلخ.
+elementborderwidth : يُستخدم هذا الخيار لتمثيل عرض الحد حول رؤوس الأسهم وشريط التمرير. القيمة الافتراضية هي -1.
+Highlightbackground : يستخدم هذا الخيار لتركيز Highlighcolor عندما لا يكون التركيز على عنصر واجهة المستخدم.
+highlighcolor : يستخدم هذا الخيار لتركيز Highlighcolor عندما يكون التركيز على عنصر واجهة المستخدم.
+سمك التظليل : يستخدم هذا الخيار لتمثيل سمك إبراز التركيز.
+Jump : يستخدم هذا الخيار للتحكم في سلوك قفزة التمرير. إذا تم ضبطه على 1 ، فسيتم استدعاء رد الاتصال عندما يحرر المستخدم زر الماوس.
+الاتجاه : يمكن ضبط هذا الخيار على أفقي أو عمودي حسب اتجاه شريط التمرير.
+تكرار التباطؤ : يخبر هذا الخيار المدة التي سيتم الضغط على الزر خلالها قبل أن يبدأ شريط التمرير في التحرك في هذا الاتجاه بشكل متكرر. الافتراضي هو 300 مللي ثانية.
+تكرار الفاصل: القيمة الافتراضية لفترة التكرار هي 100.
+takefocus : يمكنك جدولة التركيز من خلال أداة شريط التمرير
+troughcolor : يستخدم هذا الخيار لتمثيل لون الحوض الصغير.
+العرض : يستخدم هذا الخيار لتمثيل عرض شريط التمرير.
+الأساليب:
+الأساليب المستخدمة في هذه الأدوات هي كما يلي:
+
+get () : تُستخدم هذه الطريقة لإرجاع الرقمين a و b اللذين يمثلان الموضع الحالي لشريط التمرير.
+مجموعة (أولًا ، أخيرًا) : تُستخدم هذه الطريقة لتوصيل شريط التمرير بعنصر واجهة المستخدم الآخر. الأمر yscroll أو الأمر xscroll لعنصر واجهة المستخدم الآخر لهذه الطريقة.
+مثال:
+
+from tkinter import *
+  
+root = Tk()
+root.geometry("150x200")
+   
+w = Label(root, text ='GeeksForGeeks',
+          font = "50") 
+  
+w.pack()
+   
+scroll_bar = Scrollbar(root)
+  
+scroll_bar.pack( side = RIGHT,
+                fill = Y )
+   
+mylist = Listbox(root, 
+                 yscrollcommand = scroll_bar.set )
+   
+for line in range(1, 26):
+    mylist.insert(END, "Geeks " + str(line))
+  
+mylist.pack( side = LEFT, fill = BOTH )
+  
+scroll_bar.config( command = mylist.yview )
+   
+root.mainloop()
+
+
+>>>>>>>>>>>>>>>>>
+
+Python Tkinter - أداة النص ScrolledText
+مستوى الصعوبة: صعب
+آخر تحديث: 21 إبريل 2020
+Tkinter هي مكتبة بيثون قياسية مضمنة. بمساعدة Tkinter ، يمكن إنشاء العديد من تطبيقات واجهة المستخدم الرسومية بسهولة. هناك أنواع مختلفة من الأدوات المصغّرة المتوفرة في Tkinter مثل الزر والإطار والتسمية والقائمة والنص الذي تم تمريره والقماش وغيرها الكثير. عنصر واجهة المستخدم هو عنصر يوفر عناصر تحكم متنوعة. عنصر واجهة مستخدم ScrolledText هو عنصر واجهة مستخدم للنص مع شريط تمرير. توفر الوحدة النمطية tkinter.scrolledtextأداة النص جنبًا إلى جنب مع شريط التمرير. تساعد هذه الأداة المستخدم على إدخال أسطر متعددة من النص بسهولة. بدلاً من إضافة شريط التمرير إلى عنصر واجهة النص ، يمكننا الاستفادة من عنصر واجهة مستخدم نص تم تمريره يساعد في إدخال أي عدد من سطور النص.
+
+مثال 1: كود Python يعرض عنصر واجهة مستخدم scrolledText.
+
+# Python program demonstrating
+# ScrolledText widget in tkinter
+  
+import tkinter as tk
+from tkinter import ttk
+from tkinter import scrolledtext
+  
+# Creating tkinter main window
+win = tk.Tk()
+win.title("ScrolledText Widget")
+  
+# Title Label
+ttk.Label(win, 
+          text = "ScrolledText Widget Example",
+          font = ("Times New Roman", 15), 
+          background = 'green', 
+          foreground = "white").grid(column = 0,
+                                     row = 0)
+  
+# Creating scrolled text 
+# area widget
+text_area = scrolledtext.ScrolledText(win, 
+                                      wrap = tk.WORD, 
+                                      width = 40, 
+                                      height = 10, 
+                                      font = ("Times New Roman",
+                                              15))
+  
+text_area.grid(column = 0, pady = 10, padx = 10)
+  
+# Placing cursor in the text area
+text_area.focus()
+win.mainloop()
+انتاج :
+عنصر واجهة مستخدم نص تمريره
+
+مثال 2: أداة ScrolledText تجعل نص tkinter للقراءة فقط.
+
+# Importing required modules
+  
+import tkinter as tk
+import tkinter.scrolledtext as st
+  
+# Creating tkinter window
+win = tk.Tk()
+win.title("ScrolledText Widget")
+  
+# Title Label
+tk.Label(win, 
+         text = "ScrolledText Widget Example", 
+         font = ("Times New Roman", 15), 
+         background = 'green', 
+         foreground = "white").grid(column = 0,
+                                    row = 0)
+  
+# Creating scrolled text area
+# widget with Read only by
+# disabling the state
+text_area = st.ScrolledText(win,
+                            width = 30, 
+                            height = 8, 
+                            font = ("Times New Roman",
+                                    15))
+  
+text_area.grid(column = 0, pady = 10, padx = 10)
+  
+# Inserting Text which is read only
+text_area.insert(tk.INSERT,
+"""\
+This is a scrolledtext widget to make tkinter text read only.
+Hi
+Geeks !!!
+Geeks !!!
+Geeks !!! 
+Geeks !!!
+Geeks !!!
+Geeks !!!
+Geeks !!!
+""")
+  
+# Making the text read only
+text_area.configure(state ='disabled')
+win.mainloop()
+انتاج :
+scrolledtext_widget
+
+في المثال الأول ، كما ترى المؤشر ، يمكن للمستخدم إدخال أي عدد من سطور النص. في المثال الثاني ، يمكن للمستخدم قراءة النص المعروض في مربع النص ولا يمكنه تحرير / إدخال أي سطور من النص. قد نلاحظ أن شريط التمرير يختفي تلقائيًا إذا كان النص الذي أدخله المستخدم أقل من حجم الأداة.
+
+
+>>>>>>>>>>>>>>>>>
+
+Python Tkinter - أداة ListBox
+مستوى الصعوبة: أساسي
+آخر تحديث: 26 مارس 2020
+Tkinter عبارة عن مجموعة أدوات واجهة المستخدم الرسومية المستخدمة في لغة python لإنشاء واجهات رسومية سهلة الاستخدام. Tkinter هو أكثر إطار عمل واجهة المستخدم الرسومية شيوعًا والأكثر أساسية متاحًا في Python. يستخدم Tkinter نهجًا موجهًا للكائنات لإنشاء واجهات رسومية.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+القطعة ListBox
+تُستخدم أداة ListBox لعرض أنواع مختلفة من العناصر. يجب أن تكون هذه العناصر من نفس نوع الخط ولها نفس لون الخط. يجب أن تكون العناصر أيضًا من نوع النص. يمكن للمستخدم تحديد عنصر واحد أو أكثر من القائمة المحددة وفقًا للمتطلبات.
+
+بناء الجملة:
+
+listbox = Listbox (root، bg، fg، bd، height، width، font، ..) 
+معلمات اختيارية
+
+الجذر - نافذة الجذر.
+bg - لون الخلفية
+fg - لون المقدمة
+دينار بحريني - الحدود
+الارتفاع - ارتفاع القطعة.
+العرض - عرض القطعة.
+الخط - نوع خط النص.
+لون التمييز - لون عناصر القائمة عند التركيز.
+أمر yscroll - للتمرير عموديًا.
+أمر xscroll - للتمرير أفقيًا.
+المؤشر - المؤشر الموجود على الأداة والذي يمكن أن يكون سهمًا أو نقطة وما إلى ذلك.
+الطرق الشائعة
+
+yview - يسمح بتمرير عنصر واجهة المستخدم عموديًا.
+xview - يسمح بتمرير عنصر واجهة المستخدم أفقيًا.
+get () - للحصول على عناصر القائمة في نطاق معين.
+تنشيط (فهرس) - لتحديد الخطوط بفهرس محدد.
+الحجم () - إرجاع عدد الأسطر الموجودة.
+حذف (بدء ، أخير) - حذف الأسطر في النطاق المحدد.
+أقرب (ص) - إرجاع مؤشر أقرب خط.
+curseselection () - تُرجع مجموعة لجميع أرقام الأسطر التي يتم تحديدها.
+مثال 1:
+
+from tkinter import *
+  
+  
+# create a root window.
+top = Tk()
+  
+# create listbox object
+listbox = Listbox(top, height = 10, 
+                  width = 15, 
+                  bg = "grey",
+                  activestyle = 'dotbox', 
+                  font = "Helvetica",
+                  fg = "yellow")
+  
+# Define the size of the window.
+top.geometry("300x250")  
+  
+# Define a label for the list.  
+label = Label(top, text = " FOOD ITEMS") 
+  
+# insert elements by their
+# index and names.
+listbox.insert(1, "Nachos")
+listbox.insert(2, "Sandwich")
+listbox.insert(3, "Burger")
+listbox.insert(4, "Pizza")
+listbox.insert(5, "Burrito")
+  
+# pack the widgets
+label.pack()
+listbox.pack()
+  
+  
+# Display untill User 
+# exits themselves.
+top.mainloop()
+مثال الإخراج
+python-tkinter-listbox
+2: دعنا نحذف العناصر من مربع القائمة الذي تم إنشاؤه أعلاه
+
+# Delete Items from the list
+#  by specifying the index.
+listbox.delete(2)
+انتاج |
+
+
+>>>>>>>>>>>>>>>>>
+
+Python Tkinter - أداة الإطار
+مستوى الصعوبة: سهل
+آخر تحديث: ٥ مايو ٢٠٢١
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، تعد tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع tkinter هي أسرع وأسهل طريقة لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام tkinter مهمة سهلة.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+إطار
+الإطار عبارة عن منطقة مستطيلة الشكل على الشاشة. يمكن أيضًا استخدام الإطار كفئة أساسية لتنفيذ عناصر واجهة تعامل معقدة. يتم استخدامه لتنظيم مجموعة من الحاجيات.
+
+بناء الجملة:
+يرد أدناه بناء الجملة لاستخدام أداة الإطار.
+
+w = الإطار (رئيسي ، خيارات)
+حدود:
+
+رئيسي : تُستخدم هذه المعلمة لتمثيل النافذة الأصلية.
+الخيارات : هناك العديد من الخيارات المتاحة ويمكن استخدامها كأزواج مفتاح - قيمة مفصولة بفواصل.
+الخيارات:
+فيما يلي شائعة الاستخدام يمكن استخدام الخيار مع هذه الأداة: -
+
+bg: يُستخدم هذا الخيار لتمثيل لون الخلفية العادي المعروض خلف التسمية والمؤشر.
+bd: يستخدم هذا الخيار لتمثيل حجم الحد حول المؤشر والقيمة الافتراضية هي 2 بكسل.
+المؤشر: باستخدام هذا الخيار ، سيتغير مؤشر الماوس إلى هذا النمط عندما يكون فوق الإطار.
+الارتفاع: البعد الرأسي للإطار الجديد.
+لون التمييز: يستخدم هذا الخيار لتمثيل لون تسليط الضوء على التركيز عندما يكون على الإطار التركيز.
+سمك التظليل: يستخدم هذا الخيار لتمثيل لون تسليط الضوء على التركيز عندما لا يحتوي الإطار على تركيز.
+lightbackground: يستخدم هذا الخيار لتمثيل سمك تمييز التركيز ..
+الإغاثة: نوع حدود الإطار. يتم تعيين القيمة الافتراضية الخاصة به على FLAT.
+العرض: يستخدم هذا الخيار لتمثيل عرض الإطار.
+مثال:
+
+from tkinter import * root = Tk()
+root.geometry("300x150")
+  
+w = Label(root, text ='GeeksForGeeks', font = "50") 
+w.pack()
+  
+frame = Frame(root)
+frame.pack()
+  
+bottomframe = Frame(root)
+bottomframe.pack( side = BOTTOM )
+  
+b1_button = Button(frame, text ="Geeks1", fg ="red")
+b1_button.pack( side = LEFT)
+  
+b2_button = Button(frame, text ="Geeks2", fg ="brown")
+b2_button.pack( side = LEFT )
+  
+b3_button = Button(frame, text ="Geeks3", fg ="blue")
+b3_button.pack( side = LEFT )
+  
+b4_button = Button(bottomframe, text ="Geeks4", fg ="green")
+b4_button.pack( side = BOTTOM)
+  
+b5_button = Button(bottomframe, text ="Geeks5", fg ="green")
+b5_button.pack( side = BOTTOM)
+  
+b6_button = Button(bottomframe, text ="Geeks6", fg ="green")
+b6_button.pack( side = BOTTOM)
+  
+root.mainloop()
+انتاج:
+
+>>>>>>>>>>>>>>>>>
+Python Tkinter - مقياس القطعة
+آخر تحديث: ٢٣ ديسمبر ٢٠٢١
+Tkinter عبارة عن مجموعة أدوات واجهة المستخدم الرسومية المستخدمة في لغة python لإنشاء واجهات رسومية سهلة الاستخدام. Tkinter هو أكثر إطار عمل واجهة المستخدم الرسومية شيوعًا والأكثر أساسية متاحًا في Python. يستخدم Tkinter نهجًا موجهًا للكائنات لإنشاء واجهات رسومية.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+القطعة مقياس
+يتم استخدام عنصر واجهة المستخدم Scale متى أردنا تحديد قيمة معينة من مجموعة من القيم. إنه يوفر شريطًا منزلقًا يمكننا من خلاله تحديد القيم عن طريق الانزلاق من اليسار إلى اليمين أو من أعلى إلى أسفل اعتمادًا على اتجاه شريطنا المنزلق.
+
+بناء الجملة:
+
+S = Scale (root، bg، fg، bd، command، orient، from_، to، ..) 
+معلمات اختيارية
+
+الجذر - نافذة الجذر.
+bg - لون الخلفية
+fg - لون المقدمة
+دينار بحريني - الحدود
+الاتجاه - الاتجاه (عمودي أو أفقي)
+from_ - قيمة البداية
+إلى - قيمة النهاية
+troughcolor - ضبط لون الحوض الصغير.
+الحالة - يقرر ما إذا كانت الأداة ستكون مستجيبة أم غير مستجيبة.
+sliderlength - يحدد طول شريط التمرير.
+التسمية - لعرض التسمية في القطعة.
+lightbackground - لون التركيز عندما لا يكون عنصر واجهة المستخدم مركزة.
+المؤشر - المؤشر الموجود على الأداة والذي يمكن أن يكون سهمًا أو دائرة أو نقطة وما إلى ذلك.
+طرق
+
+مجموعة (قيمة) - اضبط قيمة المقياس.
+get () - احصل على قيمة المقياس.
+مثال 1: إنشاء شريط أفقي
+
+# Python program to demonstrate
+# scale widget
+  
+from tkinter import * 
+  
+  
+root = Tk()  
+root.geometry("400x300") 
+  
+v1 = DoubleVar()
+  
+def show1():  
+      
+    sel = "Horizontal Scale Value = " + str(v1.get())
+    l1.config(text = sel, font =("Courier", 14))  
+  
+  
+s1 = Scale( root, variable = v1, 
+           from_ = 1, to = 100, 
+           orient = HORIZONTAL)   
+  
+l3 = Label(root, text = "Horizontal Scaler")
+  
+b1 = Button(root, text ="Display Horizontal", 
+            command = show1, 
+            bg = "yellow")  
+  
+l1 = Label(root)
+  
+  
+s1.pack(anchor = CENTER) 
+l3.pack()
+b1.pack(anchor = CENTER)
+l1.pack() 
+  
+root.mainloop()
+انتاج:
+
+مقياس بيثون تكينتير
+
+مثال 2: إنشاء شريط تمرير عمودي
+
+from tkinter import *
+  
+root = Tk()  
+root.geometry("400x300") 
+v2 = DoubleVar()
+  
+def show2():
+      
+    sel = "Vertical Scale Value = " + str(v2.get()) 
+    l2.config(text = sel, font =("Courier", 14))
+  
+s2 = Scale( root, variable = v2,
+           from_ = 50, to = 1,
+           orient = VERTICAL) 
+  
+l4 = Label(root, text = "Vertical Scaler")
+  
+b2 = Button(root, text ="Display Vertical",
+            command = show2,
+            bg = "purple", 
+            fg = "white")
+  
+l2 = Label(root)
+  
+s2.pack(anchor = CENTER) 
+l4.pack()
+b2.pack()
+l2.pack()
+  
+root.mainloop()
+انتاج:
+
+
+
+
+>>>>>>>>>>>>>>>>>
+
+استعراض الشجرة الهرمي في تطبيق Python GUI
+آخر تحديث: 18 كانون الثاني (يناير) 2021
+يستخدم Python تطبيقات واجهة المستخدم الرسومية المختلفة التي تفيد المستخدمين أثناء التفاعل مع التطبيقات التي يستخدمونها. هناك ثلاث واجهات رسومية (GUI) يستخدمها Python وهي Tkinter و wxPython و PyQt . كل هذه يمكن أن تعمل مع windows و Linux و mac-OS. ومع ذلك ، تحتوي تطبيقات واجهة المستخدم الرسومية هذه على العديد من عناصر واجهة المستخدم ، أي عناصر تحكم مفيدة لتفاعل المستخدم مع التطبيق. بعض عناصر واجهة المستخدم عبارة عن أزرار ، ومربعات قائمة ، وشريط تمرير ، ومعاينة للشجرة ، وما إلى ذلك. 
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+ 
+
+الحاجيات Treeview
+هذه الأداة مفيدة في التصور والسماح بالتنقل عبر تسلسل هرمي للعناصر. يمكنه عرض أكثر من ميزة لكل عنصر في التسلسل الهرمي. يمكنه إنشاء عرض شجرة كواجهة مستخدم كما هو الحال في مستكشف Windows. لذلك ، سنستخدم هنا Tkinter من أجل إنشاء استعراض شجرة هرمي في تطبيق Python GUI. 
+دعنا نرى مثالاً على إنشاء معاينة هرمية للشجرة في تطبيق Python GUI . 
+
+ستبدو واجهة المستخدم الرسومية كما يلي:
+
+
+
+مثال: 
+ 
+
+# Python program to illustrate the usage
+# of hierarchical treeview in python GUI
+# application using tkinter
+ 
+# Importing tkinter
+from tkinter import * 
+ 
+# Importing ttk from tkinter
+from tkinter import ttk 
+ 
+# Creating app window
+app = Tk() 
+ 
+# Defining title of the app
+app.title("GUI Application of Python") 
+ 
+# Defining label of the app and calling a geometry
+# management method i.e, pack in order to organize
+# widgets in form of blocks before locating them
+# in the parent widget
+ttk.Label(app, text ="Treeview(hierarchical)").pack()
+ 
+# Creating treeview window
+treeview = ttk.Treeview(app) 
+ 
+# Calling pack method on the treeview
+treeview.pack() 
+ 
+# Inserting items to the treeview
+# Inserting parent
+treeview.insert('', '0', 'item1',
+                text ='GeeksforGeeks')
+ 
+# Inserting child
+treeview.insert('', '1', 'item2',
+                text ='Computer Science')
+treeview.insert('', '2', 'item3',
+                text ='GATE papers')
+treeview.insert('', 'end', 'item4',
+                text ='Programming Languages')
+ 
+# Inserting more than one attribute of an item
+treeview.insert('item2', 'end', 'Algorithm',
+                text ='Algorithm') 
+treeview.insert('item2', 'end', 'Data structure',
+                text ='Data structure')
+treeview.insert('item3', 'end', '2018 paper',
+                text ='2018 paper') 
+treeview.insert('item3', 'end', '2019 paper',
+                text ='2019 paper')
+treeview.insert('item4', 'end', 'Python',
+                text ='Python')
+treeview.insert('item4', 'end', 'Java',
+                text ='Java')
+ 
+# Placing each child items in parent widget
+treeview.move('item2', 'item1', 'end') 
+treeview.move('item3', 'item1', 'end')
+treeview.move('item4', 'item1', 'end')
+ 
+# Calling main() 
+app.mainloop()
+انتاج: 
+
+مشغل فديوهات
+
+00:00
+00:18
+
+
+في الإخراج أعلاه ، يتم إنشاء استعراض شجرة هرمي. حيث ، GeeksforGeeks هو الوالد مع علوم الكمبيوتر وأوراق GATE ولغات البرمجة كطفل لها. ولكل طفل سماته الخاصة المرتبطة به. أخيرًا ، يتم استدعاء طريقة move () هنا لتوصيل جميع الأطفال بالشجرة الأم.
+ 
+
+
+>>>>>>>>>>>>>>>>>
+
+Python-Tkinter Treeview شريط التمرير
+مستوى الصعوبة: أساسي
+آخر تحديث: 15 أكتوبر 2021
+لدى Python العديد من الخيارات لإنشاء واجهة المستخدم الرسومية و python tkinter أحدها. إنها مكتبة GUI القياسية لـ Python ، والتي تساعد في جعل تطبيقات GUI بسهولة. يوفر واجهة فعالة موجهة للكائنات لمجموعة أدوات tk GUI. كما أن لديها عناصر تحكم متعددة تسمى عناصر واجهة المستخدم مثل مربعات النص وأشرطة التمرير والأزرار وما إلى ذلك. علاوة على ذلك ، فإن Tkinter لديها بعض أساليب إدارة الهندسة وهي الحزمة () والشبكة () والمكان () والتي تساعد في تنظيم الأدوات.
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+ 
+
+شريط التمرير Treeview
+عندما يستخدم شريط التمرير عناصر واجهة مستخدم treeview ، فإن هذا النوع من شريط التمرير يسمى شريط تمرير treeview . حيث تكون أداة استعراض الشجرة مفيدة في عرض أكثر من ميزة واحدة لكل عنصر مدرج في الشجرة على الجانب الأيمن من الشجرة في شكل أعمدة. ومع ذلك ، يمكن تنفيذه باستخدام tkinter في Python بمساعدة بعض عناصر واجهة المستخدم وطرق إدارة الهندسة التي يدعمها tkinter. 
+يوضح المثال أدناه استخدام شريط التمرير Treeview باستخدام Python-tkinter: 
+مثال 1: 
+ 
+
+# Python program to illustrate the usage of
+# treeview scrollbars using tkinter
+ 
+ 
+from tkinter import ttk
+import tkinter as tk
+ 
+# Creating tkinter window
+window = tk.Tk()
+window.resizable(width = 1, height = 1)
+ 
+# Using treeview widget
+treev = ttk.Treeview(window, selectmode ='browse')
+ 
+# Calling pack method w.r.to treeview
+treev.pack(side ='right')
+ 
+# Constructing vertical scrollbar
+# with treeview
+verscrlbar = ttk.Scrollbar(window,
+                           orient ="vertical",
+                           command = treev.yview)
+ 
+# Calling pack method w.r.to vertical
+# scrollbar
+verscrlbar.pack(side ='right', fill ='x')
+ 
+# Configuring treeview
+treev.configure(xscrollcommand = verscrlbar.set)
+ 
+# Defining number of columns
+treev["columns"] = ("1", "2", "3")
+ 
+# Defining heading
+treev['show'] = 'headings'
+ 
+# Assigning the width and anchor to  the
+# respective columns
+treev.column("1", width = 90, anchor ='c')
+treev.column("2", width = 90, anchor ='se')
+treev.column("3", width = 90, anchor ='se')
+ 
+# Assigning the heading names to the
+# respective columns
+treev.heading("1", text ="Name")
+treev.heading("2", text ="Sex")
+treev.heading("3", text ="Age")
+ 
+# Inserting the items and their features to the
+# columns built
+treev.insert("", 'end', text ="L1",
+             values =("Nidhi", "F", "25"))
+treev.insert("", 'end', text ="L2",
+             values =("Nisha", "F", "23"))
+treev.insert("", 'end', text ="L3",
+             values =("Preeti", "F", "27"))
+treev.insert("", 'end', text ="L4",
+             values =("Rahul", "M", "20"))
+treev.insert("", 'end', text ="L5",
+             values =("Sonu", "F", "18"))
+treev.insert("", 'end', text ="L6",
+             values =("Rohit", "M", "19"))
+treev.insert("", 'end', text ="L7",
+             values =("Geeta", "F", "25"))
+treev.insert("", 'end', text ="L8",
+             values =("Ankit", "M", "22"))
+treev.insert("", 'end', text ="L10",
+             values =("Mukul", "F", "25"))
+treev.insert("", 'end', text ="L11",
+             values =("Mohit", "M", "16"))
+treev.insert("", 'end', text ="L12",
+             values =("Vivek", "M", "22"))
+treev.insert("", 'end', text ="L13",
+             values =("Suman", "F", "30"))
+ 
+# Calling mainloop
+window.mainloop()
+انتاج:
+ 
+
+مشغل فديوهات
+
+00:00
+00:14
+
+
+في البرنامج أعلاه ، استخدمنا طريقة pack () لطرق إدارة الهندسة. وقد قمنا ببناء شريط التمرير العمودي فقط وفقًا لمتطلبات الكود ولكن يمكنك إنشاء كلا الشريطين وفقًا لمتطلباتك. علاوة على ذلك ، يتم استخدام المراسي هنا لتحديد مواضع النص. ومع ذلك ، يمكنك أيضًا استخدام طرق إدارة الهندسة الأخرى من أجل إنشاء شريط التمرير treeview.
+ 
+
+
+>>>>>>>>>>>>>>>>>
+Python Tkinter - أداة المستوى الأعلى
+مستوى الصعوبة: أساسي
+آخر تحديث: 11 أغسطس 2021
+Tkinter عبارة عن مجموعة أدوات واجهة المستخدم الرسومية المستخدمة في Python لإنشاء واجهات رسومية سهلة الاستخدام. Tkinter هو إطار العمل الأكثر استخدامًا والأكثر أساسية في Python. يستخدم Tkinter نهجًا موجهًا للكائنات لإنشاء واجهات رسومية.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+أداة المستوى الأعلى
+يتم استخدام عنصر واجهة مستخدم Toplevel لإنشاء نافذة أعلى جميع النوافذ الأخرى. تُستخدم أداة المستوى الأعلى لتوفير بعض المعلومات الإضافية للمستخدم وأيضًا عندما يتعامل برنامجنا مع أكثر من تطبيق واحد. يتم تنظيم هذه النوافذ وإدارتها بشكل مباشر بواسطة Window Manager ولا تحتاج إلى أي نافذة رئيسية مرتبطة بها في كل مرة.
+
+بناء الجملة:  
+
+toplevel = المستوى العلوي (الجذر ، bg ، fg ، bd ، الارتفاع ، العرض ، الخط ، ..)
+معلمات اختيارية  
+
+الجذر = نافذة الجذر (اختياري) 
+bg = لون الخلفية 
+fg = لون المقدمة 
+bd = الحدود 
+الارتفاع = ارتفاع القطعة. 
+العرض = عرض القطعة. 
+font = نوع خط النص. 
+cursor = المؤشر الذي يظهر على الأداة والذي يمكن أن يكون سهمًا أو نقطة وما إلى ذلك. 
+الطرق الشائعة  
+
+iconify يحول النوافذ إلى أيقونة. 
+deiconify يعيد الرمز إلى النافذة. 
+تعيد الحالة الحالة الحالية للنافذة. 
+سحب يزيل النافذة من الشاشة. 
+العنوان يحدد عنوان النافذة. 
+يُرجع frame معرف نافذة خاص بالنظام. 
+مثال 1:  
+
+from tkinter import *
+ 
+ 
+root = Tk()
+root.geometry("200x300")
+root.title("main")
+ 
+l = Label(root, text = "This is root window")
+ 
+top = Toplevel()
+top.geometry("180x100")
+top.title("toplevel")
+l2 = Label(top, text = "This is toplevel window")
+ 
+l.pack()
+l2.pack()
+ 
+top.mainloop()
+انتاج |
+
+python-tkinter-toplevel
+
+مثال 2: إنشاء مستويات عالية متعددة فوق بعضها البعض 
+
+from tkinter import *
+ 
+ 
+# Create the root window
+# with specified size and title
+root = Tk() 
+root.title("Root Window") 
+root.geometry("450x300") 
+ 
+# Create label for root window
+label1 = Label(root, text = "This is the root window")
+   
+# define a function for 2nd toplevel
+# window which is not associated with
+# any parent window
+def open_Toplevel2(): 
+     
+    # Create widget
+    top2 = Toplevel()
+     
+    # define title for window
+    top2.title("Toplevel2")
+     
+    # specify size
+    top2.geometry("200x100")
+     
+    # Create label
+    label = Label(top2,
+                  text = "This is a Toplevel2 window")
+     
+    # Create exit button.
+    button = Button(top2, text = "Exit",
+                    command = top2.destroy)
+     
+    label.pack()
+    button.pack()
+     
+    # Display until closed manually.
+    top2.mainloop()
+      
+# define a function for 1st toplevel
+# which is associated with root window.
+def open_Toplevel1(): 
+     
+    # Create widget
+    top1 = Toplevel(root)
+     
+    # Define title for window
+    top1.title("Toplevel1")
+     
+    # specify size
+    top1.geometry("200x200")
+     
+    # Create label
+    label = Label(top1,
+                  text = "This is a Toplevel1 window")
+     
+    # Create Exit button
+    button1 = Button(top1, text = "Exit",
+                     command = top1.destroy)
+     
+    # create button to open toplevel2
+    button2 = Button(top1, text = "open toplevel2",
+                     command = open_Toplevel2)
+     
+    label.pack()
+    button2.pack()
+    button1.pack()
+     
+    # Display until closed manually
+    top1.mainloop()
+ 
+# Create button to open toplevel1
+button = Button(root, text = "open toplevel1",
+                command = open_Toplevel1)
+label1.pack()
+ 
+# position the button
+button.place(x = 155, y = 50)
+   
+# Display until closed manually
+root.mainloop()
+انتاج | 
+
+python-tkinter-toplevel
+
+>>>>>>>>>>>>>>>>>
+بايثون | دالة askopenfile () في Tkinter
+مستوى الصعوبة: متوسط
+آخر تحديث: 29 تشرين الثاني (نوفمبر) 2021
+أثناء العمل باستخدام واجهة المستخدم الرسومية ، قد يحتاج المرء إلى فتح الملفات وقراءة البيانات منها أو قد يتطلب كتابة البيانات في هذا الملف المحدد. يمكن للمرء تحقيق ذلك بمساعدة open()الوظيفة (مدمج بيثون) ولكن قد لا يتمكن المرء من تحديد أي ملف مطلوب ما لم يوفر مسارًا لهذا الملف المعين في الكود.
+بمساعدة واجهة المستخدم الرسومية ، قد لا تحتاج إلى تحديد مسار أي ملف ولكن يمكنك فتح ملف مباشرة وقراءة محتواه.
+
+من أجل استخدام وظيفة askopenfile () ، قد تحتاج إلى اتباع الخطوات التالية:
+
+-> استيراد tkinter
+-> من tkinter.filedialog import askopenfile ## الآن يمكنك استخدام هذه الوظيفة
+-> file = askopeenfile (mode = 'r'، filetypes = [('أي اسم تريد عرضه' ، 'امتداد لنوع الملف ')])
+
+يتعين علينا تحديد الوضع الذي تريد فتح الملف فيه كما في المقتطف أعلاه ، سيؤدي ذلك إلى فتح ملف في وضع القراءة.
+
+
+# importing tkinter and tkinter.ttk
+# and all their functions and classes
+from tkinter import * 
+from tkinter.ttk import *
+  
+# importing askopenfile function
+# from class filedialog
+from tkinter.filedialog import askopenfile
+  
+root = Tk()
+root.geometry('200x100')
+  
+# This function will be used to open
+# file in read mode and only Python files
+# will be opened
+def open_file():
+    file = askopenfile(mode ='r', filetypes =[('Python Files', '*.py')])
+    if file is not None:
+        content = file.read()
+        print(content)
+  
+btn = Button(root, text ='Open', command = lambda:open_file())
+btn.pack(side = TOP, pady = 10)
+  
+mainloop()
+انتاج:
+دالة askopenfile () في Tkinter
+
+المحتوى المطبوع للملف المحدد -
+المحتوى المطبوع للملف المحدد
+
+مقارنة بين محتوى الملف الأصلي والمحتوى المطبوع -
+مقارنة بين محتوى الملف الأصلي والمحتوى المطبوع
+
+ملاحظة: في الكود أعلاه فقط .py(ملفات python) سيتم فتح ملفات الأنواع. لفتح نوع محدد من الملفات ، يتعين على المرء أن يذكرها في خيار أنواع الملفات مع امتدادها كما هو مذكور في الكود أعلاه.
+
+
+>>>>>>>>>
+
+بايثون | asksaveasfile () في Tkinter
+مستوى الصعوبة: سهل
+آخر تحديث: 29 تشرين الثاني (نوفمبر) 2021
+توفر Python مجموعة متنوعة من الوحدات التي يمكن من خلالها تطوير تطبيقات GUI (واجهة المستخدم الرسومية). Tkinter هي واحدة من أسهل وأسرع طريقة لتطوير تطبيقات واجهة المستخدم الرسومية.
+
+أثناء العمل مع الملفات ، قد يحتاج المرء إلى فتح الملفات والقيام بعمليات على الملفات وبعد ذلك لحفظ الملف. asksaveasfile()هي الوظيفة المستخدمة لحفظ ملف المستخدم (يمكن تعيين الامتداد صراحة أو يمكنك تعيين الامتدادات الافتراضية أيضًا). هذه الوظيفة تندرج تحت . class filedialog
+
+يوجد أدناه الرمز:
+
+# importing all files  from tkinter
+from tkinter import * 
+from tkinter import ttk
+  
+# import only asksaveasfile from filedialog
+# which is used to save file in any extension
+from tkinter.filedialog import asksaveasfile
+  
+root = Tk()
+root.geometry('200x150')
+  
+# function to call when user press
+# the save button, a filedialog will
+# open and ask to save file
+def save():
+    files = [('All Files', '*.*'), 
+             ('Python Files', '*.py'),
+             ('Text Document', '*.txt')]
+    file = asksaveasfile(filetypes = files, defaultextension = files)
+  
+btn = ttk.Button(root, text = 'Save', command = lambda : save())
+btn.pack(side = TOP, pady = 20)
+  
+mainloop()
+الإخراج رقم 1: الدليل قبل حفظ أي ملف (المجلد فارغ في البداية)
+asksaveasfile () في Tkinter
+
+الإخراج رقم 2: مربع الحوار عندما يضغط المستخدم على زر حفظ (يتم فتح مربع الحوار لحفظ الملف). قد ترى في ملف Python الناتج كما هو محدد افتراضيًا.
+مربع الحوار عندما يضغط المستخدم على زر الحفظ
+
+المخرج رقم 3: الدليل بعد حفظ ملفين من ملفات Python (يمكن أيضًا تغيير نوع الملف)
+
+
+<<<<<<<<<<<<<<<<<
+Python - Tkinter Askquestion Dialog
+مستوى الصعوبة: سهل
+آخر تحديث: 21 أكتوبر 2021
+في Python ، توجد مكتبات Serval لواجهة المستخدم الرسومية. Tkinter هو واحد منهم الأكثر فائدة. إنها واجهة قياسية. Tkinter سهل الاستخدام ويوفر وظائف خدمة لبناء تطبيقات فعالة. في كل تطبيق ، نحتاج إلى بعض الرسائل لعرضها مثل "هل تريد الإغلاق" أو إظهار أي تحذير أو معلومات عن شيء ما. لهذا Tkinter توفير مكتبة مثل messagebox . باستخدام مكتبة مربع الرسائل ، يمكننا إظهار معلومات serval ، وخطأ ، وتحذير ، وإلغاء ETC في شكل Message-Box. يحتوي على مربع رسالة مختلف لغرض مختلف. 
+
+showinfo () - لعرض بعض المعلومات المهمة.
+showwarning () - لعرض نوع من التحذير.
+showerror () - لعرض بعض رسائل الخطأ.
+askquestion () - لعرض مربع حوار يطلب خيارين نعم أو لا.
+askokcancel () - لعرض مربع حوار يطلب خيارين OK أو CANCEL.
+askretrycancel () - لعرض مربع حوار يطلب خيارين RETRY أو CANCEL.
+askyesnocancel () - لعرض مربع حوار يطلب ثلاثة خيارات نعم أو لا أو إلغاء.
+بناء جملة وظائف صندوق الرسائل:  
+
+  messagebox.name_of_function (العنوان ، الرسالة ، [، خيارات])
+name_of_function - اسم الوظيفة التي نريد استخدامها.
+العنوان - عنوان صندوق الرسائل.
+الرسالة - الرسالة التي تريد إظهارها في مربع الحوار.
+خيارات - لتكوين الخيارات.
+اسأل سؤالا()
+تُستخدم هذه الوظيفة لطرح الأسئلة على المستخدم. هذا لديه خياران فقط نعم أو لا. 
+تطبيق هذه الوظيفة: 
+
+يمكننا استخدام هذا لسؤال المستخدم عما إذا كان المستخدم يريد المتابعة.
+يمكننا استخدام هذا لسؤال المستخدم عما إذا كان المستخدم يريد الإرسال أم لا.
+بناء الجملة:  
+
+messagebox.askfunction ((العنوان ، الرسالة ، [، خيارات])
+مثال:  
+
+from tkinter import *
+from tkinter import messagebox
+  
+     
+# object of TK()
+main = Tk()
+ 
+# function to use the
+# askquestion() function
+def Submit():
+    messagebox.askquestion("Form",
+                           "Do you want to Submit")
+     
+# setting geometry of window
+# instance
+main.geometry("100x100")
+ 
+# creating Window
+B1 = Button(main, text = "Submit", command = Submit)
+ 
+# Button positioning
+B1.pack()  
+ 
+# infinite loop till close
+main.mainloop() 
+انتاج: 
+
+انتاج
+
+1. استيراد المكتبات 
+لاستخدام وظيفة واجهة المستخدم الرسومية في بايثون ، يتعين علينا استيراد المكتبات. في السطر الأول ، نقوم باستيراد Tkinter ، وفي السطر الثاني نستورد مكتبة messagebox 
+
+من استيراد tkinter *
+من tkinter استيراد messagebox
+2. مثيل النافذة الرئيسية 
+علينا إنشاء مثيل أو كائن للنافذة إلى TK () ؛ Tk () هي إحدى وظائف Tkinter التي تنشئ نافذة يمكن الرجوع إليها من المتغير الرئيسي  
+
+main = Tk ()  
+3. حدد البعد 
+قمنا بتعيين أبعاد النافذة يمكننا ضبطه بطرق مختلفة. في هذا نحن نضعه حسب الوظيفة الهندسية () بالحجم "100X100".  
+
+top.geometry ("100x100")  
+4. تطبيق عنصر واجهة مستخدم ووظيفة أخرى 
+في مثالنا ، نقوم بإنشاء طريقة باسم إرسال واستدعاء askquestion () وإنشاء زر وتعيينه بواسطة وظيفة Pack ()  
+
+def إرسال ():
+   messagebox.askquestion ("النموذج" ، "هل تريد الإرسال")
+
+main.geometry ("100x100")  
+B1 = زر (رئيسي ، نص = "إرسال" ، الأمر = إرسال)
+B1.pack ()  
+5. mainloop () 
+يمكن استخدام هذه الطريقة عندما تكون جميع التعليمات البرمجية جاهزة للتنفيذ ، حيث يتم تشغيل حلقة INFINITE Loop المستخدمة لتشغيل التطبيق. ستفتح نافذة حتى يتم الضغط على زر الإغلاق.
+
+الرموز التي يمكننا استخدامها في الخيارات  
+
+خطأ
+معلومات
+تحذير
+سؤال
+يمكننا تغيير أيقونة مربع الحوار. يعتمد نوع الرمز الذي نريد استخدامه فقط على حاجة التطبيق. لدينا أربعة أيقونات. 
+
+خطأ  
+
+messagebox.function_name (العنوان ، الرسالة ، الرمز = "خطأ")
+مثال-  
+
+
+# illustration of icon - Error
+from tkinter import *
+from tkinter import messagebox
+ 
+main = Tk()
+ 
+def check():
+   messagebox.askquestion("Form",
+                          "Is your name correct?",
+                          icon ='error')
+ 
+main.geometry("100x100")
+B1 = Button(main, text = "check", command = check)
+B1.pack()
+ 
+main.mainloop()
+انتاج:
+
+انتاج
+
+معلومات 
+
+messagebox.function_name (العنوان ، الرسالة ، الرمز = "معلومات")
+مثال-  
+
+
+# illustration of icon - Info
+from tkinter import *
+from tkinter import messagebox
+ 
+main = Tk()
+ 
+def check():
+   messagebox.askquestion("Form",
+                          "do you want to continue",
+                          icon ='info')
+ 
+main.geometry("100x100")
+B1 = Button(main, text = "check", command = check)
+B1.pack()
+ 
+main.mainloop()
+انتاج: 
+
+انتاج
+
+سؤال 
+
+messagebox.function_name (العنوان ، الرسالة ، الرمز = "سؤال")
+مثال-  
+
+
+# illustration of icon - question
+from tkinter import *
+from tkinter import messagebox
+ 
+main = Tk()
+ 
+def check():
+   messagebox.askquestion("Form",
+                          "are you 18+",
+                          icon ='question')
+ 
+main.geometry("100x100")
+B1 = Button(main, text = "check", command = check)
+B1.pack()
+ 
+main.mainloop()
+انتاج: 
+
+انتاج
+
+تحذير  
+
+messagebox.function_name (العنوان ، الرسالة ، الرمز = "تحذير")
+مثال-  
+
+
+# illustration of icon - Warning
+from tkinter import *
+from tkinter import messagebox
+ 
+main = Tk()
+ 
+def check():
+   messagebox.askquestion("Form",
+                          "Gender is empty?",
+                          icon ='warning')
+ 
+main.geometry("100x100")
+B1 = Button(main, text = "check", command = check)
+B1.pack()
+ 
+main.mainloop()
+انتاج: 
+
+
+<<<<<<<<<<<<<<<<<
+Python Tkinter - أداة MessageBox
+مستوى الصعوبة: متوسط
+آخر تحديث: 26 مارس 2020
+تقدم Python خيارات متعددة لتطوير واجهة المستخدم الرسومية (GUI). من بين جميع طرق واجهة المستخدم الرسومية ، تعد tkinter هي الطريقة الأكثر استخدامًا. إنها واجهة Python قياسية لمجموعة أدوات Tk GUI التي يتم شحنها مع Python. Python مع tkinter هي أسرع وأسهل طريقة لإنشاء تطبيقات واجهة المستخدم الرسومية. يعد إنشاء واجهة المستخدم الرسومية باستخدام tkinter مهمة سهلة.
+
+ملاحظة: لمزيد من المعلومات ، راجع Python GUI - tkinter
+
+أداة MessageBox
+Python Tkinter - يتم استخدام أداة MessageBox لعرض مربعات الرسائل في تطبيقات python. تستخدم هذه الوحدة لعرض رسالة باستخدام يوفر عددًا من الوظائف.
+
+بناء الجملة:
+
+messagebox.Function_Name (العنوان ، الرسالة [، الخيارات])
+المعلمات:
+هناك العديد من المعلمات:
+
+Function_Name: تُستخدم هذه المعلمة لتمثيل وظيفة مربع رسالة مناسبة.
+العنوان: هذه المعلمة عبارة عن سلسلة يتم عرضها كعنوان لمربع رسالة.
+message: هذه المعلمة هي السلسلة التي سيتم عرضها كرسالة في مربع الرسالة.
+الخيارات: هناك خياران يمكن استخدامهما وهما:
+افتراضي: يُستخدم هذا الخيار لتحديد الزر الافتراضي مثل إحباط أو إعادة المحاولة أو تجاهل في مربع الرسالة.
+الأصل: يستخدم هذا الخيار لتحديد النافذة التي سيتم عرض مربع الرسالة فوقها.
+Function_Name:
+هناك وظائف أو طرق متاحة في عنصر واجهة مستخدم صندوق الرسائل.
+
+showinfo (): إظهار بعض المعلومات ذات الصلة للمستخدم.
+showwarning (): عرض التحذير للمستخدم.
+showerror (): عرض رسالة الخطأ للمستخدم.
+askquestion (): اطرح سؤالاً ويجب على المستخدم الإجابة بنعم أو لا.
+askokcancel (): قم بتأكيد إجراء المستخدم بخصوص بعض أنشطة التطبيق.
+askyesno (): يمكن للمستخدم الإجابة بنعم أو لا لبعض الإجراءات.
+askretrycancel (): اسأل المستخدم عن القيام بمهمة معينة مرة أخرى أم لا.
+مثال:
+
+from tkinter import * 
+from tkinter import messagebox
+  
+root = Tk()
+root.geometry("300x200")
+  
+w = Label(root, text ='GeeksForGeeks', font = "50") 
+w.pack()
+  
+messagebox.showinfo("showinfo", "Information")
+  
+messagebox.showwarning("showwarning", "Warning")
+  
+messagebox.showerror("showerror", "Error")
+  
+messagebox.askquestion("askquestion", "Are you sure?")
+  
+messagebox.askokcancel("askokcancel", "Want to continue?")
+  
+messagebox.askyesno("askyesno", "Find the value?")
+  
+  
+messagebox.askretrycancel("askretrycancel", "Try again?")  
+  
+root.mainloop() 
+انتاج:
+
+
+
+
+
+
+
+
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | وضع () الأسلوب في تكينتير
+مستوى الصعوبة: سهل
+آخر تحديث: 07 يونيو 2019
+يعد مدير هندسة المكان أبسط من بين مديري الهندسة العامة الثلاثة المتوفرة في Tkinter. يسمح لك بتعيين موضع النافذة وحجمها بشكل صريح ، إما بالقيمة المطلقة أو بالنسبة إلى نافذة أخرى.
+يمكنك الوصول إلى مدير المكانplace() من خلال الطريقة المتاحة لجميع عناصر واجهة المستخدم القياسية.
+
+ليس من الجيد عادة استخدامها place()مع تخطيطات النوافذ والحوارات العادية ؛ إنه ببساطة يتطلب الكثير من العمل لجعل الأشياء تعمل كما ينبغي. استخدم pack()أو grid()المديرين لمثل هذه الأغراض.
+
+بناء الجملة:
+
+widget.place (relx = 0.5 ، الاعتماد = 0.5 ، المرساة = المركز)
+ملاحظة: place() يمكن استخدام الطريقة مع grid()الطريقة وكذلك مع pack()الطريقة.
+
+كود # 1:
+
+# Importing tkinter module
+from tkinter import * from tkinter.ttk import *
+  
+# creating Tk window
+master = Tk()
+  
+# setting geometry of tk window
+master.geometry("200x200")
+  
+# button widget
+b1 = Button(master, text = "Click me !")
+b1.place(relx = 1, x =-2, y = 2, anchor = NE)
+  
+# label widget
+l = Label(master, text = "I'm a Label")
+l.place(anchor = NW)
+  
+# button widget
+b2 = Button(master, text = "GFG")
+b2.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+  
+# infinite loop which is required to
+# run tkinter program infinitely
+# until an interrupt occurs
+mainloop()
+انتاج:
+
+
+عندما نستخدم pack()أو grid()مديرين ، فمن السهل جدًا وضع عنصرين مختلفين منفصلين عن بعضهما البعض ، لكن وضع إحداهما داخل الأخرى أمر صعب بعض الشيء. ولكن يمكن تحقيق ذلك بسهولة عن طريق place()الطريقة.
+في طريقة المكان () ، يمكننا استخدام in_ option لوضع عنصر واجهة مستخدم داخل الآخر.
+
+كود # 2:
+
+# Importing tkinter module
+from tkinter import * from tkinter.ttk import *
+  
+# creating Tk window
+master = Tk()
+  
+# setting geometry of tk window
+master.geometry("200x200")
+  
+# button widget
+b2 = Button(master, text = "GFG")
+b2.pack(fill = X, expand = True, ipady = 10)
+  
+# button widget
+b1 = Button(master, text = "Click me !")
+  
+# This is where b1 is placed inside b2 with in_ option
+b1.place(in_= b2, relx = 0.5, rely = 0.5, anchor = CENTER)
+  
+# label widget
+l = Label(master, text = "I'm a Label")
+l.place(anchor = NW)
+  
+# infinite loop which is required to
+# run tkinter program infinitely
+# until an interrupt occurs
+mainloop()
+الإخراج: في الصور أدناه ، لاحظ أن أحد الأزرار يوضع داخل الآخر.
+
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | طريقة الشبكة () في Tkinter
+مستوى الصعوبة: أساسي
+تاريخ التحديث الأخير: ١٢ يونيو ٢٠١٩
+يضع مدير هندسة الشبكة عناصر واجهة المستخدم في جدول ثنائي الأبعاد. يتم تقسيم عنصر واجهة المستخدم الرئيسي إلى عدد من الصفوف والأعمدة ، ويمكن أن تحتوي كل "خلية" في الجدول الناتج على عنصر واجهة مستخدم.
+مدير الشبكة هو الأكثر مرونة بين مديري الهندسة في Tkinter . إذا كنت لا تريد أن تتعلم كيف ومتى تستخدم كل المديرين الثلاثة ، فعليك على الأقل التأكد من تعلم هذا المدير.
+
+ضع في اعتبارك المثال التالي -
+
+
+من الممكن إنشاء هذا التخطيط باستخدام مدير الحزم ، لكنه يتطلب عددًا من أدوات الإطارات الإضافية ، والكثير من العمل لجعل الأشياء تبدو جيدة. إذا كنت تستخدم مدير الشبكة بدلاً من ذلك ، فستحتاج فقط إلى مكالمة واحدة لكل عنصر واجهة مستخدم لوضع كل شيء بشكل صحيح.
+
+استخدام مدير الشبكة سهل. ما عليك سوى إنشاء الأدوات ، واستخدام طريقة الشبكة لإخبار المدير بالصف والعمود لوضعهم فيه. ليس عليك تحديد حجم الشبكة مسبقًا ؛ يحدد المدير ذلك تلقائيًا من عناصر واجهة المستخدم الموجودة فيه.
+
+كود # 1:
+
+# import tkinter module
+from tkinter import * from tkinter.ttk import *
+  
+# creating main tkinter window/toplevel
+master = Tk()
+  
+# this wil create a label widget
+l1 = Label(master, text = "First:")
+l2 = Label(master, text = "Second:")
+  
+# grid method to arrange labels in respective
+# rows and columns as specified
+l1.grid(row = 0, column = 0, sticky = W, pady = 2)
+l2.grid(row = 1, column = 0, sticky = W, pady = 2)
+  
+# entry widgets, used to take entry from user
+e1 = Entry(master)
+e2 = Entry(master)
+  
+# this will arrange entry widgets
+e1.grid(row = 0, column = 1, pady = 2)
+e2.grid(row = 1, column = 1, pady = 2)
+  
+# infinite loop which can be terminated by keyboard
+# or mouse interrupt
+mainloop()
+الإخراج:
+
+ 
+كود # 2: إنشاء التخطيط الموضح أعلاه.
+
+# import tkinter module
+from tkinter import * from tkinter.ttk import *
+  
+# creating main tkinter window/toplevel
+master = Tk()
+  
+# this will create a label widget
+l1 = Label(master, text = "Height")
+l2 = Label(master, text = "Width")
+  
+# grid method to arrange labels in respective
+# rows and columns as specified
+l1.grid(row = 0, column = 0, sticky = W, pady = 2)
+l2.grid(row = 1, column = 0, sticky = W, pady = 2)
+  
+# entry widgets, used to take entry from user
+e1 = Entry(master)
+e2 = Entry(master)
+  
+# this will arrange entry widgets
+e1.grid(row = 0, column = 1, pady = 2)
+e2.grid(row = 1, column = 1, pady = 2)
+  
+# checkbutton widget
+c1 = Checkbutton(master, text = "Preserve")
+c1.grid(row = 2, column = 0, sticky = W, columnspan = 2)
+  
+# adding image (remember image should be PNG and not JPG)
+img = PhotoImage(file = r"C:\Users\Admin\Pictures\capture1.png")
+img1 = img.subsample(2, 2)
+  
+# setting image with the help of label
+Label(master, image = img1).grid(row = 0, column = 2,
+       columnspan = 2, rowspan = 2, padx = 5, pady = 5)
+  
+# button widget
+b1 = Button(master, text = "Zoom in")
+b2 = Button(master, text = "Zoom out")
+  
+# arranging button widgets
+b1.grid(row = 2, column = 2, sticky = E)
+b2.grid(row = 2, column = 3, sticky = E)
+  
+# infinite loop which can be terminated 
+# by keyboard or mouse interrupt
+mainloop()
+انتاج:
+
+
+تحذير: لا تخلط أبدًا الشبكة () والحزمة () في نفس النافذة الرئيسية.
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | pack () طريقة في Tkinter
+مستوى الصعوبة: سهل
+آخر تحديث: 11 أغسطس 2021
+يحزم مدير هندسة الحزمة عناصر واجهة المستخدم في صفوف أو أعمدة. يمكننا استخدام خيارات مثل التعبئة والتوسيع والجانب للتحكم في مدير الهندسة هذا.
+بالمقارنة مع مدير الشبكة ، فإن مدير الحزم محدود نوعًا ما ، ولكن من الأسهل كثيرًا استخدامه في حالات قليلة ، ولكنها شائعة جدًا:
+
+ضع عنصر واجهة مستخدم داخل إطار (أو أي عنصر واجهة مستخدم حاوية آخر) ، واجعله يملأ الإطار بالكامل
+ضع عددًا من الأدوات فوق بعضها البعض
+ضع عددًا من الأدوات جنبًا إلى جنب
+الكود رقم 1: وضع عنصر واجهة مستخدم داخل الإطار وملء الإطار بالكامل. يمكننا القيام بذلك بمساعدة خيارات التوسيع والتعبئة .
+ 
+
+# Importing tkinter module
+from tkinter import * from tkinter.ttk import *
+ 
+# creating Tk window
+master = Tk()
+ 
+# creating a Fra, e which can expand according
+# to the size of the window
+pane = Frame(master)
+pane.pack(fill = BOTH, expand = True)
+ 
+# button widgets which can also expand and fill
+# in the parent widget entirely
+# Button 1
+b1 = Button(pane, text = "Click me !")
+b1.pack(fill = BOTH, expand = True)
+ 
+# Button 2
+b2 = Button(pane, text = "Click me too")
+b2.pack(fill = BOTH, expand = True)
+ 
+# Execute Tkinter
+master.mainloop()
+انتاج: 
+ 
+
+
+
+الرمز رقم 2: وضع الأدوات فوق بعضها البعض جنبًا إلى جنب. يمكننا القيام بذلك عن طريق الخيار الجانبي. 
+ 
+
+# Importing tkinter module
+from tkinter import *
+# from tkinter.ttk import *
+ 
+# creating Tk window
+master = Tk()
+ 
+# creating a Fra, e which can expand according
+# to the size of the window
+pane = Frame(master)
+pane.pack(fill = BOTH, expand = True)
+ 
+# button widgets which can also expand and fill
+# in the parent widget entirely
+# Button 1
+b1 = Button(pane, text = "Click me !",
+            background = "red", fg = "white")
+b1.pack(side = TOP, expand = True, fill = BOTH)
+ 
+# Button 2
+b2 = Button(pane, text = "Click me too",
+            background = "blue", fg = "white")
+b2.pack(side = TOP, expand = True, fill = BOTH)
+ 
+# Button 3
+b3 = Button(pane, text = "I'm also button",
+            background = "green", fg = "white")
+b3.pack(side = TOP, expand = True, fill = BOTH)
+ 
+# Execute Tkinter
+master.mainloop()
+انتاج: 
+ 
+
+
+
+كود # 3: 
+ 
+
+# Importing tkinter module
+from tkinter import *
+# from tkinter.ttk import *
+ 
+# creating Tk window
+master = Tk()
+ 
+# creating a Fra, e which can expand according
+# to the size of the window
+pane = Frame(master)
+pane.pack(fill = BOTH, expand = True)
+ 
+# button widgets which can also expand and fill
+# in the parent widget entirely
+# Button 1
+b1 = Button(pane, text = "Click me !",
+            background = "red", fg = "white")
+b1.pack(side = LEFT, expand = True, fill = BOTH)
+ 
+# Button 2
+b2 = Button(pane, text = "Click me too",
+            background = "blue", fg = "white")
+b2.pack(side = LEFT, expand = True, fill = BOTH)
+ 
+# Button 3
+b3 = Button(pane, text = "I'm also button",
+            background = "green", fg = "white")
+b3.pack(side = LEFT, expand = True, fill = BOTH)
+ 
+# Execute Tkinter
+master.mainloop()
+انتاج: 
+ 
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة PanedWindow في Tkinter
+آخر تحديث: 07 يونيو 2019
+يدعم Tkinter مجموعة متنوعة من الأدوات لجعل واجهة المستخدم الرسومية أكثر جاذبية وعملية. عنصر واجهة تعامل PanedWindow هو عنصر واجهة مستخدم لمدير الهندسة ، والذي يمكن أن يحتوي على جزء واحد أو أكثر من عناصر واجهة المستخدم الفرعية . يمكن للمستخدم تغيير حجم الحاجيات الفرعية عن طريق تحريك شرائط الخطوط الفاصلة باستخدام الماوس.
+
+بناء الجملة: PanedWindow (رئيسي ، ** خيارات)
+
+البارامترات:
+رئيسي : عنصر واجهة المستخدم الأصل أو
+خيارات كائن Tk () الرئيسية: التي يتم تمريرها في طريقة التكوين أو مباشرة في المُنشئ
+
+يمكن استخدام PanedWindow لتنفيذ مشترك 2 أو 3 أجزاء ولكن يمكن استخدام أجزاء متعددة.
+
+رمز # 1: PanedWindow مع جزأين فقط
+
+# Importing everything from tkinter module
+from tkinter import * from tkinter import ttk
+  
+# main tkinter window
+root = Tk()
+  
+# panedwindow object
+pw = PanedWindow(orient ='vertical')
+  
+# Button widget
+top = ttk.Button(pw, text ="Click Me !\nI'm a Button")
+top.pack(side = TOP)
+  
+# This will add button widget to the panedwindow
+pw.add(top)
+  
+# Checkbutton Widget
+bot = Checkbutton(pw, text ="Choose Me !")
+bot.pack(side = TOP)
+  
+# This will add Checkbutton to panedwindow
+pw.add(bot)
+  
+# expand is used so that widgets can expand
+# fill is used to let widgets adjust itself
+# according to the size of main window
+pw.pack(fill = BOTH, expand = True)
+  
+# This method is used to show sash
+pw.configure(sashrelief = RAISED)
+  
+# Infinite loop can be destroyed by
+# keyboard or mouse interrupt
+mainloop()
+الإخراج:
+
+ 
+Code # 2: PanedWindow مع أجزاء متعددة
+
+# Importing everything from tkinter module
+from tkinter import * from tkinter import ttk
+  
+# main tkinter window
+root = Tk()
+  
+# panedwindow object
+pw = PanedWindow(orient ='vertical')
+  
+# Button widget
+top = ttk.Button(pw, text ="Click Me !\nI'm a Button")
+top.pack(side = TOP)
+  
+# This will add button widget to the panedwindow
+pw.add(top)
+  
+# Checkbutton Widget
+bot = Checkbutton(pw, text ="Choose Me !")
+bot.pack(side = TOP)
+  
+# This will add Checkbutton to panedwindow
+pw.add(bot)
+  
+# adding Label widget
+label = Label(pw, text ="I'm a Label")
+label.pack(side = TOP)
+  
+pw.add(label)
+  
+# Tkinter string variable
+string = StringVar()
+  
+# Entry widget with some styling in fonts
+entry = Entry(pw, textvariable = string, font =('arial', 15, 'bold'))
+entry.pack()
+  
+# Focus force is used to focus on particular
+# widget that means widget is already selected for operations
+entry.focus_force()
+  
+pw.add(entry)
+  
+# expand is used so that widgets can expand
+# fill is used to let widgets adjust itself
+# according to the size of main window
+pw.pack(fill = BOTH, expand = True)
+  
+# This method is used to show sash
+pw.configure(sashrelief = RAISED)
+  
+# Infinite loop can be destroyed by
+# keyboard or mouse interrupt
+mainloop()
+انتاج:
+<<<<<<<<<<<<<<<<<
+بايثون | وظيفة الربط في Tkinter
+مستوى الصعوبة: سهل
+آخر تحديث: 31 أغسطس 2021
+Tkinter هي وحدة GUI (واجهة مستخدم رسومية) تُستخدم على نطاق واسع في تطبيقات سطح المكتب. يأتي مع Python ، ولكن يمكنك أيضًا تثبيته خارجيًا بمساعدة أمر pip . 
+إنه يوفر مجموعة متنوعة من فئات ووظائف Widget التي يمكن من خلالها جعل واجهة المستخدم الرسومية أكثر جاذبية وسهولة في الاستخدام من حيث المظهر والوظائف.
+يتم استخدام وظيفة الربط للتعامل مع الأحداث. يمكننا ربط وظائف وطرق Python بحدث كما يمكننا ربط هذه الوظائف بأي عنصر واجهة مستخدم معين.
+الكود رقم 1: ربط حركة الماوس بإطار tkinter. 
+ 
+
+بايثون 3
+# Import all files from
+# tkinter and overwrite
+# all the tkinter files
+# by tkinter.ttk
+from tkinter import *
+from tkinter.ttk import *
+ 
+# creates tkinter window or root window
+root = Tk()
+root.geometry('200x100')
+ 
+# function to be called when mouse enters in a frame
+def enter(event):
+    print('Button-2 pressed at x = % d, y = % d'%(event.x, event.y))
+ 
+# function to be called when when mouse exits the frame
+def exit_(event):
+    print('Button-3 pressed at x = % d, y = % d'%(event.x, event.y))
+ 
+# frame with fixed geometry
+frame1 = Frame(root, height = 100, width = 200)
+ 
+# these lines are showing the
+# working of bind function
+# it is universal widget method
+frame1.bind('<Enter>', enter)
+frame1.bind('<Leave>', exit_)
+ 
+frame1.pack()
+ 
+mainloop()
+انتاج: 
+ 
+
+مشغل فديوهات
+
+00:00
+00:22
+
+
+  
+الكود رقم 2: ربط أزرار الماوس بإطار Tkinter 
+ 
+
+بايثون 3
+# Import all files from
+# tkinter and overwrite
+# all the tkinter files
+# by tkinter.ttk
+from tkinter import *
+from tkinter.ttk import *
+ 
+# creates tkinter window or root window
+root = Tk()
+root.geometry('200x100')
+ 
+# function to be called when button-2 of mouse is pressed
+def pressed2(event):
+    print('Button-2 pressed at x = % d, y = % d'%(event.x, event.y))
+ 
+# function to be called when button-3 of mouse is pressed
+def pressed3(event):
+    print('Button-3 pressed at x = % d, y = % d'%(event.x, event.y))
+ 
+## function to be called when button-1 is double clocked
+def double_click(event):
+    print('Double clicked at x = % d, y = % d'%(event.x, event.y))
+ 
+frame1 = Frame(root, height = 100, width = 200)
+ 
+# these lines are binding mouse
+# buttons with the Frame widget
+frame1.bind('<Button-2>', pressed2)
+frame1.bind('<Button-3>', pressed3)
+frame1.bind('<Double 1>', double_click)
+ 
+frame1.pack()
+ 
+mainloop()
+انتاج: 
+ 
+
+مشغل فديوهات
+
+00:00
+00:37
+
+
+  
+الكود رقم 3: ربط أزرار لوحة المفاتيح مع نافذة الجذر (نافذة tkinter الرئيسية). 
+ 
+
+بايثون 3
+# Import all files from
+# tkinter and overwrite
+# all the tkinter files
+# by tkinter.ttk
+from tkinter import *
+from tkinter.ttk import *
+ 
+# function to be called when
+# keyboard buttons are pressed
+def key_press(event):
+    key = event.char
+    print(key, 'is pressed')
+ 
+# creates tkinter window or root window
+root = Tk()
+root.geometry('200x100')
+ 
+# here we are binding keyboard
+# with the main window
+root.bind('<Key>', key_press)
+ 
+mainloop()
+انتاج: 
+ 
+
+مشغل فديوهات
+
+00:00
+00:26
+
+
+ملاحظة: عندما نربط أزرار لوحة المفاتيح بنافذة tkinter ، كلما ضغطنا على أحرف خاصة ، سنحصل فقط على مساحة بينما في حالة الأحرف الأبجدية والرقمية ، سنحصل على القيم الفعلية (في السلسلة).
+ 
+
+
+<<<<<<<<<<<<<<<<<
+Python Tkinter - التحقق من صحة الإدخال المصغر
+آخر تحديث: 26 مارس 2020
+تقدم Python مجموعة متنوعة من الأطر للعمل مع تطبيقات واجهة المستخدم الرسومية. تعد واجهة Tkinter أو Tk واحدة من أكثر واجهات Python استخدامًا لإنشاء تطبيقات قائمة على واجهة المستخدم الرسومية. هناك تطبيقات تتطلب التحقق من صحة الحقول النصية لمنع الإدخال غير الصحيح من المستخدم قبل إرسال النموذج. تسمح Python بالتحقق من صحة الإدخال من خلال السماح بالتتبع المتغير باستخدام وظيفة رد الاتصال. يتم استدعاء هذه الوظيفة كلما تمت إضافة / حذف إدخال إلى / من عنصر واجهة المستخدم Entry. تتحقق بعض التطبيقات من صحة الإدخال عند إرسال النموذج ، ولكن الجزء التالي من الكود يقوم بالتحقق مع كل ضغطة مفتاح من لوحة المفاتيح.
+
+استيراد وحدة tkinter
+استيراد tkinter
+استيراد وحدات فرعية tkinter
+من استيراد tkinter *
+حدد وظيفة "رد الاتصال"
+رد نداء def (إدخال):
+    if input.isdigit ():
+        طباعة (إدخال)
+        عودة صحيح
+                        
+    إدخال elif هو "":
+        طباعة (إدخال)
+        عودة صحيح
+
+    آخر:
+        طباعة (إدخال)
+        عودة كاذبة
+الشرح
+تقوم وظيفة رد الاتصال بفحص المدخلات في عنصر واجهة تعامل الإدخال لإدخال صالح. إذا كان الإدخال صحيحًا ، فسيتم إرجاع True else False. في هذا المثال ، يتم التحقق من الإدخال الذي تم إدخاله من خلال لوحة المفاتيح من أجل النوع الرقمي. إذا كان الإدخال من النوع الرقمي ، فإن وظيفة رد الاتصال ترجع صحيحًا. لعملية الحذف ، ترجع وظيفة رد الاتصال صحيحًا لأن الإدخال هو "". ومع ذلك ، بالنسبة لأي إدخال غير رقمي ، تقوم وظيفة رد الاتصال بإرجاع خطأ.
+
+إنشاء النافذة الأصل
+الجذر = Tk ()
+بناء الجملة: Tk (screenName = لا شيء ، baseName = بلا ، className = 'Tk' ، useTk = 1)
+المعلمة: في هذا المثال ، يتم إنشاء فئة Tk بدون وسيطات.
+الشرح
+تقوم هذه الطريقة بإنشاء عنصر واجهة مستخدم رئيسي والذي يكون عادة النافذة الرئيسية للتطبيق.
+
+إنشاء عنصر واجهة المستخدم
+ه = دخول (جذر)
+بناء الجملة: الإدخال (رئيسي ، ** خيارات)
+المعلمة:
+
+رئيسي: يمثل النافذة الأصلية (هنا الجذر).
+الخيارات: الخيارات المدعومة هي bg، bd، command، cursor، font، export selection، justify، relief، lightlightcolor، fg، selectbackground، selectforeground، selectborderwidth، show، xscrollcommand، state، textvariable and width.
+إرجاع القيمة: إرجاع سلسلة (.! إدخال).
+الشرح
+يتم استخدام هذه الطريقة لتكوين عنصر واجهة تعامل الإدخال على عنصر واجهة المستخدم الرئيسي (الجذر).
+
+حدد موضع عنصر واجهة المستخدم Entry داخل النافذة الرئيسية
+ه.المكان (س = 50 ، ص = 50)
+بناء الجملة: place (x، y)
+المعلمة:
+
+x: موضع عنصر واجهة المستخدم الإدخال بالنسبة إلى عنصر واجهة المستخدم الأصلي على طول المحور X.
+y: موضع عنصر واجهة المستخدم الإدخال بالنسبة إلى عنصر واجهة المستخدم الأصلي على طول المحور ص.
+Explanation:
+تحدد هذه الطريقة موضع عنصر واجهة تعامل Entry في النافذة الرئيسية (الجذر).
+
+سجل وظيفة رد الاتصال
+reg = root.register (رد الاتصال)
+بناء الجملة: تسجيل (وظيفة)
+المعلمة:
+
+الوظيفة: الوظيفة التي سيتم استدعاؤها للتحقق من صحة الإدخال في عنصر واجهة المستخدم Entry.
+إرجاع القيمة: ترجع هذه الطريقة سلسلة أحرف يمكن استخدامها لاستدعاء الوظيفة.
+التفسير
+تقوم طريقة register () بإرجاع سلسلة نصية تم تخصيصها لمتغير 'reg' يتم استخدامه لاستدعاء وظيفة رد الاتصال في المراحل اللاحقة.
+
+قم باستدعاء وظيفة رد الاتصال للتحقق من صحة الإدخال في عنصر واجهة المستخدم Entry
+e.config (التحقق من صحة = "مفتاح" ، أمر التحقق من الصلاحية = (reg، '٪ P'))
+بناء الجملة: config (validate = ”key”، validatecommand = (reg، '٪ P'))
+المعلمة:
+
+تحقق من الصحة: يستخدم هذا الخيار لتحديد متى سيتم استدعاء وظيفة رد الاتصال للتحقق من صحة الإدخال. تحدد قيمة "المفتاح" أن التحقق يحدث عندما تؤدي أي ضغطة مفتاح (إدخال من لوحة المفاتيح) إلى تغيير محتويات الأداة.
+validatecommand: يستخدم هذا الخيار لتحديد وظيفة رد الاتصال. لا يتم استدعاء الوظيفة مباشرة بل يتم تمرير متغير تم تسجيله في الخطوات السابقة. تم تمرير '٪ P' للإشارة إلى القيمة التي سيحتويها النص إذا تم السماح بالتغيير.
+يدعم خيار التحقق من صحة التفسير
+القيم الأخرى مثل التركيز والتركيز والتركيز والكل ولا شيء. القيمة الافتراضية هي "لا شيء" ، مما يعني أنه لا يوجد تحقق من الصحة.
+يدعم خيار Validatecommand القيم الأخرى مثل٪ d و٪ i و٪ s و٪ S و٪ v و٪ V و٪ W. يمكن إضافة استبدال النسبة المئوية لكل معلمة ليتم تمريرها إلى دالة Python
+. تدعم أداة الإدخال أيضًا خيار أمر غير صالح يستدعي دالة كلما قام أمر validat بإرجاع خطأ.
+يمكن استخدامها بناءً على متطلبات المستخدم.
+
+قم بتشغيل التطبيق
+root.mainloop ()
+بناء الجملة: mainloop ()
+شرح
+mainloop () هي حلقة لا نهائية تستخدم لتشغيل التطبيق طالما أن النافذة غير مغلقة.
+
+كود كامل للتحقق من دخول القطعة
+
+import tkinter
+from tkinter import *
+  
+  
+def callback(input):
+      
+    if input.isdigit():
+        print(input)
+        return True
+                          
+    elif input is "":
+        print(input)
+        return True
+  
+    else:
+        print(input)
+        return False
+                          
+root = Tk()
+  
+e = Entry(root)
+e.place(x = 50, y = 50)
+reg = root.register(callback)
+  
+e.config(validate ="key", 
+         validatecommand =(reg, '% P'))
+  
+root.mainloop()
+الإخراج: (يوصى بمشاهدة ملء الشاشة)
+
+مشغل فديوهات
+
+00:00
+00:17
+
+
+الشرح
+عندما نقوم بإدخال أرقام باستخدام لوحة المفاتيح الخاصة بنا ، ترجع وظيفة رد الاتصال "true" ويسمح بالقيمة في عنصر واجهة الإدخال. ومع ذلك ، عند إدخال الحروف الأبجدية من لوحة المفاتيح ، تقوم وظيفة رد الاتصال بإرجاع خطأ ولا يُسمح بإدخال القيمة في أداة الإدخال. للحصول على فكرة أوضح عن عمل وظيفة رد الاتصال ، تتم طباعة المدخلات المرسلة من خلال لوحة المفاتيح على وحدة التحكم. يمكن ملاحظة أنه تتم طباعة أي إدخال غير رقمي على وحدة التحكم ولكن غير مسموح به في عنصر واجهة المستخدم. يُسمح أيضًا بإدراج وحذف الأرقام في أداة الإدخال.
+

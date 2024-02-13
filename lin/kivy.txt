@@ -1,0 +1,3427 @@
+
+
+دروس كيفي
+مستوى الصعوبة: سهل
+تاريخ التحديث الأخير: 21 يوليو 2021
+Kivy هي واجهة مستخدم رسومية مكتبة Python مفتوحة المصدر تتيح لك تطوير تطبيقات متعددة المنصات على Windows و macOS و Android و iOS و Linux و Raspberry-Pi. بالإضافة إلى إدخالات الماوس ولوحة المفاتيح العادية ، فإنه يدعم أيضًا أحداث اللمس المتعدد . ستتشابه التطبيقات التي تم إنشاؤها باستخدام Kivy عبر جميع الأنظمة الأساسية ولكن هذا يعني أيضًا أن التطبيقات سقطت أو ستبدو مختلفة عن أي تطبيق أصلي.
+
+دروس كيفي
+
+قائمة المحتويات -
+
+ابدء
+الحاجيات
+أزرار
+التخطيطات
+لغة تصميم kv (برنامج تعليمي لملف .kv)
+الحاجيات
+أزرار
+التخطيطات
+التطبيقات والمشاريع
+مقالات حديثة عن Kivy !!
+
+ابدء
+ما هو كيفي؟
+مقدمة وتركيب كيفي
+مرحبًا بالعالم في Kivy
+الحاجيات
+
+القطعة التسمية في Kivy
+القطعة Textinput في kivy
+قماش في kivy
+خط (قماش) في kivy
+القطعة Checkbox في Kivy
+القائمة المنسدلة في kivy
+تعديل حجم النافذة في Kivy
+القطعة Scrollview في kivy
+القطعة دائري في Kivy
+القطعة BoxLayout في Kivy
+القطعة المنزلق في Kivy
+إضافة صورة القطعة في Kivy
+القطعة المنبثقة في Kivy
+أداة التبديل في Kivy
+القطعة سبينر في kivy
+التقدم بار القطعة في kivy
+فقاعة في kivy
+لوحة مبوبة في kivy
+مبعثر في kivy
+كيفية استخدام أدوات UX المتعددة في kivy
+الرسوم المتحركة في كيفي
+أزرار
+
+العمل مع الأزرار في Kivy
+زر العمل في كيفي
+تغيير لون الزر في Kivy
+تغيير حجم وموضع الزر في Kivy
+Python - تقريب زوايا الزر في kivy
+تعطيل زر Kivy
+مربع إدخال النص مع زر التحقق في kivy
+استخدم الصورة كزر في kivy
+التخطيطات
+
+تخطيط عائم في كيفي
+GridLayouts في كيفي
+StackLayout في كيفي
+AnchorLayout في كيفي
+تخطيط نسبي في كيفي
+PageLayout في Kivy
+التخطيطات في التخطيطات (تخطيطات متعددة) في Kivy
+لغة تصميم kv (برنامج تعليمي لملف .kv)
+الحاجيات
+
+ملف Kivy .kv
+إنشاء عنصر واجهة مستخدم تخطيط مربع باستخدام ملف .kv
+قماش في Kivy باستخدام ملف .kv
+إدخال النص في kivy باستخدام ملف .kv
+قم بإنشاء خانة اختيار باستخدام ملف .kv
+بايثون | القائمة المنسدلة في kivy باستخدام ملف .kv
+القائمة المنسدلة في kivy باستخدام ملف .kv
+أداة التبديل في Kivy باستخدام ملف .kv
+القطعة Spinner في Kivy باستخدام ملف .kv
+القطعة المنبثقة في Kivy باستخدام ملف .kv
+القطعة دائري في Kivy باستخدام ملف .kv
+القطعة المنزلق باستخدام ملف .kv
+عنصر واجهة مستخدم Progressbar في kivy باستخدام ملف .kv
+RecycleView في Kivy
+إضافة صورة في Kivy باستخدام ملف .kv
+تعيين قالب الخلفية في kivy
+ScreenManager في Kivy باستخدام ملف .kv
+الرسوم المتحركة في Kivy باستخدام ملف .kv
+أزرار
+
+بايثون | العمل مع الأزرار في Kivy مع ملف .kv
+Python - تغيير لون الزر في kivy باستخدام ملف .kv
+Python - تغيير حجم زر kivy وموضعه باستخدام ملف kv
+زر تبديل في kivy باستخدام ملف .kv
+إضافة زر صورة باستخدام ملف .kv في kivy
+Python - تقريب زوايا الأزرار في kivy باستخدام ملف kv
+تعطيل زر kivy باستخدام ملف .kv
+زر نوع الإجراء العائم في kivy - Python
+زر الحركة العائم المتحرك في kivy - Python
+مربع إدخال النص مع زر التحقق في kivy (باستخدام ملف .kv)
+زر دائري (مثل البيضاوي) باستخدام قماش في kivy (باستخدام ملف kv.)
+التخطيطات
+
+تخطيط الشبكة في Kivy بدون ملف .kv
+StackLayout في Kivy باستخدام ملف .kv
+FloatLayout في Kivy باستخدام ملف .kv
+AnchorLayout في Kivy باستخدام ملف .kv
+النسق النسبي في Kivy باستخدام ملف .kv
+PageLayout في Kivy باستخدام ملف .kv
+التطبيقات والمشاريع
+القطع الناقص (المضلعات المختلفة) في كيفي
+اصنع نافذة بسيطة باستخدام kivy
+Vkeyboard (لوحة المفاتيح الافتراضية) في kivy
+عناصر واجهة مستخدم متعددة المتزلجون تتحكم في شاشة الخلفية أو WindowColor في Kivy
+كيفية استخدام ملفات kv المتعددة في kivy
+الأكورديون في كيفي
+الأكورديون في kivy باستخدام ملف .kv
+إنشاء تطبيق رسم بسيط في kivy
+منتقي الملفات في kivy
+اصنع آلة حاسبة باستخدام kivy
+قم بإنشاء ساعة توقيت باستخدام كائن الساعة في kivy باستخدام ملف kv
+إنشاء ساعة توقيت باستخدام Clock Object في kivy
+ 
+<<<<<<<<<<<<<<<<<
+
+مستوى الصعوبة: سهل
+آخر تحديث: ١٣ يناير ٢٠٢١
+Kivy هي مكتبة Python مفتوحة المصدر لواجهة مستخدم رسومية تتيح لك تطوير تطبيقات متعددة المنصات على Windows و macOS و Android و iOS و Linux و Raspberry Pi. أفضل شيء في kivy هو أنه يعمل بشكل أفضل من بدائل HTML5 عبر الأنظمة الأساسية. 
+
+لاحظ أنه من الضروري أن يكون لديك Python 3 على جهازك للاستفادة من المكتبة.
+
+التثبيت في Windows: 
+ 
+الخطوة 1: قم بتحديث النقطة والعجلة قبل تثبيت kivy عن طريق إدخال هذا الأمر في cmd- 
+ 
+python -m pip install - upgrade pip wheel setuptools
+
+
+الخطوة 2: تثبيت التبعيات- 
+ 
+python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+تثبيت python -m pip kivy.deps.gstreamer
+تثبيت python -m pip kivy.deps.angle
+الخطوة 3: تثبيت kivy.
+python -m pip تثبيت kivy
+سينتج عن شيء مثل الصورة أدناه:
+
+
+
+ 
+
+التثبيت في Linux: 
+ 
+الخطوة 1: أضف PPA عن طريق إدخال هذا الأمر في Terminal- 
+ 
+sudo add-apt-repository ppa: kivy-team / kivy
+الخطوة 2: قم بتحديث قائمة الحزم الخاصة بك باستخدام مدير الحزم الخاص بك- 
+ 
+sudo apt-get update
+الخطوة الثالثة: تثبيت Kivy 
+ 
+sudo apt-get install python3-kivy
+قم بإنشاء تطبيق 
+هناك ثلاث خطوات لإنشاء تطبيق باستخدام kivy:
+
+ترث فئة تطبيق Kivy التي تمثل نافذة عناصر واجهة المستخدم الخاصة بنا
+قم بإنشاء طريقة build () ، والتي ستظهر محتوى عناصر واجهة المستخدم.
+وأخيرا استدعاء طريقة run () . 
+ 
+مثال: 
+هذا كود python3 لإنشاء تطبيق بسيط يعرض النص المطلوب على شاشة النظام:
+ 
+
+import kivy
+kivy.require('1.10.0')
+  
+from kivy.app import App
+from kivy.uix.button import Label
+  
+# Inherit Kivy's App class which represents the window
+# for our widgets
+# HelloKivy inherits all the fields and methods
+# from Kivy
+class HelloKivy(App):
+  
+    # This returns the content we want in the window
+    def build(self):
+  
+        # Return a label widget with Hello Kivy
+        return Label(text ="Hello Geeks")
+  
+helloKivy = HelloKivy()
+helloKivy.run()
+لتشغيل هذا الرمز ، افتح cmd (Terminal في Linux) وانتقل إلى الدليل الذي تم حفظ الرمز فيه واكتب هذا الأمر- 
+ 
+
+بيثون file_name.py
+ 
+python -m pip install --upgrade pip wheel setuptools
+python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+python -m pip install kivy.deps.gstreamer
+python -m pip install kivy.deps.angle
+python -m pip install kivy
+ sudo add-apt-repository ppa:kivy-team/kivy
+sudo apt-get update
+sudo apt-get install python3-kivy
+python file_name.py
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | إضافة تسمية إلى نافذة kivy
+مستوى الصعوبة: سهل
+آخر تحديث: 27 مايو 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة عن النظام الأساسي في Python. حيث يمكن تشغيله على Android و iOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+أداة التسمية - 
+أداة التسمية هي لعرض النص. وهو يدعم سلاسل ASCII و unicode. التسمية هي النص الذي نريد إضافته إلى نافذتنا ، وإعطاء الأزرار ، وما إلى ذلك. على الملصقات ، يمكننا تطبيق النمط أيضًا ، أي زيادة النص والحجم واللون والمزيد. 
+دعونا نرى كيفية إضافة تسمية إلى نافذة Kivy .
+ 
+
+دروس كيفي - تعلم كيفي بالأمثلة .
+
+كيف تضيف ملصق؟
+ 
+
+1) استيراد kivy
+2) استيراد تطبيق kivy
+3) تسمية الاستيراد
+4) تعيين الإصدار الأدنى (اختياري)
+5) تمديد فئة التطبيق
+6) الكتابة فوق وظيفة البناء
+7) إضافة وإرجاع التسمية
+8) قم بتشغيل مثيل الفئة
+يوجد أدناه الرمز: 
+ 
+
+بايثون 3
+# import kivy module
+import kivy
+ 
+# this restricts the kivy version i.e
+# below this kivy version you cannot use the app or software
+kivy.require("1.9.1")
+ 
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# if you not import label and use it it through error
+from kivy.uix.label import Label
+ 
+# defining the App class
+class MyLabelApp(App):
+    def build(self):
+        # label display the text on screen
+        lbl = Label(text ="Label is Added on screen !!:):)")
+        return lbl
+ 
+# creating the object
+label = MyLabelApp()
+# run the window
+label.run()
+انتاج: 
+ 
+
+
+
+  
+كيف تفعل التصميم في التسمية؟
+ 
+
+بايثون 3
+# change only line 19 else all will same.
+ 
+# text colour
+l2 = Label(text ="Label is Added on \n screen !!:):)
+            and its Multi\nLine", font_size ='20sp',
+            color =[0.41, 0.42, 0.74, 1])
+انتاج: 
+ 
+
+
+
+  
+كيف ترميز النص؟
+يمكنك تغيير نمط النص باستخدام Text Markup. يشبه بناء الجملة بناء الجملة أعلاه ولكن هناك بعض الأشياء الأخرى.
+ 
+
+بايثون 3
+# markup text with different colour
+l2 = Label(text ="[color = ff3333][b]'Label'[/b] is Added [/color]\n
+                  [color = 3333ff]Screen !!:):):):)[/color]",
+                  font_size ='20sp', markup = True)
+انتاج: 
+ 
+
+
+
+المزيد من علامات الترميز التي يمكننا استخدامها -
+ 
+
+[b] [/ b] -> تنشيط النص الغامق
+[i] [/ i] -> تنشيط نص مائل
+[u] [/ u] -> نص تحته خط
+[s] [/ s] -> نص يتوسطه خط
+[font =] [/ font] -> تغيير الخط
+[size =] [/ size]] -> تغيير حجم الخط
+[color = #] [/ color] -> تغيير لون النص
+[ref =] [/ ref] -> إضافة منطقة تفاعلية. سيتوفر المرجع + المربع المحيط داخل المرجع في Label.refs
+[anchor =] -> ضع نقطة ارتساء في النص. يمكنك الحصول على موضع الرابط الخاص بك داخل النص باستخدام Label.anchors
+[فرعي] [/ فرعي] ->اعرض النص في موضع منخفض بالنسبة إلى النص قبله.
+[sup] [/ sup] -> عرض النص في موضع مرتفع بالنسبة إلى النص قبله.
+
+المرجع: https://kivy.org/doc/stable/api-kivy.uix.label.html
+
+التسمية باستخدام KivyMD
+KivyMD هي امتداد لإطار عمل Kivy. KivyMD عبارة عن مجموعة من أدوات تصميم المواد لاستخدامها مع Kivy ، وهو إطار عمل واجهة المستخدم الرسومية لصنع تطبيقات الهاتف المحمول.
+
+أولاً ، سنقوم باستيراد MDlabel من مكتبة kivyMD.uix
+
+يحتوي MDLabel على المعلمات التالية-
+
+نص- النص الذي نريد وضعه على الملصق
+halign- الموضع الذي نريد وضع الملصق فيه.
+theme_text_color- موضوع ألوان النص مثل مخصص أو أساسي أو ثانوي أو تلميح أو خطأ
+text_color- إذا كانت theme_text_color مخصصة ، فيمكننا تعيين لون النص إلى مجموعة RGB.
+تعليق يشبه الخط والعناوين
+فيما يلي المثال التالي باستخدام MDLabel
+
+بايثون 3
+from kivymd.app import MDApp
+from kivymd.uix.label import MDLabel
+from kivymd.uix.screen import Screen
+ 
+class Demo(MDApp):
+ 
+    def build(self):
+        #defining screen
+        screen = Screen()
+ 
+        #defining 1st label
+        l=MDLabel(text="Welcome!",pos_hint={'center_x':0.8,
+                                            'center_y':0.8},
+                  theme_text_color="Custom",
+                  text_color=(0.5,0,0.5,1),
+                  font_style='Caption')
+         
+        #defining 2nd label
+        l1 = MDLabel(text="Welcome!", pos_hint={'center_x':0.8,
+                                                'center_y':0.5},
+                     theme_text_color="Custom",
+                     text_color=(0.5, 0, 0.5, 1),
+                     font_style='H2')
+         
+        #defining 3rd label
+        l2 = MDLabel(text="Welcome!", pos_hint={'center_x':0.8,
+                                                'center_y':0.2},
+                     theme_text_color="Custom",
+                     text_color=(0.5, 0, 0.5, 1),
+                      font_style='H1')
+         
+        screen.add_widget(l)
+ 
+ 
+        screen.add_widget(l1)
+        screen.add_widget(l2)
+        return screen
+ 
+if __name__ == "__main__":
+    Demo().run()
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة Textinput في kivy
+آخر تحديث: 18 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة عن النظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+إدخال النص:
+توفر أداة TextInput مربعًا للنص العادي القابل للتحرير. يتم دعم ميزات Unicode ومتعددة الأسطر والتنقل بالمؤشر والاختيار والحافظة.
+
+لإنشاء إدخال نص متعدد الأسطر (يضيف مفتاح "الإدخال" سطرًا جديدًا).
+لإنشاء TextInput مفرد ، قم بتعيين الخاصية TextInput.multiline إلى False.
+
+إدخال النص (النص = "مرحبًا بالعالم" ، متعدد الأسطر = خطأ)
+للعمل مع Textinput ، يجب عليك استيراده بالأمر -
+
+من kivy.uix.textinput استيراد TextInput
+
+النهج الأساسي:
+1) استيراد kivy
+2) استيراد kivyApp
+3) استيراد التسمية
+4) استيراد مبعثر
+5) استيراد Floatlayout
+6) استيراد Textinput
+7) استيراد BoxLayout
+8) تعيين الإصدار الأدنى (اختياري)
+9) إنشاء فئة التطبيق
+10) إعادة تخطيط / عنصر واجهة مستخدم / فئة (وفقًا للمتطلبات)
+11) قم بتشغيل مثيل للفئة
+الآن تنفيذ النهج:
+
+# Program to Show how to use textinput (UX widget) in kivy 
+  
+# import kivy module    
+import kivy  
+       
+# base Class of your App inherits from the App class.    
+# app:always refers to the instance of your application   
+from kivy.app import App 
+     
+# this restrict the kivy version i.e  
+# below this kivy version you cannot  
+# use the app or software  
+kivy.require('1.9.0') 
+    
+# The Label widget is for rendering text.  
+from kivy.uix.label import Label 
+    
+# module consist the floatlayout  
+# to work with FloatLayout first  
+# you have to import it  
+from kivy.uix.floatlayout import FloatLayout 
+  
+# Scatter is used to build interactive
+# widgets that can be translated,
+# rotated and scaled with two or more
+# fingers on a multitouch system.
+from kivy.uix.scatter import Scatter
+  
+# The TextInput widget provides a
+# box for editable plain text
+from kivy.uix.textinput import TextInput
+  
+# BoxLayout arranges widgets in either
+# in vertical fashion that
+# is one on top of another or in
+# horizontal fashion that is one after another.
+from kivy.uix.boxlayout import BoxLayout
+  
+# Create the App class
+class TutorialApp(App):
+      
+    def build(self):
+  
+        b = BoxLayout(orientation ='vertical')
+  
+        # Adding the text input
+        t = TextInput(font_size = 50,
+                      size_hint_y = None,
+                      height = 100)
+          
+        f = FloatLayout()
+  
+        # By this you are able to move the
+        # Text on the screen to anywhere you want
+        s = Scatter()
+  
+        l = Label(text ="Hello !",
+                  font_size = 50)
+  
+        f.add_widget(s)
+        s.add_widget(l)
+  
+        b.add_widget(t)
+        b.add_widget(f)
+  
+        # Binding it with the label
+        t.bind(text = l.setter('text'))
+  
+          
+        return b
+  
+# Run the App
+if __name__ == "__main__":
+    TutorialApp().run()
+انتاج:
+
+
+بعد بعض المدخلات -
+
+<<<<<<<<<<<<<<<<<
+بايثون | قماش في kivy
+آخر تحديث: 19 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+ 
+
+؟؟؟؟؟؟؟؟ دروس كيفي - تعلم كيفي بالأمثلة .
+
+اللوحة القماشية: 
+اللوحة القماشية هي الكائن الجذر المستخدم للرسم بواسطة عنصر واجهة المستخدم. قماش kivy ليس المكان الذي ترسم فيه. المشاكل الرئيسية التي واجهتني في البداية مع اللوحة كانت بسبب اسمها. مع الأخذ في الاعتبار على وجه الخصوص كل المشاركات حول لوحة HTML5. أعتقد في البداية أن اللوحة القماشية هي الطلاء لكن القماش هو في الأساس وعاء للتعليمات. 
+لاستخدام Canvas ، يجب عليك الاستيراد:
+ 
+
+من kivy.graphics استيراد مستطيل ، لون
+ملاحظة: كل أداة في Kivy لديها بالفعل لوحة قماشية بشكل افتراضي. عند إنشاء عنصر واجهة مستخدم ، يمكنك إنشاء جميع الإرشادات اللازمة للرسم. إذا كان الذات هو عنصر واجهة المستخدم الحالي الخاص بك. تتم إضافة التعليمات Color and Rectangle تلقائيًا إلى كائن قماش الرسم وسيتم استخدامها عند رسم النافذة.
+ 
+
+النهج الأساسي
+-> استيراد kivy
+-> استيراد تطبيق kivy
+-> استيراد القطعة
+-> استيراد قماش أي:
+      من kivy.graphics استيراد مستطيل ، لون
+-> تعيين الحد الأدنى من الإصدار (اختياري)
+-> تمديد فئة القطعة
+-> إنشاء فئة التطبيق
+-> إرجاع القطعة
+-> تشغيل مثيل للفئة
+تنفيذ النهج - 
+ 
+
+# import kivy module
+import kivy
+   
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+   
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# A Widget is the base building block
+# of GUI interfaces in Kivy.
+# It provides a Canvas that
+# can be used to draw on screen.
+from kivy.uix.widget import Widget
+ 
+# From graphics module we are importing
+# Rectangle and Color as they are
+# basic building of canvas.
+from kivy.graphics import Rectangle, Color
+ 
+# class in which we are creating the canvas
+class CanvasWidget(Widget):
+     
+    def __init__(self, **kwargs):
+ 
+        super(CanvasWidget, self).__init__(**kwargs)
+ 
+        # Arranging Canvas
+        with self.canvas:
+ 
+            Color(.234, .456, .678, .8)  # set the colour
+ 
+            # Setting the size and position of canvas
+            self.rect = Rectangle(pos = self.center,
+                                  size =(self.width / 2.,
+                                        self.height / 2.))
+ 
+            # Update the canvas as the screen size change
+            self.bind(pos = self.update_rect,
+                  size = self.update_rect)
+ 
+    # update function which makes the canvas adjustable.
+    def update_rect(self, *args):
+        self.rect.pos = self.pos
+        self.rect.size = self.size
+ 
+# Create the App Class
+class CanvasApp(App):
+    def build(self):
+        return CanvasWidget()
+ 
+# run the App
+CanvasApp().run()
+انتاج: 
+ 
+
+
+
+يمكنك أيضًا استخدام أي عنصر واجهة مستخدم آخر في لوحة الرسم. في المثال أدناه سنوضح كيفية إضافة الصورة وتغيير لونها. 
+لتغيير اللون فقط قم بتغيير لون القماش الذي سيغير لون الصورة. 
+ 
+
+
+# import kivy module
+import kivy
+   
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+   
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# A Widget is the base building block
+# of GUI interfaces in Kivy.
+# It provides a Canvas that
+# can be used to draw on screen.
+from kivy.uix.widget import Widget
+ 
+# From graphics module we are importing
+# Rectangle and Color as they are
+# basic building of canvas.
+from kivy.graphics import Rectangle, Color
+ 
+# class in which we are creating the canvas
+class CanvasWidget(Widget):
+     
+    def __init__(self, **kwargs):
+ 
+        super(CanvasWidget, self).__init__(**kwargs)
+ 
+        # Arranging Canvas
+        with self.canvas:
+ 
+            Color(1, 0, 0, 1)  # set the colour
+ 
+            # Setting the size and position of image
+            # image must be in same folder
+            self.rect = Rectangle(source ='download.jpg',
+                                  pos = self.pos, size = self.size)
+ 
+            # Update the canvas as the screen size change
+            # if not use this next 5 line the
+            # code will run but not cover the full screen
+            self.bind(pos = self.update_rect,
+                  size = self.update_rect)
+ 
+    # update function which makes the canvas adjustable.
+    def update_rect(self, *args):
+        self.rect.pos = self.pos
+        self.rect.size = self.size
+ 
+# Create the App Class
+class CanvasApp(App):
+    def build(self):
+        return CanvasWidget()
+ 
+# run the App
+CanvasApp().run()
+الإخراج:
+الصورة الأصلية المستخدمة في التطبيق هي: 
+ 
+
+
+
+صورة في قماش: 
+ 
+
+
+
+ملاحظة: 
+تعليمات رسم Kivy لا ترتبط تلقائيًا بموضع الأدوات أو حجمها. أنت ، لذلك ، تحتاج إلى النظر في هذه العوامل عند الرسم. من أجل جعل تعليمات الرسم الخاصة بك متعلقة بالقطعة ، يجب أن يتم الإعلان عن الإرشادات في KvLang أو ربطها بالتغييرات في نقاط البيع والحجم.
+ 
+
+
+<<<<<<<<<<<<<<<<<
+
+بايثون | القطعة Checkbox في Kivy
+مستوى الصعوبة: سهل
+آخر تحديث: 19 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. يمكن تشغيل تطبيقات Kivy على Android و IOS و Linux و Windows وما إلى ذلك. وهي تُستخدم أساسًا لتطوير تطبيق Android ، ولكن هذا لا يعني أنه لا يمكن استخدامها على تطبيقات سطح المكتب.
+ 
+
+دروس كيفي - تعلم كيفي بالأمثلة .
+
+أداة Checkbox -
+CheckBox عبارة عن زر محدد ثنائي الحالة يمكن تحديده أو إلغاء تحديده. تحتوي مربعات الاختيار على تسمية مصاحبة توضح الغرض من مربع الاختيار. يمكن تجميع مربعات الاختيار معًا لتشكيل أزرار اختيار. تُستخدم مربعات الاختيار لتوضيح ما إذا كان سيتم تطبيق الإعداد أم لا.
+
+للعمل مع Checkbox ، عليك أولاً استيراد Checkbox من الوحدة النمطية التي تتكون من جميع ميزات ووظائف شريط التمرير ، أي  
+
+من kivy.uix.checkbox استيراد CheckBox
+النهج الأساسي الذي يجب اتباعه أثناء إنشاء شريط التمرير: 
+
+1) استيراد kivy
+2) استيراد تطبيق kivy
+3) استيراد مخطط الشبكة
+4) استيراد التسمية
+5) استيراد مربع الاختيار
+6) استيراد القطعة
+7) تعيين الإصدار الأدنى (اختياري)
+8) تمديد الفصل
+9) إضافة القطعة في الفصل
+10) قم بإنشاء فئة التطبيق
+11) قم بتشغيل مثيل الفئة
+الآن برنامج كيفية إنشاء مربع الاختيار في Kivy:  
+
+بايثون 3
+# Program to learn how to make checkbox in kivy
+ 
+# import kivy module
+import kivy
+ 
+# base Class of your App inherits from the App class. 
+# app:always refers to the instance of your application 
+from kivy.app import App
+ 
+# The :class:`Widget` class is the base class
+# required for creating Widgets.
+from kivy.uix.widget import Widget
+ 
+# The Label widget is for rendering text.
+from kivy.uix.label import Label
+ 
+# To use the checkbox must import it from this module
+from kivy.uix.checkbox import CheckBox
+ 
+# The GridLayout arranges children in a matrix.
+from kivy.uix.gridlayout import GridLayout
+ 
+  
+# Container class for the app's widgets
+class check_box(GridLayout):
+ 
+    def __init__(self, **kwargs):
+        # super function can be used to gain access
+        # to inherited methods from a parent or sibling class
+        # that has been overwritten in a class object.
+        super(check_box, self).__init__(**kwargs)
+ 
+        # 2 columns in grid layout
+        self.cols = 2
+ 
+        # Add checkbox, widget and labels
+        self.add_widget(Label(text ='Male'))
+        self.active = CheckBox(active = True)
+        self.add_widget(self.active)
+ 
+        self.add_widget(Label(text ='Female'))
+        self.active = CheckBox(active = True)
+        self.add_widget(self.active)
+ 
+        self.add_widget(Label(text ='Other'))
+        self.active = CheckBox(active = True)
+        self.add_widget(self.active)
+   
+       
+# App derived from App class
+class CheckBoxApp(App):
+    def build(self):     
+        return check_box()
+ 
+# Run the app
+if __name__ == '__main__':
+    CheckBoxApp().run()
+انتاج: 
+
+
+
+الآن السؤال هو كيف يمكننا ربط أو إرفاق رد الاتصال بـ Checkbox؟  
+لذلك تم إعطاء المثال البسيط أي ربط Checkbox مع النقرة ، أي عند النقر فوقه ، اطبع "Checkbox Checked" وإلا فسيتم طباعة "Checkbox غير محدد".
+
+الآن برنامج لترتيب رد اتصال إلى Checkbox ، أي ما إذا تم تحديد خانة الاختيار أم لا.  
+
+بايثون 3
+
+# Program to learn how to make checkbox
+# and adding callback in kivy
+ 
+# import kivy module
+import kivy
+ 
+# base Class of your App inherits from the App class. 
+# app:always refers to the instance of your application 
+from kivy.app import App
+ 
+# The :class:`Widget` class is the base class
+# required for creating Widgets.
+from kivy.uix.widget import Widget
+ 
+# The Label widget is for rendering text.
+from kivy.uix.label import Label
+ 
+# To use the checkbox must import it from this module
+from kivy.uix.checkbox import CheckBox
+ 
+# The GridLayout arranges children in a matrix.
+# imports the GridLayout class for use in the app.
+from kivy.uix.gridlayout import GridLayout
+ 
+  
+# Container class for the app's widgets
+class check_box(GridLayout):
+ 
+    def __init__(self, **kwargs):
+        # super function can be used to gain access
+        # to inherited methods from a parent or sibling class
+        # that has been overwritten in a class object.
+        super(check_box, self).__init__(**kwargs)
+ 
+        # 2 columns in grid layout
+        self.cols = 2
+ 
+        # Add checkbox, Label and Widget
+        self.add_widget(Label(text ='Male'))
+        self.active = CheckBox(active = True)
+        self.add_widget(self.active)
+ 
+        # Adding label to screen
+        self.lbl_active = Label(text ='Checkbox is on')
+        self.add_widget(self.lbl_active)
+         
+ 
+        # Attach a callback
+        self.active.bind(active = self.on_checkbox_Active)
+ 
+  
+    # Callback for the checkbox
+    def on_checkbox_Active(self, checkboxInstance, isActive):
+        if isActive:
+            self.lbl_active.text ="Checkbox is ON"
+            print("Checkbox Checked")
+        else:
+            self.lbl_active.text ="Checkbox is OFF"
+            print("Checkbox unchecked")
+  
+ 
+# App derived from App class
+class CheckBoxApp(App):
+    def build(self):
+        # build is a method of Kivy's App class used
+        # to place widgets onto the GUI.
+        return check_box()
+ 
+# Run the app
+if __name__ == '__main__':
+    CheckBoxApp().run()
+انتاج: 
+
+
+
+إخراج الفيديو:  
+
+مشغل فديوهات
+
+00:00
+00:00
+
+
+  
+المرجع: https://kivy.org/doc/stable/api-kivy.uix.checkbox.html .
+ 
+<<<<<<<<<<<<<<<<<
+
+بايثون | القائمة المنسدلة في kivy
+مستوى الصعوبة: متوسط
+آخر تحديث: 18 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي مع الأمثلة .
+
+قائمة منسدلة
+يمكن استخدام قائمة dop-down مع عناصر واجهة المستخدم المخصصة. يتيح لك عرض قائمة من عناصر واجهة المستخدم ضمن عنصر واجهة مستخدم معروض. على عكس مجموعات الأدوات الأخرى ، يمكن أن تحتوي قائمة عناصر واجهة المستخدم على أي نوع من عناصر واجهة المستخدم: أزرار بسيطة ، صور ، إلخ.
+
+يتم وضع القائمة المنسدلة تلقائيًا بالكامل: سنحاول دائمًا وضع القائمة المنسدلة بطريقة يمكن للمستخدم من خلالها تحديد عنصر في القائمة.
+
+بعض النقاط المهمة التي يجب وضعها في الاعتبار أثناء إنشاء قائمة منسدلة:
+
+عند إضافة الأدوات ، نحتاج إلى تحديد الارتفاع يدويًا (تعطيل size_hint_y) حتى تتمكن القائمة المنسدلة من حساب المنطقة التي تحتاجها.
+ستؤدي جميع الأزرار الموجودة في القائمة المنسدلة إلى تشغيل طريقة القائمة المنسدلة المنسدلة. بعد الاتصال ، سيعرض نص الزر الرئيسي اختيار القائمة المنسدلة.
+للعمل مع هذه الأداة ، يجب عليك استيراد:
+
+من kivy.uix.dropdown قائمة الاستيراد المنسدلة
+
+النهج الأساسي:
+1) استيراد kivy
+2) استيراد تطبيق kivy
+3) استيراد القائمة المنسدلة
+4) زر الاستيراد
+5) تعيين الإصدار الأدنى (اختياري)
+6) استيراد runTouchApp
+7) إنشاء قائمة منسدلة
+8) إنشاء طريقة runtouchApp
+   الذي يأخذ القطعة كحجة
+   لتشغيل التطبيق
+تنفيذ النهج -
+
+# Program to explain how to create drop-down in kivy 
+     
+# import kivy module    
+import kivy  
+       
+# base Class of your App inherits from the App class.    
+# app:always refers to the instance of your application   
+from kivy.app import App 
+     
+# this restrict the kivy version i.e  
+# below this kivy version you cannot  
+# use the app or software  
+kivy.require('1.9.0') 
+     
+# Importing Drop-down from the module to use in the program
+from kivy.uix.dropdown import DropDown
+  
+# The Button is a Label with associated actions
+# that are triggered when the button is pressed
+# (or released after a click / touch)
+from kivy.uix.button import Button
+  
+# another way used to run kivy app 
+from kivy.base import runTouchApp
+  
+# create a dropdown with 10 buttons
+dropdown = DropDown()
+for index in range(10):
+  
+    # Adding button in drop down list
+    btn = Button(text ='Value % d' % index, size_hint_y = None, height = 40)
+  
+    # binding the button to show the text when selected
+    btn.bind(on_release = lambda btn: dropdown.select(btn.text))
+  
+    # then add the button inside the dropdown
+    dropdown.add_widget(btn)
+  
+# create a big main button
+mainbutton = Button(text ='Hello', size_hint =(None, None), pos =(350, 300))
+  
+# show the dropdown menu when the main button is released
+# note: all the bind() calls pass the instance of the caller 
+# (here, the mainbutton instance) as the first argument of the callback
+# (here, dropdown.open.).
+mainbutton.bind(on_release = dropdown.open)
+  
+# one last thing, listen for the selection in the 
+# dropdown list and assign the data to the button text.
+dropdown.bind(on_select = lambda instance, x: setattr(mainbutton, 'text', x))
+  
+# runtouchApp:
+# If you pass only a widget in runtouchApp(), a Window will
+# be created and your widget will be added to the window
+# as the root widget.
+runTouchApp(mainbutton)
+انتاج:
+
+الصورة 1:
+
+
+الصورة 2:
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة دائري في Kivy
+آخر تحديث: 06 فبراير 2020
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+أداة الرف الدائري:
+توفر أداة Carousel عرضًا دائريًا كلاسيكيًا مناسبًا للجوّال حيث يمكنك التمرير بين الشرائح. يمكنك إضافة أي محتوى إلى المكتبة وجعلها تتحرك أفقيًا أو رأسيًا. يمكن أن يعرض الرف الدائري الصفحات في تسلسل أو حلقة.
+
+بعض النقاط المهمة التي يجب ملاحظتها:
+
+1) يوفر سهولة لاجتياز مجموعة من الشرائح.
+2) يمكنه الاحتفاظ بالصور أو مقاطع الفيديو أو أي محتوى آخر
+3) يمكن أن تكون الحركة عبارة عن تمريرات رأسية أو أفقية
+4) يوفر Kivy العديد من التخصيصات للعرض الدائري والتي تشمل:
+
+تأثير الحركة أثناء إجراء الانتقال من شريحة إلى شريحة أخرى ، مدة الفترة الانتقالية
+تحديد اتجاه السحب
+تعطيل الضربات الرأسية
+لتحديد ما إذا كان يجب أن يتكرر دائري بشكل لا نهائي أم لا
+تحديد الحد الأدنى للمسافة التي يجب مراعاتها أثناء قبول التمرير
+تحديد الحد الأدنى للمدة التي يجب مراعاتها أثناء قبول التمرير
+تحديد الشرائح الحالية والسابقة والتالية
+للعمل مع هذه الأداة ، يجب عليك استيراد:
+
+من kivy.uix.carousel import Carousel
+النهج الأساسي:
+1) استيراد kivy
+2) استيراد تطبيق kivy
+3) استيراد Gridlayout
+4) استيراد القطعة
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة عنصر واجهة المستخدم بقدر الحاجة
+7) إنشاء فئة التطبيق
+8) إعادة فئة الخ عنصر واجهة المستخدم / التخطيط
+9) قم بتشغيل مثيل للفئة
+تنفيذ النهج:
+
+# Program to explain how to add carousel in kivy 
+    
+# import kivy module    
+import kivy  
+      
+# base Class of your App inherits from the App class.    
+# app:always refers to the instance of your application   
+from kivy.app import App 
+    
+# this restrict the kivy version i.e  
+# below this kivy version you cannot  
+# use the app or software  
+kivy.require('1.9.0') 
+    
+# The Image widget is used to display an image 
+# this module contain all features of images 
+from kivy.uix.image import AsyncImage
+  
+# The Carousel widget provides the
+# classic mobile-friendly carousel
+# view where you can swipe between slides
+from kivy.uix.carousel import Carousel
+  
+  
+  
+# Create the App class
+class CarouselApp(App):
+    def build(self):
+  
+        # Add carousel
+        # And add the direction of swipe
+        carousel = Carousel(direction ='right')
+  
+        # Adding 10 slides
+        for i in range(10):
+            src = "http://placehold.it / 480x270.png&text = slide-%d&.png" %i
+            # using Asynchronous image            
+            image = AsyncImage(source = src, allow_stretch = True)
+            carousel.add_widget(image)
+        return carousel
+  
+# Run the App
+CarouselApp().run()
+انتاج:
+
+
+
+
+
+
+
+
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة BoxLayout في Kivy
+مستوى الصعوبة: متوسط
+آخر تحديث: 19 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. حيث يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+ 
+
+؟؟؟؟؟؟؟؟ دروس كيفي - تعلم كيفي بالأمثلة .
+
+الآن في هذه المقالة ، سوف نتعرف على استخدام أداة BoxLayout في kivy وكيفية إضافة بعض الميزات مثل اللون والحجم وما إلى ذلك.
+BoxLayout: 
+يرتب BoxLayout عناصر واجهة المستخدم إما بطريقة رأسية تكون واحدة فوق الأخرى أو بطريقة أفقية واحدة تلو الأخرى. عندما لا تقدم أي تلميح للحجم ، فإن الحاجيات الفرعية تقسم حجم عنصر واجهة المستخدم الأصلي بالتساوي أو وفقًا لذلك.
+ 
+
+الطريقة الأساسية التي يجب اتباعها أثناء إنشاء الزر: 
+1) استيراد kivy 
+2) استيراد kivyApp 
+3) استيراد BoxLayout 
+4) تعيين الحد الأدنى للإصدار (اختياري) 
+5) إضافة عناصر واجهة  مستخدم
+6) تمديد الفئة 
+7) مخطط الإرجاع 
+8) تشغيل مثيل للفئة
+
+فيما يلي رمز استخدام BoxLayout: 
+ 
+
+# code to show how to use nested boxlayouts.
+ 
+# import kivy module
+import kivy
+   
+# this restricts the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+   
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+   
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# BoxLayout arranges children in a vertical or horizontal box.
+# or help to put the children at the desired location.
+from kivy.uix.boxlayout import BoxLayout
+   
+# class in which we are creating the button by using boxlayout
+# defining the App class
+class BoxLayoutApp(App):
+       
+    def build(self):
+ 
+        # To position oriented widgets again in the proper orientation
+        # use of vertical orientation to set all widgets 
+        superBox = BoxLayout(orientation ='vertical')
+ 
+        # To position widgets next to each other,
+        # use a horizontal BoxLayout.
+        HB = BoxLayout(orientation ='horizontal')
+         
+        btn1 = Button(text ="One")
+        btn2 = Button(text ="Two")
+ 
+        # HB represents the horizontal boxlayout orientation
+        # declared above
+        HB.add_widget(btn1)
+        HB.add_widget(btn2)
+ 
+        # To position widgets above/below each other,
+        # use a vertical BoxLayout.
+        VB = BoxLayout(orientation ='vertical')
+ 
+        btn3 = Button(text ="Three")
+        btn4 = Button(text ="Four")
+ 
+        # VB represents the vertical boxlayout orientation
+        # declared above
+        VB.add_widget(btn3)
+        VB.add_widget(btn4)
+ 
+        # superbox used to again align the oriented widgets
+        superBox.add_widget(HB)
+        superBox.add_widget(VB)
+ 
+        return superBox
+ 
+# creating the object root for BoxLayoutApp() class 
+root = BoxLayoutApp()
+   
+# run function runs the whole program
+# i.e run() method which calls the
+# target function passed to the constructor.
+root.run()
+انتاج: 
+ 
+
+
+
+  
+بعض التعديلات مثل إضافة اللون وحجم الإصلاح في أداة تخطيط Box: 
+ 
+
+
+# code to show how to use nested boxlayouts.
+ 
+# import kivy module
+import kivy
+ 
+# to choose the colors randomly
+# every time you run it shows different color
+import random 
+ 
+# this restricts the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+   
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+   
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# BoxLayout arranges children in a vertical or horizontal box.
+# or help to put the children at the desired location.
+from kivy.uix.boxlayout import BoxLayout
+ 
+# declaring the colours you can use directly also
+red = [1, 0, 0, 1]
+green = [0, 1, 0, 1]
+blue =  [0, 0, 1, 1]
+purple = [1, 0, 1, 1]
+   
+# class in which we are creating the button
+class BoxLayoutApp(App):
+       
+    def build(self):
+ 
+        # To position oriented widgets again in the proper orientation
+        # use of vertical orientation to set all widgets 
+        superBox = BoxLayout(orientation ='vertical')
+ 
+        # To position widgets next to each other,
+        # use a horizontal BoxLayout.
+        HB = BoxLayout(orientation ='horizontal')
+ 
+        colors = [red, green, blue, purple]
+         
+        # styling the button boxlayout
+        btn1 = Button(text ="One",
+                      background_color = random.choice(colors),
+                      font_size = 32,
+                      size_hint =(0.7, 1))
+        btn2 = Button(text ="Two",
+                      background_color = random.choice(colors),
+                      font_size = 32,
+                      size_hint =(0.7, 1))
+ 
+        # HB represents the horizontal boxlayout orientation
+        # declared above
+        HB.add_widget(btn1)
+        HB.add_widget(btn2)
+ 
+        # To position widgets above/below each other,
+        # use a vertical BoxLayout.
+        VB = BoxLayout(orientation ='vertical')
+ 
+        btn3 = Button(text ="Three",
+                      background_color = random.choice(colors),
+                      font_size = 32,
+                      size_hint =(1, 10))
+        btn4 = Button(text ="Four",
+                      background_color = random.choice(colors),
+                      font_size = 32,
+                      size_hint =(1, 15))
+ 
+        # VB represents the vertical boxlayout orientation
+        # declared above
+        VB.add_widget(btn3)
+        VB.add_widget(btn4)
+ 
+        # superbox used to again align the oriented widgets
+        superBox.add_widget(HB)
+        superBox.add_widget(VB)
+ 
+        return superBox
+ 
+# creating the object root for BoxLayoutApp() class 
+root = BoxLayoutApp()
+   
+# run function runs the whole program
+# i.e run() method which calls the
+# target function passed to the constructor.
+root.run()
+الإخراج:
+الصورة 1: 
+ 
+
+
+
+الصورة 2: 
+ 
+
+
+
+ملاحظة: في كل مرة تقوم فيها بتشغيل الكود ، فإنه يوفر لك مخرجات لونية مختلفة كما في الصور.
+ 
+
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة المنزلق في Kivy
+آخر تحديث: ٢٩ يونيو ٢٠٢١
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+ 
+
+؟؟؟؟؟؟؟؟ دروس كيفي - تعلم كيفي بالأمثلة .
+
+شريط التمرير: 
+للعمل مع شريط التمرير ، عليك أولاً استيراد الوحدة النمطية التي تتكون من جميع ميزات ووظائف شريط التمرير ، أي 
+ 
+
+الوحدة: kivy.uix.slider
+تبدو أداة Slider كما هي التي نستخدمها في android لزيادة السطوع والحجم وما إلى ذلك. وهي تدعم الاتجاهات الأفقية والرأسية وقيم min / max والقيمة الافتراضية. يدعم Kivy العديد من خيارات عنصر واجهة المستخدم المنزلق لتخصيص المؤشر وصورة المؤشر والحدود والخلفية لاستخدامها في اتجاهات مختلفة والمنطقة بين القيمة الدنيا والقيمة القصوى. 
+يدعم Kivy أيضًا التعامل من حيث القيمة العادية (النطاق من 0 إلى 1) بدلاً من النطاقات الحقيقية التي يدعمها شريط التمرير.
+ 
+
+النهج الأساسي الذي يجب اتباعه أثناء إنشاء شريط التمرير:
+1) استيراد kivy 
+2) استيراد تطبيق kivy 
+3) مخطط استيراد الشبكة (ليس إلزاميًا حسب الحاجة) 
+4) ملصق استيراد (ليس إلزاميًا حسب الحاجة) 
+5) استيراد شريط التمرير 
+6) استيراد خاصية رقمية 
+7) تعيين الحد الأدنى للإصدار (اختياري) 
+8) تمديد الفئة 
+9) إضافة عنصر واجهة مستخدم وإرجاعه 
+10) قم بتشغيل مثيل للفئة
+
+يوجد أدناه شريط تمرير تنفيذ التعليمات البرمجية: 
+ 
+
+# import kivy module
+import kivy
+   
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+ 
+# Kivy Example App for the slider widget
+from kivy.app import App
+ 
+# The GridLayout arranges children in a matrix.
+from kivy.uix.gridlayout import GridLayout
+ 
+# If we will not import this module
+# It will through the error
+from kivy.uix.slider import Slider
+ 
+# The Label widget is for rendering text.
+from kivy.uix.label import Label
+ 
+# Property that represents a numeric value
+# within a minimum bound and / or maximum
+# bound – within a numeric range.
+from kivy.properties  import NumericProperty
+ 
+# class in which we are defining the
+# sliders and its effects
+class WidgetContainer(GridLayout):
+ 
+    def __init__(self, **kwargs):
+         
+        # super function can be used to gain access
+        # to inherited methods from a parent or sibling
+        # class that has been overwritten in a class object.
+        super(WidgetContainer, self).__init__(**kwargs)
+ 
+        # 4 columns in grid layout
+        self.cols = 4
+         
+        # declaring the slider and adding some effects to it
+        self.brightnessControl = Slider(min = 0, max = 100)
+          
+ 
+        # 1st row - one label, one slider   
+        self.add_widget(Label(text ='brightness'))
+        self.add_widget(self.brightnessControl)
+ 
+        # 2nd row - one label for caption,
+        # one label for slider value
+        self.add_widget(Label(text ='Slider Value'))
+        self.brightnessValue = Label(text ='0')
+        self.add_widget(self.brightnessValue)
+ 
+ 
+        # On the slider object Attach a callback
+        # for the attribute named value
+        self.brightnessControl.bind(value = self.on_value)
+        
+    # Adding functionality behind the slider
+    # i.e when pressed increase the value
+    def on_value(self, instance, brightness):
+        self.brightnessValue.text = "% d"% brightness
+ 
+ 
+# The app class
+class SliderExample(App):
+    def build(self):
+        widgetContainer = WidgetContainer()
+        return widgetContainer
+  
+ 
+# creating the object root for ButtonApp() class 
+root = SliderExample()
+   
+# run function runs the whole program
+# i.e run() method which calls the
+# target function passed to the constructor.
+root.run()
+انتاج: 
+ 
+
+
+
+  
+لإضافة بعض التصميم والتلوين إلى شريط التمرير ، ما عليك سوى استبدال السطر رقم 42 بما يلي وإضافة بعض الميزات الجديدة أيضًا إذا كنت تريد ذلك. بالنسبة للنص ، يستخدم التصميم الأوامر المناسبة في جزء النص. 
+ 
+
+# declaring the slider and adding some effects to it
+# By default its orientation is horizontal
+# if want to change to vertical do like below
+        self.brightnessControl = Slider(min = 0, max = 100,
+                                        orientation ='vertical',
+                                        value_track = True,
+                                        value_track_color =[1, 0, 0, 1])
+انتاج: 
+ 
+
+
+
+فيديو لشرح كيفية عمل شريط التمرير - 
+ 
+
+مشغل فديوهات
+
+00:00
+00:00
+
+
+ 
+
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة المنبثقة في Kivy
+آخر تحديث: 06 فبراير 2020
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+القطعة المنبثقة:
+يتم استخدام عنصر واجهة المستخدم المنبثقة لإنشاء النوافذ المنبثقة. بشكل افتراضي ، ستغطي النافذة المنبثقة النافذة "الأصلية" بالكامل. عندما تقوم بإنشاء نافذة منبثقة ، يجب عليك على الأقل تعيين Popup.title و Popup.content.
+تُستخدم مربعات الحوار المنبثقة] عندما يتعين علينا نقل بعض الرسائل الواضحة إلى المستخدم. لا يزال من الممكن إرسال الرسائل إلى المستخدم من خلال أشرطة الحالة وكذلك للرسائل المحددة التي يجب إخبارها بتركيز من خلال مربعات الحوار المنبثقة.
+ضع في اعتبارك أن الحجم الافتراضي للأداة هو size_hint = (1 ، 1).
+إذا كنت لا تريد أن تكون النافذة المنبثقة الخاصة بك في وضع ملء الشاشة ، فيجب عليك إما إعطاء تلميحات الحجم بقيم أقل من 1 (على سبيل المثال size_hint = (. 8 ، .8)) أو إلغاء تنشيط size_hint واستخدام سمات الحجم الثابت.
+لاستخدام النافذة المنبثقة ، يجب عليك استيراد:
+
+من kivy.uix.popup استيراد نافذة منبثقة
+ملاحظة: المنبثقة هي أداة خاصة. لا تحاول إضافته كطفل إلى أي عنصر واجهة مستخدم آخر. إذا قمت بذلك ، فسيتم التعامل مع Popup مثل عنصر واجهة مستخدم عادي ولن يتم إنشاؤه مخفيًا في الخلفية.
+
+النهج الأساسي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) استيراد التسمية
+4) زر الاستيراد
+5) استيراد Gridlayout
+6) استيراد المنبثقة
+7) تعيين الإصدار الأدنى (اختياري)
+8) إنشاء فئة التطبيق
+9) عودة تخطيط / عنصر واجهة مستخدم / فئة (وفقًا للمتطلبات)
+10) في فئة التطبيق ، قم بإنشاء النافذة المنبثقة
+11) قم بتشغيل مثيل للفئة
+الكود رقم 1: في الكود الأول ، ستغطي النافذة المنبثقة نافذة "الأصل" بالكامل.
+# Kivy example for the Popup widget
+  
+# Program to Show how to create a switch
+# import kivy module   
+import kivy 
+     
+# base Class of your App inherits from the App class.   
+# app:always refers to the instance of your application  
+from kivy.app import App
+   
+# this restrict the kivy version i.e 
+# below this kivy version you cannot 
+# use the app or software 
+kivy.require('1.9.0')
+  
+# The Button is a Label with associated actions
+# that is triggered when the button
+# is pressed (or released after a click/touch).
+from kivy.uix.button import Button
+  
+  
+# The GridLayout arranges children in a matrix.
+# It takes the available space and
+# divides it into columns and rows,
+# then adds widgets to the resulting “cells”.
+from kivy.uix.gridlayout import GridLayout
+  
+# Popup widget is used to create popups.
+# By default, the popup will cover
+# the whole “parent” window.
+# When you are creating a popup,
+# you must at least set a Popup.title and Popup.content.
+from kivy.uix.popup import Popup
+  
+# The Label widget is for rendering text. 
+from kivy.uix.label import Label
+  
+# to change the kivy default settings we use this module config
+from kivy.config import Config
+  
+# 0 being off 1 being on as in true / false
+# you can use 0 or 1 && True or False
+Config.set('graphics', 'resizable', True)
+  
+# Make an app by deriving from the kivy provided app class
+class PopupExample(App):
+    # override the build method and return the root widget of this App
+  
+    def build(self):
+        # Define a grid layout for this App
+        self.layout = GridLayout(cols = 1, padding = 10)
+  
+  
+        # Add a button
+        self.button = Button(text ="Click for pop-up")
+        self.layout.add_widget(self.button)
+  
+        # Attach a callback for the button press event
+        self.button.bind(on_press = self.onButtonPress)
+          
+        return self.layout
+  
+    # On button press - Create a popup dialog with a label and a close button
+    def onButtonPress(self, button):
+          
+        layout = GridLayout(cols = 1, padding = 10)
+  
+        popupLabel = Label(text = "Click for pop-up")
+        closeButton = Button(text = "Close the pop-up")
+  
+        layout.add_widget(popupLabel)
+        layout.add_widget(closeButton)       
+  
+        # Instantiate the modal popup and display
+        popup = Popup(title ='Demo Popup',
+                      content = layout)  
+        popup.open()   
+  
+        # Attach close button press with popup.dismiss action
+        closeButton.bind(on_press = popup.dismiss)   
+  
+# Run the app
+if __name__ == '__main__':
+    PopupExample().run()
+انتاج:
+
+عند النقر على الشاشة ستفتح نافذة منبثقة على النحو التالي:
+
+
+عند النقر فوق إغلاق النافذة المنبثقة ، سيتم إغلاقها.
+
+
+ 
+الكود رقم 2:
+في الكود الثاني عندما نستخدم size_hint والحجم يمكننا إعطاء الحجم وفقًا لذلك. في هذا فقط أضف شيئًا كما في الكود أدناه في السطر رقم 75.
+
+# Kivy example for the Popup widget
+  
+# Program to Show how to create a switch
+# import kivy module   
+import kivy 
+     
+# base Class of your App inherits from the App class.   
+# app:always refers to the instance of your application  
+from kivy.app import App
+   
+# this restrict the kivy version i.e 
+# below this kivy version you cannot 
+# use the app or software 
+kivy.require('1.9.0')
+  
+# The Button is a Label with associated actions
+# that is triggered when the button
+# is pressed (or released after a click/touch).
+from kivy.uix.button import Button
+  
+  
+# The GridLayout arranges children in a matrix.
+# It takes the available space and
+# divides it into columns and rows,
+# then adds widgets to the resulting “cells”.
+from kivy.uix.gridlayout import GridLayout
+  
+# Popup widget is used to create popups.
+# By default, the popup will cover
+# the whole “parent” window.
+# When you are creating a popup,
+# you must at least set a Popup.title and Popup.content.
+from kivy.uix.popup import Popup
+  
+# The Label widget is for rendering text. 
+from kivy.uix.label import Label
+  
+# to change the kivy default settings we use this module config
+from kivy.config import Config
+  
+# 0 being off 1 being on as in true / false
+# you can use 0 or 1 && True or False
+Config.set('graphics', 'resizable', True)
+  
+# Make an app by deriving from the kivy provided app class
+class PopupExample(App):
+    # override the build method and return the root widget of this App
+  
+    def build(self):
+        # Define a grid layout for this App
+        self.layout = GridLayout(cols = 1, padding = 10)
+  
+  
+        # Add a button
+        self.button = Button(text ="Click for pop-up")
+        self.layout.add_widget(self.button)
+  
+        # Attach a callback for the button press event
+        self.button.bind(on_press = self.onButtonPress)
+          
+        return self.layout
+  
+    # On button press - Create a popup dialog with a label and a close button
+    def onButtonPress(self, button):
+          
+        layout = GridLayout(cols = 1, padding = 10)
+  
+        popupLabel = Label(text = "Click for pop-up")
+        closeButton = Button(text = "Close the pop-up")
+  
+        layout.add_widget(popupLabel)
+        layout.add_widget(closeButton)       
+  
+        # Instantiate the modal popup and display
+        popup = Popup(title ='Demo Popup',
+                      content = layout,
+                      size_hint =(None, None), size =(200, 200))  
+        popup.open()   
+  
+        # Attach close button press with popup.dismiss action
+        closeButton.bind(on_press = popup.dismiss)   
+  
+# Run the app
+if __name__ == '__main__':
+    PopupExample().run()
+الإخراج:
+سيكون حجم النافذة المنبثقة أصغر من حجم النافذة.
+
+
+
+المرجع: https://kivy.org/doc/stable/api-kivy.uix.popup.html
+
+
+
+<<<<<<<<<<<<<<<<<
+
+بايثون | أداة التبديل في Kivy
+آخر تحديث: 03 تشرين الثاني (نوفمبر) 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+ 
+
+؟؟؟؟؟؟؟؟ دروس كيفي - تعلم كيفي بالأمثلة .
+
+ 
+
+أداة التبديل:
+أداة التبديل نشطة أو غير نشطة ، كمفتاح إضاءة ميكانيكي. يمكن للمستخدم التمرير إلى اليسار / اليمين لتنشيط / إلغاء تنشيطه. القيمة التي يمثلها المحول هي إما True أو False. هذا هو المفتاح يمكن أن يكون إما في وضع التشغيل أو وضع الإيقاف .
+للعمل مع Switch ، يجب عليك استيراد: 
+ 
+
+من kivy.uix.switch استيراد تبديل
+ملاحظة: إذا كنت تريد التحكم في الحالة بلمسة واحدة بدلاً من التمرير السريع ، فاستخدم زر ToggleButton بدلاً من ذلك.
+ 
+
+النهج الأساسي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) استيراد التبديل
+4) استيراد Gridlayout
+5) استيراد التسمية
+6) تعيين الإصدار الأدنى (اختياري)
+7) إنشاء فئة التخطيط (في هذا تقوم بإنشاء مفتاح)
+8) إنشاء فئة التطبيق
+9) عودة تخطيط / عنصر واجهة مستخدم / فئة (وفقًا للمتطلبات)
+10) قم بتشغيل مثيل للفئة
+تنفيذ النهج: 
+ 
+
+
+# Program to Show how to create a switch
+# import kivy module  
+import kivy
+   
+# base Class of your App inherits from the App class.  
+# app:always refers to the instance of your application 
+from kivy.app import App
+ 
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require('1.9.0')
+ 
+# The Switch widget is active or inactive
+# The state transition of a switch is from
+# either on to off or off to on.
+from kivy.uix.switch import Switch
+ 
+# The GridLayout arranges children in a matrix.
+# It takes the available space and
+# divides it into columns and rows,
+# then adds widgets to the resulting “cells”.
+from kivy.uix.gridlayout import GridLayout
+ 
+# The Label widget is for rendering text.
+from kivy.uix.label import Label
+ 
+# A Gridlayout with a label a switch
+# A class which contains all stuff about the switch
+class SimpleSwitch(GridLayout):
+ 
+     # Defining __init__ constructor
+     def __init__(self, **kwargs):
+ 
+          # super function can be used to gain access
+          # to inherited methods from a parent or sibling class
+          # that has been overwritten in a class object.
+          super(SimpleSwitch, self).__init__(**kwargs)
+ 
+          # no of columns
+          self.cols = 2
+ 
+          # Adding label to the Switch
+          self.add_widget(Label(text ="Switch"))
+ 
+          # Initially switch is Off i.e active = False
+          self.settings_sample = Switch(active = False)
+ 
+          # Add widget
+          self.add_widget(self.settings_sample)
+ 
+            
+# Defining the App Class
+class SwitchApp(App):
+     # define build function
+     def build(self):
+          # return the switch class
+          return SimpleSwitch()
+ 
+  
+# Run the kivy app
+if __name__ == '__main__':
+     SwitchApp().run()
+انتاج: 
+ 
+
+
+
+ 
+
+
+
+إرفاق رد الاتصال للتبديل: 
+ 
+
+يمكن توصيل مفتاح بمعاودة الاتصال لاسترداد قيمة المحول.
+يكون انتقال حالة المحول إما من ON إلى OFF أو من OFF إلى ON.
+عندما يقوم المحول بأي انتقال ، يتم تشغيل رد الاتصال ويمكن استرداد الحالة الجديدة ، أي أنه قد تم الوصول وأي إجراء آخر يمكن اتخاذه بناءً على الحالة.
+افتراضيًا ، يكون تمثيل الأداة ثابتًا. الحد الأدنى للحجم المطلوب هو 83 * 32 بكسل.
+الأداة بأكملها نشطة ، وليس فقط الجزء الذي يحتوي على رسومات. طالما قمت بالتمرير فوق المربع المحيط للأداة ، فستعمل.
+الآن لإرفاق رد اتصال ، يجب عليك تحديد وظيفة رد الاتصال وربطها بالمفتاح. فيما يلي رمز كيفية إرفاق رد اتصال:
+ 
+
+
+# Program to Show how to attach a callback to switch
+ 
+# import kivy module  
+import kivy
+   
+# base Class of your App inherits from the App class.  
+# app:always refers to the instance of your application 
+from kivy.app import App
+ 
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require('1.9.0')
+ 
+# The Switch widget is active or inactive
+# The state transition of a switch is from
+# either on to off or off to on.
+from kivy.uix.switch import Switch
+ 
+# The GridLayout arranges children in a matrix.
+# It takes the available space and
+# divides it into columns and rows,
+# then adds widgets to the resulting “cells”.
+from kivy.uix.gridlayout import GridLayout
+ 
+# The Label widget is for rendering text.
+from kivy.uix.label import Label
+ 
+# A Gridlayout with a label a switch
+# A class which contains all stuff about the switch
+class SimpleSwitch(GridLayout):
+ 
+     # Defining __init__ constructor
+     def __init__(self, **kwargs):
+ 
+          # super function can be used to gain access
+          # to inherited methods from a parent or sibling class
+          # that has been overwritten in a class object.
+          super(SimpleSwitch, self).__init__(**kwargs)
+ 
+          # no of columns
+          self.cols = 2
+ 
+          # Adding label to the Switch
+          self.add_widget(Label(text ="Switch"))
+ 
+          # Initially switch is Off i.e active = False
+          self.settings_sample = Switch(active = False)
+ 
+          # Add widget
+          self.add_widget(self.settings_sample)
+ 
+          # Arranging a callback to the switch
+          # using bing function
+          self.settings_sample.bind(active = switch_callback)      
+ 
+# Callback for the switch state transition
+# Defining a Callback function
+# Contains Two parameter switchObject, switchValue
+def switch_callback(switchObject, switchValue):
+     
+    # Switch value are True and False
+    if(switchValue):
+        print('Switch is ON:):):)')
+    else:
+        print('Switch is OFF:(:(:(')
+ 
+  
+# Defining the App Class
+class SwitchApp(App):
+     # define build function
+     def build(self):
+          # return the switch class
+          return SimpleSwitch()
+ 
+  
+# Run the kivy app
+if __name__ == '__main__':
+     SwitchApp().run()
+انتاج: 
+ 
+
+
+
+ 
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | القطعة سبينر في kivy
+آخر تحديث: 06 فبراير 2020
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+أداة Spinner:
+للعمل مع الدوار ، يجب عليك استيراد:
+
+من kivy.uix.spinner استيراد Spinner
+Spinner هي أداة توفر طريقة سريعة لتحديد قيمة واحدة من مجموعة. في الحالة الافتراضية ، يعرض القرص الدوار القيمة المحددة حاليًا. يؤدي لمس القرص الدوار إلى عرض قائمة منسدلة تحتوي على جميع القيم الأخرى المتاحة التي يمكن للمستخدم تحديد قيمة جديدة منها.
+مثل مربع التحرير والسرد ، يمكن أن يحتوي كائن الزيادة والنقصان على قيم متعددة ويمكن تحديد إحدى القيم.
+يمكن إرفاق رد نداء بالعنصر الدوار لتلقي إعلامات بشأن اختيار قيمة من الكائن الدوار.
+
+النهج الأساسي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) استيراد التسمية
+4) استيراد سبينر
+5) استيراد Floatlayout
+6) تعيين الإصدار الأدنى (اختياري)
+7) إنشاء فئة التطبيق:
+        1) قم بإنشاء الدوار
+        2) إرفاق الملصقات بالغزل
+        3) إرفاق رد أيضا
+8) عودة تخطيط / عنصر واجهة مستخدم / فئة (وفقًا للمتطلبات)
+9) قم بتشغيل مثيل للفئة
+تنفيذ سبينر بسيط:
+
+# Sample spinner app in kivy to change the
+# kivy default settings we use this module config
+from kivy.config import Config
+  
+# 0 being off 1 being on as in true / false
+# you can use 0 or 1 && True or False
+Config.set('graphics', 'resizable', True)
+  
+# Program to Show how to create a switch
+# import kivy module   
+import kivy 
+     
+# base Class of your App inherits from the App class.   
+# app:always refers to the instance of your application  
+from kivy.app import App
+   
+# this restrict the kivy version i.e 
+# below this kivy version you cannot 
+# use the app or software 
+kivy.require('1.9.0')
+  
+# The Label widget is for rendering text. 
+from kivy.uix.label import Label
+  
+# Spinner is a widget that provides a
+# quick way to select one value from a set.
+# like a dropdown list
+from kivy.uix.spinner import Spinner
+  
+# module consist the floatlayout 
+# to work with FloatLayout first 
+# you have to import it 
+from kivy.uix.floatlayout import FloatLayout
+  
+  
+# Make an App by deriving from the App class
+class SpinnerExample(App):
+  
+    # define build 
+    def build(self):
+  
+        # creating floatlayout
+        layout = FloatLayout()
+  
+        # creating the spinner
+        # configure spinner object and add to layout
+        self.spinnerObject = Spinner(text ="Python",
+             values =("Python", "Java", "C++", "C", "C#", "PHP"),
+             background_color =(0.784, 0.443, 0.216, 1)) 
+  
+        self.spinnerObject.size_hint = (0.3, 0.2)
+  
+        self.spinnerObject.pos_hint ={'x': .35, 'y':.75}
+  
+        layout.add_widget(self.spinnerObject)
+  
+        # return the layout
+        return layout;
+  
+  
+# Run the app
+if __name__ == '__main__':
+    SpinnerExample().run()      
+انتاج:
+
+الصورة 1:
+
+
+الصورة 2:
+
+
+الآن إذا اضطررنا إلى إخبار المستخدم في كل مرة يتم فيها تحديد العنصر في القائمة ، فسنعرض تسمية بجوار الدوار الذي يخبرنا عن التسمية المحددة. سنطبع أيضًا قيمة ونص القرص الدوار.
+
+أدناه هو التنفيذ:
+
+# Sample spinner app in kivy to change the
+# kivy default settings we use this module config
+from kivy.config import Config
+  
+# 0 being off 1 being on as in true / false
+# you can use 0 or 1 && True or False
+Config.set('graphics', 'resizable', True)
+  
+# Program to Show how to create a switch
+# import kivy module   
+import kivy 
+     
+# base Class of your App inherits from the App class.   
+# app:always refers to the instance of your application  
+from kivy.app import App
+   
+# this restrict the kivy version i.e 
+# below this kivy version you cannot 
+# use the app or software 
+kivy.require('1.9.0')
+  
+# The Label widget is for rendering text. 
+from kivy.uix.label import Label
+  
+# Spinner is a widget that provides a
+# quick way to select one value from a set.
+# like a dropdown list
+from kivy.uix.spinner import Spinner
+  
+# module consist the floatlayout 
+# to work with FloatLayout first 
+# you have to import it 
+from kivy.uix.floatlayout import FloatLayout
+  
+  
+# Make an App by deriving from the App class
+class SpinnerExample(App):
+  
+    # define build 
+    def build(self):
+  
+        # creating floatlayout
+        layout = FloatLayout()
+  
+        # creating the spinner
+        # configure spinner object and add to layout
+        self.spinnerObject = Spinner(text ="Python",
+              values =("Python", "Java", "C++", "C", "C#", "PHP"),
+              background_color =(0.784, 0.443, 0.216, 1)) 
+  
+        self.spinnerObject.size_hint = (0.3, 0.2)
+  
+        self.spinnerObject.pos_hint ={'x': .35, 'y':.75}
+  
+        layout.add_widget(self.spinnerObject)
+        self.spinnerObject.bind(text = self.on_spinner_select)
+  
+        # It changes the label info as well
+        # add a label displaying the selection from the spinner
+        self.spinnerSelection = Label(text ="Selected value in spinner is: %s" 
+                                                     %self.spinnerObject.text)
+  
+        layout.add_widget(self.spinnerSelection)
+        self.spinnerSelection.pos_hint ={'x': .1, 'y':.3}
+          
+        return layout;
+  
+    # call back for the selection in spinner object
+    def on_spinner_select(self, spinner, text):
+        self.spinnerSelection.text = "Selected value in spinner is: %s"
+                                              %self.spinnerObject.text)
+  
+        print('The spinner', spinner, 'have text', text)
+      
+  
+# Run the app
+if __name__ == '__main__':
+    SpinnerExample().run()      
+انتاج:
+
+الصورة 1:
+
+
+الصورة 2:
+
+
+يوجد أدناه الإخراج في الفيديو للحصول على فهم أفضل:
+
+مشغل فديوهات
+
+00:00
+00:00
+
+
+
+
+
+
+<<<<<<<<<<<<<<<<<
+
+بايثون | التقدم بار القطعة في kivy
+آخر تحديث: 18 كانون الثاني (يناير) 2022
+Kivy هي أداة واجهة مستخدم رسومية مستقلة عن النظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+أداة شريط التقدم:
+تُستخدم أداة ProgressBar لتصور تقدم بعض المهام. يتم دعم الوضع الأفقي فقط حاليًا: الوضع الرأسي غير متاح بعد.
+لا يحتوي شريط التقدم على عناصر تفاعلية وهو عبارة عن عنصر واجهة مستخدم للعرض فقط.
+
+لاستخدامه ، ما عليك سوى تعيين قيمة للإشارة إلى التقدم الحالي:
+
+بايثون 3
+from kivy.uix.progressbar import ProgressBar
+pb = ProgressBar(max = 1000)
+  
+# this will update the graphics automatically (75 % done)
+pb.value = 750
+للعمل مع عنصر واجهة التقدم ، يجب عليك استيراده بواسطة الأمر:
+
+من kivy.uix.progressbar import ProgressBar
+
+يأخذ شريط التقدم وسيطتين:
+
+1) الحد الأقصى: أقصى قيمة مسموح بها للقيمة. وهي خاصية رقمية وافتراضية إلى 100.
+2) القيمة: القيمة الحالية لشريط التمرير
+
+النهج الأساسي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) استيراد شريط التقدم
+4) استيراد Boxlayout (حسب الحاجة)
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة التخطيط:
+7) إنشاء فئة التطبيق
+8) عودة تخطيط / عنصر واجهة مستخدم / فئة (وفقًا للمتطلبات)
+9) قم بتشغيل مثيل للفئة
+ملاحظة: هذا الرمز مخصص لشريط تقدم العمل الكامل وتحتاج إلى التركيز فقط على إنشاء شريط التقدم وتشغيله دون الحاجة إلى الضغط على الخصائص الأخرى التي سأقوم بتغطيتها في المستقبل.
+يجب عليك أولاً النقر فوق الزر الموجود في الملف ثم سيظهر شريط التقدم.
+
+تنفيذ النهج:
+
+بايثون 3
+# Program to Show how to create a Progressbar in .kv file
+  
+# import kivy module    
+import kivy  
+       
+# base Class of your App inherits from the App class.    
+# app:always refers to the instance of your application   
+from kivy.app import App 
+     
+# this restrict the kivy version i.e  
+# below this kivy version you cannot  
+# use the app or software  
+kivy.require('1.9.0') 
+    
+# The ProgressBar widget is used to
+# visualize the progress of some task
+from kivy.uix.progressbar import ProgressBar 
+  
+# BoxLayout arranges children in a vertical or horizontal box. 
+# or help to put the children at the desired location. 
+from kivy.uix.boxlayout import BoxLayout
+  
+# The Clock object allows you to schedule a
+# function call in the future
+from kivy.clock import Clock
+   
+# The Button is a Label with associated actions 
+# that is triggered when the button 
+# is pressed (or released after a click / touch).  
+from kivy.uix.button import Button
+  
+# Popup widget is used to create popups. 
+# By default, the popup will cover 
+# the whole “parent” window. 
+# When you are creating a popup, 
+# you must at least set a Popup.title and Popup.content.
+from kivy.uix.popup import Popup
+  
+# A Widget is the base building block
+# of GUI interfaces in Kivy.
+# It provides a Canvas that
+# can be used to draw on screen.
+from kivy.uix.widget import Widget
+  
+# ObjectProperty is a specialised sub-class
+# of the Property class, so it has the same
+# initialisation parameters as it:
+# By default, a Property always takes a default
+# value[.] The default value must be a value
+# that agrees with the Property type.
+from kivy.properties import ObjectProperty
+  
+  
+  
+# Create the widget class
+class MyWidget(Widget):
+  
+    progress_bar = ObjectProperty()
+      
+    def __init__(self, **kwa):
+        super(MyWidget, self).__init__(**kwa)
+          
+        self.progress_bar = ProgressBar()
+        self.popup = Popup(
+            title ='Download',
+            content = self.progress_bar
+        )
+        self.popup.bind(on_open = self.puopen)
+        self.add_widget(Button(text ='Download', on_release = self.pop))
+  
+    # the function which works when you click = k the button 
+    def pop(self, instance):
+        self.progress_bar.value = 1
+        self.popup.open()
+  
+    # To continuously increasing the value of pb.
+    def next(self, dt):
+        if self.progress_bar.value>= 100:
+            return False
+        self.progress_bar.value += 1
+      
+    def puopen(self, instance):
+        Clock.schedule_interval(self.next, 1 / 25)
+  
+# Create the App class 
+class MyApp(App):
+    def build(self):
+        return MyWidget()
+  
+# run the App
+if __name__ in ("__main__"):
+    MyApp().run()
+  
+انتاج:
+
+الصورة 1:
+
+
+الصورة 2:
+
+<<<<<<<<<<<<<<<<<
+بايثون | العمل مع الأزرار في Kivy
+مستوى الصعوبة: متوسط
+آخر تحديث: 06 مايو 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، يوفر لك Kivy وظيفة لكتابة الكود لمرة واحدة وتشغيله على أنظمة أساسية مختلفة. يتم استخدامه بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه في تطبيقات سطح المكتب.
+ 
+
+ دروس كيفي - تعلم كيفي بالأمثلة .
+
+الآن في هذه المقالة ، سوف نتعلم كيفية إنشاء زر في kivy ، تمامًا مثل الزر الذي نستخدمه في الآلات الحاسبة والعديد من الأماكن ، إضافة وظائف إلى الزر ، وتصميم الزر. الزر
+هو تسمية مع الإجراءات المرتبطة التي يتم تشغيلها عند الضغط على الزر (أو تحريره بعد نقرة / لمس). يمكننا إضافة وظائف خلف الزر وتصميم الزر.
+ 
+
+النهج الأساسي الذي يجب اتباعه أثناء إنشاء الزر: 
+
+-> استيراد kivy
+-> استيراد تطبيق kivy
+-> زر الاستيراد
+-> تعيين الحد الأدنى من الإصدار (اختياري)
+-> تمديد الفصل
+-> إضافة زر وإرجاعه
+-> تشغيل مثيل للفئة
+رمز # 1: كيفية إنشاء زر في kivy. 
+ 
+
+# import kivy module
+import kivy
+ 
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+ 
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# class in which we are creating the button
+class ButtonApp(App):
+     
+    def build(self):
+         
+        btn = Button(text ="Push Me !")
+        return btn
+ 
+# creating the object root for ButtonApp() class
+root = ButtonApp()
+ 
+# run function runs the whole program
+# i.e run() method which calls the
+# target function passed to the constructor.
+root.run()
+انتاج: 
+ 
+
+
+
+في الإخراج أعلاه ، سيغطي الزر النافذة بأكملها نظرًا لأننا لم نعطِ أي حجم محدد أو قمنا بأي تصميم في الزر ، لذا فإنه يظهر افتراضيًا حجم الزر مساوٍ لحجم النافذة. 
+  
+كود # 2: تصميم الزر
+ 
+
+def build(self):
+        # use a (r, g, b, a) tuple
+        btn = Button(text ="Push Me !",
+                   font_size ="20sp",
+                   background_color =(1, 1, 1, 1),
+                   color =(1, 1, 1, 1),
+                   size =(32, 32),
+                   size_hint =(.2, .2),
+                   pos =(300, 250))
+ 
+        return btn
+انتاج: 
+
+ 
+
+
+
+هذه تشبه تأثيرات HTML و CSS. من خلال ذلك ، نصلح موضع الزر في منتصف النافذة وحجم النص واللون وأي شيء تريده. 
+  
+كود # 3 إضافة الوظائف خلف الزر.
+
+تتمثل إحدى المشكلات الشائعة في كيفية إضافة وظائف إلى الزر. لذلك لإضافة وظيفة نستخدم وظيفة 
+bind () ، فإنها تربط الوظيفة بالزر. ينشئ bind () حدثًا يتم إرساله إلى رد الاتصال ().
+واحدة من أكثر المشاكل شيوعًا لمستخدمي Kivy الجدد هي سوء فهم كيفية عمل طريقة الربط ، خاصة بين مستخدمي Python الجدد الذين لم يشكلوا حدسهم الكامل حول استدعاءات الوظائف. 
+الشيء هو أن طريقة الربط لا تعرف عن وجود دالة أو وسيطاتها ، فهي تتلقى فقط نتيجة استدعاء هذه الوظيفة. كما هو الحال في الكود المعطى عند الضغط على الزر فإنه يطبع ذلك "الزر المضغوط" def في رد الاتصال الخاص بالوظيفة.
+في الكود المعطى داخل bind () نستخدم on_pressلأنه عند الضغط على الزر يخبر الوظيفة أن الزر مضغوط ثم يستخدم الرابط وظيفته. 
+ 
+
+# import kivy module
+import kivy
+ 
+# this restrict the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+ 
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# class in which we are creating the button
+class ButtonApp(App):
+     
+    def build(self):
+        # use a (r, g, b, a) tuple
+        btn = Button(text ="Push Me !",
+                   font_size ="20sp",
+                   background_color =(1, 1, 1, 1),
+                   color =(1, 1, 1, 1),
+                   size =(32, 32),
+                   size_hint =(.2, .2),
+                   pos =(300, 250))
+ 
+        # bind() use to bind the button to function callback
+        btn.bind(on_press = self.callback)
+        return btn
+ 
+    # callback function tells when button pressed
+    def callback(self, event):
+        print("button pressed")
+        print('Yoooo !!!!!!!!!!!')
+         
+ 
+# creating the object root for ButtonApp() class
+root = ButtonApp()
+ 
+# run function runs the whole program
+# i.e run() method which calls the target
+# function passed to the constructor.
+root.run()
+انتاج: 
+ 
+
+
+
+إخراج الفيديو: 
+ 
+
+مشغل فديوهات
+
+00:00
+00:00
+
+
+زر باستخدام KivyMD:
+KivyMD هو امتداد لإطار عمل Kivy. KivyMD عبارة عن مجموعة من أدوات تصميم المواد لاستخدامها مع Kivy ، وهو إطار عمل واجهة المستخدم الرسومية لصنع تطبيقات الهاتف المحمول.
+
+يوجد أدناه مثال على MDRectangularFlatButton
+
+يحتوي MDRectangleFlatButton على المعلمات التالية:
+
+نص- النص الذي نريد وضعه على الزر
+pos_hint- قاموس له الموضع فيما يتعلق بالمحور السيني والمحور الصادي
+on_release- هي وظيفة لها الخصائص التي نريد الاتصال بها عند النقر فوق الزر
+from kivymd.app import MDApp
+from kivymd.uix.screen import Screen
+from kivymd.uix.button import MDRectangleFlatButton
+ 
+class Demo(MDApp):
+ 
+    def build(self):
+        screen = Screen()
+         
+        btn= MDRectangleFlatButton(text="Submit",pos_hint={'center_x':0.5,'center_y':0.3},on_release=self.btnfunc)
+           screen.add_widget(btn)
+        # adding widgets to screen
+     
+        return screen
+    def btnfunc(self,obj):
+        print("button is pressed!!")
+    
+if __name__=="__main__":
+    Demo().run()
+ انتاج:
+
+
+
+عند الضغط على الزر ، يعرض الإخراج التالي
+
+
+
+<<<<<<<<<<<<<<<<<
+
+بايثون | تخطيط عائم في كيفي
+آخر تحديث: 25 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+عائم تخطيط:
+Floatlayout يسمح لنا بوضع العناصر نسبيًا بناءً على حجم النافذة الحالية وارتفاعها خاصةً في الهواتف المحمولة ، أي Floatlayout السماح لنا بوضع العناصر باستخدام شيء يسمى الموضع النسبي. هذا يعني بدلاً من تحديد الموضع المحدد أو الإحداثيات ، سنضع كل شيء باستخدام النسبة المئوية المكتوبة بحجم النافذة. عندما نقوم بتغيير أبعاد النافذة ، فإن كل شيء يتم وضعه في النافذة سيضبط حجمه وموضعه وفقًا لذلك. هذا يجعل التطبيق أكثر موثوقية وقابلية للتحجيم لحجم النافذة.
+
+ملاحظة: يكرم FloatLayout خاصية pos_hint وخصائص size_hint لأبنائها.
+
+أول شيء يتعين علينا القيام به لاستخدام FloatLayout هو استيراده.
+
+من kivy.uix.floatlayout استيراد FloatLayout
+النهج الأساسي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) زر الاستيراد
+4) استيراد Floatlayout
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة التطبيق
+7) عودة تخطيط / القطعة / الفئة (حسب المتطلبات)
+8) قم بتشغيل مثيل للفئة
+على سبيل المثال ، يتم إنشاء FloatLayout بحجم (300 ، 300):
+
+التخطيط = FloatLayout (الحجم = (300 ، 300))
+بشكل افتراضي ، كل الأدوات لها خصائصها الخاصة size_hint = (1, 1)، لذا فإن هذا الزر أدناه سيتبنى نفس حجم التخطيط:
+
+زر = زر (نص = "مرحبًا بالعالم")
+layout.add_widget (زر)
+لإنشاء زر له عرض وارتفاع معين للتخطيط يتم وضعه في موضع معين ، يمكنك القيام بما يلي -
+
+تنفيذ النهج:
+
+# Sample Python application demonstrating the
+# working of FloatLayout in Kivy
+  
+import kivy
+  
+# base Class of your App inherits from the App class.  
+# app:always refers to the instance of your application  
+from kivy.app import App
+  
+# creates the button in kivy 
+# if not imported shows the error 
+from kivy.uix.button import Button
+  
+# module consist the floatlayout
+# to work with FloatLayout first
+# you have to import it
+from kivy.uix.floatlayout import FloatLayout
+  
+# To change the kivy default settings 
+# we use this module config 
+from kivy.config import Config 
+    
+# 0 being off 1 being on as in true / false 
+# you can use 0 or 1 && True or False 
+Config.set('graphics', 'resizable', True) 
+  
+# creating the App class
+class MyApp(App):
+  
+    def build(self):
+  
+        # creating Floatlayout
+        Fl = FloatLayout()
+  
+        # creating button
+        # a button 30 % of the width and 20 %
+        # of the height of the layout and
+        # positioned at (300, 200), you can do:
+        btn = Button(text ='Hello world',
+                    size_hint =(.3, .2),
+                    pos =(300, 200))
+  
+        # adding widget i.e button
+        Fl.add_widget(btn)
+  
+        # return the layout
+        return Fl
+  
+# run the App
+if __name__ == "__main__":
+    MyApp().run()
+انتاج:
+
+ملاحظة: الآن إذا قمت بتغيير حجم النافذة ، فإنها تغير موضعها نسبيًا وحجمها أيضًا. يمكن استخدام هذا التخطيط لتطبيق ما. في معظم الأحيان ، ستستخدم حجم النافذة.
+
+المواضع الديناميكية -
+يوجد الآن شيء مفقود أو أن الشفرة أعلاه ليست مثالية يمكنك قولها. ما زلنا بحاجة إلى إضافة موضع الأزرار.
+
+لدينا خاصيتان لإنشاء موضع ديناميكي:
+
+1) pos_hint: تقديم تلميح للموضع
+يمكننا تحديد ما يصل إلى 6 مفاتيح ، أي أنه يأخذ الحجج في شكل قاموس.
+pos_hint = {"x": 1، "y": 1، "left": 1، "right": 1، "top": 1، "bottom": 1}
+
+2) size_hint: تقديم تلميح للحجم
+يحتوي على وسيطين ، أي العرض والارتفاع
+
+ملحوظة:
+
+يمكنك فقط استخدام القيم بين 0-1 لكل من size_hint و pos_hint. حيث 0 = 0٪ و 1 = 100٪.
+يعمل نظام الإحداثيات في kivy من أسفل اليسار! سيكون هذا مهمًا عند وضع أغراضنا. (أي (0 ، 0) هو أسفل اليسار).
+كود لتنفيذ التموضع الديناميكي:
+
+# Sample Python application demonstrating the
+# working of Dynamic placement in FloatLayout in Kivy
+  
+import kivy
+  
+# base Class of your App inherits from the App class.  
+# app:always refers to the instance of your application  
+from kivy.app import App
+  
+# creates the button in kivy 
+# if not imported shows the error 
+from kivy.uix.button import Button
+  
+# module consist the floatlayout
+# to work with FloatLayout first
+# you have to import it
+from kivy.uix.floatlayout import FloatLayout
+  
+# To change the kivy default settings 
+# we use this module config 
+from kivy.config import Config 
+    
+# 0 being off 1 being on as in true / false 
+# you can use 0 or 1 && True or False 
+Config.set('graphics', 'resizable', True) 
+  
+# creating the App class
+class MyApp(App):
+  
+    def build(self):
+  
+        # creating Floatlayout
+        Fl = FloatLayout()
+  
+        # creating button
+        # a button 30 % of the width and 50 %
+        # of the height of the layout and
+        # positioned at 20 % right and 20 % up
+        # from bottom left, i.e x, y = 200, 200 from bottom left:
+        btn = Button(text ='Hello world', size_hint =(.3, .5),
+                     background_color =(.3, .6, .7, 1),
+                    pos_hint ={'x':.2, 'y':.2 })
+  
+        # adding widget i.e button
+        Fl.add_widget(btn)
+  
+        # return the layout
+        return Fl
+  
+# run the App
+if __name__ == "__main__":
+    MyApp().run()
+انتاج:
+
+
+إخراج الفيديو:
+
+مشغل فديوهات
+
+00:00
+00:00
+
+
+
+ 
+المرجع:
+https://kivy.org/doc/stable/api-kivy.uix.floatlayout.html
+https://techwithtim.net/tutorials/kivy-tutorial/floatlayout/
+
+
+
+<<<<<<<<<<<<<<<<<
+GridLayouts في كيفي | بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 21 أكتوبر 2021
+Kivy عبارة عن نظام أساسي مستقل حيث يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك. يوفر لك Kivy وظيفة لكتابة الكود لمرة واحدة وتشغيله على منصات مختلفة. يتم استخدامه بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+استخدم هذا الأمر لتثبيت kivy : 
+
+نقطة تثبيت kivy
+دروس كيفي - تعلم كيفي بالأمثلة .
+
+Gridlayout هي الوظيفة التي تنشئ الأطفال وترتبهم في شكل مصفوفة. يأخذ المساحة المتاحة (مربع) ويقسم تلك المساحة إلى صفوف وأعمدة ثم يضيف عناصر واجهة المستخدم وفقًا للخلايا أو الشبكات الناتجة. 
+لا يمكننا وضع الأدوات بشكل صريح في عمود / صف معين. يتم تعيين موضع معين لكل طفل تلقائيًا بواسطة تكوين التخطيط والفهرس الفرعي في قائمة الأطفال. يجب أن يحتوي تخطيط الشبكة على قيود الإدخال على الأقل مثل الأعمدة والصفوف. إذا لم نحدد الأعمدة أو الصفوف ، يمنحك التخطيط استثناءً. 
+
+العمود والصف -
+الآن تمثل الأعمدة العرض وتمثل الصفوف الارتفاع تمامًا مثل المصفوفة. 
+
+يتم إعطاء الحجم الأولي بواسطة خاصيتي col_default_width و row_default_height. يمكننا فرض الحجم الافتراضي عن طريق تعيين الخاصية col_force_default أو row_force_default. سيؤدي هذا إلى إجبار التخطيط على تجاهل خصائص العرض و size_hint للأطفال واستخدام الحجم الافتراضي.
+لتخصيص حجم عمود أو صف واحد ، استخدم cols_minimum أو rows_minimum.
+ليس من الضروري إعطاء كل من الصفوف والأعمدة ، فهذا يعتمد على المتطلب. يمكننا توفير كلاهما أو أي شخص وفقًا لذلك.
+في المثال الموضح أدناه ، سيكون لجميع الأدوات نفس الحجم أو بنفس الحجم. بشكل افتراضي ، الحجم هو (1 ، 1) لذلك سيأخذ الطفل الحجم الكامل للوالد.
+
+# main.py
+# import the kivy module
+import kivy
+ 
+# It’s required that the base Class
+# of your App inherits from the App class.
+from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
+ 
+# This class stores the info of .kv file
+# when it is called goes to my.kv file
+class MainWidget(GridLayout):
+    pass
+ 
+# we are defining the Base Class of our Kivy App
+class myApp(App):
+    def build(self):
+        # return a MainWidget() as a root widget
+        return MainWidget()
+ 
+if __name__ == '__main__':
+     
+    # Here the class MyApp is initialized
+    # and its run() method called.
+    myApp().run()
+ملاحظة: لفهم كيفية استخدام ملفات .kv ، ما عليك سوى زيارة هذا .
+
+كود # 1: 
+
+# my.kv file code here
+<MainWidget>:
+ 
+    cols: 2 
+    rows: 2
+     
+    Button:       
+         text: 'Hello 1'
+    Button:
+        text: 'World 1'
+    Button:
+        text: 'Hello 2'
+    Button:       
+        text: 'World 2'
+    
+انتاج: 
+ 
+
+
+
+ملاحظة: لتشغيل هذا الرمز ، عليك إنشاء ملف main.py python لرمز python أعلاه وملف my.kv ملف آخر. 
+ 
+الكود رقم 2: 
+الآن دعنا نصلح حجم الأزرار إلى 100 بكسل بدلاً من الحجم الافتراضي_ hint_x = 1 .
+
+# just do change in the above my.kv
+# (code #1) file else all are same.
+<MainWidget>:
+ 
+    cols: 2 
+    rows: 2
+     
+    Button:       
+        text: 'Hello 1'
+        size_hint_x: None
+        width: 100
+    Button:
+        text: 'World 1'
+    Button:
+        text: 'Hello 2'
+        size_hint_x: None
+        width: 100
+    Button:       
+        text: 'World 2'
+    
+انتاج : 
+ 
+
+
+
+الكود رقم 3: 
+يمكننا أيضًا إصلاح ارتفاع الصف إلى حجم معين.
+
+# just do change in the above my.kv
+# (code #1)file else all are same.
+ 
+<MainWidget>:
+ 
+    cols: 2 
+    rows: 2
+    row_force_default: True
+    row_default_height: 40
+    Button:       
+        text: 'Hello 1'
+        size_hint_x: None
+        width: 100
+    Button:
+        text: 'World 1'
+    Button:
+        text: 'Hello 2'
+        size_hint_x: None
+        width: 100
+    Button:       
+        text: 'World 2'
+    
+انتاج: 
+
+
+pip install kivy
+
+
+<<<<<<<<<<<<<<<<<
+بايثون | StackLayout في كيفي
+مستوى الصعوبة: أساسي
+آخر تحديث: 25 أغسطس 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+ 
+
+؟؟؟؟؟؟؟؟ دروس كيفي - تعلم كيفي بالأمثلة .
+
+ 
+
+المكدس تخطيط:
+لاستخدام StackLayout ، قم أولاً باستيراد StackLayout بواسطة الأمر التالي: 
+ 
+
+من kivy.uix.stacklayout استيراد StackLayout
+إنه أمر محير للغاية أن نفهم الفرق بين Stack و Boxlayout . 
+يمكن لـ StackLayout تنظيم الأدوات بمزيد من التعقيد مما يمكن لـ BoxLayout Boxlayout تنظيم الأدوات إما بطريقة رأسية أو أفقية. ولكن مع StackLayout ، يمكنك الجمع بين الاتجاهات. هناك 4 اتجاهات حكيمة و 4 أعمدة.
+ 
+
+أكثر مرونة من ذلك Boxlayout (1D)
+
+اتجاه تخطيط المكدس (2D):
+ - من اليمين إلى اليسار أو من اليسار إلى اليمين
+ - من الأعلى إلى الأسفل أو من الأسفل إلى الأعلى
+ - 'rl-bt'، 'rl-tb'، lr-bt '،' lr-tb '(الصف الحكيم)
+ - "bt-rl" ، "bt-lr" ، "tb-rl" ، "tb-lr" (العمود الحكيم)
+يتم عرض الاتجاهات الأربعة للصفوف والتوجهات العمودية الأربعة في الصور أدناه.
+ 
+
+النهج الأساسي لإنشاء تخطيط المكدس:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) زر الاستيراد
+4) استيراد Stacklayout
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة التطبيق
+7) عودة القطعة
+8) قم بتشغيل مثيل للفئة
+  
+تنفيذ النهج:
+ 
+
+# code to show how to use StackLayout
+ 
+# import kivy module
+import kivy
+ 
+# this restricts the kivy version i.e
+# below this kivy version you cannot
+# use the app or software
+kivy.require("1.9.1")
+   
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+   
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# The StackLayout arranges children vertically
+# or horizontally, as many as the layout can fit.
+from kivy.uix.stacklayout import StackLayout
+ 
+ 
+# class in which we are creating StackLayout
+class StackLayoutApp(App):
+       
+    def build(self):
+ 
+        # Different orientation
+        # ['lr-tb', 'tb-lr', 'rl-tb', 'tb-rl',
+           'lr-bt', 'bt-lr', 'rl-bt', 'bt-rl']       
+        SL = StackLayout(orientation ='lr-tb')
+ 
+        # Creating Multiple Buttons
+        btn1 = Button(text ="B1",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn2 = Button(text ="B2",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn3 = Button(text ="B3",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn4 = Button(text ="B4",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn5 = Button(text ="B5",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn6 = Button(text ="B6",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn7 = Button(text ="B7",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn8 = Button(text ="B8",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn9 = Button(text ="B9",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+        btn10 = Button(text ="B10",
+                      font_size = 20,
+                      size_hint =(.2, .1))
+ 
+ 
+        # adding widgets
+        SL.add_widget(btn1)
+        SL.add_widget(btn2)
+        SL.add_widget(btn3)
+        SL.add_widget(btn4)
+        SL.add_widget(btn5)
+        SL.add_widget(btn6)
+        SL.add_widget(btn7)
+        SL.add_widget(btn8)
+        SL.add_widget(btn9)
+        SL.add_widget(btn10)
+ 
+ 
+        # returning widgets
+        return SL
+ 
+# run function runs the whole program
+# i.e run() method which calls the
+# target function passed to the constructor.
+if __name__ == '__main__':
+    StackLayoutApp().run()
+انتاج: 
+ 
+
+
+
+هذا من أجل الاتجاه "lr-tb". يتم أولاً إضافة الأدوات من اليسار إلى اليمين ثم من أعلى إلى أسفل.
+ملاحظة: إذا كنت ترغب في تغيير الاتجاه ، فما عليك سوى تغيير الاتجاه في السطر رقم 31 بأي من الاتجاهات أدناه - 
+ 
+
+لاستخدام اتجاه الصف الحكيم:
+  -'lr-tb '
+  -'lr-bt '
+  -'rl-tb '
+  -'rl-bt '
+
+بالنسبة لتوجيه العمود الحكيم ، استخدم:
+  -'tb-lr '
+  -'tb-rl '
+  -'bt-lr '
+  -'bt-rl '
+  
+يوجد أدناه إخراج الصورة جميع الاتجاهات أعلاه -
+لاستخدام اتجاه الصف الحكيم: 
+ 
+
+"lr-tb"
+انتاج: 
+ 
+
+
+
+ 
+
+"lr-bt"
+انتاج: 
+ 
+
+
+
+ 
+
+"rl-tb"
+انتاج: 
+ 
+
+
+
+ 
+
+"rl-bt"
+انتاج: 
+ 
+
+
+
+  
+بالنسبة لتوجيه العمود الحكيم ، استخدم:
+ 
+
+"tb-lr"
+انتاج: 
+ 
+
+
+
+ 
+
+"tb-rl"
+انتاج: 
+ 
+
+
+
+ 
+
+"bt-lr"
+انتاج: 
+ 
+
+
+
+ 
+
+"bt-rl"
+انتاج: 
+
+<<<<<<<<<<<<<<<<<
+
+بايثون | AnchorLayout في كيفي
+آخر تحديث: 06 فبراير 2020
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+👉🏽 دروس كيفي - تعلم كيفي بالأمثلة .
+
+المرساة
+يقوم AnchorLayout بمحاذاة العناصر الفرعية الخاصة به إلى حد (أعلى ، أسفل ، يسار ، يمين) أو مركز. يتم استخدام الفئة الواردة أدناه لتنفيذ تخطيط الارتساء.
+
+kivy.uix.anchorlayout.AnchorLayout
+يمكن تهيئة AnchorLayout بالمعلمات:
+
+
+يمكن تمرير معلمات anchor_x : "يسار" و "يمين" و "مركز" .
+
+anchor_y 
+يمكن تمرير المعلمات: "top" و "bottom" و "center" .
+لتحديد المكان حيث يتم وضع الأدوات في الحاوية الرئيسية.
+
+هناك 9 مناطق تخطيط مختلفة حيث Anchorlayout يمكن وضع التأثير:
+
+أعلى اليسار ، أعلى الوسط ، أعلى اليمين ، وسط اليسار ، وسط الوسط ، يمين الوسط ، أسفل اليسار ، أسفل الوسط ، أسفل اليمين.
+
+ملاحظة: تذكر إضافة عناصر واجهة مستخدم متعددة إلى مخطط الارتساء ، حيث يتم وضع عناصر واجهة المستخدم فقط في نفس الموقع.
+
+النهج الأساسي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+4) استيراد Anchorlayout
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة التطبيق
+7) عودة تخطيط / القطعة / الفئة (حسب المتطلبات)
+8) قم بتشغيل مثيل للفئة
+ 
+تنفيذ النهج (مع بعض التصميم):
+
+1) anchor_x = 'right'، anchor_y = 'bottom':
+
+# Sample Python application demonstrating
+# the working of AnchorLayout in Kivy
+  
+# Module imports
+  
+# base Class of your App inherits from the App class. 
+# app:always refers to the instance of your application 
+from kivy.app import App
+  
+# The AnchorLayout aligns its children to a border
+# (top, bottom, left, right) or center
+from kivy.uix.anchorlayout import AnchorLayout
+  
+# BoxLayout arranges children in a vertical or horizontal box.
+# or help to put the childrens at the desired location.
+from kivy.uix.boxlayout import BoxLayout
+  
+# creates the button in kivy 
+# if not imported shows the error
+from kivy.uix.button import Button
+  
+  
+# A Kivy app demonstrating the working of anchor layout
+class AnchorLayoutApp(App):
+      
+    def build(self):
+  
+          
+        # Anchor Layout1
+        layout = AnchorLayout(
+        anchor_x ='right', anchor_y ='bottom')
+        btn = Button(text ='Hello World',
+                     size_hint =(.3, .3),
+                     background_color =(1.0, 0.0, 0.0, 1.0))
+      
+        layout.add_widget(btn)
+        return layout 
+  
+# creating the object root for AnchorLayoutApp() class  
+root = AnchorLayoutApp()
+# Run the Kivy app
+root.run()
+انتاج:
+
+
+إذا كنت ترغب في تغيير مواضع AnchorLayouts ، فما عليك سوى استبدال رمز الفصل في الكود أعلاه أدناه أو يمكنك تغيير anchor_xو anchor_y مع أي من المعلمات لعمل أي مجموعات 9 كما هو موضح أعلاه.
+
+2) anchor_x = 'right'، anchor_y = 'top':
+
+# A Kivy app demonstrating the working of anchor layout
+class AnchorLayoutApp(App):
+      
+    def build(self):
+          
+        # Anchor Layout1
+        layout = AnchorLayout(
+        anchor_x ='right', anchor_y ='top')
+        btn = Button(text ='Hello World',
+                     size_hint =(.3, .3),
+                     background_color =(1.0, 0.0, 1.0, 1.0))
+      
+        layout.add_widget(btn)
+        return layout 
+انتاج:
+
+
+3) anchor_x = 'center'، anchor_y = 'top':
+الإخراج:
+
+
+4) anchor_x = 'left'، anchor_y = 'top':
+الإخراج:
+
+
+5) anchor_x = 'left'، anchor_y = 'bottom':
+الإخراج:
+
+
+6) anchor_x = "يسار" ، anchor_y = "مركز":
+الإخراج:
+
+
+7) anchor_x = 'center'، anchor_y = 'center':
+الإخراج:
+
+
+8) anchor_x = 'center'، anchor_y = 'bottom':
+الإخراج:
+
+
+9) anchor_x = 'right'، anchor_y = 'center':
+الإخراج:
+
+<<<<<<<<<<<<<<<<<
+بايثون | تخطيط نسبي في كيفي
+آخر تحديث: 09 ديسمبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة عن النظام الأساسي في Python. حيث يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+دروس كيفي - تعلم كيفي بالأمثلة . 
+
+تخطيط نسبي:
+التخطيط النسبي مشابه تمامًا لـ FloatLayout ، الاختلاف هو أن عنصر واجهة المستخدم الفرعي الخاص به يتم وضعه بالنسبة إلى التخطيط.
+يعمل هذا التخطيط بنفس الطريقة التي يعمل بها FloatLayout ، لكن خصائص الموضع (x و y و center_x و right و y و center_y و top) تتعلق بحجم التخطيط وليس حجم النافذة.
+في الواقع ، بغض النظر عن الموضع المطلق والنسبي ، يتم نقل عناصر واجهة المستخدم عندما يتغير موضع التخطيط.
+عندما تتم إضافة عنصر واجهة المستخدم مع الموضع = (0 ، 0) إلى RelativeLayout ، الآن إذا تم تغيير موضع RelativeLayout ، فسوف يتحرك عنصر واجهة المستخدم الفرعي أيضًا. تظل إحداثيات عنصر واجهة المستخدم الفرعية كما هي ، على سبيل المثال (0 ، 0) لأنها دائمًا ما تكون مرتبطة بالتخطيط الأصلي.
+تعد مفاتيح pos_hint المتاحة (x و center_x و right و y و center_y و top) مفيدة للمحاذاة مع الحواف أو التمركز. 
+على سبيل المثال: 
+pos_hint: {'center_x':. 5، 'center_y':. 5} من شأنه محاذاة القطعة في المنتصف ، بغض النظر عن حجم النافذة.
+أول شيء يتعين علينا القيام به لاستخدام RelativeLayout هو استيراده. 
+
+من kivy.uix.relativelayout import RelativeLayout
+ملاحظة: 
+يسمح لك هذا التخطيط بتعيين إحداثيات نسبية للأطفال. إذا كنت تريد تحديد الموضع المطلق ، فاستخدم FloatLayout. في RelativeLayout يجب تحديد حجم كل عنصر واجهة مستخدم وموضعه. هذا أيضا لا التنسيب الديناميكي.
+
+يمكننا القيام بتحديد المواقع النسبية من خلال:
+pos_hint: تقديم تلميح للوضع
+يمكننا تحديد ما يصل إلى 8 مفاتيح ، أي أنه يأخذ الحجج في شكل قاموس.
+pos_hint = {"x": 1، "y": 1، "left": 1، "right": 1، "center_x": 1، "center_y": 1،
+           "أعلى": 1 ، "أسفل": 1 ("أعلى": 0)}
+ملاحظة: 
+يدعم كل من Floatlayout و RelativeLayout تحديد المواقع المطلق والنسبي اعتمادًا على ما إذا كان يتم استخدام pos_hint أو pos. ولكن إذا كنت تريد تحديد موضع مطلق ، فاستخدم FloatLayout.
+
+النهج الأساسي لإنشاء تخطيط نسبي:
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) زر الاستيراد
+4) استيراد Relativelayout
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة التطبيق:
+        - تحديد وظيفة build ()
+7) عودة تخطيط / القطعة / الفئة (حسب المتطلبات)
+8) قم بتشغيل مثيل للفئة
+تنفيذ النهج باستخدام نقاط البيع: 
+إنه ببساطة يعين موضع الزر. نظرًا لأن Relativelayout لا يعتمد على حجم النافذة ، فإنه يتم إصلاحه في هذا الموضع الآن إذا قمت بصغر حجم النافذة ، فقد يختفي بدلاً من تعديل نفسه. 
+
+# Sample Python application demonstrating the
+# working of RelativeLayout in Kivy
+ 
+# import modules
+import kivy
+ 
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# This layout allows you to set relative coordinates for children.
+from kivy.uix.relativelayout import RelativeLayout
+ 
+# To change the kivy default settings
+# we use this module config
+from kivy.config import Config
+     
+# 0 being off 1 being on as in true / false
+# you can use 0 or 1 && True or False
+Config.set('graphics', 'resizable', True)
+ 
+# creating the App class
+class MyApp(App):
+ 
+    def build(self):
+ 
+        # creating Relativelayout
+        Rl = RelativeLayout()
+ 
+        # creating button
+        # a button 30 % of the width and 20 %
+        # of the height of the layout and
+        # positioned at (x, y), you can do
+        # The position does not depend on window size
+        # it just positioned at the given places:
+        btn = Button(text ='Hello world',
+                 size_hint =(.2, .2),
+                 pos =(396.0, 298.0))
+        btn1 = Button(text ='Hello world !!!!!!!!!',
+                 size_hint =(.2, .2),
+                 pos =(-137.33, 298.0))
+ 
+        # adding widget i.e button
+        Rl.add_widget(btn)
+        Rl.add_widget(btn1)
+                 
+        # return the layout
+        return Rl
+ 
+# run the App
+if __name__ == "__main__":
+    MyApp().run()
+انتاج: 
+
+
+
+الآن إذا كنت تريد أن يقوم الزر بضبط نفسه وفقًا للنافذة ، يتم استخدام pos_hint . 
+
+نهج التنفيذ باستخدام pos_hint 
+
+
+# Sample Python application demonstrating the
+# working of RelativeLayout in Kivy
+ 
+# import modules
+import kivy
+ 
+# base Class of your App inherits from the App class.
+# app:always refers to the instance of your application
+from kivy.app import App
+ 
+# creates the button in kivy
+# if not imported shows the error
+from kivy.uix.button import Button
+ 
+# This layout allows you to set relative coordinates for children.
+from kivy.uix.relativelayout import RelativeLayout
+ 
+# To change the kivy default settings
+# we use this module config
+from kivy.config import Config
+     
+# 0 being off 1 being on as in true / false
+# you can use 0 or 1 && True or False
+Config.set('graphics', 'resizable', True)
+ 
+# creating the App class
+class Relative_Layout(App):
+     
+    def build(self):
+ 
+        # creating Relativelayout
+        rl = RelativeLayout()
+       
+        # creating button
+        # size of button is 20 % by height and width of layout
+        # position is bottom left i.e x = 0, y = 0
+        b1 = Button(size_hint =(.2, .2),
+                    pos_hint ={'x':0, 'y':0},
+                    text ="B1")
+         
+        # position is bottom right i.e right = 1, y = 0
+        b2 = Button(size_hint =(.2, .2),
+                    pos_hint ={'right':1, 'y':0},
+                    text ="B2")
+ 
+        b3 = Button(size_hint =(.2, .2),
+                    pos_hint ={'center_x':.5, 'center_y':.5},
+                    text ="B3")
+ 
+        b4 = Button(size_hint =(.2, .2),
+                    pos_hint ={'x':0, 'top':1},
+                    text ="B4")
+ 
+        b5 = Button(size_hint =(.2, .2),
+                    pos_hint ={'right':1, 'top':1},
+                    text ="B5")
+         
+         
+ 
+        # adding button to widget
+        rl.add_widget(b1)
+        rl.add_widget(b2)
+        rl.add_widget(b3)
+        rl.add_widget(b4)
+        rl.add_widget(b5)
+     
+         
+        # returning widget
+        return rl
+# run the App
+if __name__  == "__main__":
+    Relative_Layout().run()
+انتاج: 
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<
+
+بايثون | PageLayout في Kivy
+مستوى الصعوبة: صعب
+آخر تحديث: 19 أكتوبر 2021
+Kivy هي أداة واجهة مستخدم رسومية مستقلة للنظام الأساسي في Python. نظرًا لأنه يمكن تشغيله على Android و IOS و Linux و Windows وما إلى ذلك ، فهو يستخدم بشكل أساسي لتطوير تطبيق Android ، لكن هذا لا يعني أنه لا يمكن استخدامه على تطبيقات سطح المكتب.
+
+دروس كيفي - تعلم كيفي بالأمثلة . 
+
+تخطيط الصفحة:
+يعمل PageLayout بطريقة مختلفة عن التخطيطات الأخرى. إنه تخطيط ديناميكي ، بمعنى أنه يسمح بتقليب الصفحات باستخدام حدودها. الفكرة هي أن مكوناته مكدسة أمام بعضها البعض ، ويمكننا فقط رؤية المكون الموجود في الأعلى. 
+تُستخدم فئة PageLayout لإنشاء تخطيط بسيط متعدد الصفحات ، بطريقة تتيح التقليب السهل من صفحة إلى أخرى باستخدام الحدود.
+
+لاستخدام PageLayout ، يجب عليك استيراده عن طريق الأمر التالي:  
+
+من kivy.uix.pagelayout استيراد PageLayout
+ملاحظة: 
+لا يحترم PageLayout حاليًا خصائص size_hint أو size_hint_min أو size_hint_max أو pos_hint ، مما يعني أنه لا يمكننا استخدام كل هذه الخصائص في تخطيط الصفحة.
+
+النهج الأساسي لإنشاء PageLayout:  
+
+1) استيراد kivy
+2) استيراد kivyApp
+3) استيراد مخطط الصفحات
+4) زر الاستيراد
+5) تعيين الإصدار الأدنى (اختياري)
+6) إنشاء فئة التطبيق:
+        - تحديد وظيفة build ()
+7) عودة تخطيط / القطعة / الفئة (حسب المتطلبات)
+8) قم بتشغيل مثيل للفئة
+تنفيذ النهج: 
+
+
+# Sample Python application demonstrating 
+# How to create PageLayout in Kivy
+   
+import kivy
+   
+# base Class of your App inherits from the App class.  
+# app:always refers to the instance of your application  
+from kivy.app import App
+ 
+# The PageLayout class is used to create
+# a simple multi-page layout,
+# in a way that allows easy flipping from
+# one page to another using borders.
+from kivy.uix.pagelayout import PageLayout
+ 
+# creates the button in kivy 
+# if not imported shows the error 
+from kivy.uix.button import Button
+   
+class PageLayout(PageLayout):
+    """
+    Define class PageLayout here
+    """
+  
+    def __init__(self):
+         
+        # The super function in Python can be
+        # used to gain access to inherited methods
+        # which is either from a parent or sibling class.
+        super(PageLayout, self).__init__()
+ 
+        # creating buttons on different pages
+        btn1 = Button(text ='Page 1')
+         
+        btn2 = Button(text ='Page 2')
+  
+        btn3 = Button(text ='Page 3')
+ 
+        # adding button on the screen
+        # by add widget method
+        self.add_widget(btn1)
+ 
+        self.add_widget(btn2)
+ 
+        self.add_widget(btn3)
+  
+ 
+# creating the App class
+class Page_LayoutApp(App):
+    """
+    App class here
+    """
+  
+    def build(self):
+        """
+        build function here
+        """
+        return PageLayout()
+  
+ 
+# Run the App
+if __name__ == '__main__':
+    Page_LayoutApp().run()
+الإخراج:
+صفحة 1 صورة 
+
+
+
+صورة الصفحة 2 
+
+
+
+صورة الصفحة 3 
+
+
+
+في PageLayout يمكنك إضافة بعض الميزات في كل صفحة. يمكننا إضافة صورة ، وإنشاء لوحة ، وإضافة لون ، وإضافة عناصر واجهة مستخدم متعددة ، وتخطيطات متعددة. 
+هذه هي الطريقة التي يمكننا بها استخدام PageLayout بطريقة فعالة. أحد أفضل الأمثلة على معرضنا يحتوي على صفحات متعددة.
+يوجد أدناه الكود الذي أقوم فيه بإضافة لون مختلف إلى كل صفحة بمساعدة get_color_from_hex
+
+تنفيذ PageLayout مع الميزات 
+
+
+# Sample Python application demonstrating the
+# working of PageLayout in Kivy with some features
+   
+import kivy
+   
+# base Class of your App inherits from the App class.  
+# app:always refers to the instance of your application  
+from kivy.app import App
+ 
+# The PageLayout class is used to create
+# a simple multi-page layout,
+# in a way that allows easy flipping from
+# one page to another using borders.
+from kivy.uix.pagelayout import PageLayout
+ 
+# creates the button in kivy 
+# if not imported shows the error 
+from kivy.uix.button import Button
+ 
+ 
+# The Utils module provides a selection of general utility
+# functions and classes that may be useful for various applications.
+# These include maths, color, algebraic and platform functions.
+# Here we are using color from the module
+# By get_color_from_hex
+# Transform a hex string color to a kivy Color.
+from kivy.utils import get_color_from_hex
+   
+class PageLayout(PageLayout):
+    """
+    Define class PageLayout here
+    """
+  
+    def __init__(self):
+         
+        # The super function in Python can be
+        # used to gain access to inherited methods
+        # which is either from a parent or sibling class.
+        super(PageLayout, self).__init__()
+ 
+        # creating buttons on different pages
+ 
+        # Button 1 or Page 1
+        btn1 = Button(text ='Page 1')
+        # Adding Colour to page
+        # Here we are using colour from
+     
+        btn1.background_color = get_color_from_hex('# FF0000')
+  
+        btn2 = Button(text ='Page 2')
+        btn2.background_color = get_color_from_hex('# 00FF00')
+  
+        btn3 = Button(text ='Page 3')
+        btn3.background_color = get_color_from_hex('# 0000FF')
+  
+ 
+        # adding button on the screen
+        # by add widget method
+        self.add_widget(btn1)
+ 
+        self.add_widget(btn2)
+ 
+        self.add_widget(btn3)
+  
+ 
+# creating the App class
+class Page_LayoutApp(App):
+    """
+    App class here
+    """
+  
+    def build(self):
+        """
+        build function here
+        """
+        return PageLayout()
+  
+ 
+# Run the App
+if __name__ == '__main__':
+    Page_LayoutApp().run()
+الإخراج:
+صفحة 1 
+
+
+
+الصفحة 2 
+
+
+
+الصفحة 3 
+
+
+
+إخراج الفيديو: 
+ 
+
+مشغل فديوهات
+
+00:00
+00:16
+
+
+ملاحظة: يكون أكثر فاعلية عند العمل على Android و Ios وأي أجهزة كمبيوتر محمولة أخرى تعمل باللمس. 
+المرجع: https://kivy.org/doc/stable/api-kivy.uix.pagelayout.html

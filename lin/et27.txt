@@ -1,0 +1,428 @@
+
+البناة في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 10 أغسطس 2021
+المتطلبات الأساسية: البرمجة الشيئية في بايثون ، البرمجة الشيئية في بايثون | تُستخدم مُنشئي المجموعة 2 
+عمومًا لإنشاء مثيل لكائن. تتمثل مهمة المُنشئين في تهيئة (تعيين القيم) لأعضاء البيانات في الفصل عند إنشاء كائن من الفصل. في بايثون ، يُطلق على طريقة __init __ () اسم المُنشئ ويُستدعى دائمًا عند إنشاء كائن.
+بناء جملة إعلان المُنشئ: 
+
+def __init __ (ذاتي):
+    # جسم المنشئ
+أنواع الصانعين: 
+
+المُنشئ الافتراضي: المُنشئ الافتراضي هو مُنشئ بسيط لا يقبل أي وسيطات. يحتوي تعريفه على حجة واحدة فقط وهي إشارة إلى المثيل الذي يتم إنشاؤه.
+المُنشئ ذو المعلمات: يُعرف المُنشئ ذو المعلمات باسم المُنشئ ذي المعلمات. يأخذ المُنشئ ذو المعلمات وسيطته الأولى كمرجع إلى المثيل الذي يتم إنشاؤه والمعروف باسم self ويتم توفير باقي الوسائط بواسطة المبرمج.
+مثال على المُنشئ الافتراضي: 
+ 
+
+
+class GeekforGeeks:
+ 
+    # default constructor
+    def __init__(self):
+        self.geek = "GeekforGeeks"
+ 
+    # a method for printing data members
+    def print_Geek(self):
+        print(self.geek)
+ 
+ 
+# creating object of the class
+obj = GeekforGeeks()
+ 
+# calling the instance method using the object obj
+obj.print_Geek()
+انتاج : 
+
+GeekforGeeks
+مثال على المُنشئ ذي المعلمات: 
+
+
+class Addition:
+    first = 0
+    second = 0
+    answer = 0
+     
+    # parameterized constructor
+    def __init__(self, f, s):
+        self.first = f
+        self.second = s
+     
+    def display(self):
+        print("First number = " + str(self.first))
+        print("Second number = " + str(self.second))
+        print("Addition of two numbers = " + str(self.answer))
+ 
+    def calculate(self):
+        self.answer = self.first + self.second
+ 
+# creating object of the class
+# this will invoke parameterized constructor
+obj = Addition(1000, 2000)
+ 
+# perform Addition
+obj.calculate()
+ 
+# display result
+obj.display()
+انتاج : 
+
+العدد الأول = 1000
+الرقم الثاني = 2000
+جمع عددين = 3000
+ 
+<<<<<<<<<<<<<<<<<<<<<
+المدمرات في بايثون
+مستوى الصعوبة: أساسي
+آخر تحديث: 21 كانون الثاني (يناير) 2022
+يتم استدعاء المنشئين في Python
+Destructors عند تدمير كائن ما. في Python ، ليست هناك حاجة إلى المدمرات بقدر الحاجة في C ++ لأن Python بها مجمع قمامة يتولى إدارة الذاكرة تلقائيًا. 
+تُعرف طريقة __ del __ () باسم طريقة التدمير في بايثون. يتم استدعاؤه عندما يتم حذف جميع الإشارات إلى الكائن ، أي عندما يتم جمع كائن ما. 
+بناء جملة إعلان التدمير: 
+ 
+
+def __del __ (ذاتي):
+  # جسم المدمر
+ملاحظة: يتم أيضًا حذف الإشارة إلى الكائنات عندما يخرج الكائن عن المرجع أو عندما ينتهي البرنامج. 
+مثال 1: إليك مثال بسيط عن أداة التدمير. باستخدام كلمة del ، قمنا بحذف جميع مراجع الكائن "obj" ، وبالتالي يتم استدعاء التدمير تلقائيًا.
+ 
+
+
+# Python program to illustrate destructor
+class Employee:
+ 
+    # Initializing
+    def __init__(self):
+        print('Employee created.')
+ 
+    # Deleting (Calling destructor)
+    def __del__(self):
+        print('Destructor called, Employee deleted.')
+ 
+obj = Employee()
+del obj
+انتاج: 
+تم إنشاء الموظف.
+استدعاء المدمر ، حذف الموظف.
+ 
+
+ملاحظة: تم استدعاء أداة التدمير بعد انتهاء البرنامج أو عند حذف جميع الإشارات إلى الكائن ، أي عندما يصبح عدد المرجع صفراً ، وليس عندما يخرج الكائن عن النطاق.
+مثال 2: هذا المثال يعطي شرحا للملاحظة المذكورة أعلاه. هنا ، لاحظ أن المدمر يسمى بعد طباعة "Program End…".
+ 
+
+
+# Python program to illustrate destructor
+ 
+class Employee:
+ 
+    # Initializing
+    def __init__(self):
+        print('Employee created')
+ 
+    # Calling destructor
+    def __del__(self):
+        print("Destructor called")
+ 
+def Create_obj():
+    print('Making Object...')
+    obj = Employee()
+    print('function end...')
+    return obj
+ 
+print('Calling Create_obj() function...')
+obj = Create_obj()
+print('Program End...')
+انتاج: 
+استدعاء دالة Create_obj () ...
+صنع كائن ...
+تم إنشاء الموظف
+وظيفة نهاية ...
+نهاية البرنامج ...
+دعا المدمر
+ 
+
+مثال 3: الآن ، ضع في اعتبارك المثال التالي: 
+ 
+
+
+# Python program to illustrate destructor
+ 
+class A:
+    def __init__(self, bb):
+        self.b = bb
+ 
+class B:
+    def __init__(self):
+        self.a = A(self)
+    def __del__(self):
+        print("die")
+ 
+def fun():
+    b = B()
+ 
+fun()
+انتاج: 
+موت
+ 
+
+في هذا المثال ، عندما يتم استدعاء الوظيفة fun () ، فإنها تنشئ مثيلًا للفئة B التي تمرر نفسها إلى الفئة A ، والتي تقوم بعد ذلك بتعيين مرجع للفئة B وينتج عنها مرجع دائري .
+بشكل عام ، فإن جامع القمامة في Python الذي يستخدم للكشف عن هذه الأنواع من المراجع الدورية قد يزيله ولكن في هذا المثال ، فإن استخدام أداة التدمير المخصصة تحدد هذا العنصر على أنه "غير قابل للتحصيل". 
+ببساطة ، لا يعرف الترتيب الذي يتم به تدمير الأشياء ، لذلك يتركها. لذلك ، إذا كانت مثيلاتك متورطة في مراجع دائرية ، فستعيش في الذاكرة طوال فترة تشغيل التطبيق.
+ 
+<<<<<<<<<<<<<<<<<<<<<
+الوراثة في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 14 سبتمبر 2020
+الوراثة هي قدرة فئة ما على اشتقاق أو وراثة الخصائص من فئة أخرى. فوائد الميراث هي: 
+ 
+
+إنه يمثل علاقات العالم الحقيقي بشكل جيد.
+يوفر إمكانية إعادة استخدام رمز. لا يتعين علينا كتابة نفس الرمز مرارًا وتكرارًا. كما أنه يسمح لنا بإضافة المزيد من الميزات إلى الفصل دون تعديله.
+إنها متعدية بطبيعتها ، مما يعني أنه إذا ورثت الفئة B من فئة أخرى A ، فإن جميع الفئات الفرعية لـ B سترث تلقائيًا من الفئة A.
+يوجد أدناه مثال بسيط للميراث في بايثون 
+ 
+
+
+# A Python program to demonstrate inheritance 
+   
+# Base or Super class. Note object in bracket.
+# (Generally, object is made ancestor of all classes)
+# In Python 3.x "class Person" is 
+# equivalent to "class Person(object)"
+class Person(object):
+       
+    # Constructor
+    def __init__(self, name):
+        self.name = name
+   
+    # To get name
+    def getName(self):
+        return self.name
+   
+    # To check if this person is an employee
+    def isEmployee(self):
+        return False
+   
+   
+# Inherited or Subclass (Note Person in bracket)
+class Employee(Person):
+   
+    # Here we return true
+    def isEmployee(self):
+        return True
+   
+# Driver code
+emp = Person("Geek1")  # An Object of Person
+print(emp.getName(), emp.isEmployee())
+   
+emp = Employee("Geek2") # An Object of Employee
+print(emp.getName(), emp.isEmployee())
+انتاج: 
+Geek1 خطأ
+Geek2 صحيح
+
+ 
+
+ما هي فئة الكائن؟  
+مثل فئة Java Object ، في Python (من الإصدار 3.x) ، يكون الكائن هو جذر جميع الفئات. 
+في Python 3.x ، "class Test (object)" و "class Test" هي نفسها. 
+في Python 2.x ، ينشئ "class Test (object)" فئة مع الكائن كأصل (يسمى فئة النمط الجديد) و "class Test" ينشئ فئة النمط القديم (بدون الكائن الأصل). راجع هذا لمزيد من التفاصيل.
+
+التصنيف الفرعي (استدعاء مُنشئ الفئة الأصلية) 
+يحتاج الفصل الفرعي إلى تحديد أي فئة هي صنفه الأصلي. يمكن القيام بذلك عن طريق ذكر اسم الفئة الأصل في تعريف الفئة الفرعية. 
+على سبيل المثال: class subclass_name (superclass_name) : 
+_ _ _ 
+_ _ _ 
+ 
+
+
+# Python code to demonstrate how parent constructors
+# are called.
+  
+# parent class
+class Person( object ):    
+  
+        # __init__ is known as the constructor         
+        def __init__(self, name, idnumber):   
+                self.name = name
+                self.idnumber = idnumber
+        def display(self):
+                print(self.name)
+                print(self.idnumber)
+  
+# child class
+class Employee( Person ):           
+        def __init__(self, name, idnumber, salary, post):
+                self.salary = salary
+                self.post = post
+  
+                # invoking the __init__ of the parent class 
+                Person.__init__(self, name, idnumber) 
+  
+                  
+# creation of an object variable or an instance
+a = Employee('Rahul', 886012, 200000, "Intern")    
+  
+# calling a function of the class Person using its instance
+a.display() 
+انتاج: 
+راهول
+886012
+
+ 
+
+'a' هو المثيل الذي تم إنشاؤه للفئة Person. تستدعي __init __ () للفئة المشار إليها. يمكنك أن ترى "كائن" مكتوبًا في إعلان فئة الشخص. في بايثون ، ترث كل فئة من فئة أساسية مضمنة تسمى "الكائن". يُستدعى المُنشئ ، أي دالة "__init__" لفئة ما ، عندما نقوم بإنشاء متغير كائن أو مثيل للفئة.
+
+المتغيرات المعرفة في __init __ () تسمى متغيرات الحالة أو الكائنات. ومن ثم ، فإن 'name' و 'idnumber' هما كائنات الفئة Person. وبالمثل ، فإن "الراتب" و "الوظيفة" هي عناصر فئة الموظف. نظرًا لأن فئة الموظف يرث من فئة الشخص ، فإن "الاسم" و "الرقم" هما أيضًا عناصر فئة الموظف.
+إذا نسيت استدعاء __init __ () للفئة الأصلية ، فلن تكون متغيرات الحالة الخاصة بها متاحة للفئة الفرعية. 
+
+ينتج عن الكود التالي خطأ لنفس السبب. 
+ 
+
+
+# Python program to demonstrate error if we
+# forget to invoke __init__() of the parent.
+  
+class A:
+      def __init__(self, n = 'Rahul'):
+              self.name = n
+class B(A):
+      def __init__(self, roll):
+              self.roll = roll
+  
+object = B(23)
+print (object.name)
+انتاج : 
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/de4570cca20263ac2c4149f435dba22c.py" ، السطر 12 ، في
+    طباعة (اسم الكائن)
+AttributeError: الكائن "B" ليس له سمة "name"
+أشكال مختلفة من الميراث:  
+1. الميراث الفردي : عندما ترث فئة تابعة لأحد الأبوين ، يطلق عليها اسم الميراث الفردي. لقد رأينا مثالا أعلاه.
+2. الميراث المتعدد : عندما ترث فئة فرعية من عدة فئات رئيسية ، فإنها تسمى الوراثة المتعددة. 
+على عكس Java ومثل C ++ ، تدعم Python الوراثة المتعددة. نحدد جميع الفئات الرئيسية كقائمة مفصولة بفواصل في القوس. 
+ 
+
+
+# Python example to show the working of multiple 
+# inheritance
+class Base1(object):
+    def __init__(self):
+        self.str1 = "Geek1"
+        print("Base1")
+  
+class Base2(object):
+    def __init__(self):
+        self.str2 = "Geek2"        
+        print("Base2")
+  
+class Derived(Base1, Base2):
+    def __init__(self):
+          
+        # Calling constructors of Base1
+        # and Base2 classes
+        Base1.__init__(self)
+        Base2.__init__(self)
+        print("Derived")
+          
+    def printStrs(self):
+        print(self.str1, self.str2)
+         
+  
+ob = Derived()
+ob.printStrs()
+انتاج: 
+قاعدة 1
+قاعدة 2
+مستمد
+Geek1 Geek2
+ 
+
+3. الميراث متعدد المستويات : عندما يكون لدينا علاقة ابن وحفيد.
+ 
+
+
+# A Python program to demonstrate inheritance 
+  
+# Base or Super class. Note object in bracket.
+# (Generally, object is made ancestor of all classes)
+# In Python 3.x "class Person" is 
+# equivalent to "class Person(object)"
+class Base(object):
+      
+    # Constructor
+    def __init__(self, name):
+        self.name = name
+  
+    # To get name
+    def getName(self):
+        return self.name
+  
+  
+# Inherited or Sub class (Note Person in bracket)
+class Child(Base):
+      
+    # Constructor
+    def __init__(self, name, age):
+        Base.__init__(self, name)
+        self.age = age
+  
+    # To get name
+    def getAge(self):
+        return self.age
+  
+# Inherited or Sub class (Note Person in bracket)
+class GrandChild(Child):
+      
+    # Constructor
+    def __init__(self, name, age, address):
+        Child.__init__(self, name, age)
+        self.address = address
+  
+    # To get address
+    def getAddress(self):
+        return self.address        
+  
+# Driver code
+g = GrandChild("Geek1", 23, "Noida")  
+print(g.getName(), g.getAge(), g.getAddress())
+انتاج: 
+Geek1 23 نويدا
+
+ 
+
+4. الميراث الهرمي يتم إنشاء أكثر من فئة مشتقة من قاعدة واحدة.
+
+5. الميراث الهجين : هذا النموذج يجمع بين أكثر من شكل من أشكال الميراث. في الأساس ، هو مزيج من أكثر من نوع واحد من الميراث.
+
+الأعضاء الخاصون بالفئة الأصلية 
+لا نريد دائمًا أن يتم توريث متغيرات الحالة للفئة الأصلية بواسطة الفئة الفرعية ، أي يمكننا جعل بعض متغيرات الحالة للفئة الأصلية خاصة ، والتي لن تكون متاحة للفئة الفرعية . 
+يمكننا عمل متغير حالة عن طريق إضافة شرطات سفلية مزدوجة قبل اسمه. فمثلا،
+ 
+
+
+# Python program to demonstrate private members
+# of the parent class
+class C(object):
+       def __init__(self):
+              self.c = 21
+  
+              # d is private instance variable 
+              self.__d = 42    
+class D(C):
+       def __init__(self):
+              self.e = 84
+              C.__init__(self)
+object1 = D()
+  
+# produces an error as d is private instance variable
+print(object1.d)                     
+انتاج : 
+
+  ملف "/home/993bb61c3e76cda5bb67bd9ea05956a1.py" ، السطر 16 ، في
+    طباعة (object1.d)                     
+AttributeError: نوع الكائن 'D' ليس له سمة 'd'
+
+نظرًا لأن "d" يتم جعلها خاصة بواسطة تلك الشرطات السفلية ، فهي غير متاحة للفئة الفرعية "D" وبالتالي الخطأ.
+ 

@@ -1,0 +1,553 @@
+
+مصممون في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: 16 ديسمبر 2021
+يعد Decorators أداة قوية ومفيدة للغاية في Python لأنها تسمح للمبرمجين بتعديل سلوك الوظيفة أو الفصل. يسمح لنا المصممون بلف وظيفة أخرى من أجل توسيع سلوك الوظيفة المغلفة ، دون تعديلها بشكل دائم. ولكن قبل الغوص في أعماق الديكور ، دعونا نفهم بعض المفاهيم التي ستكون مفيدة في تعلم الديكور.
+
+كائنات من الدرجة الأولى
+في Python ، الوظائف هي كائنات من الدرجة الأولى مما يعني أنه يمكن استخدام الوظائف في Python أو تمريرها كوسائط.
+خصائص وظائف الدرجة الأولى:
+الوظيفة هي مثيل لنوع الكائن.
+يمكنك تخزين الوظيفة في متغير.
+يمكنك تمرير الوظيفة كمعامل إلى وظيفة أخرى.
+يمكنك إعادة الوظيفة من وظيفة.
+يمكنك تخزينها في هياكل البيانات مثل جداول التجزئة والقوائم ...
+ضع في اعتبارك الأمثلة أدناه لفهم أفضل.
+
+مثال 1: معاملة الوظائف ككائنات. 
+
+
+# Python program to illustrate functions
+# can be treated as objects
+def shout(text):
+    return text.upper()
+ 
+print(shout('Hello'))
+ 
+yell = shout
+ 
+print(yell('Hello'))
+انتاج:
+
+مرحبا
+مرحبا
+في المثال أعلاه ، قمنا بتعيين وظيفة صيحة لمتغير. هذا لن يستدعي الوظيفة بدلاً من ذلك يأخذ كائن الوظيفة المشار إليه بواسطة صيحة وينشئ اسمًا ثانيًا يشير إليه ، yell.
+
+مثال 2: تمرير الوظيفة كوسيطة 
+
+
+# Python program to illustrate functions
+# can be passed as arguments to other functions
+def shout(text):
+    return text.upper()
+ 
+def whisper(text):
+    return text.lower()
+ 
+def greet(func):
+    # storing the function in a variable
+    greeting = func("""Hi, I am created by a function passed as an argument.""")
+    print (greeting)
+ 
+greet(shout)
+greet(whisper)
+انتاج:
+
+مرحبًا ، لقد خلقت بواسطة وظيفة مرت كحجة.
+مرحبًا ، لقد خلقت من خلال وظيفة تم تمريرها كوسيطة.
+في المثال أعلاه ، تأخذ وظيفة الترحيب وظيفة أخرى كمعامل (الصراخ والهمس في هذه الحالة). يتم بعد ذلك استدعاء الوظيفة التي تم تمريرها كوسيطة داخل تحية الوظيفة.
+
+مثال 3: إعادة وظائف من دالة أخرى.
+
+
+# Python program to illustrate functions
+# Functions can return another function
+ 
+def create_adder(x):
+    def adder(y):
+        return x+y
+ 
+    return adder
+ 
+add_15 = create_adder(15)
+ 
+print(add_15(10))
+انتاج:
+
+25
+في المثال أعلاه ، أنشأنا دالة داخل دالة أخرى ثم أعدنا الوظيفة التي تم إنشاؤها بداخلها.
+توضح الأمثلة الثلاثة المذكورة أعلاه المفاهيم المهمة اللازمة لفهم المصممين. بعد المرور من خلالهم ، دعونا الآن نتعمق في الديكور.
+
+مصممون
+كما هو مذكور أعلاه ، يتم استخدام الديكور لتعديل سلوك الوظيفة أو الطبقة. في Decorators ، يتم أخذ الوظائف كوسيطة إلى دالة أخرى ثم يتم استدعاؤها داخل وظيفة المجمع.
+
+التركيب اللغوي للديكور: 
+
+تضمين التغريدة
+def hello_decorator ():
+    طباعة ("Gfg")
+
+"" الرمز أعلاه يعادل -
+
+def hello_decorator ():
+    طباعة ("Gfg")
+    
+hello_decorator = gfg_decorator (hello_decorator) "
+في الكود أعلاه ، gfg_decorator هي وظيفة قابلة للاستدعاء ، ستضيف بعض التعليمات البرمجية في الجزء العلوي من وظيفة أخرى قابلة للاستدعاء ، وهي وظيفة hello_decorator وتعيد وظيفة الغلاف.
+
+يمكن للمزين تعديل السلوك :  
+
+
+# defining a decorator
+def hello_decorator(func):
+ 
+    # inner1 is a Wrapper function in
+    # which the argument is called
+     
+    # inner function can access the outer local
+    # functions like in this case "func"
+    def inner1():
+        print("Hello, this is before function execution")
+ 
+        # calling the actual function now
+        # inside the wrapper function.
+        func()
+ 
+        print("This is after function execution")
+         
+    return inner1
+ 
+ 
+# defining a function, to be called inside wrapper
+def function_to_be_used():
+    print("This is inside the function !!")
+ 
+ 
+# passing 'function_to_be_used' inside the
+# decorator to control its behaviour
+function_to_be_used = hello_decorator(function_to_be_used)
+ 
+ 
+# calling the function
+function_to_be_used()
+انتاج: 
+
+مرحبًا ، هذا قبل تنفيذ الوظيفة
+هذا داخل الوظيفة !!
+هذا بعد تنفيذ الوظيفة
+دعونا نرى سلوك الكود أعلاه كيف يعمل خطوة بخطوة عند استدعاء “function_to_be_used”.
+
+
+
+
+دعنا ننتقل إلى مثال آخر حيث يمكننا بسهولة معرفة وقت تنفيذ الوظيفة باستخدام المصمم.
+
+
+# importing libraries
+import time
+import math
+ 
+# decorator to calculate duration
+# taken by any function.
+def calculate_time(func):
+     
+    # added arguments inside the inner1,
+    # if function takes any arguments,
+    # can be added like this.
+    def inner1(*args, **kwargs):
+ 
+        # storing time before function execution
+        begin = time.time()
+         
+        func(*args, **kwargs)
+ 
+        # storing time after function execution
+        end = time.time()
+        print("Total time taken in : ", func.__name__, end - begin)
+ 
+    return inner1
+ 
+ 
+ 
+# this can be added to any function present,
+# in this case to calculate a factorial
+@calculate_time
+def factorial(num):
+ 
+    # sleep 2 seconds because it takes very less time
+    # so that you can see the actual difference
+    time.sleep(2)
+    print(math.factorial(num))
+ 
+# calling the function.
+factorial(10)
+انتاج: 
+
+3628800
+إجمالي الوقت المستغرق في: العامل 2.0061802864074707
+ماذا لو أعادت الدالة شيئًا ما أو تم تمرير وسيطة إلى الدالة؟
+في جميع الأمثلة المذكورة أعلاه ، لم تُرجع الوظائف أي شيء ، لذلك لم تكن هناك أي مشكلة ، ولكن قد يحتاج المرء إلى القيمة التي تم إرجاعها.
+
+
+def hello_decorator(func):
+    def inner1(*args, **kwargs):
+         
+        print("before Execution")
+         
+        # getting the returned value
+        returned_value = func(*args, **kwargs)
+        print("after Execution")
+         
+        # returning the value to the original frame
+        return returned_value
+         
+    return inner1
+ 
+ 
+# adding decorator to the function
+@hello_decorator
+def sum_two_numbers(a, b):
+    print("Inside the function")
+    return a + b
+ 
+a, b = 1, 2
+ 
+# getting the value through return of the function
+print("Sum =", sum_two_numbers(a, b))
+انتاج: 
+
+قبل التنفيذ
+داخل الوظيفة
+بعد التنفيذ
+المجموع = 3
+في المثال أعلاه ، قد تلاحظ اختلافًا كبيرًا في معاملات الوظيفة الداخلية. تأخذ الوظيفة الداخلية الوسيطة كـ * args و ** kwargs مما يعني أنه يمكن تمرير مجموعة من الوسائط الموضعية أو قاموس وسيطات الكلمات الرئيسية بأي طول. هذا يجعله مصممًا عامًا يمكنه تزيين وظيفة بها أي عدد من الحجج.
+
+السلاسل الديكور
+بعبارات أبسط ، فإن ربط الزخارف يعني تزيين وظيفة بزخارف متعددة.
+
+مثال: 
+
+
+# code for testing decorator chaining
+def decor1(func):
+    def inner():
+        x = func()
+        return x * x
+    return inner
+ 
+def decor(func):
+    def inner():
+        x = func()
+        return 2 * x
+    return inner
+ 
+@decor1
+@decor
+def num():
+    return 10
+ 
+print(num())
+انتاج:
+
+400
+المثال أعلاه مشابه لاستدعاء الوظيفة كـ -
+
+decor1 (ديكور (عدد))
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<
+الديكور مع المعلمات في بايثون
+مستوى الصعوبة: صعب
+آخر تحديث: 17 تشرين الثاني (نوفمبر) 2021
+المتطلب السابق: مصممون بلغة بايثون ، مصممون وظيفيون
+
+نحن نعلم أن Decorators أداة قوية ومفيدة للغاية في Python لأنها تسمح للمبرمجين بتعديل سلوك الوظيفة أو الفصل. في هذه المقالة ، سنتعرف على مصممي الديكور بالمعلمات بمساعدة أمثلة متعددة. وظائف Python هي مواطنين من الدرجة الأولى مما يعني أنه يمكن معاملة الوظائف بشكل مشابه للكائنات. 
+
+ 
+
+يمكن إسناد الوظيفة إلى متغير أي يمكن الرجوع إليها.
+يمكن تمرير الوظيفة كوسيطة لدالة أخرى.
+يمكن إرجاع الوظيفة من الوظيفة.
+يشبه المصممون ذوو المعلمات المصممين العاديين.
+ 
+
+بناء الجملة لمصممي الديكور مع المعلمات:
+decorator (بارامز)
+def func_name ():
+    '' تنفيذ الوظيفة ''
+الكود أعلاه يعادل 
+
+def func_name ():
+    '' تنفيذ الوظيفة ''
+
+func_name = (decorator (params)) (func_name)
+""
+عندما يبدأ التنفيذ من اليسار إلى اليمين ، يُطلق على المصمم (البارامز) الذي يُعيد كائنًا وظيفيًا fun_obj . باستخدام fun_obj ، يتم إجراء المكالمة fun_obj (fun_name) . داخل الوظيفة الداخلية ، يتم تنفيذ العمليات المطلوبة ويتم إرجاع مرجع الوظيفة الفعلي الذي سيتم تعيينه إلى func_name . الآن ، يمكن استخدام func_name () لاستدعاء الوظيفة مع تطبيق الزخرفة عليها.
+ 
+
+كيف يتم تنفيذ الديكور مع المعلمات 
+
+def decorators(*args, **kwargs):
+    def inner(func):
+        '''
+           do operations with func
+        '''
+        return func
+    return inner #this is the fun_obj mentioned in the above content
+ 
+@decorators(params)
+def func():
+    """
+         function implementation
+    """
+يمكن أن تكون المعلمات هنا فارغة أيضًا.
+ 
+
+لاحظ هذه أولاً:
+
+
+# Python code to illustrate
+# Decorators basic in Python
+ 
+def decorator_fun(func):
+  print("Inside decorator")
+ 
+  def inner(*args, **kwargs):
+    print("Inside inner function")
+    print("Decorated the function")
+    # do operations with func
+     
+    func()
+     
+  return inner
+ 
+@decorator_fun
+def func_to():
+    print("Inside actual function")
+ 
+func_to()
+طريق اخر:
+ 
+
+
+# Python code to illustrate
+# Decorators with parameters in Python
+ 
+def decorator_fun(func):
+  print("Inside decorator")
+ 
+  def inner(*args, **kwargs):
+    print("Inside inner function")
+    print("Decorated the function")
+     
+    func()
+     
+  return inner
+ 
+ 
+def func_to():
+    print("Inside actual function")
+ 
+# another way of using decorators
+decorator_fun(func_to)()
+انتاج: 
+
+الديكور الداخلي
+داخل الوظيفة الداخلية
+تزيين الوظيفة
+داخل الوظيفة الفعلية
+  
+دعنا ننتقل إلى مثال آخر:
+ 
+
+مثال 1: 
+
+
+# Python code to illustrate
+# Decorators with parameters in Python
+ 
+def decorator(*args, **kwargs):
+    print("Inside decorator")
+     
+    def inner(func):
+         
+        # code functionality here
+        print("Inside inner function")
+        print("I like", kwargs['like'])
+         
+        func()
+         
+    # returning inner function   
+    return inner
+ 
+@decorator(like = "geeksforgeeks")
+def my_func():
+    print("Inside actual function")
+انتاج: 
+ 
+
+الديكور الداخلي
+داخل الوظيفة الداخلية
+أنا أحب geeksforgeeks
+داخل الوظيفة الفعلية
+المثال الثاني: 
+ 
+
+
+# Python code to illustrate
+# Decorators with parameters in Python
+ 
+def decorator_func(x, y):
+ 
+    def Inner(func):
+ 
+        def wrapper(*args, **kwargs):
+            print("I like Geeksforgeeks")
+            print("Summation of values - {}".format(x+y) )
+ 
+            func(*args, **kwargs)
+             
+        return wrapper
+    return Inner
+ 
+ 
+# Not using decorator
+def my_fun(*args):
+    for ele in args:
+        print(ele)
+ 
+# another way of using decorators
+decorator_func(12, 15)(my_fun)('Geeks', 'for', 'Geeks')
+انتاج:  
+
+أنا أحب Geeksforgeeks
+مجموع القيم - 27
+المهوسون
+ل
+المهوسون
+يخبرنا هذا المثال أيضًا أنه يمكن الوصول إلى معلمات الوظيفة الخارجية بواسطة الوظيفة الداخلية المغلقة. 
+ 
+
+المثال الثالث:  
+
+
+# Python code to illustrate
+# Decorators with parameters in Python  (Multi-level Decorators)
+ 
+ 
+def decodecorator(dataType, message1, message2):
+    def decorator(fun):
+        print(message1)
+        def wrapper(*args, **kwargs):
+            print(message2)
+            if all([type(arg) == dataType for arg in args]):
+                return fun(*args, **kwargs)
+            return "Invalid Input"
+        return wrapper
+    return decorator
+ 
+ 
+@decodecorator(str, "Decorator for 'stringJoin'", "stringJoin started ...")
+def stringJoin(*args):
+    st = ''
+    for i in args:
+        st += i
+    return st
+ 
+ 
+@decodecorator(int, "Decorator for 'summation'\n", "summation started ...")
+def summation(*args):
+    summ = 0
+    for arg in args:
+        summ += arg
+    return summ
+ 
+ 
+print(stringJoin("I ", 'like ', "Geeks", 'for', "geeks"))
+print()
+print(summation(19, 2, 8, 533, 67, 981, 119))
+انتاج:  
+
+Decorator for 'stringJoin'
+مصمم ل "الجمع"
+
+stringJoin بدأ ...
+أنا أحب Geeksforgeeks
+
+بدأ التلخيص ...
+1729
+1. داخل الديكور
+
+ 
+
+داخل-الديكور-الثعبان
+
+ 
+
+2. داخل الوظيفة
+
+ 
+
+داخل-وظيفة-ديكور-بيثون
+
+ملاحظة: يتم التقاط لقطات الصور باستخدام PythonTutor.
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<
+Memoization باستخدام الديكور في Python
+مستوى الصعوبة: متوسط
+تاريخ التحديث الأخير: 11 فبراير 2022
+العودية هي تقنية برمجة حيث تستدعي الوظيفة نفسها بشكل متكرر حتى يتم استيفاء شرط الإنهاء. بعض الأمثلة التي يتم فيها استخدام العودية هي: حساب سلسلة فيبوناتشي ، عاملي وما إلى ذلك ، لكن المشكلة تكمن في أنه في شجرة العودية ، يمكن أن تكون هناك فرص لحل المشكلة الفرعية التي تم حلها بالفعل مرة أخرى ، مما يضيف إلى النفقات العامة.
+Memoization هي تقنية لتسجيل النتائج الوسيطة بحيث يمكن استخدامها لتجنب الحسابات المتكررة وتسريع البرامج. يمكن استخدامه لتحسين البرامج التي تستخدم العودية. في Python ، يمكن إجراء الحفظ بمساعدة مصممي الوظيفة. 
+لنأخذ مثال حساب مضروب الرقم. يستخدم البرنامج البسيط أدناه العودية لحل المشكلة:
+ 
+
+
+# Simple recursive program to find factorial
+def facto(num):
+    if num == 1:
+        return 1
+    else:
+        return num * facto(num-1)
+         
+ 
+print(facto(5))
+يمكن تحسين البرنامج أعلاه عن طريق الحفظ باستخدام أدوات التزيين .
+ 
+
+
+# Factorial program with memoization using
+# decorators.
+ 
+# A decorator function for function 'f' passed
+# as parameter
+memory = {}
+def memoize_factorial(f):
+     
+    # This inner function has access to memory
+    # and 'f'
+    def inner(num):
+        if num not in memory:        
+            memory[num] = f(num)
+        return memory[num]
+ 
+    return inner
+     
+@memoize_factorial
+def facto(num):
+    if num == 1:
+        return 1
+    else:
+        return num * facto(num-1)
+ 
+print(facto(5))
+التفسير: 
+1. تم تحديد وظيفة تسمى memoize_factoria l. الغرض الرئيسي منه هو تخزين النتائج الوسيطة في المتغير المسمى الذاكرة. 
+2. الوظيفة الثانية التي تسمى الأمر الواقع هي وظيفة حساب العامل. تم شرحه بواسطة مصمم (الوظيفة memoize_factorial). الواقع لديه حق الوصول إلى متغير الذاكرة نتيجة لمفهوم الإغلاق. 
+
+حقيقة = memoize_factorial (أمر واقع)
+3. عندما يتم استدعاء الأمر الواقع (5) ، تتم العمليات العودية بالإضافة إلى تخزين النتائج الوسيطة. في كل مرة يلزم إجراء عملية حسابية ، يتم التحقق مما إذا كانت النتيجة متوفرة في الذاكرة . إذا كانت الإجابة بنعم ، فسيتم استخدامها ، وإلا يتم حساب القيمة وتخزينها في الذاكرة . 
+4. يمكننا التحقق من حقيقة أن الذاكرة تعمل بالفعل ، يرجى الاطلاع على إخراج هذا البرنامج.
+ 

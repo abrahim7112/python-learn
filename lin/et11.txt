@@ -1,0 +1,373 @@
+
+2
+مستوى الصعوبة: سهل
+آخر تحديث: ٢٤ يناير ٢٠٢٢
+وظائف المشغل في بايثون | مجموعة 1
+
+تتم مناقشة المزيد من الوظائف في هذه المقالة.
+
+1. setitem (ob ، pos ، val) : - تُستخدم هذه الوظيفة لتعيين القيمة في موضع معين في الحاوية. 
+العملية - ob [pos] = val
+
+2. delitem (ob، pos) : - تُستخدم هذه الوظيفة لحذف القيمة في موضع معين في الحاوية. 
+العملية - del ob [pos]
+
+3. getitem (ob، pos) : - تُستخدم هذه الوظيفة للوصول إلى القيمة في موضع معين في الحاوية. 
+العملية - ob [pos]
+ 
+
+
+# Python code to demonstrate working of
+# setitem(), delitem() and getitem()
+ 
+# importing operator module
+import operator
+ 
+# Initializing list
+li = [1, 5, 6, 7, 8]
+ 
+# printing original list
+print ("The original list is : ",end="")
+for i in range(0,len(li)):
+    print (li[i],end=" ")
+ 
+print ("\r")
+ 
+# using setitem() to assign 3 at 4th position
+operator.setitem(li,3,3)
+ 
+# printing modified list after setitem()
+print ("The modified list after setitem() is : ",end="")
+for i in range(0,len(li)):
+    print (li[i],end=" ")
+ 
+print ("\r")
+ 
+# using delitem() to delete value at 2nd index
+operator.delitem(li,1)
+ 
+# printing modified list after delitem()
+print ("The modified list after delitem() is : ",end="")
+for i in range(0,len(li)):
+    print (li[i],end=" ")
+ 
+print ("\r")
+ 
+# using getitem() to access 4th element
+print ("The 4th element of list is : ",end="")
+print (operator.getitem(li,3))
+انتاج: 
+ 
+
+القائمة الأصلية هي: 1 5 6 7 8
+القائمة المعدلة بعد setitem () هي: 1 5 6 3 8
+القائمة المعدلة بعد الحذف () هي: 1 6 3 8
+العنصر الرابع في القائمة هو: 8
+4. setitem (ob، slice (a، b)، vals) : - تُستخدم هذه الوظيفة لتعيين القيم في نطاق معين في الحاوية. 
+العملية - obj [a: b] = vals
+
+5. delitem (ob، slice (a، b)) : - تُستخدم هذه الوظيفة لحذف القيم من نطاق معين في الحاوية. 
+العملية - del obj [أ: ب]
+
+6. getitem (ob، slice (a، b)) : - تُستخدم هذه الوظيفة للوصول إلى القيم في نطاق معين في الحاوية. 
+العملية - obj [a: b]
+ 
+
+
+# Python code to demonstrate working of
+# setitem(), delitem() and getitem()
+ 
+# importing operator module
+import operator
+ 
+# Initializing list
+li = [1, 5, 6, 7, 8]
+ 
+# printing original list
+print ("The original list is : ",end="")
+for i in range(0,len(li)):
+    print (li[i],end=" ")
+ 
+print ("\r")
+ 
+# using setitem() to assign 2,3,4 at 2nd,3rd and 4th index
+operator.setitem(li,slice(1,4),[2,3,4])
+ 
+# printing modified list after setitem()
+print ("The modified list after setitem() is : ",end="")
+for i in range(0,len(li)):
+    print (li[i],end=" ")
+ 
+print ("\r")
+ 
+# using delitem() to delete value at 3rd and 4th index
+operator.delitem(li,slice(2,4))
+ 
+# printing modified list after delitem()
+print ("The modified list after delitem() is : ",end="")
+for i in range(0,len(li)):
+    print (li[i],end=" ")
+ 
+print ("\r")
+ 
+# using getitem() to access 1st and 2nd element
+print ("The 1st and 2nd element of list is : ",end="")
+print (operator.getitem(li,slice(0,2)))
+انتاج: 
+ 
+
+القائمة الأصلية هي: 1 5 6 7 8
+القائمة المعدلة بعد setitem () هي: 1 2 3 4 8
+القائمة المعدلة بعد الحذف () هي: 1 2 8
+العنصر الأول والثاني من القائمة هو: [1 ، 2]
+ 
+7. concat (ob1، obj2) : - تُستخدم هذه الوظيفة لسلسلة حاويتين. 
+العملية - obj1 + obj2
+
+8. يحتوي على (ob1، obj2) : - تُستخدم هذه الوظيفة للتحقق مما إذا كان obj2 موجودًا في obj1 . 
+العملية - obj2 في obj1
+ 
+
+
+# Python code to demonstrate working of
+# concat() and contains()
+ 
+# importing operator module
+import operator
+ 
+# Initializing string 1
+s1 = "geeksfor"
+ 
+# Initializing string 2
+s2 = "geeks"
+ 
+# using concat() to concatenate two strings
+print ("The concatenated string is : ",end="")
+print (operator.concat(s1,s2))
+ 
+# using contains() to check if s1 contains s2
+if (operator.contains(s1,s2)):
+       print ("geeksfor contains geeks")
+else : print ("geeksfor does not contain geeks")
+انتاج: 
+ 
+
+السلسلة المتسلسلة هي: geeksforgeeks
+geeksfor يحتوي على المهوسون
+ 9. و_ (أ ، ب) : - تُستخدم هذه الوظيفة لحساب أحادي المعامل وللوسيطات المذكورة. 
+العملية - أ & ب
+
+10. or_ (a، b) : - تُستخدم هذه الوظيفة لحساب المعطيات أو الوسيطات المذكورة. 
+العملية - أ | ب
+
+11. xor (a، b) : - تُستخدم هذه الوظيفة لحساب bitwise xor للوسيطات المذكورة. 
+العملية - أ ^ ب
+
+12. عكس (أ) : - تستخدم هذه الوظيفة لحساب انعكاس البت للوسيطة المذكورة. 
+العملية - ~ أ
+ 
+
+
+# Python code to demonstrate working of
+# and_(), or_(), xor(), invert()
+ 
+# importing operator module
+import operator
+ 
+# Initializing a and b
+ 
+a = 1
+ 
+b = 0
+ 
+# using and_() to display bitwise and operation
+print ("The bitwise and of a and b is : ",end="")
+print (operator.and_(a,b))
+ 
+# using or_() to display bitwise or operation
+print ("The bitwise or of a and b is : ",end="")
+print (operator.or_(a,b))
+ 
+# using xor() to display bitwise exclusive or operation
+print ("The bitwise xor of a and b is : ",end="")
+print (operator.xor(a,b))
+ 
+# using invert() to invert value of a
+operator.invert(a)
+ 
+# printing modified value
+print ("The inverted value of a is : ",end="")
+print (operator.invert(a))
+انتاج: 
+ 
+
+قيمة أحادي المعامل و a و b هي: 0
+أحادي المعامل أو a و b هو: 1
+إن xor على مستوى البت لكل من a و b هو: 1
+القيمة المقلوبة لـ a هي: -2
+
+
+ساهم مانجيت سينغ في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+ 
+
+
+>>>>>>>>>>>>>>>>>>>>>>>
+الفرق بين == والمشغل في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: ٤ أغسطس ٢٠٢١
+يقارن عامل المساواة (==) قيم كل من المعاملات والتحقق من تساوي القيمة. بينما يتحقق عامل التشغيل " is" مما إذا كان كلا المعاملين يشيران إلى نفس الكائن أم لا (موجودان في نفس موقع الذاكرة).
+ 
+
+
+# python3 code to
+# illustrate the
+# difference between
+# == and is operator
+# [] is an empty list
+list1 = []
+list2 = []
+list3=list1
+ 
+if (list1 == list2):
+    print("True")
+else:
+    print("False")
+ 
+if (list1 is list2):
+    print("True")
+else:
+    print("False")
+ 
+if (list1 is list3):
+    print("True")
+else:   
+    print("False")
+ 
+list3 = list3 + list2
+ 
+if (list1 is list3):
+    print("True")
+else:   
+    print("False")
+انتاج: 
+
+صحيح
+خطأ شنيع
+صحيح
+خطأ شنيع
+ناتج الأول إذا كان الشرط "صحيحًا" لأن كل من list1 و list2 عبارة عن قوائم فارغة.
+ثانيًا ، إذا أظهر الشرط "خطأ" لأن قائمتين فارغتين في مواقع ذاكرة مختلفة. ومن ثم تشير القائمة 1 والقائمة 2 إلى كائنات مختلفة. يمكننا التحقق من ذلك باستخدام دالة id () في لغة python التي تُرجع "هوية" كائن.
+ناتج الحالة الثالثة إذا كان الشرط "صحيح" حيث تشير كل من list1 و list3 إلى نفس الكائن.
+ناتج الرابع إذا كان الشرط "خطأ" لأن تسلسل قائمتين ينتج دائمًا قائمة جديدة.
+
+list1 = []
+list2 = []
+ 
+print(id(list1))
+print(id(list2))
+انتاج: 
+
+139877155242696
+139877155253640
+هذا يظهر list1 و list2 تشير إلى كائنات مختلفة.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>
+مشغلي الهوية والعضوية في Python
+مستوى الصعوبة: أساسي
+آخر تحديث: 09 ديسمبر 2021
+في هذه المقالة ، سنذهب إلى مشغلي الهوية والعضوية في Python.
+
+مشغلي العضوية
+مشغلي العضوية هم عوامل تشغيل تُستخدم للتحقق من صحة عضوية القيمة. تختبر العضوية في تسلسل ، مثل السلاسل أو القوائم أو المجموعات. 
+
+في المشغل: يتم استخدام عامل التشغيل "in" للتحقق مما إذا كانت القيمة موجودة في تسلسل أم لا. قم بالتقييم إلى صواب إذا عثرت على متغير في التسلسل المحدد وخطأ في الحالات الأخرى.
+# Python program to illustrate
+# Finding common member in list
+# using 'in' operator
+list1=[1,2,3,4,5]
+list2=[6,7,8,9]
+for item in list1:
+    if item in list2:
+        print("overlapping")     
+else:
+    print("not overlapping")
+انتاج:
+
+لا تتداخل
+نفس المثال بدون استخدام عامل التشغيل:
+
+# Python program to illustrate
+# Finding common member in list
+# without  using 'in' operator
+ 
+#  Define a function() that takes two lists
+def overlapping(list1,list2):
+ 
+    c=0
+    d=0
+    for i in list1:
+        c+=1
+    for i in list2:
+        d+=1
+    for i in range(0,c):
+        for j in range(0,d):
+            if(list1[i]==list2[j]):
+                return 1
+    return 0
+list1=[1,2,3,4,5]
+list2=[6,7,8,9]
+if(overlapping(list1,list2)):
+    print("overlapping")
+else:
+    print("not overlapping")
+انتاج:
+
+لا تتداخل
+عامل التشغيل "ليس في" - يتم التقييم إلى صواب إذا لم يعثر على متغير في التسلسل المحدد وخطأ في الحالات الأخرى.
+# Python program to illustrate
+# not 'in' operator
+x = 24
+y = 20
+list = [10, 20, 30, 40, 50 ];
+ 
+if ( x not in list ):
+   print("x is NOT present in given list")
+else:
+   print("x is  present in given list")
+ 
+if ( y in list ):
+   print("y is present in given list")
+else:
+   print("y is NOT present in given list")
+انتاج:
+
+x غير موجود في قائمة معينة
+y موجود في قائمة معينة
+عوامل الهوية
+في بايثون ، يتم استخدام عوامل تشغيل الهوية لتحديد ما إذا كانت القيمة من فئة أو نوع معين. تستخدم عادة لتحديد نوع البيانات التي يحتوي عليها متغير معين. 
+هناك عوامل تشغيل مختلفة للهوية مثل 
+
+عامل التشغيل 'is' - يقيّم إلى صواب إذا كانت المتغيرات على جانبي المشغل تشير إلى نفس الكائن وتخطئ في الحالات الأخرى.
+# Python program to illustrate the use
+# of 'is' identity operator
+x = 5
+if (type(x) is int):
+    print("true")
+else:
+    print("false")
+انتاج: 
+
+صحيح
+عامل التشغيل "ليس" - يقيّم إلى خطأ إذا كانت المتغيرات على جانبي المشغل تشير إلى نفس الكائن وكانت صحيحة بخلاف ذلك.
+# Python program to illustrate the
+# use of 'is not' identity operator
+x = 5.2
+if (type(x) is not int):
+    print("true")
+else:
+    print("false")
+انتاج:
+
+صحيح

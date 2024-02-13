@@ -1,0 +1,325 @@
+
+برمجة المقبس في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ١٠ نوفمبر ٢٠٢١
+برمجة المقبس هي طريقة لربط عقدتين على شبكة للتواصل مع بعضهما البعض. يستمع أحد المقبس (العقدة) إلى منفذ معين على IP ، بينما يصل المقبس الآخر إلى الآخر لتشكيل اتصال. يشكل الخادم مقبس المستمع بينما يصل العميل إلى الخادم. 
+هم العمود الفقري الحقيقي وراء تصفح الويب. بعبارات أبسط ، هناك خادم وعميل. 
+بدأت برمجة Socket عن طريق استيراد مكتبة المقابس وعمل مقبس بسيط. 
+
+مقبس الاستيراد
+s = socket.socket (socket.AF_INET ، socket.SOCK_STREAM)
+هنا قمنا بعمل مثيل مأخذ وقمنا بتمريره إلى معلمتين. المعلمة الأولى هي AF_INET والمعلمة الثانية هي SOCK_STREAM . يشير AF_INET إلى عنوان عائلة ipv4. يعني SOCK_STREAM بروتوكول TCP المهيأ للاتصال. 
+الآن يمكننا الاتصال بالخادم باستخدام هذا المقبس
+
+الاتصال بالخادم: 
+لاحظ أنه في حالة حدوث أي خطأ أثناء إنشاء المقبس ، فإن المقبس. تم طرح الخطأ ولا يمكننا الاتصال بالخادم إلا من خلال معرفة عنوان IP الخاص به. يمكنك العثور على IP للخادم باستخدام هذا: 
+
+$ ping www.google.com
+يمكنك أيضًا العثور على IP باستخدام Python: 
+
+مقبس الاستيراد
+
+ip = socket.gethostbyname ("www.google.com")
+طباعة الملكية الفكرية
+فيما يلي مثال على نص برمجي للاتصال بـ Google.
+
+# An example script to connect to Google using socket
+# programming in Python
+import socket # for socket
+import sys
+ 
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    print ("Socket successfully created")
+except socket.error as err:
+    print ("socket creation failed with error %s" %(err))
+ 
+# default port for socket
+port = 80
+ 
+try:
+    host_ip = socket.gethostbyname('www.google.com')
+except socket.gaierror:
+ 
+    # this means could not resolve the host
+    print ("there was an error resolving the host")
+    sys.exit()
+ 
+# connecting to the server
+s.connect((host_ip, port))
+ 
+print ("the socket has successfully connected to google")
+انتاج : 
+
+تم إنشاء المقبس بنجاح
+تم توصيل المقبس بـ google بنجاح
+على المنفذ == 173.194.40.19
+بادئ ذي بدء ، صنعنا مقبسًا.
+ثم قمنا بحل عنوان IP الخاص بـ google وأخيراً ، قمنا بالاتصال بـ google.
+نحتاج الآن إلى معرفة كيف يمكننا إرسال بعض البيانات عبر مقبس.
+لإرسال البيانات ، تحتوي مكتبة المقابس على وظيفة sendall . تتيح لك هذه الوظيفة إرسال البيانات إلى الخادم الذي يتصل به المقبس ويمكن للخادم أيضًا إرسال البيانات إلى العميل باستخدام هذه الوظيفة.
+برنامج خادم عميل بسيط: 
+ 
+الخادم : 
+
+يحتوي الخادم على طريقة ربط () تربطه بعنوان IP ومنفذ معينين بحيث يمكنه الاستماع إلى الطلبات الواردة على عنوان IP والمنفذ. يحتوي الخادم على طريقة listen () التي تضع الخادم في وضع الاستماع. هذا يسمح للخادم بالاستماع إلى الاتصالات الواردة. وأخيرًا ، يحتوي الخادم على طريقة Accept () و close (). يبدأ أسلوب القبول الاتصال بالعميل ويغلق أسلوب الإغلاق الاتصال بالعميل. 
+
+# first of all import the socket library
+import socket            
+ 
+# next create a socket object
+s = socket.socket()        
+print ("Socket successfully created")
+ 
+# reserve a port on your computer in our
+# case it is 12345 but it can be anything
+port = 12345               
+ 
+# Next bind to the port
+# we have not typed any ip in the ip field
+# instead we have inputted an empty string
+# this makes the server listen to requests
+# coming from other computers on the network
+s.bind(('', port))        
+print ("socket binded to %s" %(port))
+ 
+# put the socket into listening mode
+s.listen(5)    
+print ("socket is listening")           
+ 
+# a forever loop until we interrupt it or
+# an error occurs
+while True:
+ 
+# Establish connection with client.
+  c, addr = s.accept()    
+  print ('Got connection from', addr )
+ 
+  # send a thank you message to the client. encoding to send byte type.
+  c.send('Thank you for connecting'.encode())
+ 
+  # Close the connection with the client
+  c.close()
+   
+  # Breaking once connection closed
+  break
+بادئ ذي بدء ، نحن نستورد المقبس وهو أمر ضروري.
+ثم صنعنا شيئًا مقبسًا وحجزنا منفذًا على جهاز الكمبيوتر الخاص بنا.
+بعد ذلك ، قمنا بربط خادمنا بالمنفذ المحدد. يعني تمرير سلسلة فارغة أن الخادم يمكنه الاستماع إلى الاتصالات الواردة من أجهزة الكمبيوتر الأخرى أيضًا. إذا كنا قد تجاوزنا 127.0.0.1 ، لكان قد استمع فقط لتلك المكالمات التي تم إجراؤها داخل الكمبيوتر المحلي.
+بعد ذلك وضعنا الخادم في وضع الاستماع. 5 يعني هنا استمرار 5 اتصالات في الانتظار إذا كان الخادم مشغولًا وإذا حاول المقبس السادس الاتصال ، فسيتم رفض الاتصال.
+أخيرًا ، نجعل حلقة while ونبدأ في قبول جميع الاتصالات الواردة ونغلق تلك الاتصالات بعد رسالة شكر إلى جميع المقابس المتصلة.
+العميل: 
+نحتاج الآن إلى شيء يمكن للخادم التفاعل معه. يمكننا أن ننتقل إلى الخادم مثل هذا فقط لنعلم أن خادمنا يعمل. اكتب هذه الأوامر في الجهاز: 
+
+# بدء الخادم
+$ python server.py
+
+# إبقاء المحطة أعلاه مفتوحة 
+# الآن افتح محطة أخرى واكتب: 
+ 
+$ telnet localhost 12345
+إذا لم يتم التعرف على "telnet". في windows ابحث عن ميزات windows وقم بتشغيل ميزة "telnet client".
+
+انتاج : 
+
+# في server.py Terminal سترى
+# هذا الناتج:
+تم إنشاء المقبس بنجاح
+مقبس مرتبط بـ 12345
+المقبس يستمع
+تم الاتصال من ('127.0.0.1'، 52617)
+# في محطة telnet ، ستحصل على هذا:
+محاولة :: 1 ...
+جاري محاولة 127.0.0.1 ...
+متصل بالمضيف المحلي.
+شخصية الهروب هي "^]".
+شكرا لك على connectConnection مغلق من قبل مضيف أجنبي.
+يوضح هذا الإخراج أن خادمنا يعمل.
+الآن من جانب العميل: 
+
+# Import socket module
+import socket            
+ 
+# Create a socket object
+s = socket.socket()        
+ 
+# Define the port on which you want to connect
+port = 12345               
+ 
+# connect to the server on local computer
+s.connect(('127.0.0.1', port))
+ 
+# receive data from the server and decoding to get the string.
+print (s.recv(1024).decode())
+# close the connection
+s.close()    
+     
+بادئ ذي بدء ، نصنع كائنًا مقبسًا.
+ثم نتصل بالمضيف المحلي على المنفذ 12345 (المنفذ الذي يعمل عليه خادمنا) وأخيرًا ، نتلقى البيانات من الخادم ونغلق الاتصال.
+الآن احفظ هذا الملف باسم client.py وقم بتشغيله من المحطة بعد بدء البرنامج النصي للخادم.
+# بدء الخادم:
+$ python server.py
+تم إنشاء المقبس بنجاح
+مقبس مرتبط بـ 12345
+المقبس يستمع
+تم الاتصال من ('127.0.0.1'، 52617)
+# بدء العميل:
+عميل $ python
+شكرا لك على الاتصال
+المرجع: برمجة Python Socket ساهم كيشلاي فيرما
+في كتابة هذه المقالة . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين. يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+ 
+
+
+<<<<<<<<<<<<<<<<<<<
+برمجة المقبس مع خيوط متعددة في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ٢٥ يناير ٢٠٢٢
+المتطلب السابق: برمجة Socket في Python ، خيوط المعالجة المتعددة في Python
+Socket Programming -> تساعدنا على توصيل عميل بالخادم. العميل هو مرسل الرسالة ومستقبلها والخادم هو مجرد مستمع يعمل على البيانات التي يرسلها العميل.
+ما هو الموضوع؟  
+الخيط هو عملية خفيفة الوزن لا تتطلب الكثير من الذاكرة ، فهي أرخص من العمليات.
+ما هي برمجة خيوط المعالجة المتعددة؟  
+تعد عملية تعدد مؤشرات الترابط عملية تنفيذ سلاسل رسائل متعددة في وقت واحد في عملية واحدة.
+وحدات خيوط المعالجة المتعددة: 
+وحدة خيوط ووحدة خيوطتُستخدم في خيوط المعالجة المتعددة في Python ، تساعد هذه الوحدات في المزامنة وتوفر قفلًا لخيط قيد الاستخدام. 
+ 
+
+من _thread import *
+استيراد خيوط
+يتم إنشاء كائن قفل بواسطة-> 
+ 
+
+print_lock = الترابط. قفل ()
+يحتوي القفل على حالتين ، "مغلق" أو "غير مؤمن". لها طريقتان أساسيتان اكتساب () وإطلاق (). عندما تكون الحالة غير مؤمنة ، يتم استخدام print_lock.acquire () لتغيير الحالة إلى مؤمن ويستخدم print_lock.release () لتغيير الحالة لإلغاء القفل.
+يتم استخدام التابع thread.start_new_thread () لبدء سلسلة رسائل جديدة وإرجاع معرفها. الوسيطة الأولى هي الوظيفة التي يجب استدعاءها والوسيطة الثانية عبارة عن مجموعة تحتوي على قائمة الوسائط الموضعية.
+دعنا ندرس برمجة مقبس خادم العميل متعدد الخوادم عن طريق 
+الكود - ملاحظة: - يعمل الكود مع python3. 
+رمز خادم متعدد الخيوط 
+ 
+
+# import socket programming library
+import socket
+ 
+# import thread module
+from _thread import *
+import threading
+ 
+print_lock = threading.Lock()
+ 
+# thread function
+def threaded(c):
+    while True:
+ 
+        # data received from client
+        data = c.recv(1024)
+        if not data:
+            print('Bye')
+             
+            # lock released on exit
+            print_lock.release()
+            break
+ 
+        # reverse the given string from client
+        data = data[::-1]
+ 
+        # send back reversed string to client
+        c.send(data)
+ 
+    # connection closed
+    c.close()
+ 
+ 
+def Main():
+    host = ""
+ 
+    # reverse a port on your computer
+    # in our case it is 12345 but it
+    # can be anything
+    port = 12345
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((host, port))
+    print("socket binded to port", port)
+ 
+    # put the socket into listening mode
+    s.listen(5)
+    print("socket is listening")
+ 
+    # a forever loop until client wants to exit
+    while True:
+ 
+        # establish connection with client
+        c, addr = s.accept()
+ 
+        # lock acquired by client
+        print_lock.acquire()
+        print('Connected to :', addr[0], ':', addr[1])
+ 
+        # Start a new thread and return its identifier
+        start_new_thread(threaded, (c,))
+    s.close()
+ 
+ 
+if __name__ == '__main__':
+    Main()
+نافذة وحدة التحكم:
+مقبس مرتبط بمنفذ 12345
+المقبس يستمع
+متصل بـ: 127.0.0.1: 11600
+وداعا
+رمز العميل 
+ 
+
+# Import socket module
+import socket
+ 
+ 
+def Main():
+    # local host IP '127.0.0.1'
+    host = '127.0.0.1'
+ 
+    # Define the port on which you want to connect
+    port = 12345
+ 
+    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+ 
+    # connect to server on local computer
+    s.connect((host,port))
+ 
+    # message you send to server
+    message = "shaurya says geeksforgeeks"
+    while True:
+ 
+        # message sent to server
+        s.send(message.encode('ascii'))
+ 
+        # message received from server
+        data = s.recv(1024)
+ 
+        # print the received message
+        # here it would be a reverse of sent message
+        print('Received from the server :',str(data.decode('ascii')))
+ 
+        # ask the client whether he wants to continue
+        ans = input('\nDo you want to continue(y/n) :')
+        if ans == 'y':
+            continue
+        else:
+            break
+    # close the connection
+    s.close()
+ 
+if __name__ == '__main__':
+    Main()
+نافذة وحدة التحكم:
+تم الاستلام من الخادم: skeegrofskeeg syas ayruahs
+
+هل تريد المتابعة (y / n): y
+تم الاستلام من الخادم: skeegrofskeeg syas ayruahs
+
+هل تريد المتابعة (y / n): n
+
+انتهت العملية برمز الخروج 0
+مرجع- > 
+https://docs.python.org/2/library/thread.html

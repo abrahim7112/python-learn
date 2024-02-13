@@ -1,0 +1,493 @@
+
+المعالجة المتعددة في بايثون | المجموعة 1 (مقدمة)
+مستوى الصعوبة: سهل
+آخر تحديث: 09 فبراير 2018
+هذه المقالة هي مقدمة موجزة ولكنها موجزة للمعالجة المتعددة في لغة برمجة بايثون.
+
+ما هي المعالجة المتعددة؟
+
+تشير المعالجة المتعددة إلى قدرة النظام على دعم أكثر من معالج في نفس الوقت. يتم تقسيم التطبيقات في نظام متعدد المعالجات إلى إجراءات أصغر تعمل بشكل مستقل. يخصص نظام التشغيل هذه الخيوط للمعالجات لتحسين أداء النظام.
+
+لماذا المعالجة المتعددة؟
+
+ضع في اعتبارك نظام كمبيوتر بمعالج واحد. إذا تم تعيين عدة عمليات لها في نفس الوقت ، فسيتعين عليها مقاطعة كل مهمة والتحول لفترة وجيزة إلى أخرى ، للحفاظ على استمرار جميع العمليات.
+هذا الوضع يشبه تمامًا طاهٍ يعمل بمفرده في المطبخ. عليه أن يقوم بالعديد من المهام مثل الخبز والتحريك وعجن العجين وما إلى ذلك.
+
+لذا فإن الجوهر هو: كلما زاد عدد المهام التي يجب عليك القيام بها في وقت واحد ، زادت صعوبة تتبعها جميعًا ، وأصبح الحفاظ على التوقيت الصحيح أكثر صعوبة.
+هذا هو المكان الذي ينشأ فيه مفهوم المعالجة المتعددة!
+يمكن أن يحتوي نظام المعالجة المتعددة على:
+
+متعدد المعالجات ، أي كمبيوتر به أكثر من معالج مركزي.
+معالج متعدد النواة ، أي مكون حوسبة واحد مع وحدتين أو أكثر من وحدات المعالجة الفعلية المستقلة (تسمى "النوى").
+هنا ، يمكن لوحدة المعالجة المركزية تنفيذ العديد من المهام بسهولة في وقت واحد ، مع استخدام المعالج الخاص بكل مهمة.
+
+إنه تمامًا مثل الشيف في الموقف الأخير الذي يساعده مساعدوه. الآن ، يمكنهم تقسيم المهام فيما بينهم ولا يحتاج الشيف للتبديل بين مهامه.
+
+المعالجة المتعددة في بايثون
+
+في Python ، تشتمل وحدة المعالجة المتعددة على واجهة برمجة تطبيقات بسيطة جدًا وبديهية لتقسيم العمل بين عمليات متعددة.
+دعونا نفكر في مثال بسيط باستخدام وحدة المعالجة المتعددة:
+
+
+# importing the multiprocessing module
+import multiprocessing
+  
+def print_cube(num):
+    """
+    function to print cube of given num
+    """
+    print("Cube: {}".format(num * num * num))
+  
+def print_square(num):
+    """
+    function to print square of given num
+    """
+    print("Square: {}".format(num * num))
+  
+if __name__ == "__main__":
+    # creating processes
+    p1 = multiprocessing.Process(target=print_square, args=(10, ))
+    p2 = multiprocessing.Process(target=print_cube, args=(10, ))
+  
+    # starting process 1
+    p1.start()
+    # starting process 2
+    p2.start()
+  
+    # wait until process 1 is finished
+    p1.join()
+    # wait until process 2 is finished
+    p2.join()
+  
+    # both processes finished
+    print("Done!")
+مربع: 100
+المكعب: 1000
+فعله!
+دعونا نحاول فهم الكود أعلاه:
+
+لاستيراد وحدة المعالجة المتعددة ، نقوم بما يلي:
+استيراد المعالجة المتعددة
+لإنشاء عملية ، نقوم بإنشاء كائن من فئة العملية . يأخذ الحجج التالية:
+الهدف : الوظيفة التي سيتم تنفيذها بواسطة العملية
+args : الوسيطات التي سيتم تمريرها إلى الوظيفة الهدف
+ملاحظة: يأخذ مُنشئ العمليات العديد من الوسائط الأخرى أيضًا والتي سيتم مناقشتها لاحقًا. في المثال أعلاه ، أنشأنا عمليتين بوظائف مستهدفة مختلفة:
+
+p1 = المعالجة المتعددة. العملية (الهدف = print_square ، args = (10،))
+p2 = المعالجة المتعددة. العملية (الهدف = print_cube ، args = (10،))
+لبدء العملية ، نستخدم طريقة البداية لفئة العملية .
+p1.start ()
+p2.start ()
+بمجرد بدء العمليات ، يستمر البرنامج الحالي في التنفيذ. لإيقاف تنفيذ البرنامج الحالي حتى تكتمل العملية ، نستخدم طريقة الانضمام .
+p1.join ()
+p2.join ()
+نتيجة لذلك ، سينتظر البرنامج الحالي أولاً اكتمال p1 ثم p2 . بمجرد اكتمالها ، يتم تنفيذ البيانات التالية للبرنامج الحالي.
+
+دعونا نفكر في برنامج آخر لفهم مفهوم العمليات المختلفة التي تعمل على نفس نص Python النصي. في هذا المثال أدناه ، نطبع معرف العمليات التي تشغل الوظائف المستهدفة:
+
+
+# importing the multiprocessing module
+import multiprocessing
+import os
+  
+def worker1():
+    # printing process id
+    print("ID of process running worker1: {}".format(os.getpid()))
+  
+def worker2():
+    # printing process id
+    print("ID of process running worker2: {}".format(os.getpid()))
+  
+if __name__ == "__main__":
+    # printing main program process id
+    print("ID of main process: {}".format(os.getpid()))
+  
+    # creating processes
+    p1 = multiprocessing.Process(target=worker1)
+    p2 = multiprocessing.Process(target=worker2)
+  
+    # starting processes
+    p1.start()
+    p2.start()
+  
+    # process IDs
+    print("ID of process p1: {}".format(p1.pid))
+    print("ID of process p2: {}".format(p2.pid))
+  
+    # wait until processes are finished
+    p1.join()
+    p2.join()
+  
+    # both processes finished
+    print("Both processes finished execution!")
+  
+    # check if processes are alive
+    print("Process p1 is alive: {}".format(p1.is_alive()))
+    print("Process p2 is alive: {}".format(p2.is_alive()))
+معرف العملية الرئيسية: 28628
+معرف عامل تشغيل العملية 1: 29305
+معرف عامل تشغيل العملية 2: 29306
+معرف العملية p1: 29305
+معرف العملية p2: 29306
+انتهت كلتا العمليتين من التنفيذ!
+العملية p1 حية: خطأ
+العملية p2 على قيد الحياة: خطأ
+يحتوي نص Python النصي الرئيسي على معرف عملية مختلف ، وتنتج وحدة المعالجة المتعددة عمليات جديدة بمعرفات عملية مختلفة أثناء إنشاء كائنات العملية p1 و p2 . في البرنامج أعلاه ، نستخدم وظيفة os.getpid () للحصول على معرف العملية التي تقوم بتشغيل وظيفة الهدف الحالية.
+لاحظ أنه يتطابق مع معرفات العملية p1 و p2 التي نحصل عليها باستخدام سمة pid لفئة العملية .
+
+تعمل كل عملية بشكل مستقل ولها مساحة ذاكرة خاصة بها.
+بمجرد الانتهاء من تنفيذ الوظيفة المستهدفة ، يتم إنهاء العمليات. في البرنامج أعلاه ، استخدمنا طريقة is_alive لفئة العملية للتحقق مما إذا كانت العملية لا تزال نشطة أم لا.
+ضع في اعتبارك الرسم البياني أدناه لفهم كيف تختلف العمليات الجديدة عن نص Python الرئيسي:
+
+إذن ، كانت هذه مقدمة موجزة للمعالجة المتعددة في Python. ستغطي المقالات القليلة التالية الموضوعات التالية المتعلقة بالمعالجة المتعددة:
+
+تبادل البيانات بين العمليات باستخدام الصفيف والقيمة وقوائم الانتظار.
+مفاهيم القفل والتجمع في المعالجة المتعددة
+التالي:
+
+المعالجة المتعددة في بايثون | مجموعة 2
+تزامن وتجميع العمليات في بايثون
+مراجع:
+
+http://learn.parallax.com/tutorials/language/blocklyprop/blocklyprop-functions-and-multicore/bit-about-multicore
+https://docs.python.org/3/library/multiprocessing.html
+هذا المقال من مساهمة نيخيل كومار . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+<<<<<<<<<<<<<<<<<<<
+المعالجة المتعددة في بايثون | المجموعة 2 (التواصل بين العمليات)
+مستوى الصعوبة: متوسط
+آخر تحديث: 18 أكتوبر 2021
+المعالجة المتعددة في بايثون | المجموعة 1
+تناقش هذه المقالات مفهوم مشاركة البيانات وتمرير الرسائل بين العمليات أثناء استخدام وحدة المعالجة المتعددة في Python.
+في المعالجة المتعددة ، ستعمل أي عملية تم إنشاؤها حديثًا على ما يلي:
+
+اركض بشكل مستقل
+لديهم مساحة الذاكرة الخاصة بهم.
+ضع في اعتبارك البرنامج أدناه لفهم هذا المفهوم:
+
+
+import multiprocessing
+  
+# empty list with global scope
+result = []
+  
+def square_list(mylist):
+    """
+    function to square a given list
+    """
+    global result
+    # append squares of mylist to global list result
+    for num in mylist:
+        result.append(num * num)
+    # print global list result
+    print("Result(in process p1): {}".format(result))
+  
+if __name__ == "__main__":
+    # input list
+    mylist = [1,2,3,4]
+  
+    # creating new process
+    p1 = multiprocessing.Process(target=square_list, args=(mylist,))
+    # starting process
+    p1.start()
+    # wait until process is finished
+    p1.join()
+  
+    # print global result list
+    print("Result(in main program): {}".format(result))
+النتيجة (ج 1): [1 ، 4 ، 9 ، 16]
+النتيجة (في البرنامج الرئيسي): []
+في المثال أعلاه ، نحاول طباعة محتويات نتيجة القائمة العالمية في مكانين:
+
+في وظيفة قائمة_مربع . نظرًا لأنه يتم استدعاء هذه الوظيفة بواسطة العملية p1 ، يتم تغيير قائمة النتائج في مساحة الذاكرة للعملية p1 فقط.
+بعد الانتهاء من عملية p1 في البرنامج الرئيسي. نظرًا لأن البرنامج الرئيسي يتم تشغيله بواسطة عملية مختلفة ، فلا تزال مساحة الذاكرة الخاصة به تحتوي على قائمة النتائج الفارغة .
+يوضح الرسم البياني الموضح أدناه هذا المفهوم:
+
+
+تبادل البيانات بين العمليات
+
+الذاكرة المشتركة: توفر وحدة المعالجة المتعددة كائنات صفيف وقيمة لمشاركة البيانات بين العمليات.
+المصفوفة: مصفوفة الأنواع المخصصة من الذاكرة المشتركة .
+القيمة: كائن ctypes مخصص من الذاكرة المشتركة .
+فيما يلي مثال بسيط يوضح استخدام المصفوفة والقيمة لمشاركة البيانات بين العمليات.
+
+
+import multiprocessing
+  
+def square_list(mylist, result, square_sum):
+    """
+    function to square a given list
+    """
+    # append squares of mylist to result array
+    for idx, num in enumerate(mylist):
+        result[idx] = num * num
+  
+    # square_sum value
+    square_sum.value = sum(result)
+  
+    # print result Array
+    print("Result(in process p1): {}".format(result[:]))
+  
+    # print square_sum Value
+    print("Sum of squares(in process p1): {}".format(square_sum.value))
+  
+if __name__ == "__main__":
+    # input list
+    mylist = [1,2,3,4]
+  
+    # creating Array of int data type with space for 4 integers
+    result = multiprocessing.Array('i', 4)
+  
+    # creating Value of int data type
+    square_sum = multiprocessing.Value('i')
+  
+    # creating new process
+    p1 = multiprocessing.Process(target=square_list, args=(mylist, result, square_sum))
+  
+    # starting process
+    p1.start()
+  
+    # wait until the process is finished
+    p1.join()
+  
+    # print result array
+    print("Result(in main program): {}".format(result[:]))
+  
+    # print square_sum Value
+    print("Sum of squares(in main program): {}".format(square_sum.value))
+النتيجة (ج 1): [1 ، 4 ، 9 ، 16]
+مجموع المربعات (في العملية p1): 30
+النتيجة (في البرنامج الرئيسي): [1 ، 4 ، 9 ، 16]
+مجموع المربعات (في البرنامج الرئيسي): 30
+دعونا نحاول فهم الكود أعلاه سطرًا بسطر:
+
+بادئ ذي بدء ، نقوم بإنشاء نتيجة مصفوفة مثل هذا:
+  result = multiprocessing.Array('i', 4)
+الوسيطة الأولى هي نوع البيانات . يرمز الحرف "i" إلى عدد صحيح بينما يشير الحرف "d" إلى نوع البيانات العائمة.
+الوسيطة الثانية هي حجم المصفوفة. هنا ، نقوم بإنشاء مجموعة من 4 عناصر.
+وبالمثل ، فإننا ننشئ القيمة square_sum مثل هذا:
+
+  square_sum = multiprocessing.Value('i')
+هنا ، نحتاج فقط إلى تحديد نوع البيانات. يمكن إعطاء القيمة قيمة أولية (على سبيل المثال 10) مثل هذا:
+
+  square_sum = multiprocessing.Value('i', 10)
+ثانيًا ، نقوم بتمرير النتيجة و square_sum كوسيطات أثناء إنشاء كائن العملية .
+  p1 = multiprocessing.Process(target=square_list, args=(mylist, result, square_sum))
+يتم إعطاء قيمة لعناصر مصفوفة النتائج عن طريق تحديد فهرس عنصر المصفوفة.
+  for idx, num in enumerate(mylist):
+      result[idx] = num * num
+يتم إعطاء square_sum قيمة باستخدام سمة القيمة الخاصة بها:
+
+  square_sum.value = sum(result)
+من أجل طباعة عناصر مصفوفة النتيجة ، نستخدم النتيجة [:] لطباعة مصفوفة كاملة.
+  print("Result(in process p1): {}".format(result[:]))
+تتم طباعة قيمة square_sum ببساطة على النحو التالي:
+
+  print("Sum of squares(in process p1): {}".format(square_sum.value))
+فيما يلي رسم تخطيطي يوضح كيفية مشاركة العمليات لكائن المصفوفة والقيمة :
+
+
+عملية الخادم: عندما يبدأ برنامج بايثون ، تبدأ أيضًا عملية الخادم . من هناك فصاعدًا ، كلما كانت هناك حاجة إلى عملية جديدة ، تتصل العملية الرئيسية بالخادم وتطلب منه إجراء عملية جديدة.
+يمكن أن تحتوي عملية الخادم على كائنات Python وتسمح للعمليات الأخرى بمعالجتها باستخدام الوكلاء. توفر وحدة
+المعالجة المتعددة فئة المدير التي تتحكم في عملية الخادم. ومن ثم ، فإن المديرين يوفرون طريقة لإنشاء البيانات التي يمكن مشاركتها بين العمليات المختلفة.
+يعد مديرو عمليات الخادم أكثر مرونة من استخدام كائنات الذاكرة المشتركة لأنه يمكن إجراؤها لدعم أنواع الكائنات التعسفية مثل القوائم والقواميس وقائمة الانتظار والقيمة والمصفوفة وما إلى ذلك أيضًا ، يمكن أيضًا مشاركة مدير واحد بواسطة العمليات على أجهزة كمبيوتر مختلفة عبر الشبكة . ومع ذلك ، فهي أبطأ من استخدام الذاكرة المشتركة.
+
+ضع في اعتبارك المثال الوارد أدناه:
+
+
+import multiprocessing
+  
+def print_records(records):
+    """
+    function to print record(tuples) in records(list)
+    """
+    for record in records:
+        print("Name: {0}\nScore: {1}\n".format(record[0], record[1]))
+  
+def insert_record(record, records):
+    """
+    function to add a new record to records(list)
+    """
+    records.append(record)
+    print("New record added!\n")
+  
+if __name__ == '__main__':
+    with multiprocessing.Manager() as manager:
+        # creating a list in server process memory
+        records = manager.list([('Sam', 10), ('Adam', 9), ('Kevin',9)])
+        # new record to be inserted in records
+        new_record = ('Jeff', 8)
+  
+        # creating new processes
+        p1 = multiprocessing.Process(target=insert_record, args=(new_record, records))
+        p2 = multiprocessing.Process(target=print_records, args=(records,))
+  
+        # running process p1 to insert new record
+        p1.start()
+        p1.join()
+  
+        # running process p2 to print records
+        p2.start()
+        p2.join()
+تمت إضافة رقم قياسي جديد!
+
+الاسم: سام
+النتيجة: 10
+
+الاسم: آدم
+النتيجة: 9
+
+الاسم: كيفن
+النتيجة: 9
+
+الاسم: جيف
+النتيجة: 8
+دعونا نحاول فهم جزء الكود أعلاه:
+
+بادئ ذي بدء ، نقوم بإنشاء كائن manager باستخدام:
+  with multiprocessing.Manager() as manager:
+جميع الأسطر الموجودة أسفل كتلة البيان تقع ضمن نطاق كائن المدير .
+
+بعد ذلك ، نقوم بإنشاء قائمة سجلات في ذاكرة معالجة الخادم باستخدام:
+  records = manager.list([('Sam', 10), ('Adam', 9), ('Kevin',9)])
+وبالمثل ، يمكنك إنشاء قاموس كطريقة manager.dict .
+
+أخيرًا ، نقوم بإنشاء عمليات p1 (لإدراج سجل جديد في قائمة السجلات ) و p2 (لطباعة السجلات ) وتشغيلها أثناء تمرير السجلات كأحد الوسائط.
+يتم توضيح مفهوم عملية الخادم في الرسم البياني الموضح أدناه:
+
+
+التواصل بين العمليات
+
+يتطلب الاستخدام الفعال للعمليات المتعددة عادةً بعض التواصل فيما بينها ، بحيث يمكن تقسيم العمل وتجميع النتائج.
+تدعم المعالجة المتعددة نوعين من قنوات الاتصال بين العمليات:
+
+طابور
+يضخ
+قائمة الانتظار: من الطرق البسيطة للتواصل بين العملية ذات المعالجات المتعددة استخدام قائمة انتظار لتمرير الرسائل ذهابًا وإيابًا. يمكن لأي كائن Python المرور عبر قائمة انتظار.
+ملاحظة: تعد فئة Queue نسخة قريبة من queue.Queue . ضع في اعتبارك البرنامج المثال الموضح أدناه:
+
+import multiprocessing
+  
+def square_list(mylist, q):
+    """
+    function to square a given list
+    """
+    # append squares of mylist to queue
+    for num in mylist:
+        q.put(num * num)
+  
+def print_queue(q):
+    """
+    function to print queue elements
+    """
+    print("Queue elements:")
+    while not q.empty():
+        print(q.get())
+    print("Queue is now empty!")
+  
+if __name__ == "__main__":
+    # input list
+    mylist = [1,2,3,4]
+  
+    # creating multiprocessing Queue
+    q = multiprocessing.Queue()
+  
+    # creating new processes
+    p1 = multiprocessing.Process(target=square_list, args=(mylist, q))
+    p2 = multiprocessing.Process(target=print_queue, args=(q,))
+  
+    # running process p1 to square list
+    p1.start()
+    p1.join()
+  
+    # running process p2 to get queue elements
+    p2.start()
+    p2.join()
+عناصر قائمة الانتظار:
+1
+4
+9
+16
+قائمة الانتظار فارغة الآن!
+دعونا نحاول فهم الكود أعلاه خطوة بخطوة:
+
+أولاً ، نقوم بإنشاء قائمة انتظار معالجة متعددة باستخدام:
+  q = multiprocessing.Queue()
+ثم نقوم بتمرير قائمة الانتظار الفارغة q إلى وظيفة square_list من خلال العملية p1 . يتم إدراج العناصر في قائمة الانتظار باستخدام طريقة الوضع .
+  q.put(num * num)
+من أجل طباعة عناصر قائمة الانتظار ، نستخدم طريقة get حتى تصبح قائمة الانتظار فارغة.
+  while not q.empty():
+      print(q.get())
+فيما يلي رسم تخطيطي بسيط يصور العمليات في قائمة الانتظار:
+
+
+الأنابيب: يمكن أن يحتوي الأنبوب على نقطتي نهاية فقط. ومن ثم ، يُفضل على قائمة الانتظار عندما يكون الاتصال ثنائي الاتجاه فقط مطلوبًا.
+توفر وحدة المعالجة المتعددة وظيفة الأنابيب () التي تُرجع زوجًا من كائنات التوصيل المتصلة بواسطة أنبوب. يمثل كائنان التوصيل اللذين يتم إرجاعهما بواسطة الأنابيب () طرفي الأنبوب. كل كائن اتصال له طرق الإرسال () و recv () (من بين أمور أخرى).
+ضع في اعتبارك البرنامج الموضح أدناه:
+
+
+import multiprocessing
+  
+def sender(conn, msgs):
+    """
+    function to send messages to other end of pipe
+    """
+    for msg in msgs:
+        conn.send(msg)
+        print("Sent the message: {}".format(msg))
+    conn.close()
+  
+def receiver(conn):
+    """
+    function to print the messages received from other
+    end of pipe
+    """
+    while 1:
+        msg = conn.recv()
+        if msg == "END":
+            break
+        print("Received the message: {}".format(msg))
+  
+if __name__ == "__main__":
+    # messages to be sent
+    msgs = ["hello", "hey", "hru?", "END"]
+  
+    # creating a pipe
+    parent_conn, child_conn = multiprocessing.Pipe()
+  
+    # creating new processes
+    p1 = multiprocessing.Process(target=sender, args=(parent_conn,msgs))
+    p2 = multiprocessing.Process(target=receiver, args=(child_conn,))
+  
+    # running processes
+    p1.start()
+    p2.start()
+  
+    # wait until processes finish
+    p1.join()
+    p2.join()
+أرسل الرسالة: مرحبًا
+أرسل الرسالة: مرحبًا
+أرسل الرسالة: hru؟
+تلقيت الرسالة: مرحبا
+أرسل الرسالة: END
+تلقيت الرسالة: مرحبًا
+تلقيت الرسالة: hru؟
+دعونا نحاول فهم الكود أعلاه:
+
+تم إنشاء أنبوب ببساطة باستخدام:
+  parent_conn, child_conn = multiprocessing.Pipe()
+أعادت الوظيفة كائني توصيل لطرفتي الأنبوب.
+
+يتم إرسال الرسالة من أحد طرفي الأنبوب إلى آخر باستخدام طريقة الإرسال .
+  conn.send(msg)
+لتلقي أي رسائل في أحد طرفي الأنبوب ، نستخدم طريقة recv .
+  msg = conn.recv()
+في البرنامج أعلاه ، نرسل قائمة بالرسائل من طرف إلى آخر. في الطرف الآخر ، نقرأ الرسائل حتى نتلقى رسالة "END".
+ضع في اعتبارك الرسم البياني الموضح أدناه والذي يوضح علاقة أنابيب b / w والعمليات:
+
+
+ملاحظة: قد تتلف البيانات الموجودة في الأنبوب إذا حاولت عمليتان (أو خيوط) القراءة من نفس نهاية الأنبوب أو الكتابة إليه في نفس الوقت. بالطبع ، لا يوجد خطر حدوث فساد من العمليات التي تستخدم نهايات مختلفة من الأنبوب في نفس الوقت. لاحظ أيضًا أن قوائم الانتظار تقوم بإجراء مزامنة مناسبة بين العمليات ، على حساب المزيد من التعقيد. ومن ثم ، يُقال إن قوائم الانتظار تكون خيطية وعملية آمنة!

@@ -1,0 +1,177 @@
+
+وظائف First Class في Python
+مستوى الصعوبة: متوسط
+آخر تحديث: 25 نوفمبر 2020
+
+يتم التعامل مع كائنات من الدرجة الأولى في لغة ما بشكل موحد طوال الوقت. قد يتم تخزينها في هياكل البيانات ، أو تمريرها كوسيطات ، أو استخدامها في هياكل التحكم. يقال إن لغة البرمجة تدعم وظائف من الدرجة الأولى إذا تعاملت مع الوظائف على أنها كائنات من الدرجة الأولى. تدعم Python مفهوم وظائف الدرجة الأولى.
+
+خصائص وظائف الدرجة الأولى:
+
+الوظيفة هي مثيل لنوع الكائن.
+يمكنك تخزين الوظيفة في متغير.
+يمكنك تمرير الوظيفة كمعامل إلى وظيفة أخرى.
+يمكنك إعادة الوظيفة من وظيفة.
+يمكنك تخزينها في هياكل البيانات مثل جداول التجزئة والقوائم ...
+أمثلة توضح وظائف الدرجة الأولى في بايثون
+
+1. الوظائف هي كائنات: وظائف بايثون هي كائنات من الدرجة الأولى. في المثال أدناه ، نقوم بتعيين وظيفة إلى متغير. هذا الواجب لا يستدعي الوظيفة. يأخذ كائن الوظيفة المشار إليه بواسطة الصراخ ويخلق اسمًا ثانيًا يشير إليه ، yell.
+
+
+# Python program to illustrate functions
+# can be treated as objects
+def shout(text):
+    return text.upper()
+  
+print (shout('Hello'))
+  
+yell = shout
+  
+print (yell('Hello'))
+انتاج:
+
+مرحبا
+مرحبا
+2. يمكن تمرير الوظائف كوسيطات لوظائف أخرى: نظرًا لأن الوظائف هي كائنات ، يمكننا تمريرها كوسيطات إلى وظائف أخرى. الوظائف التي يمكنها قبول وظائف أخرى كوسائط تسمى أيضًا وظائف الترتيب الأعلى. في المثال أدناه ، أنشأنا دالة ترحيب تأخذ وظيفة كوسيطة.
+
+
+# Python program to illustrate functions
+# can be passed as arguments to other functions
+def shout(text):
+    return text.upper()
+  
+def whisper(text):
+    return text.lower()
+  
+def greet(func):
+    # storing the function in a variable
+    greeting = func("""Hi, I am created by a function
+                    passed as an argument.""")
+    print (greeting) 
+  
+greet(shout)
+greet(whisper)
+انتاج |
+
+مرحبًا ، لقد خلقت بواسطة وظيفة مرت كحجة.
+مرحبًا ، لقد خلقت من خلال وظيفة تم تمريرها كوسيطة.
+3. يمكن أن تعيد الوظائف وظيفة أخرى: نظرًا لأن الوظائف هي كائنات ، فيمكننا إرجاع وظيفة من وظيفة أخرى. في المثال أدناه ، ترجع الدالة create_adder وظيفة adder.
+
+
+# Python program to illustrate functions
+# Functions can return another function
+  
+def create_adder(x):
+    def adder(y):
+        return x+y
+  
+    return adder
+  
+add_15 = create_adder(15)
+  
+print (add_15(10))
+انتاج:
+
+25
+ساهم مايانك أغراوال في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+<<<<<<<<<<<<<<<<<<<<<
+إغلاق بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ٢٧ يناير ٢٠٢٢
+قبل أن نرى ما هو الإغلاق ، علينا أولاً أن نفهم ما هي الدوال المتداخلة والمتغيرات غير المحلية. 
+ 
+
+دالات متداخلة في بايثون
+تُعرف الوظيفة التي يتم تعريفها داخل دالة أخرى بأنها دالة متداخلة. الوظائف المتداخلة قادرة على الوصول إلى متغيرات النطاق المضمن. 
+في Python ، لا يمكن الوصول إلى هذه المتغيرات غير المحلية إلا ضمن نطاقها وليس خارج نطاقها. يمكن توضيح ذلك من خلال المثال التالي: 
+
+
+# Python program to illustrate
+# nested functions
+def outerFunction(text):
+    text = text
+ 
+    def innerFunction():
+        print(text)
+ 
+    innerFunction()
+ 
+if __name__ == '__main__':
+    outerFunction('Hey!')
+كما نرى ، يمكن الوصول بسهولة إلى الوظيفة الداخلية () داخل جسم الوظيفة الخارجية ولكن ليس خارجها. ومن ثم ، هنا ، يتم التعامل مع الوظيفة الداخلية () على أنها دالة متداخلة تستخدم النص كمتغير غير محلي.
+ 
+
+إغلاق بايثون
+الإغلاق هو كائن دالة يتذكر القيم في تضمين النطاقات حتى لو لم تكن موجودة في الذاكرة. 
+ 
+
+إنه سجل يخزن دالة مع بيئة: تعيين يربط كل متغير حر للوظيفة (المتغيرات التي يتم استخدامها محليًا ولكنها محددة في نطاق مغلق) بالقيمة أو المرجع الذي كان الاسم مرتبطًا به عندما كان الإغلاق خلقت.
+يسمح الإغلاق - بخلاف الوظيفة العادية - للوظيفة بالوصول إلى تلك المتغيرات الملتقطة من خلال نسخ الإغلاق لقيمها أو مراجعها ، حتى عندما يتم استدعاء الوظيفة خارج نطاقها.
+
+# Python program to illustrate
+# closures
+def outerFunction(text):
+    text = text
+ 
+    def innerFunction():
+        print(text)
+ 
+    # Note we are returning function
+    # WITHOUT parenthesis
+    return innerFunction 
+ 
+if __name__ == '__main__':
+    myFunction = outerFunction('Hey!')
+    myFunction()
+انتاج:
+omkarpathak @ omkarpathak-Inspiron-3542:
+~ / Documents / Python-Programs / $ python Closures.py
+مهلا!
+كما لوحظ من الكود أعلاه ، تساعد عمليات الإغلاق على استدعاء وظائف خارج نطاقها.
+الوظيفة الداخلية لها نطاقها فقط داخل الوظيفة الخارجية. ولكن باستخدام عمليات الإغلاق ، يمكننا بسهولة توسيع نطاقها لاستدعاء وظيفة خارج نطاقها.
+# Python program to illustrate
+# closures
+import logging
+logging.basicConfig(filename='example.log',
+                    level=logging.INFO)
+ 
+ 
+def logger(func):
+    def log_func(*args):
+        logging.info(
+            'Running "{}" with arguments {}'.format(func.__name__,
+                                                    args))
+        print(func(*args))
+         
+    # Necessary for closure to
+    # work (returning WITHOUT parenthesis)
+    return log_func            
+ 
+def add(x, y):
+    return x+y
+ 
+def sub(x, y):
+    return x-y
+ 
+add_logger = logger(add)
+sub_logger = logger(sub)
+ 
+add_logger(3, 3)
+add_logger(4, 5)
+ 
+sub_logger(10, 5)
+sub_logger(20, 10)
+انتاج:
+omkarpathak @ omkarpathak-Inspiron-3542:
+~ / Documents / Python-Programs / $ python MoreOnClosures.py
+6
+9
+5
+10
+متى ولماذا تستخدم الإغلاق:
+1. نظرًا لاستخدام الإغلاق كوظائف رد الاتصال ، فإنها توفر نوعًا من إخفاء البيانات. هذا يساعدنا على تقليل استخدام المتغيرات العالمية.
+
+2. عندما يكون لدينا وظائف قليلة في الكود الخاص بنا ، فإن عمليات الإغلاق تكون وسيلة فعالة. ولكن إذا كنا بحاجة إلى العديد من الوظائف ، فانتقل إلى الفصل الدراسي (OOP).

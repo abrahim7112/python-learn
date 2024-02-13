@@ -1,0 +1,727 @@
+
+الأخطاء والاستثناءات في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: 22 أكتوبر 2021
+الأخطاء هي المشاكل في البرنامج بسبب البرنامج الذي سيوقف التنفيذ. من ناحية أخرى ، تظهر الاستثناءات عند حدوث بعض الأحداث الداخلية التي تغير التدفق الطبيعي للبرنامج. 
+نوعان من الأخطاء يحدثان في بيثون. 
+ 
+
+أخطاء في بناء الجملة
+أخطاء منطقية (استثناءات) 
+ 
+ 
+
+أخطاء في بناء الجملة
+عندما لا يتم اتباع النحو الصحيح للغة ، يتم إلقاء خطأ نحوي.
+مثال 
+ 
+
+
+# initialize the amount variable
+amount = 10000
+  
+# check that You are eligible to
+#  purchase Dsa Self Paced or not
+if(amount>2999)
+    print("You are eligible to purchase Dsa Self Paced")
+     
+انتاج:
+ 
+
+
+
+تقوم بإرجاع رسالة خطأ في بناء الجملة لأن النقطتين: بعد عبارة if مفقودة. يمكننا إصلاح هذا عن طريق كتابة الصيغة الصحيحة.
+ 
+
+أخطاء منطقية (استثناء)
+عندما يحدث خطأ في وقت التشغيل بعد اجتياز اختبار بناء الجملة يسمى استثناء أو نوع منطقي. على سبيل المثال ، عندما نقسم أي رقم على صفر ، يتم رفع استثناء ZeroDivisionError ، أو عندما نقوم باستيراد وحدة غير موجودة ، يتم رفع ImportError.
+مثال 1: 
+ 
+
+
+# initialize the amount variable
+marks = 10000
+  
+# perform division with 0
+a = marks / 0
+print(a)
+انتاج:
+ 
+
+
+
+في المثال أعلاه خطأ ZeroDivision حيث نحاول قسمة رقم على 0.
+مثال 2: عندما تكون المسافة البادئة غير صحيحة. 
+ 
+
+
+if(a<3):
+print("gfg")
+انتاج:
+ 
+
+
+
+بعض الاستثناءات المضمنة الشائعة بخلاف الاستثناءات المذكورة أعلاه هي:
+ 
+
+ 
+
+استثناء	وصف
+الفهرس خطأ	عندما يتم استرداد فهرس خاطئ من القائمة.
+AssertionError	يحدث عندما تفشل جملة التأكيد
+خطأ في السمة	يحدث عند فشل تعيين السمة.
+استيراد خطأ	يحدث ذلك عندما لا يتم العثور على وحدة نمطية مستوردة.
+KeyError	يحدث عندما لا يتم العثور على مفتاح القاموس.
+الاسم خطأ	يحدث عندما لا يتم تعريف المتغير.
+الذاكرة خطأ	يحدث ذلك عندما تنفد ذاكرة أحد البرامج.
+خطأ مطبعي	يحدث عندما يتم تطبيق وظيفة وعملية في نوع غير صحيح.
+ملاحظة: لمزيد من المعلومات ، راجع الاستثناءات المضمنة في Python
+ 
+
+معالجة الأخطاء
+عندما يظهر خطأ واستثناء ، فإننا نتعامل مع ذلك بمساعدة طريقة المعالجة.
+ 
+
+معالجة الاستثناءات من خلال المحاولة / الاستثناء / أخيرًا 
+يمكننا معالجة الأخطاء بطريقة المحاولة / الاستثناء / أخيرًا. نكتب رمزًا غير آمن في المحاولة ، ونعود إلى الكود باستثناء الرمز النهائي في الكتلة النهائية.
+مثال 
+ 
+
+# put unsafe operation in try block
+try:
+     print("code start")
+          
+     # unsafe operation perform
+     print(1 / 0)
+  
+# if error occur the it goes in except block
+except:
+     print("an error occurs")
+  
+# final code in finally block
+finally:
+     print("GeeksForGeeks")
+انتاج: 
+ 
+بداية الكود
+حدث خطأ
+المهوسون
+ 
+رفع الاستثناءات لشرط محدد مسبقًا 
+عندما نريد رمزًا للحد من شروط معينة ، فيمكننا عندئذٍ طرح استثناء. 
+مثال 
+ 
+
+# try for unsafe code
+try:
+    amount = 1999
+    if amount < 2999:
+          
+        # raise the ValueError
+        raise ValueError("please add money in your account")
+    else:
+        print("You are eligible to purchase DSA Self Paced course")
+              
+# if false then raise the value error
+except ValueError as e:
+        print(e)
+انتاج: 
+ 
+الرجاء إضافة الأموال في حسابك
+
+
+<<<<<<<<<<<<<<<<<<<<<
+الاستثناءات المضمنة في Python
+مستوى الصعوبة: متوسط
+آخر تحديث: 22 تشرين الثاني (نوفمبر) 2020
+يجب أن تكون جميع المثيلات في Python عبارة عن حالات لفئة مشتقة من BaseException . لا تتكافئ فئتان من الاستثناءات غير المرتبطين عبر التصنيف الفرعي أبدًا ، حتى لو كان لهما نفس الاسم. يمكن إنشاء الاستثناءات المضمنة بواسطة المترجم الفوري أو الوظائف المضمنة.
+
+هناك العديد من الاستثناءات المضمنة في Python والتي تظهر عند حدوث أخطاء. يمكن عرض هذه الاستثناءات المضمنة باستخدام الوظائف المضمنة المحلية () على النحو التالي:
+
+>>> السكان المحليون () ['__ المباني__']
+يؤدي هذا إلى إرجاع قاموس الاستثناءات والوظائف والسمات المضمنة.
+
+الفئات الأساسية
+
+تُستخدم الاستثناءات التالية في الغالب كفئة أساسية للاستثناءات الأخرى.
+
+استثناء BaseException
+هذه هي الفئة الأساسية لجميع الاستثناءات المضمنة. ليس من المفترض أن يتم توريثها بشكل مباشر بواسطة الفئات المعرفة بواسطة المستخدم. بالنسبة للفئات المعرفة من قبل المستخدم ، يتم استخدام الاستثناء. هذه الفئة مسؤولة عن إنشاء تمثيل سلسلة للاستثناء باستخدام str () باستخدام الوسيطات التي تم تمريرها. يتم إرجاع سلسلة فارغة إذا لم تكن هناك وسيطات.
+args: args هي مجموعة الوسائط المعطاة لمنشئ الاستثناء.
+with_traceback (tb): تُستخدم هذه الطريقة عادةً في معالجة الاستثناءات. يقوم هذا الأسلوب بتعيين tb باعتباره التتبع الجديد للاستثناء وإرجاع كائن الاستثناء.
+رمز :
+
+يحاول:
+    ...
+باستثناء بعض استثناءات:
+    tb = sys.exc_info () [2]
+    رفع استثناءات أخرى (...). with_traceback (tb)
+استثناء استثناء
+هذه هي الفئة الأساسية لكافة الاستثناءات المضمنة التي لا تتعلق بإنهاء النظام. يجب أيضًا اشتقاق جميع الاستثناءات المعرفة من قبل المستخدم من هذه الفئة.
+استثناء ArithmeticError
+هذه الفئة هي الفئة الأساسية لتلك الاستثناءات المضمنة التي يتم رفعها للعديد من الأخطاء الحسابية مثل:
+تجاوز خطأ
+ZeroDivisionError
+FloatingPointError
+مثال :
+
+
+try:  
+    a = 10/0  
+    print (a)
+except ArithmeticError:  
+        print ("This statement is raising an arithmetic exception.")
+else:  
+    print ("Success.")
+انتاج :
+
+هذا البيان يثير استثناء حسابي.
+استثناء BufferError يظهر
+هذا الاستثناء عندما يتعذر تنفيذ العمليات المتعلقة بالمخزن المؤقت.
+استثناء LookupError
+هذه هي الفئة الأساسية لتلك الاستثناءات التي تظهر عندما يكون المفتاح أو الفهرس المستخدم في التعيين أو التسلسل غير صالح أو غير موجود. الاستثناءات المطروحة هي:
+KeyError
+الفهرس خطأ
+مثال :
+
+
+try: 
+    a = [1, 2, 3] 
+    print (a[3]) 
+except LookupError: 
+    print ("Index out of bound error.")
+else: 
+    print ("Success")
+  
+انتاج :
+
+الفهرس من الخطأ المنضم.
+استثناءات ملموسة
+
+الاستثناءات التالية هي الاستثناءات التي يتم رفعها عادةً.
+
+استثناء AssertionError
+يظهر خطأ AssertionError عند فشل جملة تأكيد.
+مثال :
+
+تأكيد خطأ ، "فشل التأكيد"
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "exceptions_AssertionError.py" ، السطر 12 ، بتنسيق
+    تأكيد خطأ ، "فشل التأكيد"
+AssertionError: فشل التأكيد
+استثناء AttributeError
+يظهر خطأ AttributeError عندما يفشل مرجع السمة أو التعيين كما هو الحال عند الإشارة إلى سمة غير موجودة.
+مثال :
+
+
+class Attributes(object):
+    pass
+  
+object = Attributes()
+print (object.attribute)
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "d912bae549a2b42953bc62da114ae7a7.py" ، السطر 5 ، في
+    طباعة الكائن
+AttributeError: كائن "السمات" ليس له سمة "سمة"
+استثناء EOFError
+يظهر خطأ EOFError عندما تصل الدالات المضمنة مثل الإدخال () إلى حالة نهاية الملف (EOF) دون قراءة أي بيانات. ترجع أساليب الملف مثل readline () سلسلة فارغة عندما تضغط على EOF.
+مثال :
+
+
+while True:
+    data = input('Enter name : ')
+    print ('Hello  ', data)
+انتاج :
+
+أدخل الاسم: مرحبًا Aditi
+أدخل الاسم: Traceback (آخر مكالمة أخيرة):
+  ملف "exceptions_EOFError.py" ، السطر 13 ، بتنسيق
+    data = raw_input ('أدخل الاسم:')
+EOFError: EOF عند قراءة سطر
+استثناء FloatingPointError
+يظهر خطأ FloatingPointError عند فشل عملية الفاصلة العائمة. يتم تعريف هذا الاستثناء دائمًا ، ولكن لا يمكن رفعه إلا عندما يتم تكوين Python باستخدام الخيار – with-fpectl ، أو عندما يتم تعريف رمز WANT_SIGFPE_HANDLER في ملف pyconfig.h.
+مثال :
+
+
+import math
+  
+print (math.exp(1000))
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "" ، السطر 1 ، بتنسيق
+خطأ FloatingPoint: في math_1
+الاستثناء GeneratorExit
+يرث هذا الاستثناء مباشرة من BaseException بدلاً من Exception لأنه من الناحية الفنية ليس خطأً. يظهر استثناء GeneratorExit عند إغلاق المولد أو coroutine.
+مثال :
+
+
+def my_generator():
+    try:
+        for i in range(5):
+            print ('Yielding', i)
+            yield i
+    except GeneratorExit:
+        print ('Exiting early')
+  
+g = my_generator()
+print (g.next())
+g.close()
+  
+انتاج :
+
+العائد 0
+0
+الخروج مبكرًا
+استثناء ImportError
+يظهر خطأ ImportError عندما تكون عبارة الاستيراد غير قادرة على تحميل وحدة نمطية أو عندما يكون "من قائمة" في من ... استيراد اسم لا يمكن العثور عليه.
+مثال :
+
+
+import module_does_not_exist
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "exceptions_ImportError_nomodule.py" ، السطر 12 ، بتنسيق
+    وحدة الاستيراد_لا_توجد
+خطأ في الاستيراد: لا توجد وحدة باسم module_does_not_exist
+
+مثال :
+
+
+from exceptions import Userexception
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "exceptions_ImportError_missingname.py" ، السطر 12 ، بتنسيق
+    من استثناءات استيراد Userexception
+ImportError: لا يمكن استيراد اسم Userexception
+
+استثناء ModuleNotFoundError
+هذه هي الفئة الفرعية لـ ImportError والتي يتم رفعها عن طريق الاستيراد عندما يتعذر العثور على وحدة نمطية. يتم رفعه أيضًا عند عدم العثور على "لا شيء" في وحدات النظام.
+استثناء IndexError
+يظهر خطأ في الفهرس عند الإشارة إلى تسلسل يقع خارج النطاق.
+مثال :
+
+
+array = [ 0, 1, 2 ]
+print (array[3])
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "exceptions_IndexError.py" ، السطر 13 ، بتنسيق
+    مجموعة الطباعة [3]
+خطأ في الفهرس: فهرس القائمة خارج النطاق
+استثناء KeyError
+يظهر خطأ KeyError عندما لا يتم العثور على مفتاح تعيين في مجموعة المفاتيح الموجودة.
+مثال :
+
+
+array = { 'a':1, 'b':2 }
+print (array['c'])
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "exceptions_KeyError.py" ، السطر 13 ، بتنسيق
+    مجموعة الطباعة ['c']
+KeyError: "c"
+استثناء KeyboardInterrupt
+يظهر هذا الخطأ عندما يضغط المستخدم على مفتاح المقاطعة مثل Control-C أو Delete.
+مثال :
+
+
+try:
+    print ('Press Return or Ctrl-C:',)
+    ignored = input()
+except Exception, err:
+    print ('Caught exception:', err)
+except KeyboardInterrupt, err:
+    print ('Caught KeyboardInterrupt')
+else:
+    print ('No exception')
+انتاج :
+
+اضغط على رجوع أو Ctrl-C: ^ CCaught KeyboardInterrupt
+خطأ MemoryError يظهر
+هذا الخطأ عند نفاد الذاكرة من إحدى العمليات.
+مثال :
+
+
+def fact(a):
+    factors = []
+    for i in range(1, a+1):
+        if a%i == 0:
+            factors.append(i)
+    return factors 
+  
+num = 600851475143
+print (fact(num))
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "4af5c316c749aff128df20714536b8f3.py" ، السطر 9 ، في
+    حقيقة الطباعة (عدد)
+  ملف "4af5c316c749aff128df20714536b8f3.py" ، السطر 3 ، في الواقع
+    لأني في النطاق (1 ، أ + 1):
+الذاكرة خطأ
+استثناء NameError يظهر
+هذا الخطأ عند عدم العثور على اسم محلي أو عمومي. على سبيل المثال ، اسم متغير غير مؤهل.
+مثال :
+
+
+def func():
+    print ans
+  
+func()
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "cfba0a5196b05397e0a23b1b5b8c7e19.py" ، السطر 4 ، في
+    func ()
+  ملف "cfba0a5196b05397e0a23b1b5b8c7e19.py" ، السطر 2 ، في func
+    طباعة الجواب
+NameError: لم يتم تعريف الاسم العام "ans"
+استثناء NotImplementedError
+هذا الاستثناء مشتق من RuntimeError. يجب أن تثير الطرق المجردة في المصنفات المحددة من قبل المستخدم هذا الاستثناء عندما تتجاوز الفئات المشتقة الطريقة.
+مثال :
+
+
+class BaseClass(object):
+    """Defines the interface"""
+    def __init__(self):
+        super(BaseClass, self).__init__()
+    def do_something(self):
+        """The interface, not implemented"""
+        raise NotImplementedError(self.__class__.__name__ + '.do_something')
+  
+class SubClass(BaseClass):
+    """Implementes the interface"""
+    def do_something(self):
+        """really does something"""
+        print (self.__class__.__name__ + ' doing something!')
+  
+SubClass().do_something()
+BaseClass().do_something()
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "b32fc445850cbc23cd2f081ba1c1d60b.py" ، السطر 16 ، في
+    BaseClass (). do_something ()
+  ملف "b32fc445850cbc23cd2f081ba1c1d60b.py" ، السطر 7 ، في do_something
+    رفع NotImplementedError (self .__ class __.__ name__ + '.do_something')
+NotImplementedError: BaseClass.do_something
+استثناء OSError ([arg])
+يظهر استثناء خطأ OSE عندما تقوم إحدى وظائف النظام بإرجاع خطأ متعلق بالنظام ، بما في ذلك حالات فشل الإدخال / الإخراج مثل أخطاء "لم يتم العثور على الملف" أو "القرص ممتلئ".
+مثال :
+
+
+def func():
+    print (ans)
+  
+func()
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "442eccd7535a2704adbe372cb731fc0f.py" ، السطر 4 ، في
+    طباعة أنا ، اسم نظام التشغيل (أنا)
+خطأ OSE: [Errno 25] ioctl غير مناسب للجهاز
+الاستثناء OverflowError
+يظهر OverflowError عندما تكون نتيجة العملية الحسابية خارج النطاق. تقوم الأعداد الصحيحة برفع MemoryError بدلاً من OverflowError. أحيانًا يتم رفع OverflowError للأعداد الصحيحة التي تقع خارج النطاق المطلوب. لا يتم التحقق من عمليات الفاصلة العائمة بسبب نقص توحيد معالجة استثناء النقطة العائمة في C.
+مثال :
+
+
+import sys
+  
+print ('Regular integer: (maxint=%s)' % sys.maxint)
+try:
+    i = sys.maxint * 3
+    print ('No overflow for ', type(i), 'i =', i)
+except OverflowError, err:
+    print ('Overflowed at ', i, err)
+  
+print()
+print ('Long integer:')
+for i in range(0, 100, 10):
+    print ('%2d' % i, 2L ** i)
+  
+print()
+print ('Floating point values:')
+try:
+    f = 2.0**i
+    for i in range(100):
+        print (i, f)
+        f = f ** 2
+except OverflowError, err:
+    print ('Overflowed after ', f, err)
+انتاج :
+
+عدد صحيح منتظم: (maxint = 9223372036854775807)
+لا يوجد تجاوز لـ i = 27670116110564327421
+
+عدد صحيح طويل:
+ 0 1
+10 1024
+20 1048576
+30 1073741824
+40 1099511627776
+50 1125899906842624
+60 1152921504606846976
+70 1180591620717411303424
+80 1208925819614629174706176
+90 1237940039285380274899124224
+
+قيم الفاصلة العائمة:
+0 1.23794003929e + 27
+1 1.53249554087e + 54
+2 2.34854258277e + 108
+3 5.5156522631e + 216
+تجاوز الحد الأقصى 5.5156522631e + 216 (34 ، "نتيجة عددية خارج النطاق")
+
+الاستثناء RecursionError
+مشتق RecursionError من RuntimeError. يظهر هذا الاستثناء عندما يكتشف المترجم أنه تم تجاوز الحد الأقصى لعمق الإعادة.
+الاستثناء ReferenceError
+يظهر ReferenceError عند استخدام وكيل مرجعي ضعيف للوصول إلى سمة المرجع بعد تجميع البيانات المهملة.
+مثال :
+
+
+import gc
+import weakref
+  
+class Foo(object):
+  
+    def __init__(self, name):
+        self.name = name
+      
+    def __del__(self):
+        print ('(Deleting %s)' % self)
+  
+obj = Foo('obj')
+p = weakref.proxy(obj)
+  
+print ('BEFORE:', p.name)
+obj = None
+print ('AFTER:', p.name)
+انتاج :
+
+قبل: obj
+(حذف)
+بعد:
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "49d0c29d8fe607b862c02f4e1cb6c756.py" ، السطر 17 ، في
+    اطبع "بعد:" ، اسم الصفحة
+ReferenceError: الكائن ضعيف الإشارة لم يعد موجودًا
+استثناء RuntimeError
+يظهر RuntimeError عندما لا ينطبق أي استثناء آخر. تقوم بإرجاع سلسلة تشير إلى الخطأ الذي حدث بالضبط.
+الاستثناء StopIteration
+يتم رفع خطأ StopIteration من خلال الوظيفة المضمنة التالية () وطريقة __next __ () الخاصة بالمكرر للإشارة إلى أن جميع العناصر تم إنتاجها بواسطة المكرر.
+مثال :
+
+
+Arr = [3, 1, 2]
+i=iter(Arr)
+  
+print (i)
+print (i.next())
+print (i.next())
+print (i.next())
+print (i.next())
+انتاج :
+
+
+3
+1
+2
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "2136fa9a620e14f8436bb60d5395cc5b.py" ، السطر 8 ، في
+    طباعة i.next ()
+توقف
+استثناء SyntaxError
+يظهر SyntaxError عندما يواجه المحلل اللغوي خطأ في بناء الجملة. قد يحدث خطأ في بناء الجملة في عبارة الاستيراد أو أثناء استدعاء الدالات المضمنة exec () أو EVAL () ، أو عند قراءة النص الأولي أو الإدخال القياسي.
+مثال :
+
+
+try:
+    print (eval('geeks for geeks'))
+except SyntaxError, err:
+    print ('Syntax error %s (%s-%s): %s' % \
+        (err.filename, err.lineno, err.offset, err.text))
+    print (err)
+انتاج :
+
+خطأ نحوي (1-9): geeks for geeks
+بناء جملة غير صالح (، السطر 1)
+استثناء SystemError
+يظهر SystemError عندما يعثر المترجم على خطأ داخلي. القيمة المرتبطة هي سلسلة تشير إلى الخطأ الذي حدث.
+استثناء SystemExit
+يظهر SystemExit عند استدعاء دالة sys.exit (). تتم ترجمة استدعاء sys.exit () إلى استثناء لتنفيذ معالجات التنظيف (أخيرًا بنود عبارات try) وتصحيح أخطاء البرنامج النصي دون المخاطرة بفقدان السيطرة.
+يظهر الاستثناء TypeError
+TypeError عند تطبيق عملية أو وظيفة على كائن من نوع غير مناسب. يعيد هذا الاستثناء سلسلة تعطي تفاصيل حول عدم تطابق النوع.
+مثال :
+
+
+arr = ('tuple', ) + 'string'
+print (arr)
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "30238c120c0868eba7e13a06c0b1b1e4.py" ، السطر 1 ، في
+    arr = ('tuple'،) + 'سلسلة'
+TypeError: يمكن فقط ربط tuple (وليس "str") إلى tuple
+الاستثناء UnboundLocalError
+UnboundLocalError هو فئة فرعية من NameError يتم رفعه عند إجراء مرجع إلى متغير محلي في دالة أو طريقة ، ولكن لم يتم تعيين قيمة لهذا المتغير.
+مثال :
+
+
+def global_name_error():
+    print (unknown_global_name)
+  
+def unbound_local():
+    local_val = local_val + 1
+    print (local_val)
+  
+try:
+    global_name_error()
+except NameError, err:
+    print ('Global name error:', err)
+  
+try:
+    unbound_local()
+except UnboundLocalError, err:
+    print ('Local name error:', err)
+انتاج :
+
+خطأ في الاسم العام: الاسم العام "unknown_global_name" غير معرف
+خطأ في الاسم المحلي: تمت الإشارة إلى المتغير المحلي "local_val" قبل التعيين
+استثناء UnicodeError
+هذا الاستثناء هو فئة فرعية من ValueError. يظهر UnicodeError عند حدوث خطأ ترميز أو فك تشفير متعلق بـ Unicode.
+الاستثناء ValueError
+يظهر خطأ ValueError عندما تتلقى عملية أو دالة مضمنة وسيطة من النوع الصحيح ولكن قيمة غير صالحة.
+مثال :
+
+
+print (int('a'))
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "44f00efda935715a3c5468d899080381.py" ، السطر 1 ، في
+    طباعة int ('a')
+ValueError: حرفية غير صالحة لـ int () ذات الأساس 10: 'a'
+الاستثناء ZeroDivisionError
+يظهر خطأ ZeroDivisionError عندما تكون الوسيطة الثانية لقسمة أو عملية نمطية صفرية. يعيد هذا الاستثناء سلسلة تشير إلى نوع المعاملات والعملية.
+مثال :
+
+
+print (1/0)
+انتاج :
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "c31d9626b41e53d170a78eac7d98cb85.py" ، السطر 1 ، في
+    طباعة 1/0
+ZeroDivisionError: قسمة عدد صحيح أو modulo على صفر
+هذا المقال من مساهمة أديتي غوبتا . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+
+<<<<<<<<<<<<<<<<<<<<<
+استثناءات يحددها المستخدم في Python مع أمثلة
+مستوى الصعوبة: متوسط
+آخر تحديث: 10 أغسطس 2021
+المتطلبات المسبقة- هذه المقالة هي امتداد لمعالجة الاستثناءات.
+تقوم Python بإلقاء أخطاء واستثناءات عندما يكون هناك خطأ في التعليمات البرمجية ، مما قد يتسبب في توقف البرنامج بشكل مفاجئ. توفر Python أيضًا طريقة معالجة استثناء بمساعدة try-except. تتضمن بعض الاستثناءات القياسية الأكثر شيوعًا IndexError و ImportError و IOError و ZeroDivisionError و TypeError و FileNotFoundError. يمكن للمستخدم إنشاء الخطأ الخاص به باستخدام فئة الاستثناء.
+ 
+
+إنشاء استثناء معرّف من قبل المستخدم
+
+يمكن للمبرمجين تسمية استثناءاتهم الخاصة عن طريق إنشاء فئة استثناء جديدة. يجب اشتقاق الاستثناءات من فئة الاستثناء ، إما بشكل مباشر أو غير مباشر. على الرغم من أنها ليست إلزامية ، إلا أن معظم الاستثناءات يتم تسميتها بأسماء تنتهي بـ "خطأ" على غرار تسمية الاستثناءات القياسية في Python. فمثلا: 
+
+
+# A python program to create user-defined exception
+ 
+# class MyError is derived from super class Exception
+class MyError(Exception):
+ 
+    # Constructor or Initializer
+    def __init__(self, value):
+        self.value = value
+ 
+    # __str__ is to print() the value
+    def __str__(self):
+        return(repr(self.value))
+ 
+try:
+    raise(MyError(3*2))
+ 
+# Value of Exception is stored in error
+except MyError as error:
+    print('A New Exception occured: ',error.value)
+انتاج: 
+
+("حدث استثناء جديد:" ، 6)
+معرفة كل شيء عن فئة الاستثناء
+
+لمعرفة المزيد حول استثناءات الفئة ، قم بتشغيل الكود أدناه 
+
+
+help(Exception)
+اشتقاق خطأ من استثناء من الدرجة الممتازة
+
+يتم إنشاء استثناءات Superclass عندما تحتاج الوحدة النمطية إلى معالجة العديد من الأخطاء المميزة. إحدى الطرق الشائعة للقيام بذلك هي إنشاء فئة أساسية للاستثناءات التي تحددها تلك الوحدة. علاوة على ذلك ، يتم تعريف الفئات الفرعية المختلفة لإنشاء فئات استثناء محددة لظروف الخطأ المختلفة.
+ 
+
+
+# class Error is derived from super class Exception
+class Error(Exception):
+ 
+    # Error is derived class for Exception, but
+    # Base class for exceptions in this module
+    pass
+ 
+class TransitionError(Error):
+ 
+    # Raised when an operation attempts a state
+    # transition that's not allowed.
+    def __init__(self, prev, nex, msg):
+        self.prev = prev
+        self.next = nex
+ 
+        # Error message thrown is saved in msg
+        self.msg = msg
+try:
+    raise(TransitionError(2,3*2,"Not Allowed"))
+ 
+# Value of Exception is stored in error
+except TransitionError as error:
+    print('Exception occured: ',error.msg)
+انتاج: 
+ 
+
+("حدث استثناء:" ، "غير مسموح به")
+كيف تستخدم الاستثناءات القياسية كفئة أساسية ؟
+خطأ وقت التشغيل هو فئة تمثل استثناءً معياريًا يظهر عندما لا يندرج الخطأ الذي تم إنشاؤه ضمن أي فئة. يوضح هذا البرنامج كيفية استخدام خطأ وقت التشغيل كفئة أساسية وخطأ في الشبكة كفئة مشتقة. بطريقة مماثلة ، يمكن اشتقاق استثناء من الاستثناءات القياسية لبيثون.
+ 
+
+
+# NetworkError has base RuntimeError
+# and not Exception
+class Networkerror(RuntimeError):
+    def __init__(self, arg):
+        self.args = arg
+ 
+try:
+    raise Networkerror("Error")
+ 
+except Networkerror as e:
+    print (e.args)
+انتاج: 
+ 
+
+('خطأ')

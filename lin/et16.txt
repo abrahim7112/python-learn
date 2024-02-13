@@ -1,0 +1,662 @@
+
+قاموس بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 31 أكتوبر 2021
+القاموس في Python عبارة عن مجموعة غير مرتبة من قيم البيانات ، تُستخدم لتخزين قيم البيانات مثل الخريطة ، والتي ، على عكس أنواع البيانات الأخرى التي تحتوي على قيمة واحدة فقط كعنصر ، يحمل القاموس المفتاح: زوج القيمة. يتم توفير قيمة المفتاح في القاموس لجعله أكثر أمثلية. 
+ 
+
+ملاحظة - لا تسمح المفاتيح الموجودة في القاموس بتعدد الأشكال.
+
+Disclamer: من المهم ملاحظة أن القواميس قد تم تعديلها للحفاظ على ترتيب الإدراج مع إصدار Python 3.7 ، لذا فهي الآن عبارة عن مجموعة مرتبة من قيم البيانات.
+
+إنشاء قاموس
+في Python ، يمكن إنشاء قاموس بوضع تسلسل من العناصر داخل أقواس متعرجة {} ، مفصولة بفاصلة. يحتوي القاموس على أزواج من القيم ، أحدهما هو المفتاح والآخر عنصر الزوج المقابل هو المفتاح: القيمة . يمكن أن تكون القيم في القاموس من أي نوع بيانات ويمكن تكرارها ، بينما لا يمكن تكرار المفاتيح ويجب أن تكون غير قابلة للتغيير . 
+ 
+
+ملاحظة - مفاتيح القاموس حساسة لحالة الأحرف ، نفس الاسم ولكن سيتم التعامل مع الحالات المختلفة للمفتاح بشكل واضح. 
+
+
+# Creating a Dictionary
+# with Integer Keys
+Dict = {1: 'Geeks', 2: 'For', 3: 'Geeks'}
+print("\nDictionary with the use of Integer Keys: ")
+print(Dict)
+ 
+# Creating a Dictionary
+# with Mixed keys
+Dict = {'Name': 'Geeks', 1: [1, 2, 3, 4]}
+print("\nDictionary with the use of Mixed Keys: ")
+print(Dict)
+انتاج: 
+
+القاموس باستخدام مفاتيح عدد صحيح:
+{1: "المهوسون" ، 2: "For" ، 3: "المهوسون"}
+
+القاموس باستخدام المفاتيح المختلطة:
+{1: [1 ، 2 ، 3 ، 4] ، "الاسم": "المهوسون"}
+يمكن أيضًا إنشاء القاموس من خلال الوظيفة المضمنة ديكت (). يمكن إنشاء قاموس فارغ بمجرد وضعه على الأقواس المتعرجة {}. 
+
+
+# Creating an empty Dictionary
+Dict = {}
+print("Empty Dictionary: ")
+print(Dict)
+ 
+# Creating a Dictionary
+# with dict() method
+Dict = dict({1: 'Geeks', 2: 'For', 3:'Geeks'})
+print("\nDictionary with the use of dict(): ")
+print(Dict)
+ 
+# Creating a Dictionary
+# with each item as a Pair
+Dict = dict([(1, 'Geeks'), (2, 'For')])
+print("\nDictionary with each item as a pair: ")
+print(Dict)
+انتاج: 
+
+قاموس فارغ:
+{}
+
+القاموس باستخدام ديكت ():
+{1: "المهوسون" ، 2: "For" ، 3: "المهوسون"}
+
+قاموس مع كل عنصر كزوج:
+{1: "المهوسون" ، 2: "For"}
+القاموس المتداخل:
+
+
+ 
+
+
+# Creating a Nested Dictionary
+# as shown in the below image
+Dict = {1: 'Geeks', 2: 'For',
+        3:{'A' : 'Welcome', 'B' : 'To', 'C' : 'Geeks'}}
+ 
+print(Dict)
+انتاج: 
+
+{1: "المهوسون" ، 2: "For" ، 3: {"A": "مرحبًا" ، "B": "To" ، "C": "Geeks"}}
+إضافة عناصر إلى القاموس
+في قاموس Python ، يمكن إضافة العناصر بطرق متعددة. يمكن إضافة قيمة واحدة في كل مرة إلى القاموس عن طريق تحديد القيمة مع المفتاح ، على سبيل المثال Dict [Key] = "القيمة". يمكن تحديث قيمة موجودة في قاموس باستخدام طريقة () update المضمنة . يمكن أيضًا إضافة قيم المفاتيح المتداخلة إلى قاموس موجود. 
+ 
+
+ملاحظة - أثناء إضافة قيمة ، إذا كانت قيمة المفتاح موجودة بالفعل ، يتم تحديث القيمة وإلا يتم إضافة مفتاح جديد بالقيمة إلى القاموس.
+
+
+# Creating an empty Dictionary
+Dict = {}
+print("Empty Dictionary: ")
+print(Dict)
+ 
+# Adding elements one at a time
+Dict[0] = 'Geeks'
+Dict[2] = 'For'
+Dict[3] = 1
+print("\nDictionary after adding 3 elements: ")
+print(Dict)
+ 
+# Adding set of values
+# to a single Key
+Dict['Value_set'] = 2, 3, 4
+print("\nDictionary after adding 3 elements: ")
+print(Dict)
+ 
+# Updating existing Key's Value
+Dict[2] = 'Welcome'
+print("\nUpdated key value: ")
+print(Dict)
+ 
+# Adding Nested Key value to Dictionary
+Dict[5] = {'Nested' :{'1' : 'Life', '2' : 'Geeks'}}
+print("\nAdding a Nested Key: ")
+print(Dict)
+انتاج:  
+
+قاموس فارغ:
+{}
+
+القاموس بعد إضافة 3 عناصر:
+{0: "المهوسون" ، 2: "For" ، 3: 1}
+
+القاموس بعد إضافة 3 عناصر:
+{0: "المهوسون" ، 2: "For" ، 3: 1 ، "مجموعة القيمة": (2 ، 3 ، 4)}
+
+القيمة الرئيسية المحدثة:
+{0: "المهوسون" ، 2: "مرحبًا" ، 3: 1 ، "مجموعة القيمة": (2 ، 3 ، 4)}
+
+إضافة مفتاح متداخل:
+{0: "المهوسون" ، 2: "مرحبًا" ، 3: 1 ، 5: {'Nested': {'1': 'Life'، '2': 'Geeks'}}، 'Value_set': (2، 3 ، 4)}
+الوصول إلى العناصر من القاموس
+من أجل الوصول إلى عناصر القاموس ، يرجى الرجوع إلى اسم مفتاحه. يمكن استخدام المفتاح داخل أقواس مربعة. 
+
+
+# Python program to demonstrate 
+# accessing a element from a Dictionary
+ 
+# Creating a Dictionary
+Dict = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+ 
+# accessing a element using key
+print("Accessing a element using key:")
+print(Dict['name'])
+ 
+# accessing a element using key
+print("Accessing a element using key:")
+print(Dict[1])
+انتاج: 
+
+الوصول إلى عنصر باستخدام المفتاح:
+ل
+
+الوصول إلى عنصر باستخدام المفتاح:
+المهوسون
+هناك أيضًا طريقة تسمى get () تساعد أيضًا في الوصول إلى العنصر من القاموس.
+
+
+# Creating a Dictionary
+Dict = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+ 
+# accessing a element using get()
+# method
+print("Accessing a element using get:")
+print(Dict.get(3))
+انتاج: 
+
+الوصول إلى عنصر باستخدام get:
+المهوسون
+الوصول إلى عنصر قاموس متداخل
+من أجل الوصول إلى قيمة أي مفتاح في القاموس المتداخل ، استخدم صيغة الفهرسة [].
+
+
+# Creating a Dictionary
+Dict = {'Dict1': {1: 'Geeks'},
+        'Dict2': {'Name': 'For'}}
+ 
+# Accessing element using key
+print(Dict['Dict1'])
+print(Dict['Dict1'][1])
+print(Dict['Dict2']['Name'])
+انتاج: 
+
+{1: "المهوسون"}
+المهوسون
+ل
+إزالة العناصر من القاموس
+باستخدام ديل الكلمة
+في قاموس Python ، يمكن حذف المفاتيح باستخدام الكلمة الأساسية del . باستخدام الكلمة الأساسية del ، يمكن حذف قيم محددة من القاموس وكذلك القاموس بأكمله. يمكن أيضًا حذف العناصر الموجودة في قاموس متداخل باستخدام الكلمة الأساسية del وتوفير مفتاح متداخل محدد ومفتاح معين ليتم حذفه من هذا القاموس المتداخل.
+ 
+
+ملاحظة: سيحذف del Dict القاموس بأكمله وبالتالي ستؤدي طباعته بعد الحذف إلى ظهور خطأ.
+
+
+# Initial Dictionary
+Dict = { 5 : 'Welcome', 6 : 'To', 7 : 'Geeks',
+        'A' : {1 : 'Geeks', 2 : 'For', 3 : 'Geeks'},
+        'B' : {1 : 'Geeks', 2 : 'Life'}}
+print("Initial Dictionary: ")
+print(Dict)
+ 
+# Deleting a Key value
+del Dict[6]
+print("\nDeleting a specific key: ")
+print(Dict)
+ 
+# Deleting a Key from
+# Nested Dictionary
+del Dict['A'][2]
+print("\nDeleting a key from Nested Dictionary: ")
+print(Dict)
+انتاج: 
+
+القاموس الأولي:
+{'A': {1: 'Geeks'، 2: 'For'، 3: 'Geeks'}، 'B': {1: 'Geeks'، 2: 'Life'}، 5: 'Welcome'، 6 : "إلى" ، 7: "المهوسون"}
+
+حذف مفتاح معين:
+{'A': {1: 'Geeks'، 2: 'For'، 3: 'Geeks'}، 'B': {1: 'Geeks'، 2: 'Life'}، 5: 'Welcome'، 7 : "المهوسون"}
+
+حذف مفتاح من القاموس المتداخل:
+{"أ": {1: "المهوسون" ، 3: "المهوسون"} ، "ب": {1: "المهوسون" ، 2: "الحياة"} ، 5: "مرحبًا" ، 7: "المهوسون"}
+باستخدام طريقة pop ()
+يتم استخدام طريقة Pop ( ) لإرجاع وحذف قيمة المفتاح المحدد.
+
+
+# Creating a Dictionary
+Dict = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+ 
+# Deleting a key
+# using pop() method
+pop_ele = Dict.pop(1)
+print('\nDictionary after deletion: ' + str(Dict))
+print('Value associated to poped key is: ' + str(pop_ele))
+انتاج: 
+
+القاموس بعد الحذف: {3: "Geeks"، "name": "For"}
+القيمة المرتبطة بالمفتاح المنبثق هي: المهوسون
+باستخدام طريقة popitem ()
+يقوم popitem () بإرجاع وإزالة زوج عنصر عشوائي (مفتاح ، قيمة) من القاموس.
+
+
+# Creating Dictionary
+Dict = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+ 
+# Deleting an arbitrary key
+# using popitem() function
+pop_ele = Dict.popitem()
+print("\nDictionary after deletion: " + str(Dict))
+print("The arbitrary pair returned is: " + str(pop_ele))
+انتاج: 
+
+القاموس بعد الحذف: {3: "Geeks"، "name": "For"}
+الزوج التعسفي الذي تم إرجاعه هو: (1، 'Geeks')
+ باستخدام طريقة clear ()
+يمكن حذف جميع العناصر من القاموس مرة واحدة باستخدام طريقة clear () .
+
+
+# Creating a Dictionary
+Dict = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}
+ 
+ 
+# Deleting entire Dictionary
+Dict.clear()
+print("\nDeleting Entire Dictionary: ")
+print(Dict)
+انتاج: 
+
+حذف القاموس بأكمله:
+{}
+طرق القاموس 
+طرق	وصف
+ينسخ()	يقومون بنسخ () طريقة إرجاع نسخة ضحلة من القاموس.
+صافي()	تقوم طريقة clear () بإزالة كافة العناصر من القاموس.
+البوب ​​()	يزيل ويعيد عنصرًا من قاموس له المفتاح المحدد.
+popitem ()	يزيل زوج المفاتيح والقيمة التعسفي من القاموس ويعيده كـ tuple.
+احصل على()	إنها طريقة تقليدية للوصول إلى قيمة لمفتاح.
+Dictionary_name.values ​​()	تقوم بإرجاع قائمة بجميع القيم المتوفرة في قاموس معين.
+شارع ()	ينتج تمثيل سلسلة قابل للطباعة من القاموس.
+تحديث()	يضيف أزواج قيم القاموس في قاموس ديكت 2 إلى ديكت
+الوضع الإفتراضي()	اضبط ديكت [مفتاح] = افتراضي إذا لم يكن المفتاح موجودًا بالفعل في ديكت
+مفاتيح ()	يقوم بإرجاع قائمة مفاتيح قاموس ديكت
+أغراض()	تُرجع قائمة أزواج tuple الخاصة بـ (مفتاح ، قيمة)
+has_key ()	يعود صحيحًا إذا كان المفتاح في قاموس الإملاء ، خطأ بخلاف ذلك
+fromkeys ()	قم بإنشاء قاموس جديد بمفاتيح من التسلسل والقيم المحددة على القيمة.
+نوع()	إرجاع نوع المتغير الذي تم تمريره.
+cmp ()	يقارن عناصر كل من ديكت.
+مقالات حديثة عن قاموس بايثون
+
+https://youtu.be/z7z_e5
+
+المزيد من مقاطع الفيديو على Python Dictionary:  
+Python Dictionary Set 2  
+Python Dictionary Dictionary 3
+
+ برامج القاموس
+
+طرق القاموس - المجموعة 1 ، المجموعة 2
+طريقة الحصول على () للقواميس
+معالجة المفاتيح المفقودة في القاموس
+قاموس مرتب
+orderDict ()
+سلسلة خريطة
+عنصر الأغلبية
+القاموس والعداد في بايثون للعثور على الفائز في الانتخابات
+كيفية تنفيذ القاموس باستخدام Python3
+الكلمات المحتملة باستخدام أحرف معينة في بايثون
+قاموس Python ، اضبطه وعداده للتحقق مما إذا كانت الترددات يمكن أن تصبح هي نفسها
+تقاطع قاموس بايثون
+OrderedDict () في بايثون
+تحقق مما إذا كانت التمثيلات الثنائية لرقمين هي الجناس الناقص
+عداد Python للعثور على حجم أكبر مجموعة فرعية من كلمات الجناس الناقص
+اطبع الجناس الناقصة معًا في Python باستخدام القائمة والقاموس
+قم بتحويل قائمة المجموعات إلى قاموس
+البحث عن جميع الأحرف المكررة في السلسلة
+إزالة جميع الكلمات المكررة من جملة معينة
+قاموس Python للبحث عن أحرف معكوسة في سلسلة
+مثال على تقاطع عداد Python والقاموس (أنشئ سلسلة باستخدام الحذف وإعادة الترتيب)
+ثاني أكثر الكلمات تكرارا في تسلسل بايثون
+فهم قاموس بايثون
+K'th حرف غير متكرر في Python باستخدام List Comprehension و OrderedDict
+القشط والبحث عن الكلمات المرتبة في قاموس باستخدام بايثون
+طرق لفرز قائمة القواميس حسب القيم في بايثون - استخدام عنصر العناصر
+دمج قواميسين
+روابط مفيدة 
+
+مقالات حديثة عن قاموس بايثون
+مخرجات برامج بايثون - القاموس
+مخرجات برامج بايثون - القاموس
+منصة ممارسة الترميز
+أسئلة الاختيار من متعدد - بايثون
+جميع المقالات في فئة بايثون
+
+>>>>>>>>>>>
+صفائف بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 19 كانون الثاني (يناير) 2022
+المصفوفة هي مجموعة من العناصر المخزنة في مواقع ذاكرة متجاورة. الفكرة هي تخزين عدة عناصر من نفس النوع معًا. هذا يجعل من السهل حساب موضع كل عنصر ببساطة عن طريق إضافة تعويض إلى القيمة الأساسية ، أي موقع الذاكرة للعنصر الأول من المصفوفة (يُشار إليه عمومًا باسم المصفوفة).
+من أجل التبسيط ، يمكننا التفكير في مجموعة من السلالم حيث يتم وضع قيمة في كل خطوة (دعنا نقول أحد أصدقائك). هنا ، يمكنك تحديد موقع أي من أصدقائك بمجرد معرفة عدد الخطوات التي يقومون بها. يمكن معالجة المصفوفة في Python بواسطة وحدة نمطية تسمى المصفوفة . يمكن أن تكون مفيدة عندما يتعين علينا معالجة قيم نوع بيانات معينة فقط. يمكن للمستخدم معالجة القوائمكمصفوفات. ومع ذلك ، لا يمكن للمستخدم تقييد نوع العناصر المخزنة في القائمة. إذا قمت بإنشاء مصفوفات باستخدام وحدة الصفيف ، يجب أن تكون جميع عناصر المصفوفة من نفس النوع. 
+ 
+
+
+
+ 
+
+إنشاء مصفوفة
+يمكن إنشاء المصفوفة في Python عن طريق استيراد وحدة الصفيف. يتم استخدام المصفوفة ( نوع البيانات ، قائمة القيمة ) لإنشاء مصفوفة بنوع البيانات وقائمة القيم المحددة في الوسائط الخاصة بها. 
+ 
+
+
+# Python program to demonstrate
+# Creation of Array
+ 
+# importing "array" for array creations
+import array as arr
+ 
+# creating an array with integer type
+a = arr.array('i', [1, 2, 3])
+ 
+# printing original array
+print ("The new created array is : ", end =" ")
+for i in range (0, 3):
+    print (a[i], end =" ")
+print()
+ 
+# creating an array with float type
+b = arr.array('d', [2.5, 3.2, 3.3])
+ 
+# printing original array
+print ("The new created array is : ", end =" ")
+for i in range (0, 3):
+    print (b[i], end =" ")
+    
+انتاج : 
+
+المصفوفة الجديدة التي تم إنشاؤها هي: 1 2 3
+المصفوفة الجديدة التي تم إنشاؤها هي: 2.5 3.2 3.3
+تم ذكر بعض أنواع البيانات أدناه والتي ستساعد في إنشاء مجموعة من أنواع البيانات المختلفة. 
+ 
+
+
+
+ 
+
+إضافة عناصر إلى مصفوفة
+يمكن إضافة العناصر إلى الصفيف باستخدام وظيفة insert () المضمنة. يُستخدم الإدخال لإدراج عنصر بيانات واحد أو أكثر في مصفوفة. بناءً على المتطلبات ، يمكن إضافة عنصر جديد في البداية أو النهاية أو أي فهرس معين للصفيف. تُستخدم append () أيضًا لإضافة القيمة المذكورة في متغيراتها في نهاية المصفوفة. 
+ 
+
+
+# Python program to demonstrate
+# Adding Elements to a Array
+ 
+# importing "array" for array creations
+import array as arr
+ 
+# array with int type
+a = arr.array('i', [1, 2, 3])
+ 
+ 
+print ("Array before insertion : ", end =" ")
+for i in range (0, 3):
+    print (a[i], end =" ")
+print()
+ 
+# inserting array using
+# insert() function
+a.insert(1, 4)
+ 
+print ("Array after insertion : ", end =" ")
+for i in (a):
+    print (i, end =" ")
+print()
+ 
+# array with float type
+b = arr.array('d', [2.5, 3.2, 3.3])
+ 
+print ("Array before insertion : ", end =" ")
+for i in range (0, 3):
+    print (b[i], end =" ")
+print()
+ 
+# adding an element using append()
+b.append(4.4)
+ 
+print ("Array after insertion : ", end =" ")
+for i in (b):
+    print (i, end =" ")
+print()
+انتاج : 
+
+صفيف قبل الإدراج: 1 2 3
+الصفيف بعد الإدراج: 1 4 2 3
+الصفيف قبل الإدراج: 2.5 3.2 3.3
+صفيف بعد الإدراج: 2.5 3.2 3.3 4.4
+ 
+
+الوصول إلى العناصر من المصفوفة
+من أجل الوصول إلى عناصر المصفوفة ، يرجى الرجوع إلى رقم الفهرس. استخدم عامل الفهرس [] للوصول إلى عنصر في مصفوفة. يجب أن يكون الفهرس عددًا صحيحًا. 
+ 
+
+
+# Python program to demonstrate
+# accessing of element from list
+ 
+# importing array module
+import array as arr
+ 
+# array with int type
+a = arr.array('i', [1, 2, 3, 4, 5, 6])
+ 
+# accessing element of array
+print("Access element is: ", a[0])
+ 
+# accessing element of array
+print("Access element is: ", a[3])
+ 
+# array with float type
+b = arr.array('d', [2.5, 3.2, 3.3])
+ 
+# accessing element of array
+print("Access element is: ", b[1])
+ 
+# accessing element of array
+print("Access element is: ", b[2])
+انتاج : 
+
+عنصر الوصول هو: 1
+عنصر الوصول هو: 4
+عنصر الوصول هو: 3.2
+عنصر الوصول هو: 3.3
+ 
+
+إزالة العناصر من المصفوفة
+يمكن إزالة العناصر من المصفوفة باستخدام وظيفة الإزالة المضمنة () ولكن يظهر خطأ إذا لم يكن العنصر موجودًا في المجموعة. تزيل طريقة Remove () عنصرًا واحدًا فقط في كل مرة ، لإزالة مجموعة من العناصر ، يتم استخدام المكرر. يمكن أيضًا استخدام وظيفة pop () لإزالة عنصر من المصفوفة وإعادته ، ولكن بشكل افتراضي يزيل العنصر الأخير فقط من المصفوفة ، لإزالة عنصر من موضع معين في المصفوفة ، يتم تمرير فهرس العنصر باعتباره حجة لطريقة pop ().
+ملاحظة - طريقة الإزالة في القائمة ستزيل التواجد الأول فقط للعنصر الذي تم البحث عنه. 
+ 
+
+
+# Python program to demonstrate
+# Removal of elements in a Array
+  
+# importing "array" for array operations
+import array
+  
+# initializing array with array values
+# initializes array with signed integers
+arr = array.array('i', [1, 2, 3, 1, 5])
+ 
+# printing original array
+print ("The new created array is : ", end ="")
+for i in range (0, 5):
+    print (arr[i], end =" ")
+ 
+print ("\r")
+ 
+# using pop() to remove element at 2nd position
+print ("The popped element is : ", end ="")
+print (arr.pop(2))
+ 
+# printing array after popping
+print ("The array after popping is : ", end ="")
+for i in range (0, 4):
+    print (arr[i], end =" ")
+ 
+print("\r")
+ 
+# using remove() to remove 1st occurrence of 1
+arr.remove(1)
+ 
+# printing array after removing
+print ("The array after removing is : ", end ="")
+for i in range (0, 3):
+    print (arr[i], end =" ")
+انتاج: 
+
+المصفوفة الجديدة التي تم إنشاؤها هي: 1 2 3 1 5
+العنصر المنبثق هو: 3
+الصفيف بعد الفرقعة هو: 1 2 1 5
+الصفيف بعد الإزالة هو: 2 1 5
+ 
+
+تشريح صفيف
+في مصفوفة Python ، توجد طرق متعددة لطباعة المصفوفة بأكملها بكل العناصر ، ولكن لطباعة نطاق محدد من العناصر من المصفوفة ، نستخدم عملية Slice . يتم تنفيذ عملية الشريحة على مجموعة باستخدام النقطتين (:). لطباعة العناصر من البداية إلى النطاق ، استخدم [: الفهرس] ، لطباعة العناصر من نهاية الاستخدام [: -الفهرس] ، لطباعة العناصر من فهرس معين حتى النهاية ، استخدم [الفهرس:] ، لطباعة العناصر داخل النطاق ، استخدم [ فهرس البداية: فهرس النهاية] ولطباعة القائمة بأكملها باستخدام عملية التقطيع ، استخدم [:]. علاوة على ذلك ، لطباعة مجموعة كاملة بترتيب عكسي ، استخدم [:: - 1]. 
+ 
+
+
+
+ 
+
+
+# Python program to demonstrate
+# slicing of elements in a Array
+ 
+# importing array module
+import array as arr
+ 
+# creating a list
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+a = arr.array('i', l)
+print("Initial Array: ")
+for i in (a):
+    print(i, end =" ")
+ 
+# Print elements of a range
+# using Slice operation
+Sliced_array = a[3:8]
+print("\nSlicing elements in a range 3-8: ")
+print(Sliced_array)
+ 
+# Print elements from a
+# pre-defined point to end
+Sliced_array = a[5:]
+print("\nElements sliced from 5th "
+      "element till the end: ")
+print(Sliced_array)
+ 
+# Printing elements from
+# beginning till end
+Sliced_array = a[:]
+print("\nPrinting all elements using slice operation: ")
+print(Sliced_array)
+انتاج |
+المصفوفة الأولية:
+1 2 3 4 5 6 7 8 9 10
+عناصر التقطيع في نطاق 3-8:
+مجموعة ('i'، [4، 5، 6، 7، 8])
+
+العناصر المقطعة من العنصر الخامس حتى النهاية:
+مجموعة ('i'، [6، 7، 8، 9، 10])
+
+طباعة جميع العناصر باستخدام عملية الشريحة:
+صفيف ('i' ، [1 ، 2 ، 3 ، 4 ، 5 ، 6 ، 7 ، 8 ، 9 ، 10])
+انتاج : 
+
+المصفوفة الأولية:
+1 2 3 4 5 6 7 8 9 10
+عناصر التقطيع في نطاق 3-8:
+مجموعة ('i'، [4، 5، 6، 7، 8])
+
+العناصر المقطعة من العنصر الخامس حتى النهاية:
+مجموعة ('i'، [6، 7، 8، 9، 10])
+
+طباعة جميع العناصر باستخدام عملية الشريحة:
+صفيف ('i' ، [1 ، 2 ، 3 ، 4 ، 5 ، 6 ، 7 ، 8 ، 9 ، 10])
+ 
+
+عنصر البحث في المصفوفة
+من أجل البحث عن عنصر في المصفوفة ، نستخدم طريقة python in-built index () . تقوم هذه الوظيفة بإرجاع فهرس التواجد الأول للقيمة المذكورة في الوسائط. 
+ 
+
+
+# Python code to demonstrate
+# searching an element in array
+ 
+  
+# importing array module
+import array
+  
+# initializing array with array values
+# initializes array with signed integers
+arr = array.array('i', [1, 2, 3, 1, 2, 5])
+ 
+# printing original array
+print ("The new created array is : ", end ="")
+for i in range (0, 6):
+    print (arr[i], end =" ")
+ 
+print ("\r")
+ 
+# using index() to print index of 1st occurrence of 2
+print ("The index of 1st occurrence of 2 is : ", end ="")
+print (arr.index(2))
+ 
+# using index() to print index of 1st occurrence of 1
+print ("The index of 1st occurrence of 1 is : ", end ="")
+print (arr.index(1))
+انتاج: 
+ 
+
+المصفوفة الجديدة التي تم إنشاؤها هي: 1 2 3 1 2 5
+مؤشر التواجد الأول للعدد 2 هو: 1
+مؤشر التواجد الأول للعدد 1 هو: 0
+ 
+
+تحديث العناصر في مصفوفة
+لتحديث عنصر في المصفوفة ، نقوم ببساطة بإعادة تعيين قيمة جديدة للفهرس المطلوب الذي نريد تحديثه. 
+ 
+
+
+# Python code to demonstrate
+# how to update an element in array
+ 
+# importing array module
+import array
+ 
+# initializing array with array values
+# initializes array with signed integers
+arr = array.array('i', [1, 2, 3, 1, 2, 5])
+ 
+# printing original array
+print ("Array before updation : ", end ="")
+for i in range (0, 6):
+    print (arr[i], end =" ")
+ 
+print ("\r")
+ 
+# updating a element in a array
+arr[2] = 6
+print("Array after updation : ", end ="")
+for i in range (0, 6):
+    print (arr[i], end =" ")
+print()
+ 
+# updating a element in a array
+arr[4] = 8
+print("Array after updation : ", end ="")
+for i in range (0, 6):
+    print (arr[i], end =" ")
+انتاج: 
+
+صفيف قبل التحديث: 1 2 3 1 2 5
+الصفيف بعد التحديث: 1 2 6 1 2 5
+الصفيف بعد التحديث: 1 2 6 1 8 5

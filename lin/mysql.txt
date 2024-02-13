@@ -1,0 +1,1579 @@
+Python MySQL
+مستوى الصعوبة: سهل
+آخر تحديث: 01 فبراير 2022
+يعد Python MySQL Connector برنامج تشغيل Python يساعد على دمج Python و MySQL. تتيح مكتبة Python MySQL هذه التحويل بين أنواع بيانات Python و MySQL. يتم تنفيذ MySQL Connector API باستخدام Python الخالصة ولا تتطلب أي مكتبة تابعة لجهات خارجية. 
+
+mysql تعليمي
+
+سيساعد هذا البرنامج التعليمي Python MySQL في تعلم كيفية استخدام MySQL مع Python من الأساسيات إلى التقدم ، بما في ذلك جميع الوظائف والاستعلامات الضرورية الموضحة بالتفصيل بمساعدة أمثلة Python MySQL الجيدة. لذلك دعونا نبدأ.
+
+تثبيت
+لتثبيت وحدة Python-mysql-connector ، يجب أن يكون لدى المرء Python و PIP مثبتان مسبقًا على نظامهم. إذا تم تثبيت Python و pip بالفعل ، فاكتب الأمر أدناه في المحطة.
+
+pip3 تثبيت mysql- موصل- بيثون
+ملاحظة: إذا لم تكن لغة Python موجودة ، فانتقل إلى كيفية تثبيت Python على نظامي التشغيل Windows و Linux ؟ واتبع التعليمات المقدمة.
+
+تثبيت موصل mysql python
+
+الاتصال بخادم MySQL
+يمكننا الاتصال بخادم MySQL باستخدام طريقة connect (). 
+
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password"
+)
+ 
+print(dataBase)
+  
+# Disconnecting from the server
+dataBase.close()
+انتاج:
+
+<mysql.connector.connection_cext.CMySQLConnection كائن عند 0x7f73f0191d00>
+
+ملاحظة: لمزيد من المعلومات ، راجع قاعدة بيانات Connect MySQL باستخدام MySQL-Connector Python .
+
+إنشاء قاعدة بيانات
+بعد الاتصال بخادم MySQL ، دعونا نرى كيفية إنشاء قاعدة بيانات MySQL باستخدام Python. لهذا ، سننشئ أولاً كائن cursor () ثم سنمرر أمر SQL كسلسلة إلى طريقة التنفيذ (). أمر SQL لإنشاء قاعدة بيانات هو - 
+
+إنشاء قاعدة بيانات DATABASE_NAME
+مثال: إنشاء قاعدة بيانات MySQL باستخدام لغة Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+ 
+# creating database
+cursorObject.execute("CREATE DATABASE gfg")
+انتاج:
+
+Pyhton MySQL إنشاء قاعدة بيانات
+
+تكوين الجداول
+لإنشاء الجداول ، سوف نتبع النهج المماثل لكتابة أوامر SQL كسلاسل ثم تمريرها إلى طريقة التنفيذ () لكائن المؤشر . أمر SQL لإنشاء جدول هو - 
+
+اصنع جدول
+(
+    العمود اسم_العمود_البيانات_نوع ،
+    العمود اسم_العمود_نوع_البيانات ،
+    :
+    :
+    العمود اسم_العمود_البيانات_نوع
+) ؛
+مثال: إنشاء جدول MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+# creating table
+studentRecord = """CREATE TABLE STUDENT (
+                   NAME  VARCHAR(20) NOT NULL,
+                   BRANCH VARCHAR(50),
+                   ROLL INT NOT NULL,
+                   SECTION VARCHAR(5),
+                   AGE INT
+                   )"""
+  
+# table created
+cursorObject.execute(studentRecord)
+  
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+إنشاء mysql الجدول بيثون
+
+أدخل البيانات في الجداول
+لإدخال البيانات في جدول MySQL ، يتم استخدام الإدراج في الاستعلام. 
+
+بناء الجملة:
+
+ أدخل اسم الجدول (اسم العمود) القيم (البيانات)
+مثال 1: إدخال صف واحد
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+sql = "INSERT INTO STUDENT (NAME, BRANCH, ROLL, SECTION, AGE)\
+VALUES (%s, %s, %s, %s, %s)"
+val = ("Ram", "CSE", "85", "B", "19")
+   
+cursorObject.execute(sql, val)
+dataBase.commit()
+   
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+أدخل صفًا واحدًا في قاعدة بيانات mysql باستخدام Python
+
+مثال 2: إدراج صفوف متعددة
+لإدراج قيم متعددة مرة واحدة ، يتم استخدام طريقة التنفيذ (). تتكرر هذه الطريقة من خلال تسلسل المعلمات ، وتمرير المعلمة الحالية إلى طريقة التنفيذ.
+
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+sql = "INSERT INTO STUDENT (NAME, BRANCH, ROLL, SECTION, AGE)\
+VALUES (%s, %s, %s, %s, %s)"
+val = [("Nikhil", "CSE", "98", "A", "18"),
+       ("Nisha", "CSE", "99", "A", "18"),
+       ("Rohan", "MAE", "43", "B", "20"),
+       ("Amit", "ECE", "24", "A", "21"),
+       ("Anil", "MAE", "45", "B", "20"),
+       ("Megha", "ECE", "55", "A", "22"),
+       ("Sita", "CSE", "95", "A", "19")]
+   
+cursorObject.executemany(sql, val)
+dataBase.commit()
+   
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+python mysql إدراج العديد من الصفوف
+
+جلب البيانات
+يمكننا استخدام استعلام التحديد في جداول MySQL بالطرق التالية -
+
+من أجل تحديد أعمدة سمات معينة من الجدول ، نكتب أسماء السمات.
+حدد attr1 ، attr2 من table_name
+من أجل تحديد جميع أعمدة السمات من الجدول ، نستخدم رمز النجمة "*".
+حدد * من table_name
+مثال: حدد البيانات من جدول MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query = "SELECT NAME, ROLL FROM STUDENT"
+cursorObject.execute(query)
+   
+myresult = cursorObject.fetchall()
+   
+for x in myresult:
+    print(x)
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+استعلام تحديد python mysql
+
+حيث الشرطية
+حيث يتم استخدام الشرط في قاعدة بيانات MySQL لتصفية البيانات حسب الحالة المطلوبة. يمكنك جلب أو حذف أو تحديث مجموعة معينة من البيانات في قاعدة بيانات MySQL باستخدام جملة where.
+
+بناء الجملة:
+
+حدد العمود 1 ، العمود 2 ،…. عمود من [اسم الجدول] أين [الحالة] ؛
+
+مثال: عبارة Where في MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query = "SELECT * FROM STUDENT where AGE >=20"
+cursorObject.execute(query)
+   
+myresult = cursorObject.fetchall()
+   
+for x in myresult:
+    print(x)
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+("Rohan"، "MAE"، 43، "B"، 20)
+('أميت'، 'ECE'، 24، 'A'، 21)
+("Anil"، "MAE"، 45، "B"، 20)
+('Megha'، 'ECE'، 55، 'A'، 22)
+ترتيب حسب الشرط
+OrderBy يستخدم لترتيب مجموعة النتائج إما بترتيب تصاعدي أو تنازلي. بشكل افتراضي ، يكون دائمًا بترتيب تصاعدي ما لم يتم ذكر "DESC" ، والذي يرتب ترتيبًا تنازليًا. يمكن أيضًا استخدام "ASC" لترتيبه بشكل صريح بترتيب تصاعدي. ولكن ، لا يتم ذلك عمومًا بهذه الطريقة لأن التخلف عن السداد يفعل ذلك بالفعل.
+
+بناء الجملة:
+
+حدد العمود 1 ، العمود 2
+من table_name
+ترتيب حسب اسم العمود ASC | تنازلي ؛
+مثال: عبارة Order By في MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query = "SELECT * FROM STUDENT ORDER BY NAME DESC"
+cursorObject.execute(query)
+   
+myresult = cursorObject.fetchall()
+   
+for x in myresult:
+    print(x)
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+python mysql منظم بواسطة
+
+شرط الحد
+يتم استخدام جملة الحد في SQL للتحكم في عدد السجلات في مجموعة النتائج التي تم إرجاعها من الاستعلام الذي تم إنشاؤه أو تقييده. بشكل افتراضي ، يعطي SQL العدد المطلوب من السجلات بدءًا من الأعلى ولكنه يسمح باستخدام الكلمة الأساسية OFFSET. يتيح لك OFFSET البدء من صف مخصص والحصول على العدد المطلوب من صفوف النتائج.
+
+بناء الجملة:
+
+حدد * من حدود اسم الجدول ؛
+حدد * من tablename حد حد تعويض تعويض ؛
+مثال: عبارة Limit في MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query = "SELECT * FROM STUDENT LIMIT 2 OFFSET 1"
+cursorObject.execute(query)
+   
+myresult = cursorObject.fetchall()
+   
+for x in myresult:
+    print(x)
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+('Nikhil'، 'CSE'، 98، 'A'، 18)
+("نيشا"، "CSE"، 99، "أ"، 18)
+تحديث البيانات
+يتم استخدام استعلام التحديث لتغيير القيم الموجودة في قاعدة البيانات. باستخدام التحديث يمكن تصحيح أو تحديث قيمة معينة. إنه يؤثر فقط على البيانات وليس هيكل الجدول. الميزة الأساسية التي يوفرها هذا الأمر هي أنه يحافظ على دقة الجدول.
+
+بناء الجملة:
+
+تحديث اسم الجدول
+SET = "قيمة جديدة"
+أين = "القيمة القديمة" ؛
+مثال: تحديث جدول MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query = "UPDATE STUDENT SET AGE = 23 WHERE Name ='Ram'"
+cursorObject.execute(query)
+dataBase.commit()
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+تحديث الجدول mysql بيثون
+
+حذف البيانات من الجدول
+يمكننا استخدام استعلام الحذف لحذف البيانات من الجدول في MySQL.
+
+بناء الجملة:
+
+احذف من TABLE_NAME حيث ATTRIBUTE_NAME = ATTRIBUTE_VALUE
+مثال: حذف البيانات من جدول MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query = "DELETE FROM STUDENT WHERE NAME = 'Ram'"
+cursorObject.execute(query)
+dataBase.commit()
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+Python mySQL حذف من الجدول
+
+إسقاط الجداول
+يؤثر أمر الإسقاط على بنية الجدول وليس البيانات. يتم استخدامه لحذف جدول موجود بالفعل. للحالات التي لا تكون فيها متأكدًا من وجود الجدول المراد إسقاطه أم لا DROP TABLE إذا تم استخدام الأمر EXISTS. سيتم التعامل مع كلتا الحالتين في الأمثلة التالية.
+
+بناء الجملة:
+
+إسقاط جدول الجدول ؛
+إسقاط الجدول في حالة EXISTS tablename ؛
+في البداية ، دعنا نرى قائمة الجداول في قاعدة البيانات الخاصة بنا.
+
+جداول إسقاط mysql بيثون
+
+يمكننا أن نرى أن هناك جدولين للطلاب ، لذلك دعونا نتخلص من الجدول الثاني.
+
+مثال 1: إسقاط الجدول في MySQL باستخدام Python
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query ="DROP TABLE Student;"
+ 
+cursorObject.execute(query)
+dataBase.commit()
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+جداول إسقاط mysql بيثون
+
+مثال 2: إسقاط الجدول إن وجد
+# importing required libraries
+import mysql.connector
+  
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="password",
+  database = "gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+  
+query ="Drop Table if exists Employee;"
+ 
+cursorObject.execute(query)
+dataBase.commit()
+ 
+# disconnecting from server
+dataBase.close()
+المثال أعلاه ، لن يخلق أي خطأ ومخرج لأننا استخدمنا استعلام جدول الإسقاط موجود. إذا كنا سنستخدم ببساطة موظف جدول الإسقاط ثم خطأ في البرمجة: 1051 (42S02): يتم رفع جدول غير معروف "gfg.Employee" .
+
+تمارين Python MySQL
+العمل مع الجداول
+كيفية إدراج القيم في جدول خادم MySQL باستخدام Python؟
+كيف تظهر كل الجداول في MySQL باستخدام Python؟
+كيف تحصل على حجم الجدول في MySQL باستخدام Python؟
+كيفية إعادة تسمية جدول MySQL في بايثون؟
+كيفية نسخ جدول في MySQL باستخدام Python؟
+كيفية نسخ تعريف جدول في MySQL باستخدام Python؟
+احصل على المعرف بعد INSERT في قاعدة بيانات MySQL باستخدام Python
+كيفية استخدام عبارة IF في MySQL باستخدام Python
+حذف عنصر من الجدول في MySql باستخدام Python
+امنح أذونات جدول وأعمدة MySQL باستخدام Python
+العمل على الأعمدة
+كيف تحسب عدد الصفوف في جدول MySQL في بايثون؟
+عد عمود جدول SQL باستخدام Python
+كيفية إضافة عمود إلى جدول MySQL في Python؟
+كيفية الحصول على الحد الأدنى والأقصى لقيمة عمود من جدول MySQL باستخدام Python؟
+كيفية إجراء العمليات الحسابية عبر أعمدة جدول MySQL باستخدام Python؟
+كيف تسلسل قيم العمود لجدول MySQL باستخدام Python؟
+أضف تعليقًا إلى العمود في MySQL باستخدام Python
+امنح أذونات جدول وأعمدة MySQL باستخدام Python
+تطبيقات ومشاريع Python MySQL
+أنشئ صفحة تسجيل دخول إلى قاعدة بيانات MySQL في لغة Python باستخدام Tkinter
+استخراج البيانات من قاعدة البيانات باستخدام MySQL-Connector و XAMPP في Python
+
+<<<<<<<<<<<<<<<<<<<<
+قم بتوصيل قاعدة بيانات MySQL باستخدام MySQL-Connector Python
+مستوى الصعوبة: سهل
+آخر تحديث: 13 سبتمبر 2021
+أثناء العمل مع Python ، نحتاج إلى العمل مع قواعد البيانات ، فقد تكون من أنواع مختلفة مثل MySQL و SQLite و NoSQL وما إلى ذلك. في هذه المقالة ، سوف نتطلع إلى كيفية توصيل قواعد بيانات MySQL باستخدام MySQL Connector / Python.
+تُستخدم وحدة MySQL Connector في Python لتوصيل قواعد بيانات MySQL ببرامج Python ، وهي تفعل ذلك باستخدام Python Database API Specification v2.0 (PEP 249). يستخدم مكتبة Python القياسية وليس له تبعيات.
+ 
+
+الاتصال بقاعدة البيانات
+في المثال التالي سنقوم بالاتصال بقاعدة بيانات MySQL باستخدام connect ()
+مثال:
+ 
+
+# Python program to connect
+# to mysql database
+ 
+ 
+import mysql.connector
+ 
+ 
+# Connecting from the server
+conn = mysql.connector.connect(user = 'username',
+                               host = 'localhost',
+                              database = 'database_name')
+ 
+print(conn)
+ 
+# Disconnecting from the server
+conn.close()
+انتاج:
+ 
+
+python-mysql-connect-1
+
+لنفس الشيء أيضًا ، يمكننا استخدام فئة connection.MySQLConnection () بدلاً من connect ():
+مثال:
+ 
+
+# Python program to connect
+# to mysql database
+ 
+ 
+from mysql.connector import connection
+ 
+# Connecting to the server
+conn = connection.MySQLConnection(user = 'username',
+                              host = 'localhost',
+                              database = 'database_name')
+ 
+print(conn)
+ 
+# Disconnecting from the server
+conn.close()
+انتاج:
+ 
+
+python-mysql-connect-2
+
+هناك طريقة أخرى لتمرير القاموس في وظيفة connect () باستخدام عامل التشغيل "**":
+مثال:
+ 
+
+# Python program to connect
+# to mysql database
+ 
+ 
+from mysql.connector import connection
+ 
+ 
+dict = {
+  'user': 'root',
+  'host': 'localhost',
+  'database': 'College'
+}
+ 
+# Connecting to the server
+conn = connection.MySQLConnection(**dict)
+ 
+print(conn)
+ 
+# Disconnecting from the server
+conn.close()
+انتاج:
+
+<<<<<<<<<<<<<<<<<<<<
+؛ Python MySQL - إنشاء قاعدة بيانات
+مستوى الصعوبة: سهل
+تاريخ التحديث الأخير: 04 يوليو 2021
+Python Database API (واجهة برنامج التطبيق) هي واجهة قاعدة البيانات لبيثون القياسي. تلتزم معظم واجهات قاعدة بيانات Python بهذا المعيار. هناك العديد من خوادم قواعد البيانات التي تدعمها قاعدة بيانات Python مثل MySQL و GadFly و mSQL و PostgreSQL و Microsoft SQL Server 2000 و Informix و Interbase و Oracle و Sybase وما إلى ذلك. للاتصال بخادم قاعدة بيانات MySQL من Python ، نحتاج إلى استيراد mysql.connector واجهه المستخدم.
+بناء الجملة: 
+ 
+
+إنشاء قاعدة بيانات DATABASE_NAME
+مثال:
+ 
+
+# importing required libraries
+import mysql.connector
+ 
+dataBase = mysql.connector.connect(
+  host ="localhost",
+  user ="user",
+  passwd ="gfg"
+)
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+ 
+# creating database
+cursorObject.execute("CREATE DATABASE geeks4geeks")
+انتاج:
+ 
+
+python-mysql-create-db
+
+يوضح البرنامج أعلاه إنشاء قاعدة بيانات MySQL geeks4geeks حيث يكون اسم المضيف مضيفًا محليًا ، واسم المستخدم هو المستخدم وكلمة المرور gfg.
+لنفترض أننا نريد إنشاء جدول في قاعدة البيانات ، ثم نحتاج إلى الاتصال بقاعدة البيانات. يوجد أدناه برنامج لإنشاء جدول في قاعدة بيانات geeks4geeks التي تم إنشاؤها في البرنامج أعلاه.
+ 
+
+# importing required library
+import mysql.connector
+ 
+# connecting to the database
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "gfg",
+                     database = "geeks4geeks" ) 
+ 
+# preparing a cursor object
+cursorObject = dataBase.cursor()
+ 
+# creating table 
+studentRecord = """CREATE TABLE STUDENT (
+                   NAME  VARCHAR(20) NOT NULL,
+                   BRANCH VARCHAR(50),
+                   ROLL INT NOT NULL,
+                   SECTION VARCHAR(5),
+                   AGE INT
+                   )"""
+ 
+# table created
+cursorObject.execute(studentRecord) 
+ 
+# disconnecting from server
+dataBase.close()
+انتاج:
+<<<<<<<<<<<<<<<<<<<<
+Python: إنشاء جدول MySQL
+آخر تحديث: ١٠ يناير ٢٠٢١
+MySQL هو نظام إدارة قاعدة بيانات علائقية (RDBMS) بينما لغة الاستعلام المهيكلة (SQL) هي اللغة المستخدمة للتعامل مع RDBMS باستخدام أوامر مثل إنشاء وإدراج وتحديث وحذف البيانات من قواعد البيانات. أوامر SQL غير حساسة لحالة الأحرف ، أي إنشاء وإنشاء تدل على نفس الأمر.
+التثبيت 
+اتبع العملية المذكورة أدناه لتثبيت تبعيات Python MySQL
+
+انتقل إلى دليل البرنامج النصي Python باستخدام موجه الأوامر.
+نفّذ الأمر 
+ 
+نقطة تثبيت mysql- موصل
+طرق وحدة موصل Python Mysql
+ 
+1. connect ():  تُستخدم هذه الوظيفة لإنشاء اتصال بخادم MySQL. فيما يلي الوسائط المستخدمة لبدء الاتصال:
+
+user: اسم المستخدم المرتبط بخادم MySQL المستخدم لمصادقة الاتصال
+كلمة المرور: كلمة المرور المرتبطة باسم المستخدم للمصادقة
+قاعدة البيانات: قاعدة البيانات في MySQL لإنشاء الجدول
+2. cursor () : Cursor هو مساحة العمل التي تم إنشاؤها في ذاكرة النظام عند تنفيذ أمر SQL. هذه الذاكرة مؤقتة ويتم تقييد اتصال المؤشر طوال الجلسة / العمر الافتراضي ويتم تنفيذ الأوامر 
+ 
+
+3. تنفيذ () : تأخذ وظيفة التنفيذ استعلام SQL كوسيطة وتنفذ. الاستعلام هو أمر SQL يستخدم لإنشاء وإدراج واسترداد وتحديث وحذف وما إلى ذلك. 
+ 
+
+ 
+
+قاعدة البيانات
+قاعدة البيانات هي منظمة للمعلومات منظمة في جداول متعددة. يتم تنظيم قواعد البيانات بطريقة تجعل معالجة البيانات أمرًا سهلاً ، مثل إنشاء وإدراج وتحديث وحذف إلخ.
+أمر SQL لإنشاء قاعدة بيانات: 
+ 
+
+إنشاء قاعدة بيانات ؛
+مثال: ضع في اعتبارك المثال أدناه لإنشاء قاعدة بيانات في MySQL (على سبيل المثال: الكلية)
+ 
+
+# Python code for creating Database
+# Host: It is the server name. It will be
+# "localhost" if you are using localhost database
+ 
+import mysql.connector as SQLC
+# Establishing connection with the SQL
+ 
+DataBase = SQLC.connect(
+  host ="server name",
+  user ="user name",
+  password ="password"
+)
+# Cursor to the database
+Cursor = DataBase.cursor()
+ 
+Cursor.execute("CREATE DATABASE College")
+print("College Data base is created")
+انتاج :
+ 
+
+تم إنشاء قاعدة بيانات الكلية
+ 
+
+
+
+ 
+
+جدول
+ 
+
+الجدول عبارة عن مجموعة من البيانات المنظمة في شكل صفوف وأعمدة. الجدول موجود داخل قاعدة بيانات.
+تسمى الصفوف أيضًا مجموعات
+تسمى الأعمدة سمات الجدول
+أمر SQL لإنشاء جدول: 
+ 
+
+اصنع جدول
+(
+     العمود اسم_العمود_البيانات_نوع ،
+     العمود اسم_العمود_نوع_البيانات ،
+     :
+     :
+     العمود اسم_العمود_البيانات_نوع
+) ؛
+ 
+
+أنواع بيانات SQL
+تُستخدم أنواع البيانات لتحديد نوع البيانات التي سيتم تخزينها في خلية الجدول. 
+أنواع مختلفة من أنواع البيانات 
+ 
+
+رقمي
+سلسلة أحرف
+التاريخ / الوقت.
+أحرف / سلسلة Unicode
+الثنائية
+بصرف النظر عن أنواع البيانات المذكورة أعلاه ، هناك أنواع بيانات متنوعة أخرى في MySQL تتضمن أنواع بيانات CLOB و BLOB و JSON و XML.
+ضع في اعتبارك رمز بيثون المذكور أدناه لإنشاء جدول "الطالب" الذي يحتوي على عمودين اسم ، رقم اللف في قاعدة البيانات "الكلية" التي تم إنشاؤها مسبقًا.
+ 
+
+# Python code for creating Table in the Database
+# Host: It is the server name. It will be "localhost"
+# if you are using localhost database
+ 
+import mysql.connectors as SQLC
+def CreateTable():
+      
+     # Connecting To the Database in Localhost
+     DataBase = SQLC.connect(
+                 host ="server name",
+                 user ="user name",
+                 password ="password",
+                 database ="College"
+               )
+ 
+     # Cursor to the database
+     Cursor = DataBase.cursor()
+ 
+     # Query for Creating the table
+     # The student table contains two columns Name and
+     # Name of data type varchar i.e to store string
+     # and Roll number of the integer data type.
+     TableName ="CREATE TABLE Student
+                (
+                    Name VARCHAR(255),
+                    Roll_no int
+                );"
+ 
+     Cursor.execute(TableName)
+     print("Student Table is Created in the Database")
+     return
+ 
+# Calling CreateTable function
+CreateTable()
+انتاج :
+ 
+
+يتم إنشاء جدول الطالب في قاعدة البيانات
+ 
+<<<<<<<<<<<<<<<<<<<<
+Python MySQL - إدراج في الجدول
+آخر تحديث: 06 مارس 2020
+MySQL هو نظام إدارة قاعدة بيانات علائقية (RDBMS) بينما لغة الاستعلام المهيكلة (SQL) هي اللغة المستخدمة للتعامل مع RDBMS باستخدام أوامر مثل إنشاء وإدراج وتحديث وحذف البيانات من قواعد البيانات. أوامر SQL غير حساسة لحالة الأحرف ، أي إنشاء وإنشاء تدل على نفس الأمر.
+
+ملحوظة: قبل إدخال البيانات في قاعدة البيانات الخاصة بنا ، نحتاج إلى إنشاء جدول. للقيام بذلك ، ارجع إلى Python: MySQL Create Table.
+
+إدخال البيانات
+يمكنك إدراج صف واحد أو عدة صفوف مرة واحدة. كود الموصل مطلوب لتوصيل الأوامر بقاعدة البيانات المعينة.
+
+استعلام موصل
+
+# Enter the server name in host
+# followed by your user and
+# password along with the database 
+# name provided by you.
+  
+import mysql.connector
+  
+  
+mydb = mysql.connector.connect(
+  host = "localhost",
+  user = "username",
+  password = "password",
+  database = "database_name"
+) 
+  
+mycursor = mydb.cursor()
+الآن ، يمكن كتابة الإدخال في الاستعلام على النحو التالي:
+
+مثال: لنفترض أن السجل يبدو كالتالي -
+
+python-mysql-insert
+
+sql = "INSERT INTO Student (Name, Roll_no) VALUES (%s, %s)"
+val = ("Ram", "85")
+  
+mycursor.execute(sql, val)
+mydb.commit()
+  
+print(mycursor.rowcount, "details inserted")
+  
+# disconnecting from server
+mydb.close()
+انتاج:
+
+تم إدراج تفاصيل واحدة
+python-mysql-insert-2
+
+لإدراج قيم متعددة مرة واحدة ،executemany() يتم استخدام الطريقة. تتكرر هذه الطريقة من خلال تسلسل المعلمات ، وتمرير المعلمة الحالية إلى طريقة التنفيذ.
+
+مثال:
+
+sql = "INSERT INTO Student (Name, Roll_no) VALUES (%s, %s)"
+val = [("Akash", "98"),
+       ("Neel", "23"),
+       ("Rohan", "43"),
+       ("Amit", "87"),
+       ("Anil", "45"), 
+       ("Megha", "55"), 
+       ("Sita", "95")]
+  
+mycursor.executemany(sql, val)
+mydb.commit()
+  
+print(mycursor.rowcount, "details inserted")
+  
+# disconnecting from server
+mydb.close()
+انتاج:
+
+تم إدراج 7 تفاصيل
+python-mysql-insert-3
+
+ملحوظة:
+
+الcursor() للتكرار خلال الصفوف.
+بدون الأمر mydb.commit()لن يتم حفظ التغييرات.
+
+<<<<<<<<<<<<<<<<<<<<
+Python MySQL - حدد الاستعلام
+آخر تحديث: 06 مارس 2020
+Python Database API (واجهة برنامج التطبيق) هي واجهة قاعدة البيانات لبيثون القياسي. تلتزم معظم واجهات قاعدة بيانات Python بهذا المعيار. هناك العديد من خوادم قواعد البيانات التي تدعمها قاعدة بيانات Python مثل MySQL و GadFly و mSQL و PostgreSQL و Microsoft SQL Server 2000 و Informix و Interbase و Oracle و Sybase وما إلى ذلك. للاتصال بخادم قاعدة بيانات MySQL من Python ، نحتاج إلى استيراد mysql.connectorالوحدة.
+
+يوجد أدناه برنامج للاتصال بقاعدة بيانات MySQL geeks.
+
+# importing required library 
+import mysql.connector
+  
+# connecting to the database 
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "pswrd",
+                     database = "geeks" ) 
+  
+# preparing a cursor object 
+cursorObject = dataBase.cursor() 
+  
+# disconnecting from server
+dataBase.close() 
+يوضح البرنامج أعلاه الاتصال بقاعدة بيانات MySQL geeksحيث يوجد اسم المضيف واسم localhostالمستخدم وكلمة userالمرور pswrd.
+
+حدد استعلام
+بعد الاتصال بقاعدة البيانات في MySQL ، يمكننا تحديد الاستعلامات من الجداول الموجودة فيها.
+
+بناء الجملة:
+
+من أجل تحديد أعمدة سمات معينة من الجدول ، نكتب أسماء السمات.
+حدد attr1 ، attr2 من table_name
+من أجل تحديد جميع أعمدة السمات من الجدول ، نستخدم رمز النجمة "*".
+حدد * من table_name
+مثال 1: لنفترض أن الجدول يبدو كالتالي -
+
+python-mysql-select
+
+يوجد أدناه برنامج لتحديد استعلام من الجدول في قاعدة البيانات.
+
+# importing required library 
+import mysql.connector 
+    
+# connecting to the database 
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "pswrd",
+                     database = "geeks" ) 
+    
+# preparing a cursor object 
+cursorObject = dataBase.cursor()
+    
+print("Displaying NAME and ROLL columns from the STUDENT table:")
+  
+# selecting query
+query = "SELECT NAME, ROLL FROM STUDENT"
+cursorObject.execute(query)
+  
+myresult = cursorObject.fetchall()
+  
+for x in myresult:
+    print(x)
+  
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+python-mysql-select-2
+
+مثال 2: دعونا نلقي نظرة على مثال آخر لاختيار الاستعلامات في جدول.
+
+# importing required library 
+import mysql.connector 
+    
+# connecting to the database 
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "pswrd",
+                     database = "geeks" )  
+    
+# preparing a cursor object 
+cursorObject = dataBase.cursor()
+    
+print("Displaying NAME and ROLL columns from the STUDENT table:")
+  
+# selecting query
+query = "SELECT * FROM STUDENT"
+cursorObject.execute(query)
+  
+myresult = cursorObject.fetchall()
+  
+for x in myresult:
+    print(x)
+  
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+
+<<<<<<<<<<<<<<<<<<<<
+Python MySQL - شرط أين
+مستوى الصعوبة: خبير
+آخر تحديث: ٢٣ يناير ٢٠٢٢
+حيث يتم استخدام الشرط في قاعدة بيانات MySQL لتصفية البيانات حسب الحالة المطلوبة. يمكنك جلب أو حذف أو تحديث مجموعة معينة من البيانات في قاعدة بيانات MySQL باستخدام جملة where.
+بناء الجملة
+ 
+
+حدد العمود 1 ، العمود 2 ،…. عمود من [اسم الجدول] أين [الحالة] ؛ 
+ 
+
+يتم استخدام الصيغة أعلاه لعرض مجموعة معينة من البيانات التي تتبع الشرط.
+مثال: ضع في اعتبارك قاعدة البيانات التالية المسماة الكلية ولها اسم جدول كطالب.
+مخطط قاعدة البيانات:
+ 
+
+مخطط بيثون ديسيبل
+
+  
+قاعدة البيانات:
+ 
+
+بيثون ديسيبل الجدول
+
+  
+ 
+
+حيث الشرط في بايثون
+خطوات استخدام عبارة where في Python هي: 
+ 
+
+قم أولاً بتكوين اتصال بين MySQL وبرنامج Python. يتم ذلك عن طريق استيراد حزمة mysql.connector واستخدام طريقة mysql.connector.connect () لتمرير اسم المستخدم وكلمة المرور والمضيف (افتراضي اختياري: المضيف المحلي) وقاعدة البيانات (اختياري) كمعلمات لها.
+الآن ، قم بإنشاء كائن مؤشر على كائن الاتصال الذي تم إنشاؤه أعلاه باستخدام طريقة المؤشر (). مؤشر قاعدة البيانات هو بنية تحكم تمكن من اجتياز السجلات في قاعدة بيانات.
+بعد ذلك ، قم بتنفيذ عبارة where عن طريق تمريرها من خلال طريقة execute ().
+ 
+
+import mysql.connector
+  
+#Establishing connection
+conn = mysql.connector.connect(user='your_username',
+                               host='localhost',
+                               password ='your_password',
+                               database='College')
+  
+# Creating a cursor object using
+# the cursor() method
+mycursor = conn.cursor();
+  
+# SQL Query
+sql = "select * from Student where Roll_no >= 3;"
+  
+# Executing query
+mycursor.execute(sql)
+  
+myresult = mycursor.fetchall()
+  
+for x in myresult:
+    print(x)
+ 
+# Closing the connection
+conn.close()
+انتاج: 
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<
+Python MySQL - ترتيب حسب الشرط
+مستوى الصعوبة: أساسي
+آخر تحديث: 09 مارس 2020
+يتم استخدام الموصل عندما يتعين علينا استخدام MySQL مع لغات البرمجة الأخرى. يتمثل عمل MySQL-connector في توفير الوصول إلى MySQL Driver إلى اللغة المطلوبة. وبالتالي ، فإنه يولد اتصالاً بين لغة البرمجة وخادم MySQL.
+
+حسب الشرط
+OrderBy يستخدم لترتيب مجموعة النتائج إما بترتيب تصاعدي أو تنازلي. بشكل افتراضي ، يكون دائمًا بترتيب تصاعدي ما لم يتم ذكر "DESC" ، والذي يرتب ترتيبًا تنازليًا.
+يمكن أيضًا استخدام "ASC" لترتيبه بشكل صريح بترتيب تصاعدي. ولكن ، لا يتم ذلك عمومًا بهذه الطريقة لأن التخلف عن السداد يفعل ذلك بالفعل.
+
+بناء الجملة-
+
+حدد العمود 1 ، العمود 2
+من table_name
+ترتيب حسب اسم العمود ASC | تنازلي ؛
+ستساعدك البرامج التالية على فهم هذا بشكل أفضل.
+قاعدة البيانات قيد الاستخدام:
+
+ترتيب الثعبان
+
+مثال 1: برنامج لترتيب البيانات بترتيب تصاعدي حسب الاسم
+
+# Python program to demonstrate
+# order by clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+  password = ''
+)
+  
+cs = mydb.cursor()
+  
+# Order by clause
+statement ="SELECT * FROM Student ORDER BY Name"
+cs.execute(statement)
+  
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+      
+# Disconnecting from the database
+mydb.close()
+انتاج:
+
+python-mysql- ترتيب حسب
+
+مثال 2: ترتيب قاعدة البيانات بترتيب تنازلي
+
+# Python program to demonstrate
+# order by clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+  
+cs = mydb.cursor()
+  
+# Order by clause
+statement ="SELECT * FROM Student ORDER BY Name DESC"
+cs.execute(statement)
+  
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+    
+# Disconnecting from the database  
+mydb.close()
+انتاج:
+
+python-mysql-order-by-2
+
+مثال 3: برنامج للحصول على الاسم من الجدول ، مرتبة بترتيب تنازلي حسب Roll no.
+
+# Python program to demonstrate
+# order by clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+  
+cs = mydb.cursor()
+  
+# Order by clause
+statement ="SELECT Name FROM Student ORDER BY Roll_no DESC"
+cs.execute(statement)
+  
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+      
+# Disconnecting from the database
+mydb.close()
+انتاج:
+<<<<<<<<<<<<<<<<<<<<
+Python MySQL - حذف الاستعلام
+مستوى الصعوبة: سهل
+آخر تحديث: 06 مارس 2020
+Python Database API (واجهة برنامج التطبيق) هي واجهة قاعدة البيانات لبيثون القياسي. تلتزم معظم واجهات قاعدة بيانات Python بهذا المعيار. هناك العديد من خوادم قواعد البيانات التي تدعمها قواعد بيانات Python مثل MySQL و GadFly و PostgreSQL و Microsoft SQL Server 2000 و Informix و Interbase و Oracle و Sybase وما إلى ذلك. للاتصال بخادم قاعدة بيانات MySQL من Python ، نحتاج إلى استيراد mysql.connectorالواجهة.
+
+يوجد أدناه برنامج للاتصال بقاعدة بيانات MySQL geeks.
+
+# importing required library 
+import mysql.connector
+  
+# connecting to the database 
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "pswrd",
+                     database = "geeks" ) 
+  
+# preparing a cursor object 
+cursorObject = dataBase.cursor() 
+  
+  
+# disconnecting from server
+dataBase.close() 
+يوضح البرنامج أعلاه الاتصال بقاعدة بيانات MySQL geeksحيث يوجد اسم المضيف واسم localhostالمستخدم وكلمة userالمرور pswrd.
+
+حذف الاستعلام من الجداول
+بعد الاتصال بقاعدة البيانات في MySQL ، يمكننا إنشاء جداول فيها ومعالجتها.
+
+بيان النحو:
+
+احذف من TABLE_NAME حيث ATTRIBUTE_NAME = ATTRIBUTE_VALUE
+مثال 1: يوجد أدناه برنامج لحذف استعلام من الجدول في قاعدة البيانات.
+
+# importing required library 
+import mysql.connector 
+  
+# connecting to the database 
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "pswrd",
+                     database = "geeks" )  
+  
+# preparing a cursor object 
+cursorObject = dataBase.cursor() 
+  
+# creating table  
+studentRecord = """CREATE TABLE STUDENT ( 
+                   NAME  VARCHAR(20) NOT NULL, 
+                   BRANCH VARCHAR(50), 
+                   ROLL INT NOT NULL,
+                   SECTION VARCHAR(5), 
+                   AGE INT
+                   )"""
+  
+# table created
+cursorObject.execute(studentRecord)  
+  
+# inserting data into the table
+query = "INSERT INTO STUDENT (NAME, BRANCH, ROLL, SECTION, AGE) VALUES (% s, % s)"
+  
+attrValues = ("Rituraj Saha", "Information Technology", "1706256", "IT-3", "20")
+cursorObject.execute(query, attrValues)
+  
+attrValues = ("Ritam Barik", "Information Technology", "1706254", "IT-3", "21")
+cursorObject.execute(query, attrValues)
+  
+attrValues = ("Rishi Kumar", "Information Technology", "1706253", "IT-3", "21")
+cursorObject.execute(query, attrValues)
+  
+# deleting query
+query = "DELETE FROM STUDENT WHERE ROLL = 1706256"
+cursorObject.execute(query, attrValues)
+  
+dataBase.commit()
+  
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+بيثون- mysql- حذف
+
+في البرنامج أعلاه ، يتم إنشاء جدول يحمل STUDENTسمات NAMEو BRANCHو ROLLو SECTION. AGEيتم إدراج بيانات متعددة في STUDENTالجدول ثم يتم حذف استعلام واحد من الجدول الذي يحتوي على ROLLقيمة السمة 1706256.
+
+مثال 2: دعونا نلقي نظرة على مثال آخر للاستعلامات في جدول.
+
+# importing required library 
+import mysql.connector
+  
+# connecting to the database 
+dataBase = mysql.connector.connect(
+                     host = "localhost",
+                     user = "user",
+                     passwd = "pswrd",
+                     database = "geeks" ) 
+  
+# preparing a cursor object 
+cursorObject = dataBase.cursor() 
+  
+# drop table if it already exists 
+cursorObject.execute("DROP TABLE IF EXISTS PHONE_RECORD")
+  
+# creating table  
+phoneRecord = """CREATE TABLE PHONE_RECORD ( 
+                   NAME  VARCHAR(20) NOT NULL, 
+                   PHONE VARCHAR(10) NOT NULL
+                   )"""
+  
+# table created
+cursorObject.execute(phoneRecord)  
+  
+# inserting data into the table
+query = "INSERT INTO PHONE_RECORD (NAME, PHONE) VALUES (% s, % s)"
+attrValues = ("Rituraj Saha", "9163089075")
+cursorObject.execute(query, attrValues)
+  
+# deleting query
+query = "DELETE FROM STUDENT WHERE NAME = 'Rituraj Saha'"
+cursorObject.execute(query)
+  
+dataBase.commit()
+  
+# disconnecting from server
+dataBase.close()
+انتاج:
+
+بايثون- MYSQL-DELETE1
+
+في البرنامج أعلاه ، يتم إنشاء جدول آخر في geeksقاعدة البيانات باسم يحتوي على PHONE_RECORDالسمة NAMEو PHONE. يتم إدخال عمود واحد فقط في الجدول ثم يتم حذفه باستخدام DELETEالعبارة.
+
+
+<<<<<<<<<<<<<<<
+Python MySQL - الجدول المنسدل
+آخر تحديث: 09 مارس 2020
+يتم استخدام الموصل عندما يتعين علينا استخدام MySQL مع لغات البرمجة الأخرى. يتمثل عمل MySQL-connector في توفير الوصول إلى MySQL Driver إلى اللغة المطلوبة. وبالتالي ، فإنه يولد اتصالاً بين لغة البرمجة وخادم MySQL.
+
+أمر إسقاط الجدول
+يؤثر أمر الإسقاط على بنية الجدول وليس البيانات. يتم استخدامه لحذف جدول موجود بالفعل. للحالات التي لا تكون فيها متأكدًا من وجود الجدول المراد إسقاطه أم لا DROP TABLE إذا تم استخدام الأمر EXISTS . سيتم التعامل مع كلتا الحالتين في الأمثلة التالية.
+
+بناء الجملة:
+
+إسقاط جدول الجدول ؛
+
+إسقاط الجدول في حالة EXISTS tablename ؛
+ستساعدك البرامج التالية على فهم هذا بشكل أفضل.
+
+الجداول قبل الإسقاط:
+
+python-mysql-drop
+
+مثال 1: برنامج لإثبات انخفاض إن وجد. سنحاول إسقاط جدول غير موجود في قاعدة البيانات أعلاه.
+
+# Python program to demonstrate
+# drop clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+  
+cs = mydb.cursor()
+  
+# drop clause
+statement = "Drop Table if exists Employee"
+  
+# Uncommenting statement ="DROP TABLE employee"
+# Will raise an error as the table employee
+# does not exists
+  
+cs.execute(statement)
+      
+# Disconnecting from the database
+mydb.close()
+انتاج:
+
+python-mysql-drop-1
+
+مثال 2: برنامج إسقاط الجدول المهوسون
+
+# Python program to demonstrate
+# drop clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+  
+cs = mydb.cursor()
+  
+# drop clause
+statement ="DROP TABLE Geeks"
+  
+cs.execute(statement)
+      
+# Disconnecting from the database
+mydb.close()
+انتاج:
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+
+آخر تحديث: 09 مارس 2020
+يتم استخدام الموصل عندما يتعين علينا استخدام MySQL مع لغات البرمجة الأخرى. يتمثل عمل MySQL-connector في توفير الوصول إلى MySQL Driver إلى اللغة المطلوبة. وبالتالي ، فإنه يولد اتصالاً بين لغة البرمجة وخادم MySQL.
+
+شرط التحديث
+يستخدم التحديث لتغيير القيم الموجودة في قاعدة البيانات. باستخدام التحديث يمكن تصحيح أو تحديث قيمة معينة. إنه يؤثر فقط على البيانات وليس هيكل الجدول.
+الميزة الأساسية التي يوفرها هذا الأمر هي أنه يحافظ على دقة الجدول.
+
+بناء الجملة:
+
+تحديث اسم الجدول
+SET = "قيمة جديدة"
+أين = "القيمة القديمة" ؛
+ستساعدك البرامج التالية على فهم هذا بشكل أفضل.
+قاعدة البيانات قيد الاستخدام:
+
+python-mysql-update
+
+مثال 1: برنامج لتحديث عمر الطالب المسمى ريشي كومار.
+
+# Python program to demonstrate
+# update clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+  
+cs = mydb.cursor()
+  
+# drop clause
+statement ="UPDATE STUDENT SET AGE = 23 WHERE Name ='Rishi Kumar'"
+  
+cs.execute(statement)
+mydb.commit()
+  
+# Disconnecting from the database
+mydb.close()
+انتاج:
+
+python-mysql-update1
+
+مثال 2: برنامج لتصحيح الهجاء لطالب اسمه SK
+
+# Python program to demonstrate
+# update clause
+  
+  
+import mysql.connector
+  
+# Connecting to the Database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+  
+cs = mydb.cursor()
+  
+# drop clause
+statement ="UPDATE STUDENT SET Name = 'S.K. Anirban' WHERE Name ='SK Anirban'"
+  
+cs.execute(statement)
+mydb.commit()
+  
+# Disconnecting from the database
+mydb.close()
+انتاج:
+
+
+<<<<<<<<<<<<<<<<<<<<<
+
+مستوى الصعوبة: أساسي
+آخر تحديث: 18 مارس 2020
+يتم استخدام الموصل عندما يتعين علينا استخدام MySQL مع لغات البرمجة الأخرى. يتمثل عمل mysql-connector في توفير الوصول إلى MySQL Driver إلى اللغة المطلوبة. وبالتالي ، فإنه يولد اتصالاً بين لغة البرمجة وخادم MySQL.
+
+موصل Python-MySQL
+هذا موصل MySQL يسمح لبيثون بالوصول إلى MySQL Driver وتنفيذ استعلامات SQL في مرفق البرمجة الخاص بها. سنحاول هنا تنفيذ شرط الحد على قاعدة البيانات الخاصة بنا وسندرس المخرجات الناتجة.
+
+شرط تحديد SQL
+يتم استخدام جملة الحد في SQL للتحكم في عدد السجلات في مجموعة النتائج التي تم إرجاعها من الاستعلام الذي تم إنشاؤه أو تقييده. بشكل افتراضي ، يعطي SQL العدد المطلوب من السجلات بدءًا من الأعلى ولكنه يسمح باستخدام الكلمة الأساسية OFFSET. يتيح لك OFFSET البدء من صف مخصص والحصول على العدد المطلوب من صفوف النتائج.
+
+بناء الجملة:
+
+حدد * من حدود اسم الجدول ؛
+
+حدد * من tablename حد حد تعويض تعويض ؛
+ستساعدك البرامج التالية على فهم هذا بشكل أفضل.
+قاعدة البيانات قيد الاستخدام:
+
+بيثون الانضمام db22
+
+مثال 1: برنامج لعرض سجلين فقط
+
+import mysql.connector
+   
+# Conencting to the database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+   
+cs = mydb.cursor()
+  
+# STUDENT and STudent are
+# two different database
+statement ="SELECT * FROM STUDENT LIMIT 2"
+  
+cs.execute(statement)
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+انتاج:
+
+حد بيثون 1
+
+مثال 2: برنامج لبدء من السجل الثاني وعرض أول سجلين
+
+import mysql.connector
+   
+# Conencting to the database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+   
+cs = mydb.cursor()
+  
+# STUDENT and STudent are
+# two different database
+statement ="SELECT * FROM STUDENT LIMIT 2 OFFSET 1"
+  
+cs.execute(statement)
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+انتاج:
+
+<<<<<<<<<<<<<<<<<<<<<
+Python MySQL - انضم
+آخر تحديث: 18 مارس 2020
+يتم استخدام الرابط عندما يتعين علينا استخدام mysql مع لغات البرمجة الأخرى. يتمثل عمل mysql-connector في توفير الوصول إلى MySQL Driver إلى اللغة المطلوبة. وبالتالي ، فإنه يولد اتصالاً بين لغة البرمجة وخادم MySQL.
+
+موصل Python-MySQL
+هذا موصل MySQL يسمح لبيثون بالوصول إلى MySQL Driver وتنفيذ استعلامات SQL في مرفق البرمجة الخاص بها. سنحاول هنا تنفيذ بند الانضمام على قاعدة البيانات الخاصة بنا وسندرس المخرجات الناتجة.
+
+بند JOIN من SQL
+يسمح لك الانضمام بدمج جدولين أو أكثر في SQL ، بناءً على العمود ذي الصلة بينهما. بناءً على طلب الانضمام هذا ، هناك ثلاثة أنواع من الانضمام:
+
+
+يعطي INNER JOIN
+السجلات التي تم إنتاجها بواسطة الأعمدة المتطابقة. يعمل كل من JOIN و INNER JOIN بنفس الطريقة.
+بناء الجملة:
+حدد العمود 1 ، العمود 2 ...
+من الجدول
+حالة JOIN tablename ON ؛
+حدد العمود 1 ، العمود 2 ...
+من الجدول
+INNER JOIN tablename ON الحالة ؛
+يعطي LEFT JOIN
+تلك السجلات من الجدول 1 مع إزالة المحتويات الحصرية لـ 2
+بناء الجملة:
+حدد العمود 1 ، العمود 2 ...
+من الجدول
+LEFT JOIN tablename شرط التشغيل ؛
+يعطي RIGHT JOIN
+جميع السجلات من الجدول 2 بعد إزالة السجلات الحصرية لـ 1.
+البنية:
+حدد العمود 1 ، العمود 2 ...
+من الجدول
+RIGHT JOIN tablename ON الحالة ؛
+ستساعدك البرامج التالية على فهم هذا بشكل أفضل.
+قاعدة البيانات قيد الاستخدام:
+
+بيثون الانضمام db1
+
+بيثون الانضمام db21
+
+البرنامج 1: استخدام الصلة الداخلية
+
+import mysql.connector
+   
+# Conencting to the database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+   
+cs = mydb.cursor()
+  
+# STUDENT and STudent are
+# two different database
+statement ="SELECT S.NAME from Student S JOIN \
+Student on S.Roll_no = Student.Roll_no"
+  
+cs.execute(statement)
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+انتاج:
+
+بيثون الانضمام 1
+
+البرنامج 2: استخدام LEFT JOIN
+
+import mysql.connector
+   
+# Conencting to the database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+   
+cs = mydb.cursor()
+  
+# STUDENT and STudent are
+# two different database
+statement ="SELECT S.Name from STUDENT S\
+ LEFT JOIN Student s ON S.Roll_no = s.Roll_no"
+  
+cs.execute(statement)
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+انتاج:
+
+بيثون الانضمام 2
+
+البرنامج 3: استخدام RIGHT JOIN
+
+import mysql.connector
+   
+# Conencting to the database
+mydb = mysql.connector.connect(
+  host ='localhost',
+  database ='College',
+  user ='root',
+)
+   
+cs = mydb.cursor()
+  
+# STUDENT and STudent are
+# two different database
+statement ="SELECT S.Name from STUDENT S RIGHT \
+JOIN Student s ON S.Roll_no = s.Roll_no"
+  
+cs.execute(statement)
+result_set = cs.fetchall()
+  
+for x in result_set:
+    print(x)
+انتاج:

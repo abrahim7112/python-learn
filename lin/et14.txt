@@ -1,0 +1,255 @@
+
+Python Tuples
+مستوى الصعوبة: سهل
+آخر تحديث: 29 ديسمبر 2021
+Tuple عبارة عن مجموعة من كائنات Python تشبه إلى حد كبير القائمة. يمكن أن يكون تسلسل القيم المخزنة في المجموعة من أي نوع ، ويتم فهرستها بواسطة أعداد صحيحة. 
+
+يتم فصل قيم المجموعة بناءًا عن طريق "الفواصل". على الرغم من أنه ليس ضروريًا ، إلا أنه من الشائع تعريف المجموعة بإغلاق تسلسل القيم بين قوسين. يساعد هذا في فهم مجموعات Python بسهولة أكبر.
+
+إنشاء Tuple
+في Python ، يتم إنشاء المجموعات عن طريق وضع تسلسل من القيم مفصولة بفاصلة مع أو بدون استخدام الأقواس لتجميع تسلسل البيانات.
+
+ملاحظة: يُعرف إنشاء مجموعة Python دون استخدام الأقواس باسم التعبئة Tuple.  
+
+برنامج Python لتوضيح إضافة العناصر في Tuple.
+# Creating an empty Tuple
+Tuple1 = ()
+print("Initial empty Tuple: ")
+print(Tuple1)
+ 
+# Creating a Tuple
+# with the use of string
+Tuple1 = ('Geeks', 'For')
+print("\nTuple with the use of String: ")
+print(Tuple1)
+ 
+# Creating a Tuple with
+# the use of list
+list1 = [1, 2, 4, 5, 6]
+print("\nTuple using List: ")
+print(tuple(list1))
+ 
+# Creating a Tuple
+# with the use of built-in function
+Tuple1 = tuple('Geeks')
+print("\nTuple with the use of function: ")
+print(Tuple1)
+انتاج: 
+
+الأولي فارغة Tuple:
+()
+
+Tuple مع استخدام String:
+("المهوسون"، "For")
+
+قائمة باستخدام Tuple:
+(1 ، 2 ، 4 ، 5 ، 6)
+
+Tuple مع استخدام الوظيفة:
+('G'، 'e'، 'e'، 'k'، 's')
+إنشاء Tuple بأنواع بيانات مختلطة.
+يمكن أن تحتوي المجموعات على أي عدد من العناصر وأي نوع بيانات (مثل السلاسل والأعداد الصحيحة والقائمة وما إلى ذلك). يمكن أيضًا إنشاء Tuples باستخدام عنصر واحد ، لكنه صعب بعض الشيء. لا يكفي وجود عنصر واحد بين الأقواس ، يجب أن يكون هناك "فاصلة" لاحقة لجعلها مجموعة. 
+
+# Creating a Tuple
+# with Mixed Datatype
+Tuple1 = (5, 'Welcome', 7, 'Geeks')
+print("\nTuple with Mixed Datatypes: ")
+print(Tuple1)
+ 
+# Creating a Tuple
+# with nested tuples
+Tuple1 = (0, 1, 2, 3)
+Tuple2 = ('python', 'geek')
+Tuple3 = (Tuple1, Tuple2)
+print("\nTuple with nested tuples: ")
+print(Tuple3)
+ 
+# Creating a Tuple
+# with repetition
+Tuple1 = ('Geeks',) * 3
+print("\nTuple with repetition: ")
+print(Tuple1)
+ 
+# Creating a Tuple
+# with the use of loop
+Tuple1 = ('Geeks')
+n = 5
+print("\nTuple with a loop")
+for i in range(int(n)):
+    Tuple1 = (Tuple1,)
+    print(Tuple1)
+انتاج: 
+
+Tuple مع أنواع بيانات مختلطة:
+(5 ، "مرحبًا" ، 7 ، "المهوسون")
+
+Tuple مع المجموعات المتداخلة:
+((0، 1، 2، 3)، ('python'، 'geek'))
+
+Tuple مع التكرار:
+("المهوسون" ، "المهوسون" ، "المهوسون")
+
+Tuple مع حلقة
+("المهوسون" ،)
+(("المهوسون" ،) ،)
+((('Geeks'،)،)،)
+((('Geeks'،)،)،)،)
+(((('Geeks'،)،)،)،)،)
+الوصول إلى المجموعات
+تعتبر المجموعات غير قابلة للتغيير ، وعادةً ما تحتوي على سلسلة من العناصر غير المتجانسة التي يتم الوصول إليها عن طريق التفريغ أو الفهرسة (أو حتى عن طريق السمة في حالة المجموعات المسماة). القوائم قابلة للتغيير ، وعادة ما تكون عناصرها متجانسة ويمكن الوصول إليها عن طريق التكرار على القائمة.
+
+ملاحظة: عند تفريغ مجموعة المتغيرات على الجانب الأيسر ، يجب أن تكون مساوية لعدد من القيم في مجموعة معينة a. 
+
+# Accessing Tuple
+# with Indexing
+Tuple1 = tuple("Geeks")
+print("\nFirst element of Tuple: ")
+print(Tuple1[0])
+ 
+ 
+# Tuple unpacking
+Tuple1 = ("Geeks", "For", "Geeks")
+ 
+# This line unpack
+# values of Tuple1
+a, b, c = Tuple1
+print("\nValues after unpacking: ")
+print(a)
+print(b)
+print(c)
+انتاج: 
+
+العنصر الأول في Tuple:
+جي
+
+القيم بعد التفريغ:
+المهوسون
+ل
+المهوسون
+تسلسل Tuples
+تسلسل tuple هو عملية الانضمام إلى مجموعتين أو أكثر من Tuple. يتم إجراء التسلسل باستخدام عامل التشغيل "+". يتم إجراء تسلسل المجموعات دائمًا من نهاية المجموعة الأصلية. لا تنطبق العمليات الحسابية الأخرى على Tuples. 
+
+ملاحظة - يمكن دمج أنواع البيانات نفسها فقط مع التسلسل ، ويظهر خطأ إذا تم دمج قائمة ومجموعة. 
+
+
+
+# Concatenation of tuples
+Tuple1 = (0, 1, 2, 3)
+Tuple2 = ('Geeks', 'For', 'Geeks')
+ 
+Tuple3 = Tuple1 + Tuple2
+ 
+# Printing first Tuple
+print("Tuple 1: ")
+print(Tuple1)
+ 
+# Printing Second Tuple
+print("\nTuple2: ")
+print(Tuple2)
+ 
+# Printing Final Tuple
+print("\nTuples after Concatenation: ")
+print(Tuple3)
+انتاج: 
+
+الهيكل 1:
+(0 ، 1 ، 2 ، 3)
+
+Tuple2:
+("المهوسون" ، "For" ، "المهوسون")
+
+صفوف بعد التسلسل:
+(0، 1، 2، 3، "Geeks"، "For"، "Geeks")
+تشريح Tuple
+يتم تشريح Tuple لجلب نطاق معين أو شريحة من العناصر الفرعية من Tuple. يمكن أيضًا إجراء التقطيع للقوائم والمصفوفات. تؤدي الفهرسة في القائمة إلى جلب عنصر واحد بينما يسمح التقسيم بجلب مجموعة من العناصر. 
+
+ملاحظة - يمكن أيضًا استخدام قيم الزيادة السالبة لعكس تسلسل المجموعات. 
+
+
+
+
+# Slicing of a Tuple
+ 
+# Slicing of a Tuple
+# with Numbers
+Tuple1 = tuple('GEEKSFORGEEKS')
+ 
+# Removing First element
+print("Removal of First Element: ")
+print(Tuple1[1:])
+ 
+# Reversing the Tuple
+print("\nTuple after sequence of Element is reversed: ")
+print(Tuple1[::-1])
+ 
+# Printing elements of a Range
+print("\nPrinting elements between Range 4-9: ")
+print(Tuple1[4:9])
+انتاج: 
+
+إزالة العنصر الأول:
+("E" ، "E" ، "K" ، "S" ، "F" ، "O" ، "R" ، "G" ، "E" ، "E" ، "K" ، "S")
+
+Tuple بعد عكس تسلسل العنصر:
+('S'، 'K'، 'E'، 'E'، 'G'، 'R'، 'O'، 'F'، 'S'، 'K'، 'E'، 'E'، ' G ')
+
+عناصر الطباعة بين النطاق 4-9:
+("S" ، "F" ، "O" ، "R" ، "G")
+حذف Tuple
+تعتبر المجموعات غير قابلة للتغيير ، وبالتالي فهي لا تسمح بحذف جزء منها. يتم حذف المجموعة بالكامل باستخدام طريقة del (). 
+
+ملاحظة - ينتج عن طباعة Tuple بعد الحذف خطأ. 
+
+
+# Deleting a Tuple
+ 
+Tuple1 = (0, 1, 2, 3, 4)
+del Tuple1
+ 
+print(Tuple1)
+Traceback (آخر مكالمة أخيرة): 
+الملف "/home/efa50fd0709dec08434191f32275928a.py" ، السطر 7 ، في 
+الطباعة (Tuple1) 
+خطأ الاسم: الاسم "Tuple1" غير محدد
+
+طرق مدمجة
+طريقة مضمنة	وصف
+فهرس( )	ابحث في tuple وقم بإرجاع فهرس القيمة المعطاة حيثما كانت متاحة
+عدد( )	إرجاع تكرار حدوث قيمة محددة
+وظائف مدمجة
+وظيفة مدمجة	وصف
+الكل()	إرجاع صحيح إذا كانت كل العناصر صحيحة أو إذا كانت tuple فارغة
+أي()	إرجاع صحيح إذا كان أي عنصر من عناصر المجموعة صحيحًا. إذا كانت tuple فارغة ، فارجع خطأ
+لين ()	تُرجع طول المجموعة أو حجمها
+عد ()	إرجاع كائن تعداد tuple
+الأعلى()	إرجاع الحد الأقصى لعنصر tuple معين
+دقيقة ()	إرجاع عنصر الحد الأدنى من مجموعة معينة
+مجموع()	تلخيص الأرقام الموجودة في المجموعة
+مرتبة()	عناصر الإدخال في المجموعة وإرجاع قائمة مرتبة جديدة
+tuple ()	Convert an iterable to a tuple.
+Recent Articles on Tuple
+
+
+Tuples Programs
+
+Print unique rows in a given boolean Strings
+Program to generate all possible valid IP addresses from given string
+Python Dictionary to find mirror characters in a string
+Generate two output strings depending upon occurrence of character in input string in Python
+Python groupby method to remove all consecutive duplicates
+Convert a list of characters into a string
+Remove empty tuples from a list
+Reversing a Tuple
+Python Set symmetric_difference()
+Convert a list of Tuples into Dictionary
+Sort a tuple by its float element
+Count occurrences of an element in a Tuple
+Count the elements in a list until an element is a Tuple
+Sort Tuples in Increasing Order by any key
+Namedtuple in Python 
+Useful Links:
+
+Output of Python Programs
+Recent Articles on Python Tuples
+Multiple Choice Questions – Python
+All articles in Python Category

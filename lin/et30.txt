@@ -1,0 +1,148 @@
+
+المتغيرات الطبقية أو الثابتة في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 03 أغسطس 2021
+تشترك جميع الكائنات في الفئة أو المتغيرات الثابتة. تختلف المتغيرات المثيلة أو غير الثابتة باختلاف الكائنات (كل كائن له نسخة). على سبيل المثال ، اسمح لطالب علوم الكمبيوتر بتمثيله بواسطة Class CSStudent . قد يكون للفئة متغير ثابت قيمته "cse" لجميع الكائنات. وقد يحتوي الفصل أيضًا على أعضاء غير ثابتين مثل الاسم واللف . في C ++ و Java ، يمكننا استخدام الكلمات الأساسية الثابتة لجعل المتغير متغير فئة. المتغيرات التي ليس لها كلمة رئيسية ثابتة سابقة هي متغيرات حالة. شاهد هذا للحصول على مثال Java وهذا لمثال C ++. بايثون
+_نهج بسيط لا يتطلب كلمة رئيسية ثابتة. 
+
+جميع المتغيرات التي تم تعيين قيمة لها في إعلان الفئة هي متغيرات فئة. والمتغيرات التي يتم تعيين قيم لها داخل الطرق هي متغيرات حالة.
+ 
+
+
+# Python program to show that the variables with a value
+# assigned in class declaration, are class variables
+ 
+# Class for Computer Science Student
+class CSStudent:
+    stream = 'cse'                  # Class Variable
+    def __init__(self,name,roll):
+        self.name = name            # Instance Variable
+        self.roll = roll            # Instance Variable
+ 
+# Objects of CSStudent class
+a = CSStudent('Geek', 1)
+b = CSStudent('Nerd', 2)
+ 
+print(a.stream)  # prints "cse"
+print(b.stream)  # prints "cse"
+print(a.name)    # prints "Geek"
+print(b.name)    # prints "Nerd"
+print(a.roll)    # prints "1"
+print(b.roll)    # prints "2"
+ 
+# Class variables can be accessed using class
+# name also
+print(CSStudent.stream) # prints "cse"
+ 
+# Now if we change the stream for just a it won't be changed for b
+a.stream = 'ece'
+print(a.stream) # prints 'ece'
+print(b.stream) # prints 'cse'
+ 
+# To change the stream for all instances of the class we can change it
+# directly from the class
+CSStudent.stream = 'mech'
+ 
+print(a.stream) # prints 'ece'
+print(b.stream) # prints 'mech'
+انتاج: 
+
+CS
+CS
+المهووس
+فظة إهانة
+1
+2
+CS
+ECE
+CS
+ECE
+ميكانيكي
+
+
+هذا المقال من مساهمة هارشيت جوبتا . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال وإرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه
+
+
+<<<<<<<<<<<<<<<<<<<<<
+طريقة الفصل مقابل الطريقة الثابتة في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: 24 أغسطس 2021
+طريقة الفصل
+إنclassmethod decorator هو مصمم وظيفي مدمج وهو تعبير يتم تقييمه بعد تحديد وظيفتك. نتيجة هذا التقييم تلقي بظلالها على تعريف وظيفتك. 
+يتلقى التابع الفئة كوسيطة أولى ضمنية ، تمامًا مثل تلقي طريقة المثيل صيغة المثيل 
+: 
+
+الفئة C (كائن): 
+    classmethod 
+    def fun (cls، arg1، arg2، ...):
+       ....
+fun: دالة يجب تحويلها إلى طريقة صنف
+ إرجاع: طريقة صنف للدالة.
+طريقة الفئة هي طريقة مرتبطة بالفئة وليس كائن الفئة.
+لديهم حق الوصول إلى حالة الفئة لأنها تأخذ معلمة فئة تشير إلى الفئة وليس مثيل الكائن.
+يمكنه تعديل حالة الفصل التي سيتم تطبيقها عبر جميع مثيلات الفئة. على سبيل المثال ، يمكنه تعديل متغير فئة يكون قابلاً للتطبيق على جميع الحالات.
+ 
+طريقة ثابتة
+لا يتلقى الأسلوب الثابت وسيطة أولى ضمنية. 
+
+بناء الجملة: 
+
+الفئة C (كائن): 
+    staticmethod 
+    def fun (arg1، arg2، ...): 
+        ... 
+إرجاع: طريقة ثابتة لمتعة الوظيفة.
+الطريقة الثابتة هي أيضًا طريقة مرتبطة بالفئة وليس كائن الفصل.
+لا يمكن للطريقة الثابتة الوصول إلى حالة الفئة أو تعديلها.
+إنه موجود في الفصل لأنه من المنطقي أن تكون الطريقة موجودة في الفصل.
+طريقة الفصل مقابل الطريقة الثابتة
+تأخذ طريقة الفئة cls كمعامل أول بينما لا تحتاج الطريقة الثابتة إلى معلمات محددة.
+يمكن لطريقة الفئة الوصول إلى حالة الفئة أو تعديلها بينما لا يمكن للطريقة الثابتة الوصول إليها أو تعديلها.
+بشكل عام ، لا تعرف الطرق الثابتة شيئًا عن الحالة الطبقية. إنها طرق من نوع الأداة المساعدة تأخذ بعض المعلمات وتعمل على تلك المعلمات. من ناحية أخرى ، يجب أن تحتوي طرق الفئات على فئة كمعامل.
+نستخدمclassmethod decorator في بيثون لإنشاء طريقة فصل ونستخدمstaticmethod decorator لإنشاء طريقة ثابتة في بيثون.
+متى تستخدم ماذا؟
+نحن نستخدم طريقة الفصل بشكل عام لإنشاء طرق المصنع. ترجع طرق المصنع كائنات الفئة (على غرار المنشئ) لحالات استخدام مختلفة.
+نحن نستخدم طرقًا ثابتة بشكل عام لإنشاء وظائف المرافق.
+كيف تحدد طريقة الفصل والطريقة الثابتة؟
+لتحديد طريقة الفصل في بيثون ، نستخدمclassmethod decorator ، ولتحديد طريقة ثابتة نستخدمstaticmethod decorator. 
+دعونا نلقي نظرة على مثال لفهم الفرق بينهما. دعنا نقول أننا نريد إنشاء فئة الشخص. الآن ، لا تدعم python طريقة التحميل الزائد مثل C ++ أو Java ، لذلك نستخدم طرق الفصل لإنشاء طرق المصنع. في المثال أدناه نستخدم طريقة الفصل لإنشاء كائن شخص من سنة الميلاد.
+كما هو موضح أعلاه ، فإننا نستخدم طرقًا ثابتة لإنشاء وظائف الأداة المساعدة. في المثال أدناه نستخدم طريقة ثابتة للتحقق مما إذا كان الشخص بالغًا أم لا. 
+ 
+
+التنفيذ 
+
+
+# Python program to demonstrate
+# use of class method and static method.
+from datetime import date
+  
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+      
+    # a class method to create a Person object by birth year.
+    @classmethod
+    def fromBirthYear(cls, name, year):
+        return cls(name, date.today().year - year)
+      
+    # a static method to check if a Person is adult or not.
+    @staticmethod
+    def isAdult(age):
+        return age > 18
+  
+person1 = Person('mayank', 21)
+person2 = Person.fromBirthYear('mayank', 1996)
+  
+print (person1.age)
+print (person2.age)
+  
+# print the result
+print (Person.isAdult(22))
+انتاج:
+
+21
+25
+صحيح

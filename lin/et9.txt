@@ -1,0 +1,121 @@
+
+عامل ثلاثي في ​​بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: ٥ يناير ٢٠٢٢
+تُعرف العوامل الثلاثية أيضًا باسم التعبيرات الشرطية ، وهي عوامل تقوم بتقييم شيء ما بناءً على الشرط سواء كان صوابًا أم خطأ. تمت إضافته إلى Python في الإصدار 2.5 . 
+إنه يسمح ببساطة باختبار شرط في سطر واحد ليحل محل متعدد الأسطر if-else مما يجعل الكود مضغوطًا.
+ 
+
+بناء الجملة : 
+
+[on_true] إذا [تعبير] آخر [on_false]
+طريقة بسيطة لاستخدام المشغل الثلاثي:
+
+# Program to demonstrate conditional operator
+a, b = 10, 20
+ 
+# Copy value of a in min if a < b else copy b
+min = a if a < b else b
+ 
+print(min)
+انتاج: 
+
+10
+الطريقة المباشرة باستخدام tuples و Dictionary و lambda
+
+# Python program to demonstrate ternary operator
+a, b = 10, 20
+ 
+# Use tuple for selecting an item
+# (if_test_false,if_test_true)[test]
+# if [a<b] is true it return 1, so element with 1 index will print
+# else if [a<b] is false it return 0, so element with 0 index will print
+print( (b, a) [a < b] )
+ 
+# Use Dictionary for selecting an item
+# if [a < b] is true then value of True key will print
+# elif [a<b] is false then value of False key will print
+print({True: a, False: b} [a < b])
+ 
+# lambda is more efficient than above two methods
+# because in lambda  we are assure that
+# only one expression will be evaluated unlike in
+# tuple and Dictionary
+print((lambda: b, lambda: a)[a < b]())
+انتاج:
+
+10
+10
+10
+يمكن كتابة عامل التشغيل الثلاثي في ​​صورة if-else المتداخلة:
+
+# Python program to demonstrate nested ternary operator
+a, b = 10, 20
+ 
+print ("Both a and b are equal" if a == b else "a is greater than b"
+        if a > b else "b is greater than a")
+يمكن كتابة النهج أعلاه على النحو التالي: 
+ 
+
+
+# Python program to demonstrate nested ternary operator
+a, b = 10, 20
+ 
+if a != b:
+    if a > b:
+        print("a is greater than b")
+    else:
+        print("b is greater than a")
+else:
+    print("Both a and b are equal")
+انتاج:
+
+ب أكبر من أ
+لاستخدام وظيفة الطباعة في المشغل الثلاثي يكون مثل: - 
+مثال: ابحث عن العدد الأكبر بين 2 باستخدام عامل التشغيل الثلاثي في ​​python3
+
+
+a=5
+b=7
+ 
+# [statement_on_True] if [condition] else [statement_on_false]
+ 
+print(a,"is greater") if (a>b) else print(b,"is Greater")
+انتاج:
+
+7 أكبر
+نقاط مهمة: 
+يتم أولاً تقييم الشرط المعطى (أ <ب) ، ثم يتم إرجاع أ أو ب بناءً على القيمة المنطقية التي يتم إرجاعها بواسطة الشرط
+يختلف ترتيب الوسيطات في المشغل عن اللغات الأخرى مثل C / C ++ (راجع المعاملات الثلاثية C / C ++ ).
+تتمتع التعبيرات الشرطية بأولوية أدنى بين جميع عمليات Python.
+الطريقة المستخدمة قبل 2.5 عندما لم يكن العامل الثلاثي موجودًا  في
+تعبير مثل المعطى أدناه ، يتحقق المترجم من التعبير إذا كان هذا صحيحًا ثم يتم تقييم on_true ، وإلا يتم تقييم on_false.
+ 
+
+بناء الجملة : 
+
+'' 'عندما يصبح الشرط صحيحًا ، التعبير [on_false]
+   لم يتم تنفيذه وقيمة "True و [on_true]"
+   يتم إرجاع. القيمة الأخرى لـ "False or [on_false]"
+   يتم إرجاع.
+   لاحظ أن "True و x" تساوي x.
+   و "False or x" تساوي x. ""
+[تعبير] و [on_true] أو [on_false]
+مثال : 
+
+
+# Program to demonstrate conditional operator
+a, b = 10, 20
+ 
+# If a is less than b, then a is assigned
+# else b is assigned (Note : it doesn't
+# work if a is 0.
+min = a < b and a or b
+ 
+print(min)
+انتاج:
+
+10
+ملاحظة: العيب الوحيد لهذه الطريقة هو أن on_true يجب ألا تكون صفراً أو خطأ . إذا حدث هذا فسيتم تقييم on_false دائمًا. والسبب في ذلك هو أنه إذا كان التعبير صحيحًا ، فسيقوم المترجم بالتحقق من صحة on_true ، وإذا كان ذلك سيكون صفراً أو خطأ ، فهذا سيجبر المترجم الفوري على التحقق من خطأ on_false لإعطاء النتيجة النهائية للتعبير بالكامل.
+
+هذا المقال من إعداد مايانك راوات وتحسينه شوبهام بانسال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.

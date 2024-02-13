@@ -1,0 +1,292 @@
+
+بايثون لامدا
+مستوى الصعوبة: سهل
+آخر تحديث: ١٣ يناير ٢٠٢٢
+في Python ، تعني الوظيفة المجهولة أن الوظيفة بدون اسم. كما نعلم بالفعل ، يتم استخدام الكلمة الأساسية def لتحديد الوظائف العادية ويتم استخدام الكلمة الأساسية lambda لإنشاء وظائف مجهولة. يحتوي على النحو التالي:
+
+بناء الجملة:
+
+حجج لامدا: التعبير
+يمكن أن تحتوي هذه الوظيفة على أي عدد من الوسيطات ولكن تعبير واحد فقط يتم تقييمه وإرجاعه.
+أحدهما مجاني لاستخدام وظائف lambda حيثما كانت الكائنات الوظيفية مطلوبة.
+يجب أن تظل على علم بأن وظائف lambda مقصورة من الناحية التركيبية على تعبير واحد.
+لها استخدامات مختلفة في مجالات معينة من البرمجة إلى جانب أنواع أخرى من التعبيرات في الوظائف.
+مثال 1:
+
+بايثون 3
+
+# Python program to demonstrate
+# lambda functions
+ 
+ 
+string ='GeeksforGeeks'
+ 
+# lambda returns a function object
+print(lambda string : string)
+انتاج: 
+
+<وظيفة <lambda> في 0x7f268eb16f28>
+في هذا المثال أعلاه ، لم يتم استدعاء lambda بواسطة وظيفة الطباعة ولكن ببساطة يتم إرجاع كائن الوظيفة وموقع الذاكرة حيث يتم تخزينه. 
+لذلك ، لجعل الطباعة تطبع السلسلة أولاً ، نحتاج إلى استدعاء lambda حتى تمر السلسلة بالطباعة.
+
+المثال الثاني: 
+
+بايثون 3
+
+# Python program to demonstrate
+# lambda functions
+ 
+ 
+x ="GeeksforGeeks"
+ 
+# lambda gets pass to print
+(lambda x : print(x))(x)
+انتاج:
+
+GeeksforGeeks
+مثال # 3: الفرق بين لامدا واستدعاء الوظيفة العادية 
+
+بايثون 3
+
+# Python program to illustrate cube of a number 
+# showing difference between def() and lambda().
+ 
+ 
+def cube(y):
+    return y*y*y;
+   
+g = lambda x: x*x*x
+print(g(7))
+   
+print(cube(5))
+انتاج: 
+
+343
+125
+المثال الرابع: تصبح وظيفة lambda أكثر فائدة عند استخدامها داخل دالة.
+
+بايثون 3
+
+# Python program to demonstrate
+# lambda functions
+ 
+ 
+def power(n):
+    return lambda a : a ** n
+ 
+# base = lambda a : a**2 get
+# returned to base
+base = power(2)
+ 
+print("Now power is set to 2")
+ 
+# when calling base it gets
+# executed with already set with 2
+print("8 powerof 2 = ", base(8))
+ 
+# base = lambda a : a**5 get
+# returned to base
+base = power(5)
+print("Now power is set to 5")
+ 
+# when calling base it gets executed
+# with already set with newly 2
+print("8 powerof 5 = ", base(8))
+انتاج: 
+
+الآن تم ضبط الطاقة على 2
+8 أس 2 = 64
+الآن تم ضبط الطاقة على 5
+8 أس 5 = 32768
+يمكننا أيضًا استبدال قائمة الفهم بـ Lambda باستخدام طريقة map () ، فهي ليست سريعة فحسب ، بل فعالة أيضًا ، ولنرى أيضًا كيفية استخدام lambda في عامل التصفية ().
+
+المثال الخامس: عامل التصفية () والخريطة (
+
+بايثون 3
+
+# Python program to demonstrate
+# lambda functions inside map()
+# and filter()
+ 
+ 
+a = [100, 2, 8, 60, 5, 4, 3, 31, 10, 11]
+ 
+# in filter either we use assignment or
+# conditional operator, the pass actual
+# parameter will get return
+filtered = filter (lambda x: x % 2 == 0, a)
+print(list(filtered))
+ 
+# in map either we use assignment or
+# conditional operator, the result of
+# the value will get returned
+mapped = map (lambda x: x % 2 == 0, a)
+print(list(mapped))
+انتاج:
+
+[100 ، 2 ، 8 ، 60 ، 4 ، 10]
+[صحيح ، صحيح ، صحيح ، صحيح ، خطأ ، صحيح ، خطأ ، خطأ ، صحيح ، خطأ]
+
+<<<<<<<<<<<<<<<<<<<<<
+المتغيرات العالمية والمحلية في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 09 تشرين الثاني (نوفمبر) 2021
+ 
+المتغيرات العامة هي تلك التي لم يتم تحديدها داخل أي دالة ولها نطاق عالمي بينما المتغيرات المحلية هي تلك التي يتم تحديدها داخل دالة ونطاقها يقتصر على تلك الوظيفة فقط. بمعنى آخر ، يمكننا القول أن المتغيرات المحلية يمكن الوصول إليها فقط داخل الوظيفة التي تمت تهيئتها من خلالها بينما يمكن الوصول إلى المتغيرات العامة في جميع أنحاء البرنامج وداخل كل وظيفة. 
+
+المتغيرات المحلية
+المتغيرات المحلية هي تلك التي تتم تهيئتها داخل دالة وتنتمي فقط إلى تلك الوظيفة المعينة. لا يمكن الوصول إليه في أي مكان خارج الوظيفة. دعونا نرى كيفية إنشاء متغير محلي.
+
+مثال: تكوين المتغيرات المحلية
+
+
+def f():
+     
+    # local variable
+    s = "I love Geeksforgeeks"
+    print(s)
+ 
+# Driver code
+f()
+انتاج |
+أنا أحب Geeksforgeeks
+إذا حاولنا استخدام هذا المتغير المحلي خارج الدالة ، فلنرى ما سيحدث.
+
+مثال:
+
+
+def f():
+     
+    # local variable
+    s = "I love Geeksforgeeks"
+    print("Inside Function:", s)
+ 
+# Driver code
+f()
+print(s)
+انتاج |
+
+NameError: لم يتم تعريف الاسم
+المتغيرات العالمية
+المتغيرات العامة هي تلك التي يتم تحديدها خارج أي وظيفة والتي يمكن الوصول إليها من خلال البرنامج ، أي داخل وخارج كل وظيفة ، دعونا نرى كيفية إنشاء متغير عالمي.
+
+مثال: تحديد المتغيرات العالمية والوصول إليها
+
+
+# This function uses global variable s
+def f():
+    print("Inside Function", s)
+ 
+# Global scope
+s = "I love Geeksforgeeks"
+f()
+print("Outside Function", s)
+انتاج |
+داخل الوظيفة أحب Geeksforgeeks
+خارج الوظيفة أحب Geeksforgeeks
+يتم تعريف المتغير s على أنه المتغير العام ويستخدم داخل الوظيفة وكذلك خارجها.
+
+ملاحظة: نظرًا لعدم وجود سكان محليين ، سيتم استخدام القيمة من الكرة الأرضية.
+
+الآن ، ماذا لو كان هناك متغير بنفس الاسم تمت تهيئته داخل دالة وكذلك بشكل عام. الآن السؤال الذي يطرح نفسه ، هل سيكون للمتغير المحلي بعض التأثير على المتغير الشامل أو العكس ، وماذا سيحدث إذا غيرنا قيمة المتغير داخل الدالة f ()؟ هل سيؤثر على الكرة الأرضية أيضًا؟ نقوم باختباره في الجزء التالي من الكود: 
+
+
+# This function has a variable with
+# name same as s.
+def f():
+    s = "Me too."
+    print(s)
+ 
+# Global scope
+s = "I love Geeksforgeeks"
+f()
+print(s)
+انتاج: 
+
+أنا أيضا.
+أنا أحب Geeksforgeeks.
+إذا تم تعريف متغير بنفس الاسم داخل نطاق الوظيفة أيضًا ، فسيتم طباعة القيمة المعطاة داخل الوظيفة فقط وليس القيمة العامة. 
+
+السؤال هو ، ماذا لو حاولنا تغيير قيمة متغير عام داخل الدالة. دعنا نرى ذلك باستخدام المثال أدناه.
+
+مثال: 
+
+
+# This function uses global variable s
+def f():
+    s += 'GFG'
+    print("Inside Function", s)
+ 
+# Global scope
+s = "I love Geeksforgeeks"
+f()
+انتاج |
+
+UnboundLocalError: تمت الإشارة إلى المتغير المحلي قبل التعيين
+لجعل البرنامج أعلاه يعمل ، نحتاج إلى استخدام الكلمة الأساسية "العالمية". دعونا نرى ما هي هذه الكلمة الرئيسية العالمية.
+
+الكلمات الرئيسية العالمية
+نحتاج فقط إلى استخدام الكلمة الأساسية العامة في وظيفة إذا أردنا القيام بالتخصيصات أو تغيير المتغير العام. العالمية ليست ضرورية للطباعة والوصول. بايثون "تفترض" أننا نريد متغيرًا محليًا بسبب التخصيص إلى s داخل f () ، لذا فإن العبارة الأولى تلقي برسالة الخطأ. أي متغير يتم تغييره أو إنشاؤه داخل دالة يكون محليًا إذا لم يتم الإعلان عنه كمتغير شامل. لإخبار Python ، أننا نريد استخدام المتغير الشامل ، يجب علينا استخدام الكلمة الأساسية "global" ، كما يتضح في المثال التالي: 
+
+مثال 1: استخدام الكلمات الأساسية العالمية
+
+
+# This function modifies the global variable 's'
+def f():
+    global s
+    s += ' GFG'
+    print(s)
+    s = "Look for Geeksforgeeks Python Section"
+    print(s)
+ 
+# Global Scope
+s = "Python is great!"
+f()
+print(s)
+انتاج |
+بايثون شيء عظيم! GFG
+ابحث عن قسم Geeksforgeeks Python
+ابحث عن قسم Geeksforgeeks Python
+الآن لا يوجد غموض. 
+
+مثال 2: استخدام المتغيرات العالمية والمحلية
+
+
+a = 1
+ 
+# Uses global because there is no local 'a'
+def f():
+    print('Inside f() : ', a)
+ 
+# Variable 'a' is redefined as a local
+def g():
+    a = 2
+    print('Inside g() : ', a)
+ 
+# Uses global keyword to modify global 'a'
+def h():
+    global a
+    a = 3
+    print('Inside h() : ', a)
+ 
+ 
+# Global scope
+print('global : ', a)
+f()
+print('global : ', a)
+g()
+print('global : ', a)
+h()
+print('global : ', a)
+انتاج |
+عالمي: 1
+داخل f (): 1
+عالمي: 1
+داخل ز (): 2
+عالمي: 1
+داخل h (): 3
+عالمي: 3
+
+
+ساهم شويتانشو روهاتجي في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.

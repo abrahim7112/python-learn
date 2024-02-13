@@ -1,0 +1,171 @@
+
+تقنيات التكرار في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 03 كانون الثاني (يناير) 2022
+تدعم Python تقنيات التكرار المختلفة من خلال وظائف معينة تحمل في ثناياه عوامل ، في حاويات متسلسلة مختلفة. هذه الأساليب مفيدة للغاية في المقام الأول في البرمجة التنافسية وأيضًا في العديد من المشاريع التي تتطلب تقنية محددة مع حلقات تحافظ على الهيكل العام للكود. تم توفير الكثير من الوقت ومساحة الذاكرة حيث لا توجد حاجة للإعلان عن المتغيرات الإضافية التي نعلن عنها في النهج التقليدي للحلقات.
+
+أين يتم استخدامها؟
+تعد تقنيات التكرار المختلفة مفيدة بشكل أساسي في الأماكن التي لا نحتاج فيها إلى معالجة هيكل وترتيب الحاويات الإجمالية ، بدلاً من طباعة العناصر لمثيل يستخدم مرة واحدة فقط ، ولا يحدث تغيير في المكان في الحاوية. يمكن أيضًا استخدام هذا في حالات لتوفير الوقت.
+
+تقنيات التكرار المختلفة باستخدام هياكل بيانات Python هي: 
+باستخدام enumerate ():   يتم استخدام enumerate () للتكرار خلال الحاويات التي تطبع رقم الفهرس جنبًا إلى جنب مع القيمة الموجودة في هذا الفهرس المحدد.
+
+# python code to demonstrate working of enumerate()
+ 
+for key, value in enumerate(['The', 'Big', 'Bang', 'Theory']):
+    print(key, value)
+انتاج:
+
+0 ال
+1 كبير
+2 بانج
+3 النظرية
+
+# python code to demonstrate working of enumerate()
+ 
+for key, value in enumerate(['Geeks', 'for', 'Geeks',
+                             'is', 'the', 'Best',
+                             'Coding', 'Platform']):
+    print(value, end=' ')
+انتاج:
+
+Geeks for Geeks هي أفضل منصة تشفير
+باستخدام zip ():  يتم استخدام zip () لدمج حاويتين متشابهتين (list-list أو dict -ict) لطباعة القيم بالتسلسل. الحلقة موجودة فقط حتى تنتهي الحاوية الأصغر. يمكن العثور على شرح مفصل لـ zip () والعدد () هنا .
+# python code to demonstrate working of zip()
+ 
+# initializing list
+questions = ['name', 'colour', 'shape']
+answers = ['apple', 'red', 'a circle']
+ 
+# using zip() to combine two containers
+# and print values
+for question, answer in zip(questions, answers):
+    print('What is your {0}?  I am {1}.'.format(question, answer))
+انتاج:
+
+ما اسمك؟ أنا تفاحة.
+ما هو لونك أنا أحمر.
+ما هو شكلك أنا دائرة.
+باستخدام iteritem ():  يتم استخدام iteritems () للتكرار خلال القاموس لطباعة زوج القيمة والمفتاح القاموس بالتتابع والذي يتم استخدامه قبل إصدار Python 3.
+استخدام العناصر (): تؤدي العناصر () مهمة مماثلة في القاموس مثل iteritems () ولكن لها عيوب معينة عند مقارنتها بالعناصر ().
+انها تستغرق وقتا طويلا جدا . إن تسميته بالقواميس الكبيرة يستغرق وقتًا طويلاً.
+يأخذ الكثير من الذاكرة . يأخذ أحيانًا ضعف الذاكرة عند استدعائه في القاموس.
+مثال 1:
+
+
+# python code to demonstrate working of items()
+ 
+d = {"geeks": "for", "only": "geeks"}
+ 
+# iteritems() is renamed to items() in python3
+# using items to print the dictionary key-value pair
+print("The key value pair using items is : ")
+for i, j in d.items():
+    print(i, j)
+انتاج:
+
+زوج القيمة الرئيسية الذي يستخدم العناصر التكرارية هو:
+المهوسون
+المهوسون فقط
+زوج القيمة الرئيسية الذي يستخدم العناصر هو:
+المهوسون
+المهوسون فقط
+المثال 2:
+
+
+# python code to demonstrate working of items()
+ 
+king = {'Akbar': 'The Great', 'Chandragupta': 'The Maurya',
+        'Modi': 'The Changer'}
+ 
+# using items to print the dictionary key-value pair
+for key, value in king.items():
+    print(key, value)
+انتاج:
+
+أكبر العظيم
+Chandragupta موريا
+مودي المغير
+باستخدام Sorted ():   Sorted () يستخدم لطباعة الحاوية مرتبة حسب الترتيب . لا يقوم بفرز الحاوية ولكنه يقوم فقط بطباعة الحاوية بترتيب فرز لمثيل واحد. يمكن دمج استخدام المجموعة () لإزالة التكرارات .
+مثال 1:
+
+
+# python code to demonstrate working of sorted()
+ 
+# initializing list
+lis = [1, 3, 5, 6, 2, 1, 3]
+ 
+# using sorted() to print the list in sorted order
+print("The list in sorted order is : ")
+for i in sorted(lis):
+    print(i, end=" ")
+ 
+print("\r")
+ 
+# using sorted() and set() to print the list in sorted order
+# use of set() removes duplicates.
+print("The list in sorted order (without duplicates) is : ")
+for i in sorted(set(lis)):
+    print(i, end=" ")
+انتاج:
+
+الترتيب المرتب حسب الترتيب هو:
+1 1 2 3 3 5 6
+القائمة بالترتيب الفرز (بدون تكرارات) هي:
+1 2 3 5 6
+المثال 2:
+
+
+# python code to demonstrate working of sorted()
+ 
+# initializing list
+basket = ['guave', 'orange', 'apple', 'pear',
+          'guava', 'banana', 'grape']
+ 
+# using sorted() and set() to print the list
+#  in sorted order
+for fruit in sorted(set(basket)):
+    print(fruit)
+انتاج:
+
+تفاح
+موز
+عنب
+جوافة
+الجواف
+البرتقالي
+كمثرى
+استخدام معكوس ():  مقلوب () يستخدم لطباعة قيم الحاوية بالترتيب المعكوس . لا يعكس أي تغييرات على القائمة الأصلية
+مثال 1:
+
+
+# python code to demonstrate working of reversed()
+ 
+# initializing list
+lis = [1, 3, 5, 6, 2, 1, 3]
+ 
+ 
+# using revered() to print the list in reversed order
+print("The list in reversed order is : ")
+for i in reversed(lis):
+    print(i, end=" ")
+انتاج:
+
+القائمة بترتيب معكوس هي:
+3 1 2 6 5 3 1
+المثال 2:
+
+
+# python code to demonstrate working of reversed()
+ 
+# using reversed() to print in reverse order
+for i in reversed(range(1, 10, 3)):
+    print(i)
+انتاج:
+
+7
+4
+1
+هذه التقنيات سريعة في الاستخدام وتقلل من جهد الترميز. من أجل ، بينما تحتاج الحلقات إلى تغيير هيكل الحاوية بالكامل.
+لا تتطلب تقنيات التكرار هذه أي تغييرات هيكلية في الحاوية. لديهم كلمات رئيسية تقدم الغرض الدقيق من الاستخدام. حيث أنه لا يمكن إجراء تنبؤات مسبقة أو تخمينات من أجل ، بينما لا يمكن فهم الغرض بسهولة في لمحة.
+تجعل تقنية التكرار الكود أكثر إيجازًا من استخدام for & while looping.

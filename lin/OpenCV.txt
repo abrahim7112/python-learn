@@ -1,0 +1,1817 @@
+
+برنامج OpenCV Python التعليمي
+مستوى الصعوبة: صعب
+آخر تحديث: ٢٨ مارس ٢٠٢١
+OpenCV عبارة عن مكتبة ضخمة مفتوحة المصدر لرؤية الكمبيوتر والتعلم الآلي ومعالجة الصور. يدعم OpenCV مجموعة متنوعة من لغات البرمجة مثل Python و C ++ و Java وما إلى ذلك. يمكنه معالجة الصور ومقاطع الفيديو لتحديد الكائنات أو الوجوه أو حتى الكتابة اليدوية للإنسان. عندما يتم دمجها مع مكتبات مختلفة ، مثلNumpy المكتبة المُحسَّنة للغاية للعمليات العددية ، فإن عدد الأسلحة يزداد في ترسانة أرسنال الخاصة بك ، أي أنه يمكن دمج العمليات التي يمكن للمرء القيام بها في Numpy مع OpenCV.
+
+سيساعدك هذا البرنامج التعليمي OpenCV على تعلم معالجة الصور من الأساسيات إلى التقدم ، مثل العمليات على الصور ومقاطع الفيديو باستخدام مجموعة ضخمة من برامج ومشاريع Opencv.
+OpenCV- تعليمي- بيثون
+
+قائمة المحتويات:
+
+ابدء
+العمل مع الصور
+ابدء
+معالجة الصورة
+كشف الميزات والوصف
+وظائف الرسم
+العمل مع مقاطع الفيديو
+ابدء
+معالجة الفيديو
+التطبيقات والمشاريع
+المقالات الأخيرة على OpenCV !!
+
+ 
+
+ابدء
+OpenCV - نظرة عامة
+مقدمة إلى OpenCV
+قم بتثبيت OpenCV for Python على نظام Windows
+قم بتثبيت OpenCV for Python على Linux
+قم بإعداد Opencv مع بيئة أناكوندا
+العمل مع الصور
+ابدء
+
+قراءة صورة في OpenCV باستخدام Python
+اعرض صورة في OpenCV باستخدام Python
+كتابة صورة في OpenCV باستخدام Python
+OpenCV | حفظ الصورة
+مسافات اللون
+العمليات الحسابية على الصور
+عمليات Bitwise على الصور الثنائية
+معالجة الصورة
+
+تغيير حجم الصورة
+تآكل الصورة
+تعتيم الصورة
+إنشاء حدود حول الصور
+تدرج الرمادي للصور
+التحجيم والتدوير والتغيير واكتشاف الحواف
+تآكل وتمدد الصور
+تحليل صورة باستخدام المدرج التكراري
+معادلة الرسوم البيانية
+عتبة بسيطة
+عتبة التكيف
+أوتسو عتبة
+تجزئة باستخدام العتبة
+تحويل صورة من مساحة لونية إلى أخرى
+تصفية اللون باستخدام OpenCV
+تقليل الضوضاء من الصور الملونة
+تصور الصورة في مساحات لونية مختلفة
+ابحث عن إحداثيات الكنتور
+التصفية الثنائية
+رسم الصورة باستخدام OpenCV
+عمليات تحويل الكثافة على الصور
+تسجيل الصور
+الخلفية الطرح
+طرح الخلفية في صورة باستخدام مفهوم المتوسط ​​الجاري
+استخراج المقدمة في صورة باستخدام خوارزمية Grabcut
+العمليات المورفولوجية في معالجة الصور (الافتتاح)
+العمليات المورفولوجية في معالجة الصور (الإغلاق)
+العمليات المورفولوجية في معالجة الصور (التدرج)
+تجزئة الصورة باستخدام العمليات الصرفية
+ترجمة الصور
+هرم الصورة
+كشف الميزات والوصف
+كشف الخط باستخدام طريقة Houghline
+كشف الدائرة
+كشف زاوية الصورة
+كشف الزاوية بطريقة شي توماسي
+كشف الزاوية مع كشف هاريس كورنر
+ابحث عن الدوائر والأشكال الناقصة في الصورة
+كشف مجال الوثيقة
+كشف الابتسامة
+وظائف الرسم
+
+ارسم خطا
+ارسم مقطع سهم
+ارسم قطع ناقص
+أرسم دائرة
+ارسم مستطيلاً
+ارسم سلسلة نصية
+البحث عن الخطوط ورسمها
+ارسم مثلثًا مع النقطه الوسطى
+العمل مع مقاطع الفيديو
+ابدء
+
+قم بتشغيل مقطع فيديو باستخدام OpenCV
+معالجة الفيديو
+
+إنشاء فيديو باستخدام صور متعددة
+استخراج الصور من الفيديو
+التطبيقات والمشاريع
+استخراج الإطارات باستخدام OpenCV
+عرض إحداثيات النقاط التي تم النقر عليها على الصورة باستخدام Python-OpenCV
+الكشف عن النقاط البيضاء والسوداء
+لوحة ألوان OpenCV BGR مع أشرطة تعقب
+ارسم شكلاً مستطيلاً واستخرج الأشياء
+عباءة غير مرئية باستخدام OpenCV
+خط أنابيب تجميع الوجه غير الخاضع للإشراف
+حفظ الفيديو المشغل من كاميرا الويب
+كشف الوجه باستخدام Python و OpenCV مع كاميرا الويب
+فتح نوافذ متعددة الألوان
+قم بتشغيل مقطع فيديو في الوضع العكسي
+مطابقة القالب باستخدام OpenCV في Python
+رسم صورة باستخدام OpenCV - Python
+كشف المركبة في إطار فيديو باستخدام Python - OpenCV
+عد عدد الوجوه باستخدام Python - OpenCV
+رسم كاميرا الويب الحية باستخدام OpenCV
+كشف والتعرف على لوحة ترخيص السيارة من مقطع فيديو في الوقت الفعلي
+ 
+<<<<<<<<<<<<<<<<<<<<<<
+مقدمة إلى OpenCV
+مستوى الصعوبة: سهل
+آخر تحديث: 09 سبتمبر 2019
+OpenCV هي واحدة من أكثر مكتبات رؤية الكمبيوتر شيوعًا. إذا كنت ترغب في بدء رحلتك في مجال رؤية الكمبيوتر ، فإن الفهم الشامل لمفاهيم OpenCV له أهمية قصوى.
+في هذه المقالة ، سأحاول تقديم المفاهيم الأساسية والأكثر أهمية لـ OpenCV بطريقة بديهية.
+ستغطي هذه المقالة الموضوعات التالية:
+
+قراءة صورة
+استخراج قيم RGB للبكسل
+استخراج منطقة الاهتمام (ROI)
+تغيير حجم الصورة
+تدوير الصورة
+رسم مستطيل
+عرض النص
+هذه هي الصورة الأصلية التي سنتعامل معها خلال هذه المقالة.
+
+الصورة الأصلية
+
+لنبدأ بالمهمة البسيطة المتمثلة في قراءة صورة باستخدام OpenCV.
+
+قراءة صورة
+
+
+# Importing the OpenCV library
+import cv2
+# Reading the image using imread() function
+image = cv2.imread('image.png')
+  
+# Extracting the height and width of an image
+h, w = image.shape[:2]
+# Displaying the height and width
+print("Height = {},  Width = {}".format(h, w))
+سنركز الآن على استخراج قيم RGB لكل بكسل فردي.
+ملاحظة - يقوم OpenCV بترتيب القنوات بترتيب BGR. لذا فإن القيمة 0 ستتوافق مع البكسل الأزرق وليس الأحمر.
+
+استخراج قيم RGB للبكسل
+
+
+# Extracting RGB values. 
+# Here we have randomly chosen a pixel
+# by passing in 100, 100 for height and width.
+(B, G, R) = image[100, 100]
+  
+# Displaying the pixel values
+print("R = {}, G = {}, B = {}".format(R, G, B))
+  
+# We can also pass the channel to extract 
+# the value for a specific channel
+B = image[100, 100, 0]
+print("B = {}".format(B))
+استخراج منطقة الاهتمام (ROI)
+
+
+# We will calculate the region of interest 
+# by slicing the pixels of the image
+roi = image[100 : 500, 200 : 700]
+منطقة الاهتمام
+
+تغيير حجم الصورة
+
+
+# resize() function takes 2 parameters, 
+# the image and the dimensions
+resize = cv2.resize(image, (800, 800))
+الصورة التي تم تغيير حجمها
+
+تكمن مشكلة هذا النهج في عدم الحفاظ على نسبة العرض إلى الارتفاع للصورة. لذلك نحن بحاجة إلى القيام ببعض الأعمال الإضافية من أجل الحفاظ على نسبة عرض إلى ارتفاع مناسبة.
+
+
+# Calculating the ratio
+ratio = 800 / w
+  
+# Creating a tuple containing width and height
+dim = (800, int(h * ratio))
+  
+# Resizing the image
+resize_aspect = cv2.resize(image, dim)
+تغيير الحجم مع نسبة العرض إلى الارتفاع المناسبة
+
+تدوير الصورة
+
+
+# Calculating the center of the image
+center = (w // 2, h // 2)
+  
+# Generating a rotation matrix
+matrix = cv2.getRotationMatrix2D(center, -45, 1.0) 
+  
+# Performing the affine transformation
+rotated = cv2.warpAffine(image, matrix, (w, h))
+الصورة التي تم تدويرها
+
+هناك الكثير من الخطوات المتضمنة في تدوير الصورة. لذا ، اسمحوا لي أن أشرح كل منهم بالتفصيل.
+
+الوظائف الرئيسية 2 المستخدمة هنا هي -
+
+getRotationMatrix2D ()
+الاعوجاج ()
+getRotationMatrix2D ()
+يستغرق 3 وسيطات -
+
+المركز - إحداثيات المركز للصورة
+Angle - الزاوية (بالدرجات) التي يجب تدوير الصورة بها
+المقياس - عامل التحجيم
+ 
+تقوم بإرجاع مصفوفة 2 * 3 تتكون من قيم مشتقة من alpha و beta
+alpha = scale * cos (زاوية)
+beta = scale * sine (زاوية)
+
+مصفوفة الدوران
+
+الاعوجاج ()
+
+تقوم وظيفة warpAffine بتحويل الصورة المصدر باستخدام مصفوفة التدوير:
+
+dst (x، y) = src (M11X + M12Y + M13، M21X + M22Y + M23)
+هنا M هي مصفوفة الدوران الموضحة أعلاه.
+يقوم بحساب إحداثيات x و y الجديدة للصورة ويقوم بتحويلها.
+
+رسم مستطيل
+هي عملية موضعية.
+
+
+# We are copying the original image, 
+# as it is an in-place operation.
+output = image.copy()
+  
+# Using the rectangle() function to create a rectangle.
+rectangle = cv2.rectangle(output, (1500, 900), 
+                          (600, 400), (255, 0, 0), 2)
+مستطيل
+
+يأخذ في 5 حجج -
+
+صورة
+إحداثيات الزاوية العلوية اليسرى
+إحداثيات الزاوية اليمنى السفلية
+اللون (بتنسيق BGR)
+عرض الخط
+ 
+عرض النص
+إنها أيضًا عملية موضعية
+
+
+# Copying the original image
+output = image.copy()
+  
+# Adding the text using putText() function
+text = cv2.putText(output, 'OpenCV Demo', (500, 550), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 0, 0), 2)
+نص
+
+يأخذ في 7 حجج -
+
+صورة
+النص المراد عرضه
+إحداثيات الزاوية اليسرى السفلية ، من حيث يجب أن يبدأ النص
+الخط
+حجم الخط
+اللون (تنسيق BGR)
+عرض الخط
+
+<<<<<<<<<<<<<<<<<<<<<<
+كيفية تثبيت OpenCV لـ Python على نظام Windows؟
+مستوى الصعوبة: سهل
+آخر تحديث: 05 أكتوبر 2021
+المتطلبات المسبقة: مقدمة عن لغة Python
+ 
+، تعد OpenCV مكتبة ضخمة مفتوحة المصدر لرؤية الكمبيوتر والتعلم الآلي ومعالجة الصور ، وهي تلعب الآن دورًا رئيسيًا في التشغيل في الوقت الفعلي وهو أمر مهم للغاية في أنظمة اليوم. باستخدامه ، يمكن للمرء معالجة الصور ومقاطع الفيديو لتحديد الأشياء أو الوجوه أو حتى الكتابة اليدوية للإنسان. عندما تتكامل مع مكتبات مختلفة ، مثل Numpuy ، تكون Python قادرة على معالجة بنية مصفوفة OpenCV للتحليل. لتحديد أنماط الصور وميزاتها المختلفة ، نستخدم مساحة المتجه ونجري عمليات حسابية على هذه الميزات.
+
+لتثبيت OpenCV ، يجب تثبيت Python و PIP مسبقًا على نظامهم. للتحقق مما إذا كان نظامك يحتوي بالفعل على Python ، اتبع الإرشادات التالية:
+
+افتح سطر الأوامر (ابحث عن cmd في مربع الحوار Run ( + R ).
+الآن قم بتشغيل الأمر التالي:
+
+بيثون - الإصدار
+إذا تم تثبيت Python بالفعل ، فسيتم إنشاء رسالة مع توفر إصدار Python.
+python-version-check-windows
+
+إذا لم يكن Python موجودًا ، فانتقل إلى كيفية تثبيت Python على Windows؟ واتبع التعليمات المقدمة.
+ 
+PIP هو نظام إدارة حزم يستخدم لتثبيت وإدارة حزم البرامج / المكتبات المكتوبة بلغة Python. يتم تخزين هذه الملفات في "مستودع على الإنترنت" كبير يسمى Python Package Index (PyPI).
+للتحقق مما إذا كان PIP مثبتًا بالفعل على نظامك ، ما عليك سوى الانتقال إلى سطر الأوامر وتنفيذ الأمر التالي:
+
+نقطة-V
+التحقق من النقطة
+
+إذا لم يكن PIP موجودًا ، فانتقل إلى كيفية تثبيت PIP على Windows؟ واتبع التعليمات المقدمة.
+
+تنزيل وتثبيت OpenCV:
+يمكن تنزيل OpenCV وتثبيته مباشرة باستخدام pip (مدير الحزم). لتثبيت OpenCV ، ما عليك سوى الانتقال إلى سطر الأوامر واكتب الأمر التالي:
+
+نقطة تثبيت opencv-python
+بداية من التثبيت:
+
+اكتب الأمر في Terminal وتابع:
+ابدء
+جمع المعلومات وتنزيل البيانات:
+تحميل البيانات ل OpenCV
+تثبيت الحزم:
+تثبيت-الحزم- OpenCV
+التثبيت النهائي:
+التشطيب - التثبيت - OpenCV
+للتحقق مما إذا كان OpenCV مثبتًا بشكل صحيح ، ما عليك سوى تشغيل الأوامر التالية لإجراء فحص الإصدار:
+
+الثعبان
+>>> استيراد السيرة الذاتية 2.
+>>> طباعة (السيرة الذاتية 2.__ نسخة _)
+python --version
+pip -V
+pip install opencv-python
+
+<<<<<<<<<<<<<<<<<<<<<<
+قراءة صورة في OpenCV باستخدام Python
+مستوى الصعوبة: أساسي
+آخر تحديث: 15 ديسمبر 2020
+المتطلب السابق: أساسيات OpenCV
+
+في هذه المقالة ، سنحاول فتح صورة باستخدام OpenCV (Open Source Computer Vision). لاستخدام مكتبة OpenCV في لغة python ، نحتاج إلى تثبيت هذه المكتبات كشرط أساسي:
+
+مكتبة Numpy (ضرورية ، لأن OpenCV يستخدمها في الخلفية).
+OpenCV بيثون
+ 
+لتثبيت هذه المكتبات ، نحتاج إلى تشغيل أوامر pip هذه في cmd:
+
+نقطة تثبيت opencv-python
+نقطة تثبيت numpy
+نقطة تثبيت matplotlib
+ لقراءة الصور تستخدم طريقة cv2.imread (). تقوم هذه الطريقة بتحميل صورة من الملف المحدد. إذا تعذر قراءة الصورة (بسبب فقدان ملف أو أذونات غير مناسبة أو تنسيق غير مدعوم أو غير صالح) ، فإن هذه الطريقة تُرجع مصفوفة فارغة.
+
+بناء الجملة: cv2.imread (مسار ، علم)
+
+المعلمات:
+المسار: سلسلة تمثل مسار الصورة المراد قراءتها.
+علم: يحدد الطريقة التي يجب أن تقرأ بها الصورة. القيمة الافتراضية هي cv2.IMREAD_COLOR
+
+إرجاع القيمة: تقوم هذه الطريقة بإرجاع صورة تم تحميلها من الملف المحدد.
+
+ملاحظة: يجب أن تكون الصورة في دليل العمل أو يجب إعطاء مسار كامل للصورة.
+
+يتم وصف جميع أنواع الأعلام الثلاثة أدناه:
+
+cv2.IMREAD_COLOR: يحدد لتحميل صورة ملونة. سيتم إهمال أي شفافية للصورة. هذا هو العلم الافتراضي. بدلاً من ذلك ، يمكننا تمرير القيمة الصحيحة 1 لهذه العلامة.
+cv2.IMREAD_GRAYSCALE: يحدد لتحميل صورة في وضع التدرج الرمادي. بدلاً من ذلك ، يمكننا تمرير قيمة عدد صحيح 0 لهذه العلامة.
+cv2.IMREAD_UNCHANGED: يحدد لتحميل صورة على هذا النحو بما في ذلك قناة ألفا. بدلاً من ذلك ، يمكننا تمرير قيمة عدد صحيح -1 لهذه العلامة.
+
+فيما يلي الأكواد تطبيقات لقراءة الصور وعرض الصور على الشاشة باستخدام وظائف مكتبات OpenCV و matplotlib.
+ 
+المثال رقم 1 (باستخدام OpenCV): 
+
+الصورة المستخدمة:
+
+
+
+# Python code to read image
+import cv2
+ 
+# To read image from disk, we use
+# cv2.imread function, in below method,
+img = cv2.imread("geeksforgeeks.png", cv2.IMREAD_COLOR)
+ 
+# Creating GUI window to display an image on screen
+# first Parameter is windows title (should be in string format)
+# Second Parameter is image array
+cv2.imshow("Cute Kitens", img)
+ 
+# To hold the window on screen, we use cv2.waitKey method
+# Once it detected the close input, it will release the control
+# To the next line
+# First Parameter is for holding screen for specified milliseconds
+# It should be positive integer. If 0 pass an parameter, then it will
+# hold the screen until user close it.
+cv2.waitKey(0)
+ 
+# It is for removing/deleting created GUI window from screen
+# and memory
+cv2.destroyAllWindows()
+انتاج:
+
+
+
+المثال الثاني: الفتح في وضع grascale
+
+
+# Python program to explain cv2.imread() method
+ 
+# importing cv2
+import cv2
+ 
+# path
+path = r'geeksforgeeks.png'
+ 
+# Using cv2.imread() method
+# Using 0 to read image in grayscale mode
+img = cv2.imread(path, 0)
+ 
+# Displaying the image
+cv2.imshow('image', img)
+انتاج : 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+
+آخر تحديث: 26 أغسطس 2019
+تهدف هذه المقالة إلى معرفة كيفية حفظ صورة من موقع إلى أي موقع آخر مرغوب فيه على نظامك في CPP باستخدام OpenCv. باستخدام OpenCV ، يمكننا إنشاء صورة فارغة بأي لون يرغب فيه المرء.
+
+لذا ، دعونا نتعمق فيه ونفهم المفهوم بالشرح الكامل.
+
+الكود: كود C ++ لحفظ صورة في أي مكان في OpenCV.
+
+// c++ code explaining how to
+// save an image to a defined
+// location in OpenCV
+  
+// loading library files
+#include <highlevelmonitorconfigurationapi.h>
+#include <opencv2\highgui\highgui.hpp>
+#include <opencv2\opencv.hpp>
+  
+using namespace cv;
+using namespace std;
+  
+int main(int argc, char** argv)
+{
+  
+    // Reading the image file from a given location in system
+    Mat img = imread("..path\\abcd.jpg");
+  
+    // if there is no image
+    // or in case of error
+    if (img.empty()) {
+        cout << "Can not open or image is not present" << endl;
+  
+        // wait for any key to be pressed
+        cin.get();
+        return -1;
+    }
+  
+    // You can make any changes
+    // like blurring, transformation
+  
+    // writing the image to a defined location as JPEG
+    bool check = imwrite("..path\\MyImage.jpg", img);
+  
+    // if the image is not saved
+    if (check == false) {
+        cout << "Mission - Saving the image, FAILED" << endl;
+  
+        // wait for any key to be pressed
+        cin.get();
+        return -1;
+    }
+  
+    cout << "Successfully saved the image. " << endl;
+  
+    // Naming the window
+    String geek_window = "MY SAVED IMAGE";
+  
+    // Creating a window
+    namedWindow(geek_window);
+  
+    // Showing the image in the defined window
+    imshow(geek_window, img);
+  
+    // waiting for any key to be pressed
+    waitKey(0);
+  
+    // destroying the creating window
+    destroyWindow(geek_window);
+  
+    return 0;
+}
+الإدخال:
+
+الإخراج:
+
+
+تفسير :
+
+// Reading the image file from a given location in system
+Mat img = imread("..path\\abcd.jpg");
+  
+// if there is no image
+// or in case of error
+if (img.empty()) {
+    cout << "Can not open or image is not present" << endl;
+  
+    // wait for any key to be pressed
+    cin.get();
+    return -1;
+}
+يقرأ هذا الجزء من الكود الصورة من المسار الذي أعطيناه لها. كما أنه يعتني بأي خطأ (في حالة حدوثه). إذا لم تكن هناك صورة موجودة في هذا المسار ، فستظهر رسالة "لا يمكن الفتح أو الصورة غير موجودة" وعند الضغط على أي مفتاح ، ستخرج النافذة.
+
+
+// writing the image to a defined location as JPEG
+bool check = imwrite("..path\\MyImage.jpg", img);
+  
+// if the image is not saved
+if (check == false) {
+    cout << "Mission - Saving the image, FAILED" << endl;
+  
+    // wait for any key to be pressed
+    cin.get();
+    return -1;
+}
+  
+cout << "Successfully saved the image. " << endl;
+يقوم هذا الجزء من الكود بكتابة الصورة إلى المسار المحدد وإذا لم ينجح ذلك ، فسيؤدي ذلك إلى إنشاء رسالة "المهمة - حفظ الصورة ، فشل" وعند الضغط على أي مفتاح ، ستخرج النافذة. وسيقوم باقي الكود بإنشاء النافذة وعرض الصورة فيها. سيستمر في عرض الصورة في النافذة حتى يتم الضغط على المفتاح. أخيرًا ، سيتم تدمير النافذة.
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+
+مستوى الصعوبة: سهل
+آخر تحديث: 13 ديسمبر 2021
+يمكن تطبيق العمليات الحسابية مثل عمليات الجمع والطرح وعمليات Bitwise (AND ، OR ، NOT ، XOR) على صور الإدخال. يمكن أن تكون هذه العمليات مفيدة في تحسين خصائص الصور المدخلة. تعتبر المعادلات الحسابية للصورة مهمة لتحليل خصائص الصورة المدخلة. يمكن استخدام الصور التي تم تشغيلها كصورة إدخال محسّنة ، ويمكن تطبيق العديد من العمليات الأخرى لتوضيح الصورة أو تحديدها أو توسيعها وما إلى ذلك. 
+ 
+
+إضافة الصورة:
+يمكننا إضافة صورتين باستخدام الوظيفة cv2.add () . يؤدي هذا إلى إضافة وحدات بكسل للصورة في الصورتين مباشرةً. 
+ 
+
+بناء الجملة: cv2.add (img1، img2)
+لكن إضافة وحدات البكسل ليست بالموقف المثالي. لذلك ، نستخدم cv2.addweighted (). تذكر ، يجب أن تكون كلتا الصورتين متساويتين في الحجم والعمق. 
+ 
+
+بناء الجملة : cv2.addWeighted (img1، wt1، img2، wt2، gammaValue)
+المعلمات : 
+img1 : مصفوفة صورة الإدخال الأولى (قناة واحدة أو 8 بت أو نقطة عائمة) 
+wt1 : وزن عناصر صورة الإدخال الأولى التي سيتم تطبيقها على الصورة النهائية 
+img2 : مصفوفة صورة الإدخال الثانية (قناة واحدة أو 8 بت أو نقطة عائمة) 
+wt2 : وزن عناصر صورة الإدخال الثانية التي سيتم تطبيقها على غاما الصورة النهائية 
+القيمة : قياس الضوء
+ 
+
+الصور المستخدمة
+كإدخال: صورة الإدخال 1: 
+
+
+
+صورة الإدخال 2: 
+
+
+
+يوجد أدناه الرمز: 
+ 
+
+# Python program to illustrate
+# arithmetic operation of
+# addition of two images
+   
+# organizing imports
+import cv2
+import numpy as np
+   
+# path to input images are specified and 
+# images are loaded with imread command
+image1 = cv2.imread('input1.jpg')
+image2 = cv2.imread('input2.jpg')
+ 
+# cv2.addWeighted is applied over the
+# image inputs with applied parameters
+weightedSum = cv2.addWeighted(image1, 0.5, image2, 0.4, 0)
+ 
+# the window showing output image
+# with the weighted sum
+cv2.imshow('Weighted Image', weightedSum)
+ 
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+انتاج: 
+
+
+
+ 
+
+طرح الصورة:
+تمامًا مثل الجمع ، يمكننا طرح قيم البكسل في صورتين ودمجها بمساعدة cv2.subtract (). يجب أن تكون الصور متساوية في الحجم والعمق. 
+ 
+
+بناء الجملة: cv2.subtract (src1، src2)
+الصور المستخدمة 
+كإدخال: صورة الإدخال 1: 
+
+
+
+صورة الإدخال 2: 
+
+
+
+يوجد أدناه الرمز: 
+
+
+# Python program to illustrate
+# arithmetic operation of
+# subtraction of pixels of two images
+ 
+# organizing imports
+import cv2
+import numpy as np
+   
+# path to input images are specified and 
+# images are loaded with imread command
+image1 = cv2.imread('input1.jpg')
+image2 = cv2.imread('input2.jpg')
+ 
+# cv2.subtract is applied over the
+# image inputs with applied parameters
+sub = cv2.subtract(image1, image2)
+ 
+# the window showing output image
+# with the subtracted image
+cv2.imshow('Subtracted Image', sub)
+ 
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+انتاج: 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+العمليات الحسابية على الصور باستخدام OpenCV | المجموعة 2 (عمليات Bitwise على الصور الثنائية)
+مستوى الصعوبة: سهل
+آخر تحديث: ١٢ أكتوبر ٢٠٢١
+المتطلب السابق: العمليات الحسابية على الصور | تُستخدم عمليات Set-1
+Bitwise في معالجة الصورة وتستخدم لاستخراج الأجزاء الأساسية في الصورة. في هذه المقالة ، عمليات Bitwise المستخدمة هي: 
+ 
+
+و
+أو
+XOR
+ليس
+أيضًا ، تساعد عمليات Bitwise في إخفاء الصورة. يمكن تمكين إنشاء الصور بمساعدة هذه العمليات. يمكن أن تكون هذه العمليات مفيدة في تحسين خصائص الصور المدخلة. 
+ملاحظة: يجب تطبيق عمليات Bitwise على صور الإدخال ذات الأبعاد نفسها.
+صورة الإدخال 1: 
+ 
+
+
+
+الصورة المدخلة 2: 
+ 
+
+
+
+ 
+
+عملية Bitwise AND على الصورة:
+اقتران البتات لعناصر صفيف الإدخال. 
+ 
+
+بناء الجملة: cv2.bitwise_and (مصدر 1 ، مصدر 2 ، وجهة ، قناع)
+المعلمات:  
+source1: مصفوفة صورة الإدخال الأولى (قناة مفردة ، 8 بت أو نقطة عائمة) 
+المصدر 2: مصفوفة صورة الإدخال الثانية (قناة واحدة ، 8 بت أو النقطة العائمة) 
+dest: مصفوفة الإخراج (على غرار أبعاد ونوع مصفوفة صورة الإدخال) 
+القناع: قناع العملية ، الإدخال / الإخراج قناع قناة واحدة 8 بت 
+ 
+
+ 
+
+# Python program to illustrate
+# arithmetic operation of
+# bitwise AND of two images
+    
+# organizing imports
+import cv2
+import numpy as np
+    
+# path to input images are specified and  
+# images are loaded with imread command 
+img1 = cv2.imread('input1.png') 
+img2 = cv2.imread('input2.png')
+ 
+# cv2.bitwise_and is applied over the
+# image inputs with applied parameters
+dest_and = cv2.bitwise_and(img2, img1, mask = None)
+ 
+# the window showing output image
+# with the Bitwise AND operation
+# on the input images
+cv2.imshow('Bitwise And', dest_and)
+  
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+انتاج: 
+ 
+
+
+
+ 
+
+عملية "أو" على مستوى البت على الصورة:
+فصل من الحكمة عن عناصر مصفوفة الإدخال. 
+ 
+
+بناء الجملة: cv2.bitwise_or (مصدر 1 ، مصدر 2 ، وجهة ، قناع)
+المعلمات:  
+source1: مصفوفة صورة الإدخال الأولى (قناة مفردة ، 8 بت أو نقطة عائمة) 
+المصدر 2: مصفوفة صورة الإدخال الثانية (قناة واحدة ، 8 بت أو النقطة العائمة) 
+dest: مصفوفة الإخراج (على غرار أبعاد ونوع مصفوفة صورة الإدخال) 
+القناع: قناع العملية ، الإدخال / الإخراج قناع قناة واحدة 8 بت 
+ 
+
+ 
+
+# Python program to illustrate
+# arithmetic operation of
+# bitwise OR of two images
+    
+# organizing imports
+import cv2
+import numpy as np
+    
+# path to input images are specified and  
+# images are loaded with imread command 
+img1 = cv2.imread('input1.png') 
+img2 = cv2.imread('input2.png')
+ 
+# cv2.bitwise_or is applied over the
+# image inputs with applied parameters
+dest_or = cv2.bitwise_or(img2, img1, mask = None)
+ 
+# the window showing output image
+# with the Bitwise OR operation
+# on the input images
+cv2.imshow('Bitwise OR', dest_or)
+  
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+انتاج: 
+ 
+
+
+
+ 
+
+عملية Bitwise XOR على الصورة:
+عملية حصرية للبت أو على عناصر مصفوفة الإدخال. 
+ 
+
+بناء الجملة: cv2.bitwise_xor (مصدر 1 ، مصدر 2 ، وجهة ، قناع)
+المعلمات:  
+source1: مصفوفة صورة الإدخال الأولى (قناة مفردة ، 8 بت أو نقطة عائمة) 
+المصدر 2: مصفوفة صورة الإدخال الثانية (قناة واحدة ، 8 بت أو النقطة العائمة) 
+dest: مصفوفة الإخراج (على غرار أبعاد ونوع مصفوفة صورة الإدخال) 
+القناع: قناع العملية ، الإدخال / الإخراج قناع قناة واحدة 8 بت 
+ 
+
+ 
+
+# Python program to illustrate
+# arithmetic operation of
+# bitwise XOR of two images
+    
+# organizing imports
+import cv2
+import numpy as np
+    
+# path to input images are specified and  
+# images are loaded with imread command 
+img1 = cv2.imread('input1.png') 
+img2 = cv2.imread('input2.png')
+ 
+# cv2.bitwise_xor is applied over the
+# image inputs with applied parameters
+dest_xor = cv2.bitwise_xor(img1, img2, mask = None)
+ 
+# the window showing output image
+# with the Bitwise XOR operation
+# on the input images
+cv2.imshow('Bitwise XOR', dest_xor)
+  
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+انتاج: 
+ 
+
+
+
+ 
+
+عملية Bitwise NOT على الصورة:
+عكس عناصر مجموعة الإدخال. 
+ 
+
+بناء الجملة: cv2.bitwise_not (مصدر ، وجهة ، قناع)
+المعلمات: 
+المصدر: مصفوفة صورة الإدخال (قناة مفردة ، 8 بت أو نقطة عائمة) 
+dest: مصفوفة الإخراج (على غرار أبعاد ونوع مصفوفة صورة الإدخال) 
+قناع: قناع التشغيل ، قناع القناة الواحدة الإدخال / الإخراج 8 بت 
+ 
+
+ 
+
+# Python program to illustrate
+# arithmetic operation of
+# bitwise NOT on input image
+    
+# organizing imports
+import cv2
+import numpy as np
+    
+# path to input images are specified and  
+# images are loaded with imread command 
+img1 = cv2.imread('input1.png') 
+img2 = cv2.imread('input2.png')
+ 
+# cv2.bitwise_not is applied over the
+# image input with applied parameters
+dest_not1 = cv2.bitwise_not(img1, mask = None)
+dest_not2 = cv2.bitwise_not(img2, mask = None)
+ 
+# the windows showing output image
+# with the Bitwise NOT operation
+# on the 1st and 2nd input image
+cv2.imshow('Bitwise NOT on image 1', dest_not1)
+cv2.imshow('Bitwise NOT on image 2', dest_not2)
+  
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+الإخراج:  
+Bitwise NOT على الصورة 1 
+ 
+
+
+
+Bitwise NOT على الصورة 2 
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+تغيير حجم الصورة باستخدام OpenCV | بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 15 مارس 2021
+يشير تغيير حجم الصورة إلى تحجيم الصور. يعد القياس مفيدًا في العديد من تطبيقات معالجة الصور بالإضافة إلى تطبيقات التعلم الآلي. إنه يساعد في تقليل عدد وحدات البكسل من الصورة وله العديد من المزايا ، على سبيل المثال ، يمكنه تقليل وقت تدريب الشبكة العصبية حيث أن عدد وحدات البكسل في الصورة أكثر هو عدد عقد الإدخال التي تؤدي بدورها إلى زيادة تعقيد النموذج.
+كما أنه يساعد في تكبير الصور. نحتاج في كثير من الأحيان إلى تغيير حجم الصورة ، أي إما تقليصها أو توسيع نطاقها لتلبية متطلبات الحجم. يوفر لنا OpenCV العديد من طرق الاستيفاء لتغيير حجم الصورة.
+ 
+
+اختيار طريقة الإقحام لتغيير الحجم - 
+
+cv2.INTER_AREA: يستخدم هذا عندما نحتاج إلى تقليص الصورة.
+cv2.INTER_CUBIC: هذا بطيء ولكنه أكثر كفاءة.
+cv2.INTER_LINEAR: يستخدم هذا بشكل أساسي عندما يكون التكبير / التصغير مطلوبًا. هذا هو أسلوب الاستيفاء الافتراضي في OpenCV.
+يوجد أدناه رمز تغيير الحجم. 
+ 
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+ 
+image = cv2.imread("C://gfg//tomatoes.jpg", 1)
+# Loading the image
+ 
+half = cv2.resize(image, (0, 0), fx = 0.1, fy = 0.1)
+bigger = cv2.resize(image, (1050, 1610))
+ 
+stretch_near = cv2.resize(image, (780, 540),
+               interpolation = cv2.INTER_NEAREST)
+ 
+ 
+Titles =["Original", "Half", "Bigger", "Interpolation Nearest"]
+images =[image, half, bigger, stretch_near]
+count = 4
+ 
+for i in range(count):
+    plt.subplot(2, 2, i + 1)
+    plt.title(Titles[i])
+    plt.imshow(images[i])
+ 
+plt.show()
+انتاج: 
+ 
+
+
+
+ملحوظة: شيء واحد يجب مراعاته أثناء استخدام وظيفة cv2.resize () هو أن المجموعة التي تم تمريرها لتحديد حجم الصورة الجديدة ((1050 ، 1610) في هذه الحالة) تتبع الترتيب (العرض ، الارتفاع) بخلاف ما يلي متوقع (ارتفاع ، عرض).
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+معالجة الصور في Python (القياس ، والتدوير ، والتغيير ، واكتشاف الحواف)
+مستوى الصعوبة: أساسي
+تاريخ التحديث الأخير: 17 سبتمبر 2018
+إن التقاط الصور هو مجرد نقرة ، فلماذا يجب أن يكون اللعب بها أكثر من بضعة أسطر من التعليمات البرمجية. لا يبدو الحال مع الثعبان. هناك عدد غير قليل من المكتبات الجيدة المتاحة في Python لمعالجة الصور مثل open-cv ، و Pillow إلخ. في هذه المقالة سنستخدم Open CV ، وهي مكتبة مفتوحة المصدر لرؤية الكمبيوتر. تتوفر واجهات C ++ و python و java. إنه مُحسَّن للغاية (مكتوب بلغة C / C ++) للتطبيقات في الوقت الفعلي في مجال رؤية الكمبيوتر.
+
+لنبدأ بواحد بسيط مثل تحجيم الصورة.
+
+تحجيم صورة : -
+
+عملية التحجيم تزيد / تصغر حجم الصورة.
+
+import cv2
+import numpy as np
+  
+FILE_NAME = 'volleyball.jpg'
+try:
+    # Read image from disk.
+    img = cv2.imread(FILE_NAME)
+  
+    # Get number of pixel horizontally and vertically.
+    (height, width) = img.shape[:2]
+  
+    # Specify the size of image along with interploation methods.
+    # cv2.INTER_AREA is used for shrinking, whereas cv2.INTER_CUBIC
+    # is used for zooming.
+    res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)
+  
+    # Write image back to disk.
+    cv2.imwrite('result.jpg', res)
+  
+except IOError:
+    print ('Error while reading files !!!')
+انتاج:
+
+
+تدوير الصورة: -
+يمكن تدوير الصور إلى أي درجة في اتجاه عقارب الساعة أو غير ذلك. نحتاج فقط إلى تحديد نقطة دوران قائمة مصفوفة التناوب ودرجة الدوران وعامل التحجيم.
+
+import cv2
+import numpy as np
+  
+FILE_NAME = 'volleyball.jpg'
+try:
+    # Read image from the disk.
+    img = cv2.imread(FILE_NAME)
+  
+    # Shape of image in terms of pixels.
+    (rows, cols) = img.shape[:2]
+  
+    # getRotationMatrix2D creates a matrix needed for transformation.
+    # We want matrix for rotation w.r.t center to 45 degree without scaling.
+    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)
+    res = cv2.warpAffine(img, M, (cols, rows))
+  
+    # Write image back to disk.
+    cv2.imwrite('result.jpg', res)
+except IOError:
+    print ('Error while reading files !!!')
+انتاج:
+
+
+ترجمة صورة: -
+ترجمة صورة تعني نقلها ضمن إطار مرجعي معين.
+
+import cv2
+import numpy as np
+  
+FILE_NAME = 'volleyball.jpg'
+# Create translation matrix.
+# If the shift is (x, y) then matrix would be
+# M = [1 0 x]
+#     [0 1 y]
+# Let's shift by (100, 50).
+M = np.float32([[1, 0, 100], [0, 1, 50]])
+  
+try:
+  
+    # Read image from disk.
+    img = cv2.imread(FILE_NAME)
+    (rows, cols) = img.shape[:2]
+  
+    # warpAffine does appropriate shifting given the
+    # translation matrix.
+    res = cv2.warpAffine(img, M, (cols, rows))
+  
+    # Write image back to disk.
+    cv2.imwrite('result.jpg', res)
+  
+except IOError:
+    print ('Error while reading files !!!')
+انتاج:
+
+
+اكتشاف الحواف في الصورة: -
+تتضمن عملية اكتشاف الصورة اكتشاف الحواف الحادة في الصورة. يعد اكتشاف الحافة هذا ضروريًا في سياق التعرف على الصور أو توطين الكائن / اكتشافه . هناك العديد من الخوارزميات لاكتشاف الحواف نظرًا لإمكانية تطبيقها على نطاق واسع. سنستخدم إحدى هذه الخوارزميات المعروفة باسم Canny Edge Detection .
+
+import cv2
+import numpy as np
+  
+FILE_NAME = 'volleyball.jpg'
+try:
+    # Read image from disk.
+    img = cv2.imread(FILE_NAME)
+  
+    # Canny edge detection.
+    edges = cv2.Canny(img, 100, 200)
+  
+    # Write image back to disk.
+    cv2.imwrite('result.jpg', edges)
+except IOError:
+    print ('Error while reading files !!!')
+انتاج:
+
+
+يرجى الرجوع إلى جيثب لمزيد من التفاصيل.
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+بايثون | تشويش وضوح الصورة باستخدام OpenCV
+مستوى الصعوبة: متوسط
+تاريخ التحديث الأخير: 17 أبريل 2019
+يشير عدم وضوح الصورة إلى جعل الصورة أقل وضوحًا أو تمييزًا. يتم ذلك بمساعدة العديد من نوى مرشح التمرير المنخفض.
+
+مزايا التعتيم:
+
+يساعد في إزالة الضوضاء. نظرًا لأن الضوضاء تعتبر إشارة مرور عالية ، لذلك من خلال تطبيق نواة مرشح التمرير المنخفض نقوم بتقييد الضوضاء.
+يساعد في تنعيم الصورة.
+تتم إزالة الحواف منخفضة الكثافة.
+يساعد في إخفاء التفاصيل عند الضرورة. على سبيل المثال ، في كثير من الحالات ، تريد الشرطة عمداً إخفاء وجه الضحية ، وفي مثل هذه الحالات يكون التعتيم مطلوبًا.
+أنواع التعتيم المهمة:
+
+تمويه غاوسي: تمويه غاوسي هو نتيجة تمويه الصورة بوظيفة غاوسية. إنه تأثير مستخدَم على نطاق واسع في برامج الرسومات ، وعادةً ما يعمل على تقليل ضوضاء الصورة وتقليل التفاصيل. يتم استخدامه أيضًا كمرحلة معالجة مسبقة قبل تطبيق نماذج التعلم الآلي أو التعلم العميق.
+مثال على نواة غاوسية (3 × 3)
+  1/16 \ رباعي \ start {bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \\ \ end {bmatrix}  
+Median Blur: إن Median Filter عبارة عن تقنية تصفية رقمية غير خطية ، غالبًا ما تستخدم لإزالة الضوضاء من صورة أو إشارة. يستخدم الترشيح المتوسط ​​على نطاق واسع في معالجة الصور الرقمية لأنه ، في ظل ظروف معينة ، يحافظ على الحواف أثناء إزالة الضوضاء. إنها واحدة من أفضل الخوارزميات لإزالة ضوضاء الملح والفلفل.
+تمويه ثنائي: المرشح الثنائي هو مرشح تنعيم غير خطي ، يحافظ على الحواف ، ويقلل التشويش للصور. يستبدل كثافة كل بكسل بمتوسط ​​مرجح لقيم الكثافة من وحدات البكسل القريبة. يمكن أن يعتمد هذا الوزن على توزيع غاوسي. وبالتالي ، يتم الحفاظ على الحواف الحادة مع التخلص من الحواف الضعيفة.
+يوجد أدناه كود Python:
+
+# importing libraries
+import cv2
+import numpy as np
+  
+image = cv2.imread('C://Geeksforgeeks//image_processing//fruits.jpg')
+  
+cv2.imshow('Original Image', image)
+cv2.waitKey(0)
+  
+# Gaussian Blur
+Gaussian = cv2.GaussianBlur(image, (7, 7), 0)
+cv2.imshow('Gaussian Blurring', Gaussian)
+cv2.waitKey(0)
+  
+# Median Blur
+median = cv2.medianBlur(image, 5)
+cv2.imshow('Median Blurring', median)
+cv2.waitKey(0)
+  
+  
+# Bilateral Blur
+bilateral = cv2.bilateralFilter(image, 9, 75, 75)
+cv2.imshow('Bilateral Blurring', bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+انتاج:
+<<<<<<<<<<<<<<<<<<<<<<
+
+مستوى الصعوبة: سهل
+آخر تحديث: 25 حزيران (يونيو) 2021
+العمليات الصرفية هي مجموعة من العمليات التي تعالج الصور بناءً على الأشكال. يطبقون عنصر هيكلي على صورة إدخال ويولدون صورة ناتجة. 
+أهم العمليات المورفولوجية الأساسية هما: أساسيات التآكل والتوسع للتآكل: 
+ 
+ 
+
+يزيل حدود الكائن الأمامي
+تستخدم لتقليل ميزات الصورة.
+عمل التعرية: 
+ 
+
+نواة (مصفوفة ذات حجم فردي (3،5،7) تلتف مع الصورة.
+سيتم اعتبار البكسل في الصورة الأصلية (إما 1 أو 0) 1 فقط إذا كانت جميع وحدات البكسل الموجودة أسفل النواة 1 ، وإلا فإنه يتآكل (مصنوع من الصفر).
+وبالتالي سيتم تجاهل جميع وحدات البكسل القريبة من الحد اعتمادًا على حجم النواة.
+لذا فإن سمك أو حجم الكائن الأمامي يتناقص أو ببساطة تتناقص المنطقة البيضاء في الصورة.
+أساسيات التوسيع: 
+ 
+
+يزيد من مساحة الكائن
+تستخدم لإبراز الميزات
+عمل التمدد:
+ 
+
+نواة (مصفوفة ذات حجم فردي (3،5،7) تلتف مع الصورة
+عنصر البكسل في الصورة الأصلية هو "1" إذا كان بكسل واحد على الأقل تحت النواة هو "1".
+يزيد من المنطقة البيضاء في الصورة أو يزيد حجم الكائن الأمامي 
+ 
+ 
+
+
+# Python program to demonstrate erosion and
+# dilation of images.
+import cv2
+import numpy as np
+ 
+# Reading the input image
+img = cv2.imread('input.png', 0)
+ 
+# Taking a matrix of size 5 as the kernel
+kernel = np.ones((5,5), np.uint8)
+ 
+# The first parameter is the original image,
+# kernel is the matrix with which image is
+# convolved and third parameter is the number
+# of iterations, which will determine how much
+# you want to erode/dilate a given image.
+img_erosion = cv2.erode(img, kernel, iterations=1)
+img_dilation = cv2.dilate(img, kernel, iterations=1)
+ 
+cv2.imshow('Input', img)
+cv2.imshow('Erosion', img_erosion)
+cv2.imshow('Dilation', img_dilation)
+ 
+cv2.waitKey(0)
+الصورة الثانية هي الشكل المتآكل للصورة الأصلية والصورة الثالثة هي الشكل الموسع. 
+ 
+
+
+
+استخدامات التعرية والتوسع: 
+ 
+
+التعرية: 
+مفيد لإزالة الضوضاء البيضاء الصغيرة.
+تستخدم لفصل كائنين متصلين وما إلى ذلك.
+تمدد:
+في حالات مثل إزالة الضوضاء ، يتبع التآكل تمدد. لأن التعرية تزيل الضوضاء البيضاء ، لكنها تقلص الجسم أيضًا. لذلك نقوم بتوسيعها. منذ اختفاء الضوضاء ، لن يعودوا ، لكن مساحة الكائن لدينا تزداد.
+إنه مفيد أيضًا في ضم الأجزاء المكسورة من الكائن.
+هذا المقال من مساهمة براتيما أوبدهياي . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+<<<<<<<<<<<<<<<<<<<<<<
+
+مستوى الصعوبة: سهل
+آخر تحديث: ١٢ أكتوبر ٢٠٢١
+Thresholding هي تقنية في OpenCV ، وهي تعيين قيم البكسل فيما يتعلق بقيمة العتبة المقدمة. في العتبة ، تتم مقارنة قيمة كل بكسل مع قيمة الحد. إذا كانت قيمة البكسل أصغر من العتبة ، يتم ضبطها على 0 ، وإلا يتم تعيينها على القيمة القصوى (بشكل عام 255). العتبة هي تقنية تجزئة شائعة جدًا ، تُستخدم لفصل كائن يعتبر مقدمة عن خلفيته. العتبة هي القيمة التي تحتوي على منطقتين على جانبيها ، أي أقل من الحد الأدنى أو أعلى منه. 
+في Computer Vision ، تتم تقنية العتبة هذه على الصور ذات التدرج الرمادي. لذلك في البداية ، يجب تحويل الصورة إلى مساحة لونية ذات تدرج رمادي. 
+ 
+
+إذا كانت f (x، y) <T.
+   ثم f (x، y) = 0
+آخر
+   و (س ، ص) = 255
+
+أين
+f (x، y) = تنسيق قيمة البكسل
+T = قيمة العتبة.
+في OpenCV مع Python ، تُستخدم الوظيفة cv2.threshold لتحديد العتبة. 
+ 
+
+بناء الجملة: cv2.threshold (source ، thresholdValue ، maxVal ، thresholdingTechnique) 
+المعلمات: 
+-> المصدر : مصفوفة صورة الإدخال (يجب أن تكون في تدرج الرمادي). 
+-> قيمة العتبة : قيمة الحد الأدنى والأعلى التي ستتغير قيم البكسل وفقًا لذلك. 
+-> maxVal : القيمة القصوى التي يمكن تخصيصها للبكسل. 
+-> تقنية العتبة : نوع العتبة التي سيتم تطبيقها. 
+ 
+
+ 
+
+عتبة بسيطة
+تقنية العتبة الأساسية هي العتبة الثنائية. لكل بكسل ، يتم تطبيق نفس قيمة الحد. إذا كانت قيمة البكسل أصغر من الحد الفاصل ، يتم ضبطها على 0 ، وإلا يتم ضبطها على قيمة قصوى.
+تقنيات العتبة البسيطة المختلفة هي: 
+ 
+
+cv2.THRESH_BINARY : إذا كانت كثافة البكسل أكبر من الحد المعين ، يتم تعيين القيمة على 255 ، وإلا يتم تعيينها على 0 (أسود).
+cv2.THRESH_BINARY_INV : الحالة المعكوسة أو المعاكسة لـ cv2.THRESH_BINARY.
+cv.THRESH_TRUNC : إذا كانت قيمة كثافة البكسل أكبر من الحد الأدنى ، يتم اقتطاعها إلى الحد الأدنى. يتم تعيين قيم البكسل لتكون مماثلة للحد الفاصل. تبقى جميع القيم الأخرى كما هي.
+cv.THRESH_TOZERO : تم ضبط كثافة البكسل على 0 ، لجميع كثافة البكسل ، أقل من قيمة العتبة.
+cv.THRESH_TOZERO_INV : الحالة المعكوسة أو المعاكسة لـ cv2.THRESH_TOZERO.
+ 
+
+
+
+يوجد أدناه كود Python الذي يشرح تقنيات العتبة البسيطة المختلفة - 
+ 
+
+# Python program to illustrate
+# simple thresholding type on an image
+     
+# organizing imports
+import cv2
+import numpy as np
+ 
+# path to input image is specified and 
+# image is loaded with imread command
+image1 = cv2.imread('input1.jpg')
+ 
+# cv2.cvtColor is applied over the
+# image input with applied parameters
+# to convert the image in grayscale
+img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+ 
+# applying different thresholding
+# techniques on the input image
+# all pixels value above 120 will
+# be set to 255
+ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
+ret, thresh2 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV)
+ret, thresh3 = cv2.threshold(img, 120, 255, cv2.THRESH_TRUNC)
+ret, thresh4 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO)
+ret, thresh5 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO_INV)
+ 
+# the window showing output images
+# with the corresponding thresholding
+# techniques applied to the input images
+cv2.imshow('Binary Threshold', thresh1)
+cv2.imshow('Binary Threshold Inverted', thresh2)
+cv2.imshow('Truncated Threshold', thresh3)
+cv2.imshow('Set to 0', thresh4)
+cv2.imshow('Set to 0 Inverted', thresh5)
+   
+# De-allocate any associated memory usage 
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()
+إدخال: 
+ 
+
+
+
+انتاج: 
+ 
+
+
+
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+بايثون | تقنيات العتبة باستخدام OpenCV | المجموعة 2 (عتبة التكيف)
+مستوى الصعوبة: متوسط
+تاريخ التحديث الأخير: 06 مايو 2019
+المتطلب السابق: عتبة بسيطة باستخدام OpenCV
+
+في المنشور السابق ، تم شرح العتبة البسيطة بأنواع مختلفة من تقنيات العتبة. تقنية العتبة الأخرى هي العتبة التكيفية . في عتبة بسيطة ، تم استخدام قيمة عالمية للعتبة التي ظلت ثابتة طوال الوقت. لذلك ، لن تساعد قيمة العتبة الثابتة في حالة ظروف الإضاءة المتغيرة في مناطق مختلفة. العتبة التكيفية هي الطريقة التي يتم فيها حساب قيمة العتبة للمناطق الأصغر. هذا يؤدي إلى قيم عتبة مختلفة لمناطق مختلفة فيما يتعلق بالتغيير في الإضاءة. نستخدم cv2.adaptiveThresholdلهذا.
+
+بناء الجملة : cv2.adaptiveThreshold (المصدر ، maxVal ، طريقة التكيف ، العتبة ، النوع ، الكتلة ، الثابت)
+
+المعلمات:
+-> المصدر : مصفوفة صورة الإدخال (قناة واحدة ، 8 بت أو نقطة عائمة)
+-> maxVal : القيمة القصوى التي يمكن تعيينها للبكسل.
+-> طريقة التكيف : تحدد الطريقة التكيفية كيفية حساب قيمة العتبة.
+
+ cv2.ADAPTIVE_THRESH_MEAN_C : قيمة العتبة = (متوسط ​​قيم منطقة الجوار - قيمة ثابتة). بمعنى آخر ، هو متوسط ​​جوار blockSize × blockSize لنقطة ناقص ثابت.
+
+cv2.ADAPTIVE_THRESH_GAUSSIAN_C : قيمة العتبة = (مجموع غاوسي المرجح لقيم الجوار - قيمة ثابتة). بمعنى آخر ، هو مجموع مرجح للكتلة الحجم × الكتلة الحجم المجاورة لنقطة ناقص الثابت.
+
+-> نوع العتبة : نوع العتبة التي سيتم تطبيقها.
+-> blockSize : حجم حي البكسل المستخدم لحساب قيمة العتبة.
+-> ثابت : قيمة ثابتة تُطرح من المجموع المتوسط ​​أو المرجح لوحدات البكسل المجاورة.
+
+فيما يلي تطبيق Python:
+
+# Python program to illustrate 
+# adaptive thresholding type on an image
+       
+# organizing imports 
+import cv2 
+import numpy as np 
+   
+# path to input image is specified and  
+# image is loaded with imread command 
+image1 = cv2.imread('input1.jpg') 
+   
+# cv2.cvtColor is applied over the
+# image input with applied parameters
+# to convert the image in grayscale 
+img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+   
+# applying different thresholding 
+# techniques on the input image
+thresh1 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C,
+                                          cv2.THRESH_BINARY, 199, 5)
+  
+thresh2 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+                                          cv2.THRESH_BINARY, 199, 5)
+  
+# the window showing output images
+# with the corresponding thresholding 
+# techniques applied to the input image
+cv2.imshow('Adaptive Mean', thresh1)
+cv2.imshow('Adaptive Gaussian', thresh2)
+  
+     
+# De-allocate any associated memory usage  
+if cv2.waitKey(0) & 0xff == 27: 
+    cv2.destroyAllWindows() 
+إدخال الصورة :
+
+
+الإخراج :
+<<<<<<<<<<<<<<<<<<
+
+تاريخ التحديث الأخير: 29 مايو 2019
+في المنشورات السابقة ، تم شرح العتبة البسيطة والحد التكيفي . في عتبة بسيطة ، تم استخدام القيمة العالمية للعتبة التي ظلت ثابتة طوال الوقت. في العتبة التكيفية ، يتم حساب قيمة العتبة للمناطق الأصغر ذات القيم العتبة المختلفة للمناطق المختلفة فيما يتعلق بالتغير في الإضاءة.
+
+في Otsu Thresholding ، لم يتم اختيار قيمة العتبة ولكن يتم تحديدها تلقائيًا. يتم اعتبار الصورة ثنائية النسق (قيمتان مميزتان للصورة). يحتوي الرسم البياني الذي تم إنشاؤه على قمتين. لذلك ، سيكون الشرط العام هو اختيار قيمة حدية تقع في منتصف كل من قيم ذروة المدرج التكراري.
+
+نستخدم الوظيفة التقليدية ونستخدمها كعلم إضافي. cv2.threshold cv2.THRESH_OTSU
+
+بناء الجملة: cv2.threshold (source ، thresholdValue ، maxVal ، thresholdingTechnique)
+
+المعلمات:
+-> المصدر : مصفوفة صورة الإدخال (يجب أن تكون بتدرج الرمادي).
+-> قيمة العتبة : قيمة الحد الأدنى والأعلى التي ستتغير قيم البكسل وفقًا لذلك.
+-> maxVal : القيمة القصوى التي يمكن تخصيصها للبكسل.
+-> تقنية العتبة : نوع العتبة التي سيتم تطبيقها.
+
+يوجد أدناه كود Python الذي يشرح تقنية Otsu Thresholding -
+
+# Python program to illustrate
+# Otsu thresholding type on an image
+  
+# organizing imports
+import cv2         
+import numpy as np    
+  
+# path to input image is specified and
+# image is loaded with imread command
+image1 = cv2.imread('input1.jpg')
+  
+# cv2.cvtColor is applied over the
+# image input with applied parameters
+# to convert the image in grayscale
+img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+  
+# applying Otsu thresholding
+# as an extra flag in binary 
+# thresholding     
+ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY + 
+                                            cv2.THRESH_OTSU)     
+  
+# the window showing output image         
+# with the corresponding thresholding         
+# techniques applied to the input image    
+cv2.imshow('Otsu Threshold', thresh1)         
+       
+# De-allocate any associated memory usage         
+if cv2.waitKey(0) & 0xff == 27:
+    cv2.destroyAllWindows()     
+إدخال:
+
+
+انتاج:
+
+
+تقبل العملية الحسابية أن الصورة تحتوي على فئتين من وحدات البكسل تتبع بكسلات المقدمة والخلفية ، وفي تلك المرحلة تتأكد من الحد المثالي الذي يعزل الفئتين بهدف أن يكون انتشارهما المدمج غير مهم.
+
+
+<<<<<<<<<<<<<<,,,,
+تصفية اللون باستخدام OpenCV
+مستوى الصعوبة: أساسي
+آخر تحديث: 16 فبراير 2021
+يُستخدم تجزئة اللون أو ترشيح الألوان على نطاق واسع في OpenCV لتحديد كائنات / مناطق معينة لها لون معين. مساحة اللون الأكثر استخدامًا هي مساحة ألوان RGB ، وتسمى مساحة اللون المضافة حيث تضيف ظلال الألوان الثلاثة لإعطاء لون للصورة. لتحديد منطقة ذات لون معين ، ضع الحد وأنشئ قناعًا لفصل الألوان المختلفة. تعد مساحة ألوان HSV أكثر فائدة لهذا الغرض حيث أن الألوان الموجودة في مساحة HSV تكون أكثر محلية وبالتالي يمكن فصلها بسهولة. ترشيح الألوان له العديد من التطبيقات وحالات الاستخدامات مثل التشفير ، وتحليل الأشعة تحت الحمراء ، وحفظ الأطعمة للأطعمة القابلة للتلف ، وما إلى ذلك في مثل هذه الحالات ، يمكن استخدام مفاهيم معالجة الصور لاكتشاف أو استخراج مناطق ذات لون معين. 
+لتجزئة اللون ، كل ما نحتاجه هو قيم العتبة أو معرفة النطاق الأدنى والحد الأعلى للألوان في إحدى فراغات اللون. يعمل بشكل أفضل في مساحة اللون Hue-Saturation-Value. 
+بعد تحديد نطاق اللون المراد تقسيمه ، من الضروري إنشاء قناع وفقًا لذلك وباستخدامه ، يمكن فصل منطقة معينة من الاهتمام.
+ 
+
+يوجد أدناه الرمز:  
+
+import cv2
+import numpy as np
+ 
+cap = cv2.VideoCapture(0)
+ 
+while(1):
+    _, frame = cap.read()
+    # It converts the BGR color space of image to HSV color space
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+     
+    # Threshold of blue in HSV space
+    lower_blue = np.array([60, 35, 140])
+    upper_blue = np.array([180, 255, 255])
+ 
+    # preparing the mask to overlay
+    mask = cv2.inRange(hsv, lower_blue, upper_blue)
+     
+    # The black region in the mask has the value of 0,
+    # so when multiplied with original image removes all non-blue regions
+    result = cv2.bitwise_and(frame, frame, mask = mask)
+ 
+    cv2.imshow('frame', frame)
+    cv2.imshow('mask', mask)
+    cv2.imshow('result', result)
+     
+    cv2.waitKey(0)
+ 
+cv2.destroyAllWindows()
+cap.release()
+الصورة الأصلية- 
+ 
+
+
+
+صورة مقنعة- 
+ 
+
+
+
+مناطق مجزأة باللون الأزرق- 
+ 
+
+>>>>>>>>>>>>>>>
+بايثون | التصفية الثنائية
+آخر تحديث: 31 أكتوبر 2021
+يستخدم المرشح الثنائي لتنعيم الصور وتقليل التشويش ، مع الحفاظ على الحواف . تشرح هذه المقالة طريقة استخدام عامل التصفية المتوسط ​​، بينما تقدم هذه المقالة طريقة تستخدم عامل تصفية متوسط. ومع ذلك ، غالبًا ما تؤدي هذه التلافيفات إلى فقدان معلومات الحافة المهمة ، لأنها تطمس كل شيء ، بغض النظر عن كونها ضوضاء أو ميزة. لمواجهة هذه المشكلة ، تم تقديم المرشح الثنائي غير الخطي.
+ 
+
+التمويه الضبابي
+يمكن صياغة التمويه الغاوسي على النحو التالي:
+ 
+
+
+
+هنا ،  GA [I] _p  هي النتيجة بالبكسل ، و RHS هو في الأساس مجموع على جميع وحدات البكسل q الموزونة بوظيفة Gaussian. معدل الذكاء  هي الشدة عند البكسل q .
+
+المرشح الثنائي: مصطلح حافة إضافي
+يمكن صياغة المرشح الثنائي على النحو التالي: 
+ 
+
+
+
+هنا ، يعتبر عامل التطبيع ووزن النطاق مصطلحات جديدة تمت إضافتها إلى المعادلة السابقة. \ sigma_s  يشير إلى الامتداد المكاني للنواة ، أي حجم الجوار ،  \ sigma_r  ويشير إلى السعة الدنيا للحافة. إنه يضمن أن وحدات البكسل التي تحتوي على قيم شدة مماثلة لتلك الخاصة بالبكسل المركزي تعتبر ضبابية ، بينما يتم الحفاظ على تغييرات الكثافة الحادة. كلما كانت القيمة أصغر  \ sigma_r  ، كانت الحافة أكثر حدة. كما  \ sigma_r  تميل إلى اللانهاية ، تميل المعادلة إلى تمويه Gaussian.
+OpenCV لديه وظيفة تسمى dualFilter () مع الوسيطات التالية: 
+ 
+
+د: قطر كل حي بكسل.
+sigmaColor: القيمة  \سيجما  في فضاء اللون. كلما زادت القيمة ، ستبدأ الألوان المتباعدة في الاختلاط.
+sigmaSpace: القيمة  \سيجما  في مساحة الإحداثيات. كلما زادت قيمته ، زاد عدد وحدات البكسل الإضافية التي تمتزج معًا ، نظرًا لأن ألوانها تقع ضمن نطاق sigmaColor.
+الكود: 
+الإدخال: صورة صاخبة.
+ 
+
+
+
+الكود: تنفيذ التصفية الثنائية 
+
+
+import cv2
+ 
+# Read the image.
+img = cv2.imread('taj.jpg')
+ 
+# Apply bilateral filter with d = 15,
+# sigmaColor = sigmaSpace = 75.
+bilateral = cv2.bilateralFilter(img, 15, 75, 75)
+ 
+# Save the output.
+cv2.imwrite('taj_bilateral.jpg', bilateral)
+إخراج المرشح الثنائي
+ 
+
+
+
+مقارنة مع عوامل التصفية 
+المتوسطة والمتوسطة يوجد أدناه ناتج عامل التصفية المتوسط ​​(cv2.blur (img، (5، 5))).
+ 
+
+
+
+يوجد أدناه ناتج عامل التصفية المتوسط ​​(cv2.medianBlur (img، 5)). 
+ 
+
+
+
+يوجد أدناه إخراج مرشح Gaussian (cv2.GaussianBlur (img، (5، 5)، 0)). 
+ 
+
+
+
+من السهل ملاحظة أن كل هذه المرشحات المزيلة للضوضاء تلطخ الحواف ، بينما تحتفظ التصفية الثنائية بها.
+
+>>>>>>>>>>>>>>>
+
+مستوى الصعوبة: سهل
+تاريخ التحديث الأخير: 06 يوليو 2021
+لطرح الخلفية العديد من حالات الاستخدام في الحياة اليومية ، ويتم استخدامه لتجزئة الكائن ، وتعزيز الأمان ، وتتبع المشاة ، وحساب عدد الزوار ، وعدد المركبات في حركة المرور وما إلى ذلك ، وهو قادر على تعلم وتحديد قناع المقدمة.
+كما يوحي الاسم ، فإنه قادر على طرح أو حذف جزء الخلفية في الصورة. ناتجها عبارة عن صورة ثنائية مجزأة تقدم معلومات حول الكائنات غير الثابتة في الصورة. تكمن مشكلة في هذا المفهوم المتمثل في العثور على جزء غير ثابت ، حيث يمكن أن يتحرك ظل الكائن المتحرك وأحيانًا يتم تصنيفه في المقدمة.
+خوارزميات الطرح الخلفية الشائعة هي: 
+ 
+
+BackgroundSubtractorMOG : إنها خوارزمية تجزئة الخلفية تعتمد على خليط غاوسي.
+BackgroundSubtractorMOG2 : يستخدم نفس المفهوم ولكن الميزة الرئيسية التي يوفرها هي من حيث الاستقرار حتى عندما يكون هناك تغيير في اللمعان وقدرة أفضل على تحديد الظلال في الإطارات.
+الشبكة الهندسية المتعددة : تستخدم الطريقة الإحصائية وخوارزمية تجزئة البايزين لكل بكسل.
+ 
+
+# Python code for Background subtraction using OpenCV
+import numpy as np
+import cv2
+ 
+cap = cv2.VideoCapture('/home/sourabh/Downloads/people-walking.mp4')
+fgbg = cv2.createBackgroundSubtractorMOG2()
+ 
+while(1):
+    ret, frame = cap.read()
+ 
+    fgmask = fgbg.apply(frame)
+  
+    cv2.imshow('fgmask', fgmask)
+    cv2.imshow('frame',frame )
+ 
+     
+    k = cv2.waitKey(30) & 0xff
+    if k == 27:
+        break
+     
+ 
+cap.release()
+cv2.destroyAllWindows()
+إطار الفيديو الأصلي: 
+ 
+
+
+
+إطار فيديو مطروح في الخلفية: 
+ 
+
+
+
+وهكذا ، رأينا تطبيقًا لخوارزمية الطرح الخلفية للكشف عن الحركات ، والحياة في إطارات الفيديو.
+
+
+>>>>>>>>>>>>>>>
+
+مستوى الصعوبة: صعب
+تاريخ التحديث الأخير: 15 أكتوبر 2018
+OpenCV (Open Source Computer Vision) هي مكتبة رؤية كمبيوتر تحتوي على وظائف متنوعة لإجراء عمليات على الصور أو مقاطع الفيديو. يمكن استخدام مكتبة OpenCV لإجراء عمليات متعددة على مقاطع الفيديو.
+
+دعونا نرى كيفية تشغيل مقطع فيديو باستخدام OpenCV Python.
+
+لالتقاط مقطع فيديو ، نحتاج إلى إنشاء ملف VideoCapture object. VideoCapture لها فهرس الجهاز أو اسم ملف الفيديو. فهرس الجهاز هو مجرد رقم لتحديد الكاميرا. إذا مررنا بـ 0 فهذا يعني أنه للكاميرا الأولى و 1 للكاميرا الثانية وهكذا. نلتقط الفيديو إطارًا تلو الآخر.
+بناء الجملة :
+
+cv2.VideoCapture (0): تعني الكاميرا الأولى أو كاميرا الويب.
+cv2.VideoCapture (1): تعني كاميرا ثانية أو كاميرا ويب.
+cv2.VideoCapture ("file name.mp4"): يعني ملف الفيديو
+أدناه هو التنفيذ:
+
+# importing libraries
+import cv2
+import numpy as np
+   
+# Create a VideoCapture object and read from input file
+cap = cv2.VideoCapture('tree.mp4')
+   
+# Check if camera opened successfully
+if (cap.isOpened()== False): 
+  print("Error opening video  file")
+   
+# Read until video is completed
+while(cap.isOpened()):
+      
+  # Capture frame-by-frame
+  ret, frame = cap.read()
+  if ret == True:
+   
+    # Display the resulting frame
+    cv2.imshow('Frame', frame)
+   
+    # Press Q on keyboard to  exit
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+      break
+   
+  # Break the loop
+  else: 
+    break
+   
+# When everything done, release 
+# the video capture object
+cap.release()
+   
+# Closes all the frames
+cv2.destroyAllWindows()
+ملاحظة: يجب أن يكون ملف الفيديو في نفس الدليل حيث يتم تنفيذ البرنامج.
+انتاج:
+
+نموذج إطار الفيديو:
+
+
+>>>>>>>>>>>>>>>>>>
+
+مستوى الصعوبة: أساسي
+تاريخ التحديث الأخير: 29 أغسطس 2018
+يأتي OpenCV بالعديد من وظائف تحرير الفيديو القوية. في السيناريو الحالي ، يمكن تحقيق تقنيات مثل مسح الصور والتعرف على الوجوه باستخدام OpenCV.
+
+يعد تحليل الصور مجالًا شائعًا جدًا في مجال رؤية الكمبيوتر. إنه استخراج معلومات مفيدة من مقاطع الفيديو أو الصور. يمكن استخدام مكتبة OpenCv لإجراء عمليات متعددة على مقاطع الفيديو.
+
+الوحدات المطلوبة:
+
+استيراد السيرة الذاتية 2
+استيراد نظام التشغيل
+الوظيفة المستخدمة:
+
+VideoCapture(File_path) : Read the video(.mp4 format)
+
+read() : Read data depending upon the type of object that calls
+
+imwrite(filename, img[, params]) : Saves an image to a specified file.
+
+أدناه هو التنفيذ:
+
+# Importing all necessary libraries
+import cv2
+import os
+  
+# Read the video from specified path
+cam = cv2.VideoCapture("C:\\Users\\Admin\\PycharmProjects\\project_1\\openCV.mp4")
+  
+try:
+      
+    # creating a folder named data
+    if not os.path.exists('data'):
+        os.makedirs('data')
+  
+# if not created then raise error
+except OSError:
+    print ('Error: Creating directory of data')
+  
+# frame
+currentframe = 0
+  
+while(True):
+      
+    # reading from frame
+    ret,frame = cam.read()
+  
+    if ret:
+        # if video is still left continue creating images
+        name = './data/frame' + str(currentframe) + '.jpg'
+        print ('Creating...' + name)
+  
+        # writing the extracted images
+        cv2.imwrite(name, frame)
+  
+        # increasing counter so that it will
+        # show how many frames are created
+        currentframe += 1
+    else:
+        break
+  
+# Release all space and windows once done
+cam.release()
+cv2.destroyAllWindows()
+انتاج:
+صورة
+
+سيتم حفظ جميع الصور المستخرجة في مجلد باسم "البيانات" على النظام.
+
+
+
+>>>>>>>>>>>>>>>>>>
+
+مستوى الصعوبة: متوسط
+آخر تحديث: 22 سبتمبر 2021
+OpenCV عبارة عن مكتبة تُستخدم لإجراء معالجة الصور باستخدام لغات البرمجة مثل Python. يستخدم هذا المشروع مكتبة OpenCV لاكتشاف الوجه في الوقت الفعلي باستخدام كاميرا الويب الخاصة بك ككاميرا أساسية.
+فيما يلي متطلباته: - 
+ 
+
+بايثون 2.7.1
+OpenCV
+نومبي
+مصنفات وجه Haar Cascade Frontal
+النهج / الخوارزميات المستخدمة: 
+ 
+
+يستخدم هذا المشروع خوارزمية LBPH (الرسوم البيانية للأنماط الثنائية المحلية) لاكتشاف الوجوه. يقوم بتسمية وحدات البكسل في الصورة عن طريق تحديد جوار كل بكسل ويعتبر النتيجة كرقم ثنائي.
+يستخدم LBPH 4 معلمات: 
+(1) نصف القطر: يستخدم نصف القطر لبناء نمط ثنائي محلي دائري ويمثل نصف القطر حول 
+البكسل المركزي. 
+(2) الجيران: عدد نقاط العينة لبناء النمط الثنائي المحلي الدائري. 
+(3) الشبكة X: عدد الخلايا في الاتجاه الأفقي. 
+(4) الشبكة Y: عدد الخلايا في الاتجاه العمودي.
+يتم تدريب النموذج الذي تم إنشاؤه باستخدام الوجوه ذات العلامة الممنوحة لهم ، وبعد ذلك ، يتم إعطاء الجهاز بيانات اختبار ويقرر الجهاز الملصق الصحيح له.
+كيف تستعمل : 
+ 
+
+قم بإنشاء دليل على جهاز الكمبيوتر الخاص بك وقم بتسميته (قل المشروع)
+قم بإنشاء ملفي python باسم create_data.py و face_recognize.py ، انسخ كود المصدر الأول وكود المصدر الثاني فيهما على التوالي.
+انسخ haarcascade_frontalface_default.xml إلى دليل المشروع ، يمكنك الحصول عليه في opencv أو من 
+هنا .
+أنت الآن جاهز لتشغيل الرموز التالية.
+ 
+
+# Creating database
+# It captures images and stores them in datasets
+# folder under the folder name of sub_data
+import cv2, sys, numpy, os
+haar_file = 'haarcascade_frontalface_default.xml'
+ 
+# All the faces data will be
+#  present this folder
+datasets = 'datasets' 
+ 
+ 
+# These are sub data sets of folder,
+# for my faces I've used my name you can
+# change the label here
+sub_data = 'vivek'    
+ 
+path = os.path.join(datasets, sub_data)
+if not os.path.isdir(path):
+    os.mkdir(path)
+ 
+# defining the size of images
+(width, height) = (130, 100)   
+ 
+#'0' is used for my webcam,
+# if you've any other camera
+#  attached use '1' like this
+face_cascade = cv2.CascadeClassifier(haar_file)
+webcam = cv2.VideoCapture(0)
+ 
+# The program loops until it has 30 images of the face.
+count = 1
+while count < 30:
+    (_, im) = webcam.read()
+    gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 4)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(im, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        face = gray[y:y + h, x:x + w]
+        face_resize = cv2.resize(face, (width, height))
+        cv2.imwrite('% s/% s.png' % (path, count), face_resize)
+    count += 1
+     
+    cv2.imshow('OpenCV', im)
+    key = cv2.waitKey(10)
+    if key == 27:
+        break
+يجب تشغيل الكود التالي بعد تدريب النموذج على الوجوه:
+ 
+
+
+# It helps in identifying the faces
+import cv2, sys, numpy, os
+size = 4
+haar_file = 'haarcascade_frontalface_default.xml'
+datasets = 'datasets'
+ 
+# Part 1: Create fisherRecognizer
+print('Recognizing Face Please Be in sufficient Lights...')
+ 
+# Create a list of images and a list of corresponding names
+(images, labels, names, id) = ([], [], {}, 0)
+for (subdirs, dirs, files) in os.walk(datasets):
+    for subdir in dirs:
+        names[id] = subdir
+        subjectpath = os.path.join(datasets, subdir)
+        for filename in os.listdir(subjectpath):
+            path = subjectpath + '/' + filename
+            label = id
+            images.append(cv2.imread(path, 0))
+            labels.append(int(label))
+        id += 1
+(width, height) = (130, 100)
+ 
+# Create a Numpy array from the two lists above
+(images, labels) = [numpy.array(lis) for lis in [images, labels]]
+ 
+# OpenCV trains a model from the images
+# NOTE FOR OpenCV2: remove '.face'
+model = cv2.face.LBPHFaceRecognizer_create()
+model.train(images, labels)
+ 
+# Part 2: Use fisherRecognizer on camera stream
+face_cascade = cv2.CascadeClassifier(haar_file)
+webcam = cv2.VideoCapture(0)
+while True:
+    (_, im) = webcam.read()
+    gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(im, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        face = gray[y:y + h, x:x + w]
+        face_resize = cv2.resize(face, (width, height))
+        # Try to recognize the face
+        prediction = model.predict(face_resize)
+        cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
+ 
+        if prediction[1]<500:
+ 
+           cv2.putText(im, '% s - %.0f' %
+(names[prediction[0]], prediction[1]), (x-10, y-10),
+cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0))
+        else:
+          cv2.putText(im, 'not recognized',
+(x-10, y-10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0))
+ 
+    cv2.imshow('OpenCV', im)
+     
+    key = cv2.waitKey(10)
+    if key == 27:
+        break
+ملاحظة: لن يتم تشغيل البرامج المذكورة أعلاه على IDE عبر الإنترنت. 
+ 
+
+لقطات من البرنامج
+
+قد يبدو الأمر مختلفًا لأنني قمت بدمج البرنامج أعلاه في إطار عمل flask
+، حيث يؤدي تشغيل البرنامج الثاني إلى نتائج مشابهة للصورة أدناه: 
+ 
+
+الكشف عن الوجه
+الكشف عن الوجه
+
+تخزين مجموعات البيانات: 

@@ -1,0 +1,167 @@
+
+بايثون | تنسيق الإخراج
+مستوى الصعوبة: سهل
+آخر تحديث: 08 فبراير 2022
+هناك عدة طرق لتقديم مخرجات البرنامج. يمكن طباعة البيانات في نموذج يمكن قراءته من قبل الإنسان ، أو كتابتها في ملف لاستخدامها في المستقبل ، أو حتى في شكل آخر محدد. غالبًا ما يرغب المستخدمون في مزيد من التحكم في تنسيق الإخراج بدلاً من مجرد طباعة قيم مفصولة بمسافة. هناك عدة طرق لتنسيق الإخراج. 
+
+لاستخدام القيم الحرفية للسلسلة المنسقة ، ابدأ سلسلة بـ f أو F قبل علامة الاقتباس الافتتاحية أو علامة الاقتباس الثلاثية.
+شارع . format () تساعد طريقة السلاسل المستخدم على إنشاء مخرجات مربي الحيوانات
+يمكن للمستخدمين القيام بكل عمليات معالجة السلسلة باستخدام عمليات تشريح السلسلة والتسلسل لإنشاء أي تخطيط يريده المستخدمون. يحتوي نوع السلسلة على بعض الطرق التي تؤدي عمليات مفيدة لحشو السلاسل لعرض عمود معين.
+تنسيق الإخراج باستخدام عامل نمط السلسلة (٪): 
+يمكن أيضًا استخدام عامل التشغيل٪ لتنسيق السلسلة. يفسر الوسيطة اليسرى مثل تنسيق نمط printf () كما هو الحال في سلاسل لغة C ليتم تطبيقها على الوسيطة الصحيحة. في Python ، لا توجد وظيفة printf () ولكن وظيفة printf القديمة موجودة في Python. لهذا الغرض ، يتم تحميل عامل التشغيل modulo٪ بشكل زائد بواسطة فئة السلسلة لإجراء تنسيق السلسلة. لذلك ، غالبًا ما يطلق عليه عامل سلسلة سلسلة (أو أحيانًا يسمى المعامل). 
+
+لا يزال عامل تشغيل وحدة السلسلة (٪) متاحًا في Python (3.x) ويستخدم على نطاق واسع. ولكن في الوقت الحاضر تمت إزالة النمط القديم للتنسيق من اللغة. 
+
+
+# Python program showing how to use
+# string modulo operator(%) to print
+# fancier output
+ 
+# print integer and float value
+print("Geeks : %2d, Portal : %5.2f" % (1, 05.333))
+ 
+# print integer value
+print("Total students : %3d, Boys : %2d" % (240, 120))
+ 
+# print octal value
+print("%7.3o" % (25))
+ 
+# print exponential value
+print("%10.3E" % (356.08977))
+انتاج : 
+
+المهوسون: 1 ، البوابة: 5.33
+مجموع الطلاب: 240 ، بنين: 120
+031
+3.561E + 02
+
+
+يوجد اثنان من هؤلاء في مثالنا: "٪ 2d" و "٪ 5.2f". الصيغة العامة للعنصر النائب للتنسيق هي: 
+
+٪ نوع [إشارات] [عرض] [. دقة]
+دعنا نلقي نظرة على العناصر النائبة في مثالنا.  
+
+يتم استخدام العنصر النائب الأول "٪ 2d" للمكون الأول من المجموعة الخاصة بنا ، أي العدد الصحيح 1. سيتم طباعة الرقم المكون من حرفين. نظرًا لأن 1 يتكون من رقم واحد فقط ، فإن الإخراج مبطن بفراغات بادئة واحدة.
+الثاني "٪ 5.2f" هو وصف تنسيق لرقم عائم. مثل العناصر النائبة الأخرى ، يتم تقديمه بالحرف٪. ويتبع ذلك العدد الإجمالي للأرقام التي يجب أن تحتويها السلسلة. يتضمن هذا الرقم الفاصلة العشرية وجميع الأرقام ، أي قبل العلامة العشرية وبعدها.
+يجب تنسيق الرقم العائم 05.333 بـ 5 أحرف. يتم تعيين الجزء العشري من الرقم أو الدقة على 2 ، أي الرقم الذي يلي "." في العنصر النائب لدينا. أخيرًا ، الحرف الأخير "f" من العنصر النائب الخاص بنا يشير إلى "float".
+تنسيق الإخراج باستخدام طريقة التنسيق: 
+تمت إضافة طريقة format () في Python (2.6). تتطلب طريقة تنسيق السلاسل مزيدًا من الجهد اليدوي. يستخدم المستخدمون {} لتحديد مكان استبدال المتغير ويمكنهم تقديم توجيهات تنسيق تفصيلية ، ولكن يحتاج المستخدم أيضًا إلى توفير المعلومات المطلوب تنسيقها. تتيح لنا هذه الطريقة ربط العناصر داخل الإخراج من خلال التنسيق الموضعي. فمثلا - 
+
+الكود 1:  
+
+
+# Python program showing
+# use of format() method
+ 
+# using format() method
+print('I love {} for "{}!"'.format('Geeks', 'Geeks'))
+ 
+# using format() method and referring
+# a position of the object
+print('{0} and {1}'.format('Geeks', 'Portal'))
+ 
+print('{1} and {0}'.format('Geeks', 'Portal'))
+ 
+ 
+# the above formatting can also be done by using f-Strings
+# Although, this features work only with python 3.6 or above.
+ 
+print(f"I love {'Geeks'} for \"{'Geeks'}!\"")
+ 
+# using format() method and referring
+# a position of the object
+print(f"{'Geeks'} and {'Portal'}")
+انتاج : 
+
+أنا أحب المهوسون "المهوسون!"
+المهوسون والبوابة
+البوابة والمهوسون
+يتم استبدال الأقواس والأحرف الموجودة داخلها (تسمى حقول التنسيق ) بالكائنات التي تم تمريرها إلى طريقة format (). يمكن استخدام رقم بين قوسين للإشارة إلى موضع الكائن الذي تم تمريره في طريقة format (). 
+  
+الكود 2: 
+
+
+# Python program showing
+# a use of format() method
+ 
+# combining positional and keyword arguments
+print('Number one portal is {0}, {1}, and {other}.'
+     .format('Geeks', 'For', other ='Geeks'))
+ 
+# using format() method with number
+print("Geeks :{0:2d}, Portal :{1:8.2f}".
+      format(12, 00.546))
+ 
+# Changing positional argument
+print("Second argument: {1:3d}, first one: {0:7.2f}".
+      format(47.42, 11))
+ 
+print("Geeks: {a:5d},  Portal: {p:8.2f}".
+     format(a = 453, p = 59.058))
+انتاج: 
+
+البوابة الأولى هي Geeks و For و Geeks.
+المهوسون: 12 ، البوابة: 0.55
+الحجة الثانية: 11 ، الأولى: 47.42
+المهوسون: 453 ، البوابة: 59.06
+الرسم التخطيطي التالي باستخدام مثال يوضح كيفية عمل طريقة التنسيق للمعلمات الموضعية: 
+
+
+
+  
+الكود 3: 
+
+
+# Python program to
+# show format () is
+# used in dictionary
+ 
+tab = {'geeks': 4127, 'for': 4098, 'geek': 8637678}
+ 
+# using format() in dictionary
+print('Geeks: {0[geeks]:d}; For: {0[for]:d}; '
+    'Geeks: {0[geek]:d}'.format(tab))
+ 
+data = dict(fun ="GeeksForGeeks", adj ="Portal")
+ 
+# using format() in dictionary
+print("I love {fun} computer {adj}".format(**data))
+انتاج: 
+
+المهوسون: 4127 ؛ من أجل: 4098 ؛ المهوسون: 8637678
+أنا أحب بوابة الكمبيوتر GeeksForGeeks
+تنسيق الإخراج باستخدام أسلوب السلسلة: 
+يتم تنسيق هذا الإخراج باستخدام عمليات تشريح السلسلة والتسلسل. نوع السلسلة لديه بعض الطرق التي تساعد في تنسيق الإخراج بطريقة مربي الحيوانات. بعض الطرق التي تساعد في تنسيق المخرجات هي str. rjust () و str.rjust () و str.centre ()
+
+
+# Python program to
+# format a output using
+# string() method
+ 
+cstr = "I love geeksforgeeks"
+   
+# Printing the center aligned 
+# string with fillchr
+print ("Center aligned string with fillchr: ")
+print (cstr.center(40, '#'))
+ 
+# Printing the left aligned 
+# string with "-" padding 
+print ("The left aligned string is : ")
+print (cstr.ljust(40, '-'))
+ 
+# Printing the right aligned string
+# with "-" padding 
+print ("The right aligned string is : ")
+print (cstr.rjust(40, '-'))
+انتاج: 
+
+سلسلة محاذاة للوسط مع تعبئة:
+########## أحب geeksforgeeks ##########
+
+السلسلة المحاذية إلى اليسار هي:
+أنا أحب geeksforgeeks --------------------
+
+السلسلة المحاذية لليمين هي:
+-------------------- أنا أحب geeksforgeeks
+ 

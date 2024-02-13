@@ -1,0 +1,431 @@
+
+كلمات بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: ١٢ أكتوبر ٢٠٢١
+كلمات بايثون: مقدمة
+
+الكلمات الرئيسية في Python هي كلمات محجوزة لا يمكن استخدامها كاسم متغير أو اسم وظيفة أو أي معرف آخر.
+
+قائمة بكل الكلمات الرئيسية في بايثون
+و	كما	يجزم	فترة راحة
+صف دراسي	استمر	def	ديل
+أليف	آخر	إلا	خطأ شنيع
+أخيرا	ل	من	عالمي
+إذا	يستورد	في	يكون
+لامدا	لا أحد	غير محلي	ليس
+أو	نجاح	رفع	إرجاع
+صحيح	يحاول	في حين	مع
+أثمر	 	 	 
+يمكننا أيضًا الحصول على جميع أسماء الكلمات الرئيسية باستخدام الكود أدناه.
+
+مثال: قائمة كلمات بايثون 
+
+# Python code to demonstrate working of iskeyword()
+  
+# importing "keyword" for keyword operations
+import keyword
+  
+# printing all keywords at once using "kwlist()"
+print("The list of keywords is : ")
+print(keyword.kwlist)
+انتاج:
+
+قائمة الكلمات الرئيسية هي: 
+
+['False' و 'None' و 'True' و 'و' as 'و' assert 'و' async 'و' await 'و break' و 'class' و 'continue' و 'def' و ' del '،' elif '،' else '،' except '،' finally '،' for '،' from '،' global '،' if '،' import '،' in '،' is '،' lambda ' ، 'nonlocal'، 'not'، 'or'، 'pass'، 'lift'، 'return'، 'try'، 'while'، 'with'، 'production']
+
+دعنا نناقش كل كلمة رئيسية بالتفصيل بمساعدة الأمثلة الجيدة.
+
+صحيح ، خطأ ، لا شيء
+صواب: تُستخدم هذه الكلمة الرئيسية لتمثيل صحيح منطقي. إذا كانت العبارة صحيحة ، تتم طباعة "True".
+خطأ: تُستخدم هذه الكلمة الأساسية للتعبير عن خطأ منطقي. إذا كانت العبارة خاطئة ، تتم طباعة "False". 
+لا شيء: هذا ثابت خاص يستخدم للإشارة إلى قيمة فارغة أو فراغ. من المهم أن تتذكر ، 0 ، أي حاوية فارغة (على سبيل المثال قائمة فارغة) لا تحسب إلى بلا. 
+إنه كائن من نوع البيانات الخاص به - NoneType. لا يمكن إنشاء عدة كائنات "بلا" ويمكن تخصيصها للمتغيرات.
+مثال: كلمة رئيسية صواب وخطأ ولا شيء
+
+print(False == 0)
+print(True == 1)
+  
+print(True + True + True)
+print(True + False + False)
+  
+print(None == 0)
+print(None == [])
+انتاج |
+صحيح
+صحيح
+3
+1
+خطأ شنيع
+خطأ شنيع
+و ، أو ، ليس ، في ، هو
+و : هذا عامل منطقي في بيثون. "و" إرجاع أول قيمة خاطئة. إذا لم يتم العثور على العودة الماضي . جدول الحقيقة لـ "و" موضح أدناه. 
+والكلمة الأساسية python
+
+3 و 0 تعيد 0 
+
+3 و 10 تعيد 10 
+
+10 أو 20 أو 30 أو 10 أو 70 إرجاع 10 
+
+قد تكون العبارات المذكورة أعلاه مربكة بعض الشيء لمبرمج قادم من لغة مثل C حيث تقوم العوامل المنطقية دائمًا بإرجاع القيم المنطقية (0 أو 1). الأسطر التالية مباشرة من مستندات Python تشرح هذا:
+
+يحسب التعبير x و y أولاً x ؛ إذا كانت x خطأ ، يتم إرجاع قيمتها ؛ وإلا ، يتم تقييم y ويتم إرجاع القيمة الناتجة.
+
+يحسب التعبير x أو y أولاً x ؛ إذا كانت x صحيحة ، يتم إرجاع قيمتها ؛ وإلا ، يتم تقييم y ويتم إرجاع القيمة الناتجة.
+
+لاحظ أنه لا يتم إرجاع القيمة والنوع ولا أو تقييدهما إلى False و True ، بل يتم إرجاع الوسيطة الأخيرة التي تم تقييمها. يكون هذا مفيدًا في بعض الأحيان ، على سبيل المثال ، إذا كانت s عبارة عن سلسلة يجب استبدالها بقيمة افتراضية إذا كانت فارغة ، فإن التعبير s أو "foo" ينتج عنه القيمة المطلوبة. نظرًا لأنه لا يتعين عليه إنشاء قيمة جديدة ، فإنه يُرجع قيمة منطقية بغض النظر عن نوع الوسيطة الخاصة بها (على سبيل المثال ، لا ينتج "foo" خطأ بدلاً من ".)
+
+أو : هذا عامل منطقي في بيثون. "أو" إرجاع القيمة الحقيقية الأولى. إذا لم يتم العثور على العودة أخيرًا. جدول الحقيقة لـ "أو" موضح أدناه. 
+ 
+أو
+
+3 أو 0 إرجاع 3 
+
+3 أو 10 مرتجعات 3 
+
+0 أو 0 أو 3 أو 10 أو 0 إرجاع 3 
+
+not: هذا المعامل المنطقي يقلب قيمة الحقيقة. جدول الحقيقة لـ "ليس" موضح أدناه. 
+in: تُستخدم هذه الكلمة الأساسية للتحقق مما إذا كانت الحاوية تحتوي على قيمة. تُستخدم هذه الكلمة الرئيسية أيضًا للتكرار خلال الحاوية.
+is: تُستخدم هذه الكلمة الأساسية لاختبار هوية الكائن ، أي للتحقق مما إذا كان كلا الكائنين يأخذان نفس موقع الذاكرة أم لا. 
+مثال: و ، أو ، لا ، هو وفي الكلمات الأساسية
+
+# showing logical operation
+# or (returns True)
+print(True or False)
+  
+# showing logical operation
+# and (returns False)
+print(False and True)
+  
+# showing logical operation
+# not (returns False)
+print(not True)
+  
+# using "in" to check
+if 's' in 'geeksforgeeks':
+    print("s is part of geeksforgeeks")
+else:
+    print("s is not part of geeksforgeeks")
+  
+# using "in" to loop through
+for i in 'geeksforgeeks':
+    print(i, end=" ")
+  
+print("\r")
+  
+# using is to check object identity
+# string is immutable( cannot be changed once allocated)
+# hence occupy same memory location
+print(' ' is ' ')
+  
+# using is to check object identity
+# dictionary is mutable( can be changed once allocated)
+# hence occupy different memory location
+print({} is {})
+انتاج: 
+
+صحيح
+خطأ شنيع
+خطأ شنيع
+s جزء من geeksforgeeks
+geeksforgeeks
+صحيح
+خطأ شنيع
+الكلمات الأساسية للتكرار - لـ ، بينما ، كسر ، تابع
+لـ : تُستخدم هذه الكلمة الرئيسية للتحكم في التدفق والتكرار.
+while : لها عمل مشابه مثل "for" ، وتستخدم للتحكم في التدفق والتكرار.
+كسر : يستخدم "كسر" للتحكم في تدفق الحلقة. يتم استخدام العبارة للخروج من الحلقة وتمرير عنصر التحكم إلى العبارة التالية مباشرة بعد الحلقة.
+تابع : تستخدم كلمة "متابعة" أيضًا للتحكم في تدفق الكود. تتخطى الكلمة الأساسية التكرار الحالي للحلقة ولكنها لا تنهي الحلقة.
+مثال: على سبيل المثال ، بينما ، كسر ، تابع الكلمة الأساسية
+
+# Using for loop
+for i in range(10):
+  
+    print(i, end = " ")
+      
+    # break the loop as soon it sees 6
+    if i == 6:
+        break
+      
+print()
+      
+# loop from 1 to 10
+i = 0
+while i <10:
+      
+    # If i is equals to 6,
+    # continue to next iteration
+    # without printing
+    if i == 6:
+        i+= 1
+        continue
+    else:
+        # otherwise print the value
+        # of i
+        print(i, end = " ")
+          
+    i += 1
+انتاج |
+0 1 2 3 4 5 6
+0 1 2 3 4 5 7 8 9
+الكلمات الأساسية الشرطية - if، else، elif
+إذا : هو بيان ضوابط لاتخاذ القرار. يجبر تعبير الحقيقة السيطرة على الدخول في كتلة عبارة "if".
+آخر : إنه بيان تحكم لاتخاذ القرار. يفرض التعبير الكاذب السيطرة على الانتقال إلى كتلة جملة "else".
+أليف : هو بيان تحكم لاتخاذ القرار. إنه اختصار لعبارة " else if "
+مثال: الكلمة الأساسية if ، و else ، و elif
+
+# Python program to illustrate if-elif-else ladder
+#!/usr/bin/python
+  
+i = 20
+if (i == 10):
+    print ("i is 10")
+elif (i == 20):
+    print ("i is 20")
+else:
+    print ("i is not present")
+انتاج |
+أنا 20
+ملاحظة: لمزيد من المعلومات ، راجع دروس بايثون إذا كانت أخرى .
+
+def
+تستخدم الكلمة الأساسية def للإعلان عن وظائف محددة من قبل المستخدم.
+
+مثال: الكلمة الأساسية def
+
+# def keyword
+def fun():
+    print("Inside Function")
+      
+fun()
+انتاج |
+داخل الوظيفة
+عودة الكلمات الرئيسية - العائد ، العائد
+return: تُستخدم هذه الكلمة الأساسية للعودة من الوظيفة.
+العائد: تُستخدم هذه الكلمة الرئيسية مثل بيان الإرجاع ولكنها تُستخدم لإرجاع المولد.
+مثال: كلمة العودة والعائد
+
+# Return keyword
+def fun():
+    S = 0
+      
+    for i in range(10):
+        S += i
+    return S
+  
+print(fun())
+  
+# Yield Keyword
+def fun():
+    S = 0
+      
+    for i in range(10):
+        S += i
+        yield S
+  
+for i in fun():
+    print(i)
+انتاج |
+45
+0
+1
+3
+6
+10
+15
+21
+28
+36
+45
+صف دراسي
+تستخدم الكلمة الأساسية للفئة للإعلان عن فئات محددة من قبل المستخدم.
+
+مثال: Class Keyword
+
+# Python3 program to
+# demonstrate instantiating
+# a class
+  
+  
+class Dog:
+      
+    # A simple class
+    # attribute
+    attr1 = "mammal"
+    attr2 = "dog"
+  
+    # A sample method
+    def fun(self):
+        print("I'm a", self.attr1)
+        print("I'm a", self.attr2)
+  
+# Driver code
+# Object instantiation
+Rodger = Dog()
+  
+# Accessing class attributes
+# and method through objects
+print(Rodger.attr1)
+Rodger.fun()
+انتاج |
+الحيوان الثديي
+أنا من الثدييات
+أنا كلب
+ملاحظة: لمزيد من المعلومات ، راجع البرنامج التعليمي لفئات وكائنات بايثون .
+
+مع
+باستخدام الكلمات الرئيسية ، يتم استخدام الكلمات الرئيسية في التفاف تنفيذ كتلة التعليمات البرمجية ضمن الأساليب التي يحددها مدير السياق. لا يتم استخدام هذه الكلمة الرئيسية كثيرًا في البرمجة اليومية.
+
+مثال: مع Keyword
+# using with statement
+with open('file_path', 'w') as file:
+    file.write('hello world !')
+كما
+كما يتم استخدام الكلمة الأساسية لإنشاء الاسم المستعار للوحدة المستوردة. أي إعطاء اسم جديد للوحدة المستوردة. على سبيل المثال استيراد الرياضيات مثل mymath.
+
+مثال: ككلمة رئيسية
+
+import math as gfg
+  
+print(gfg.factorial(5))
+انتاج |
+120
+نجاح
+تمرير هو البيان الفارغ في بايثون. لا شيء يحدث عند مواجهة هذا. يستخدم هذا لمنع أخطاء المسافة البادئة ويستخدم كعنصر نائب.
+
+مثال: تمرير الكلمات الرئيسية
+
+n = 10
+for i in range(n):
+      
+# pass can be used as placeholder
+# when code is to added later
+pass
+لامدا
+تُستخدم الكلمة الأساسية Lambda لإنشاء وظائف إرجاع مضمنة مع عدم وجود عبارات مسموح بها داخليًا. 
+
+مثال: كلمة لامدا
+
+# Lambda keyword
+g = lambda x: x*x*x
+  
+print(g(7))
+انتاج |
+343
+الاستيراد من
+استيراد : تستخدم هذه العبارة لتضمين وحدة نمطية معينة في البرنامج الحالي.
+from: يُستخدم بشكل عام مع الاستيراد ، من لاستيراد وظائف معينة من الوحدة النمطية المستوردة.
+مثال: استيراد ، من الكلمة الرئيسية
+
+# import keyword
+import math
+print(math.factorial(10))
+  
+# from keyword
+from math import factorial
+print(factorial(10))
+انتاج |
+3628800
+3628800
+كلمات رئيسية للتعامل مع الاستثناءات - حاول ، باستثناء ، رفع ، أخيرًا ، ثم أكد
+جرب: تستخدم هذه الكلمة الأساسية لمعالجة الاستثناءات ، وتستخدم للقبض على الأخطاء في التعليمات البرمجية باستخدام الكلمة الأساسية باستثناء. يتم فحص الكود الموجود في كتلة "try" ، إذا كان هناك أي نوع من الأخطاء ، باستثناء تنفيذ الكتلة.
+باستثناء: كما هو موضح أعلاه ، يعمل هذا جنبًا إلى جنب مع "محاولة" لالتقاط الاستثناءات.
+أخيرًا: بغض النظر عن نتيجة كتلة "try" ، يتم دائمًا تنفيذ الكتلة التي تسمى "أخيرًا".
+رفع: يمكننا رفع استثناء صريح مع الكلمة الرئيسية زيادة
+تأكيد: تستخدم هذه الوظيفة لأغراض التصحيح . تستخدم عادة للتحقق من صحة الكود. إذا تم تقييم العبارة على أنها صحيحة ، فلن يحدث شيء ، ولكن عندما تكون خاطئة ، يتم رفع " AssertionError ". يمكن للمرء أيضًا طباعة رسالة بها الخطأ ، مفصولة بفاصلة .
+مثال: حاول ، باستثناء ، رفع ، أخيرًا ، وأكد الكلمات الرئيسية
+
+# initializing number
+a = 4
+b = 0
+  
+# No exception Exception raised in try block
+try:
+    k = a//b # raises divide by zero exception.
+    print(k)
+  
+# handles zerodivision exception
+except ZeroDivisionError:
+    print("Can't divide by zero")
+  
+finally:
+    # this block is always executed
+    # regardless of exception generation.
+    print('This is always executed')
+  
+# assert Keyword  
+# using assert to check for 0
+print ("The value of a / b is : ")
+assert b != 0, "Divide by 0 error"
+print (a / b)
+انتاج |
+
+لا يمكن القسمة على الصفر
+يتم تنفيذ هذا دائما
+قيمة أ / ب هي:
+AssertionError: قسمة على خطأ 0
+ملاحظة: لمزيد من المعلومات ، يرجى الرجوع إلى برنامجنا التعليمي الخاص بمعالجة الاستثناءات في بايثون.
+
+ديل
+يتم استخدام del لحذف إشارة إلى كائن. يمكن حذف أي متغير أو قيمة قائمة باستخدام del.
+
+مثال: del Keyword
+
+my_variable1 = 20
+my_variable2 = "GeeksForGeeks"
+  
+# check if my_variable1 and my_variable2 exists
+print(my_variable1)
+print(my_variable2)
+  
+# delete both the variables
+del my_variable1
+del my_variable2
+  
+# check if my_variable1 and my_variable2 exists
+print(my_variable1)
+print(my_variable2)
+انتاج |
+
+20
+المهوسون
+خطأ في الاسم: لم يتم تعريف الاسم "my_variable1"
+عالمي ، غير محلي
+عام : تُستخدم هذه الكلمة الأساسية لتعريف متغير داخل الوظيفة ليكون نطاقًا عالميًا.
+غير محلي: تعمل هذه الكلمة الأساسية بشكل مشابه للكلمة العامة ، ولكن بدلاً من العالمية ، تعلن هذه الكلمة الأساسية عن متغير للإشارة إلى متغير خاص بوظيفة التضمين الخارجية ، في حالة الدوال المتداخلة.
+مثال: الكلمات الرئيسية العالمية وغير المحلية
+
+# global variable
+a = 15
+b = 10
+  
+# function to perform addition
+def add():
+    c = a + b
+    print(c)
+  
+# calling a function
+add()
+  
+# nonlocal keyword
+def fun():
+    var1 = 10
+  
+    def gun():
+        # tell python explicitly that it
+        # has to access var1 initialized
+        # in fun on line 2
+        # using the keyword nonlocal
+        nonlocal var1
+          
+        var1 = var1 + 10
+        print(var1)
+  
+    gun()
+fun()
+انتاج |
+25
+20
+ملاحظة: لمزيد من المعلومات ، راجع البرنامج التعليمي الخاص بنا حول المتغيرات العالمية والمحلية في Python .

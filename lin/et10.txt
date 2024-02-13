@@ -1,0 +1,508 @@
+
+مشغلي القسم في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 31 مايو 2021
+ضع في اعتبارك العبارات أدناه بلغة بايثون.
+ 
+
+
+# A Python program to demonstrate the use of
+# "//" for integers
+print (5//2)
+print (-5//2)
+انتاج:
+
+2
+-3
+الناتج الأول جيد ، لكن الناتج الثاني قد يفاجأ إذا كنا قادرين على عالم Java / C ++. في Python ، يعمل العامل "//" كتقسيم أرضي للوسيطات الصحيحة والعائمة. ومع ذلك ، فإن العامل / يقوم بإرجاع قيمة عائمة إذا كانت إحدى الوسيطات عبارة عن عدد عائم (هذا مشابه لـ C ++)
+
+ملحوظة:
+
+يتم استخدام عامل التشغيل "//" لإرجاع أقرب قيمة عدد صحيح أقل من أو تساوي تعبيرًا أو قيمة محددة. لذا من الكود أعلاه ، 5 // 2 تُرجع 2. أنت تعلم أن 5/2 يساوي 2.5 ، أقرب عدد صحيح أقل من أو يساوي 2 [5 // 2] (وهو معكوس للرياضيات العادية ، في الرياضيات العادية القيمة 3).
+ 
+
+
+# A Python program to demonstrate use of
+# "/" for floating point numbers
+print (5.0/2)
+print (-5.0/2)
+انتاج:
+
+2.5
+-2.5
+عامل تقسيم الطوابق الحقيقي هو "//". تقوم بإرجاع قيمة الكلمة لكل من وسيطات الأعداد الصحيحة والفاصلة العائمة. 
+
+
+# A Python program to demonstrate use of
+# "//" for both integers and floating points
+print (5//2)
+print (-5//2)
+print (5.0//2)
+print (-5.0//2)
+انتاج:
+
+2
+-3
+2.0
+-3.0
+انظر على سبيل المثال.
+ 
+
+
+>>>>>>>>>>>>>>>>>>>>>>>
+زيادة تحميل المشغل في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: 26 مايو 2021
+يعني التحميل الزائد على المشغل إعطاء معنى أكبر يتجاوز المعنى التشغيلي المحدد مسبقًا. على سبيل المثال ، يتم استخدام عامل التشغيل + لإضافة عددين صحيحين وكذلك ربط سلسلتين ودمج قائمتين. يمكن تحقيق ذلك لأن عامل التشغيل "+" مثقل بشكل زائد بواسطة فئة int وفئة str. ربما لاحظت أن نفس عامل التشغيل أو الوظيفة المضمنة تُظهر سلوكًا مختلفًا للكائنات من فئات مختلفة ، وهذا ما يسمى بتحميل المشغل الزائد . 
+ 
+
+
+# Python program to show use of
+# + operator for different purposes.
+ 
+print(1 + 2)
+ 
+# concatenate two strings
+print("Geeks"+"For")
+ 
+# Product two numbers
+print(3 * 4)
+ 
+# Repeat the String
+print("Geeks"*4)
+انتاج: 
+ 
+
+3
+المهوسون
+12
+GeeksGeeksGeeksGeeks
+كيف تفرط في تحميل المشغلين في بايثون؟  
+ضع في اعتبارك أن لدينا كائنين يمثلان تمثيلًا ماديًا لفئة (نوع بيانات محدد من قبل المستخدم) وعلينا إضافة كائنين باستخدام عامل '+' ثنائي ، فإنه يتسبب في حدوث خطأ ، لأن المترجم لا يعرف كيفية إضافة كائنين . لذلك نحدد طريقة للمشغل وتسمى هذه العملية التحميل الزائد للمشغل. يمكننا زيادة التحميل على جميع المشغلين الحاليين ولكن لا يمكننا إنشاء مشغل جديد. لأداء التحميل الزائد على المشغل ، توفر Python بعض الوظائف الخاصة أو الوظائف السحرية التي يتم استدعاؤها تلقائيًا عندما تكون مرتبطة بهذا المشغل المحدد. على سبيل المثال ، عندما نستخدم عامل + ، يتم استدعاء الطريقة السحرية __add__ تلقائيًا حيث يتم تحديد عملية عامل +.
+زيادة التحميل على عامل التشغيل الثنائي + في بايثون: 
+عندما نستخدم عامل تشغيل على أنواع بيانات يحددها المستخدم ، يتم تلقائيًا استدعاء وظيفة خاصة أو وظيفة سحرية مرتبطة بهذا المشغل. تغيير سلوك المشغل بسيط مثل تغيير سلوك الطريقة أو الوظيفة. أنت تحدد طرقًا في فصلك الدراسي ويعمل المشغلون وفقًا لذلك السلوك المحدد في الطرق. عندما نستخدم عامل التشغيل + ، يتم استدعاء الطريقة السحرية __إضافة__ تلقائيًا حيث يتم تحديد عملية عامل +. هناك من خلال تغيير رمز هذه الطريقة السحرية ، يمكننا إعطاء معنى إضافي للمشغل +. 
+الكود 1: 
+ 
+
+
+# Python Program illustrate how
+# to overload an binary + operator
+ 
+class A:
+    def __init__(self, a):
+        self.a = a
+ 
+    # adding two objects
+    def __add__(self, o):
+        return self.a + o.a
+ob1 = A(1)
+ob2 = A(2)
+ob3 = A("Geeks")
+ob4 = A("For")
+ 
+print(ob1 + ob2)
+print(ob3 + ob4)
+انتاج : 
+ 
+
+3
+المهوسون
+الكود 2: 
+ 
+
+
+# Python Program to perform addition
+# of two complex numbers using binary
+# + operator overloading.
+ 
+class complex:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+ 
+     # adding two objects
+    def __add__(self, other):
+        return self.a + other.a, self.b + other.b
+ 
+Ob1 = complex(1, 2)
+Ob2 = complex(2, 3)
+Ob3 = Ob1 + Ob2
+print(Ob3)
+انتاج : 
+ 
+
+(3 ، 5)
+زيادة التحميل على عوامل المقارنة في بايثون: 
+ 
+
+
+# Python program to overload
+# a comparison operators
+ 
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __gt__(self, other):
+        if(self.a>other.a):
+            return True
+        else:
+            return False
+ob1 = A(2)
+ob2 = A(3)
+if(ob1>ob2):
+    print("ob1 is greater than ob2")
+else:
+    print("ob2 is greater than ob1")
+انتاج : 
+ 
+
+ob2 أكبر من ob1
+المساواة في التحميل الزائد وأقل من المشغلين: 
+ 
+
+
+# Python program to overload equality
+# and less than operators
+ 
+class A:
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, other):
+        if(self.a<other.a):
+            return "ob1 is lessthan ob2"
+        else:
+            return "ob2 is less than ob1"
+    def __eq__(self, other):
+        if(self.a == other.a):
+            return "Both are equal"
+        else:
+            return "Not equal"
+                 
+ob1 = A(2)
+ob2 = A(3)
+print(ob1 < ob2)
+ 
+ob3 = A(4)
+ob4 = A(4)
+print(ob1 == ob2)
+انتاج : 
+ 
+
+ob1 هو أقل من ob2
+ليس متساوي
+طرق Python السحرية أو وظائف خاصة لزيادة التحميل على المشغل
+العوامل الثنائية :
+المشغل أو العامل	طريقة السحر
++	__إضافة __ (نفسية ، أخرى)
+-	__sub __ (نفسية ، أخرى)
+*	__mul __ (النفس ، أخرى)
+/	__truediv __ (النفس ، أخرى)
+//	__floordiv __ (النفس ، أخرى)
+٪	__mod __ (النفس ، أخرى)
+**	__pow __ (النفس ، أخرى)
+>>	__rshift __ (نفسية ، أخرى)
+<<	__lshift __ (النفس ، أخرى)
+&	__ و __ (النفس ، غير ذلك)
+|	__أو __ (النفس ، أخرى)
+^	__xor __ (النفس ، أخرى)
+عوامل المقارنة :
+المشغل أو العامل	طريقة السحر
+<	__LT __ (ذاتي ، أخرى)
+>	__GT __ (SELF ، أخرى)
+<=	__LE __ (SELF ، OTHER)
+> =	__GE __ (SELF ، أخرى)
+==	__EQ __ (ذاتي ، أخرى)
+! =	__NE __ (SELF ، أخرى)
+مشغلي التخصيص:
+المشغل أو العامل	طريقة السحر
+- =	__ISUB __ (SELF ، أخرى)
++ =	__IADD __ (ذاتي ، أخرى)
+* =	__IMUL __ (ذاتي ، أخرى)
+/ =	__IDIV __ (ذاتي ، أخرى)
+// =	__IFLOORDIV __ (ذاتي ، أخرى)
+٪ =	__IMOD __ (SELF ، OTHER)
+** =	__IPOW __ (SELF ، أخرى)
+>> =	__IRSHIFT __ (ذاتي ، أخرى)
+<< =	__ILSHIFT __ (ذاتي ، أخرى)
+& =	__IAND __ (SELF ، أخرى)
+| =	__IOR __ (ذاتي ، أخرى)
+^ =	__IXOR __ (ذاتي ، أخرى)
+العوامل الأحادية:
+المشغل أو العامل	طريقة السحر
+-	__NEG __ (SELF ، أخرى)
++	__POS __ (SELF ، أخرى)
+~	__INVERT __ (ذاتي ، أخرى)
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+أي كل شيء في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 25 نوفمبر 2020
+Any and All هما عنصران داخليان مدمجان يتم توفيرهما في Python يستخدمان لـ And / Or المتتالية.
+
+أي
+عوائد صحيحة إذا كان أي من العناصر صحيحًا. تقوم بإرجاع خطأ إذا كانت فارغة أو كانت جميعها خاطئة. يمكن اعتبار أي منها على أنها سلسلة من عمليات OR على العناصر التكرارية المتوفرة.
+إنها ماس كهربائى التنفيذ ، أي وقف التنفيذ بمجرد معرفة النتيجة.
+
+بناء الجملة: أي (قائمة العناصر التكرارية)
+
+
+# Since all are false, false is returned
+print (any([False, False, False, False]))
+  
+# Here the method will short-circuit at the
+# second item (True) and will return True.
+print (any([False, True, False, False]))
+  
+# Here the method will short-circuit at the
+# first (True) and will return True.
+print (any([True, False, False, False]))
+انتاج :
+
+خطأ شنيع
+صحيح
+صحيح
+ 
+
+كل
+المرتجعات صحيحة إذا كانت جميع العناصر صحيحة (أو إذا كانت العناصر القابلة للتكرار فارغة). يمكن اعتبار كل شيء على أنه سلسلة من العمليات AND على العناصر التكرارية المتوفرة. كما أنه يحدث دارة قصيرة في التنفيذ ، أي وقف التنفيذ بمجرد معرفة النتيجة.
+
+التركيب اللغوي: all (list of iterables)
+
+
+# Here all the iterables are True so all
+# will return True and the same will be printed
+print (all([True, True, True, True]))
+  
+# Here the method will short-circuit at the 
+# first item (False) and will return False.
+print (all([False, True, True, False]))
+  
+# This statement will return False, as no
+# True is found in the iterables
+print (all([False, False, False]))
+انتاج :
+
+صحيح
+خطأ شنيع
+خطأ شنيع
+أمثلة عملية
+
+
+# This code explains how can we 
+# use 'any' function on list 
+list1 = []
+list2 = []
+  
+# Index ranges from 1 to 10 to multiply
+for i in range(1,11):
+    list1.append(4*i) 
+  
+# Index to access the list2 is from 0 to 9
+for i in range(0,10):
+    list2.append(list1[i]%5==0)
+  
+print('See whether at least one number is divisible by 5 in list 1=>')
+print(any(list2))
+انتاج:
+
+انظر ما إذا كان هناك رقم واحد على الأقل قابل للقسمة على 5 في القائمة 1 =>
+صحيح
+
+# Illustration of 'all' function in python 3
+  
+# Take two lists 
+list1=[]
+list2=[]
+  
+# All numbers in list1 are in form: 4*i-3
+for i  in range(1,21):
+    list1.append(4*i-3)
+  
+# list2 stores info of odd numbers in list1
+for i in range(0,20):
+    list2.append(list1[i]%2==1)
+  
+print('See whether all numbers in list1 are odd =>')
+print(all(list2))
+انتاج:
+
+تحقق مما إذا كانت جميع الأرقام في القائمة 1 فردية =>
+صحيح
+جدول الحقيقة: -
+
+
+ساهم Mayank Rawat في هذه المقالة . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+>>>>>>>>>>>>>>>>>>>>>>>
+
+ة 1
+مستوى الصعوبة: أساسي
+آخر تحديث: 11 أكتوبر 2021
+لدى Python وظائف محددة مسبقًا للعديد من العمليات الحسابية والمنطقية والعلائقية والبتية إلخ ضمن الوحدة النمطية "المشغل". يتم تناول بعض الوظائف الأساسية في هذه المقالة.
+
+1. أضف (أ ، ب) : - تقوم هذه الوظائف بإرجاع إضافة الوسيطات المحددة.
+العملية - أ + ب.
+
+2. sub (a، b) : - تقوم هذه الوظائف بإرجاع الاختلاف في المعطيات المعطاة.
+العملية - أ - ب.
+
+3. mul (a، b) : - تقوم هذه الوظائف بإرجاع منتج الوسيطات المعطاة.
+العملية - أ * ب.
+
+
+# Python code to demonstrate working of 
+# add(), sub(), mul()
+  
+# importing operator module 
+import operator
+  
+# Initializing variables
+a = 4
+  
+b = 3
+  
+# using add() to add two numbers
+print ("The addition of numbers is :",end="");
+print (operator.add(a, b))
+  
+# using sub() to subtract two numbers
+print ("The difference of numbers is :",end="");
+print (operator.sub(a, b))
+  
+# using mul() to multiply two numbers
+print ("The product of numbers is :",end="");
+print (operator.mul(a, b))
+انتاج:
+
+جمع الأعداد: 7
+الفرق في الأرقام هو: 1
+حاصل ضرب الأعداد: 12
+4. truediv (أ ، ب) : - تعرض هذه الوظيفة قسمة الحجج المعطاة.
+العملية - أ / ب.
+
+5. floordiv (a، b) : - تعرض هذه الوظيفة أيضًا قسمة المتغيرات المعينة. لكن القيمة هي قيمة أرضية أي تُرجع أكبر عدد صحيح صغير .
+العملية - أ // ب.
+
+6. pow (a، b) : - تقوم هذه الدالة بإرجاع الأس للحجج المعطاة.
+العملية - أ ** ب.
+
+7. mod (a، b) : - ترجع هذه الدالة معامل المعطيات المعطاة.
+العملية - أ٪ ب.
+
+
+# Python code to demonstrate working of 
+# truediv(), floordiv(), pow(), mod()
+  
+# importing operator module 
+import operator
+  
+# Initializing variables
+a = 5
+  
+b = 2
+  
+# using truediv() to divide two numbers
+print ("The true division of numbers is : ",end="");
+print (operator.truediv(a,b))
+  
+# using floordiv() to divide two numbers
+print ("The floor division of numbers is : ",end="");
+print (operator.floordiv(a,b))
+  
+# using pow() to exponentiate two numbers
+print ("The exponentiation of numbers is : ",end="");
+print (operator.pow(a,b))
+  
+# using mod() to take modulus of two numbers
+print ("The modulus of numbers is : ",end="");
+print (operator.mod(a,b))
+انتاج:
+
+القسمة الحقيقية للأعداد هي: 2.5
+قسمة الأرقام الأرضية هي: 2
+أس الأعداد هو: 25
+معامل الأعداد هو: 1
+8. lt (a، b) : - تُستخدم هذه الوظيفة للتحقق مما إذا كانت a أقل من b أم لا . إرجاع صحيح إذا كان a أقل من b ، وإلا يتم إرجاع خطأ.
+العملية - أ <ب .
+
+9. le (a، b) : - تُستخدم هذه الوظيفة للتحقق مما إذا كان a أصغر من أو يساوي b أم لا . إرجاع صحيح إذا كان a أصغر من أو يساوي b ، وإلا يتم إرجاع خطأ.
+العملية - أ <= ب .
+
+10. مكافئ (أ ، ب) : - تُستخدم هذه الوظيفة للتحقق مما إذا كان a يساوي b أم لا . إرجاع صحيح إذا كان a يساوي b ، وإلا يتم إرجاع خطأ.
+العملية - أ == ب .
+
+
+# Python code to demonstrate working of 
+# lt(), le() and eq()
+  
+# importing operator module 
+import operator
+  
+# Initializing variables
+a = 3
+  
+b = 3
+  
+# using lt() to check if a is less than b
+if(operator.lt(a,b)):
+       print ("3 is less than 3")
+else : print ("3 is not less than 3")
+  
+# using le() to check if a is less than or equal to b
+if(operator.le(a,b)):
+       print ("3 is less than or equal to 3")
+else : print ("3 is not less than or equal to 3")
+  
+# using eq() to check if a is equal to b
+if (operator.eq(a,b)):
+       print ("3 is equal to 3")
+else : print ("3 is not equal to 3")
+انتاج:
+
+3 لا تقل عن 3
+3 أصغر من أو يساوي 3
+3 يساوي 3
+11. gt (a، b) : - تُستخدم هذه الوظيفة للتحقق مما إذا كانت a أكبر من b أم لا . لإرجاع صحيح إذا كانت a أكبر من b ، وإلا تُرجع خطأ.
+العملية - أ> ب .
+
+12. ge (a، b) - تُستخدم هذه الوظيفة للتحقق مما إذا كانت a أكبر من أو تساوي b أم لا . لإرجاع صحيح إذا كان a أكبر من أو يساوي b ، وإلا ترجع خطأ.
+العملية - أ> = ب .
+
+13. ne (a، b) : - تُستخدم هذه الوظيفة للتحقق مما إذا كانت a لا تساوي b أو تساوي . لإرجاع صحيح إذا كان a لا يساوي b ، وإلا يتم إرجاع خطأ.
+العملية - أ! = ب .
+
+
+# Python code to demonstrate working of 
+# gt(), ge() and ne()
+  
+# importing operator module 
+import operator
+  
+# Initializing variables
+a = 4
+  
+b = 3
+  
+# using gt() to check if a is greater than b
+if (operator.gt(a,b)):
+       print ("4 is greater than 3")
+else : print ("4 is not greater than 3")
+  
+# using ge() to check if a is greater than or equal to b
+if (operator.ge(a,b)):
+       print ("4 is greater than or equal to 3")
+else : print ("4 is not greater than or equal to 3")
+  
+# using ne() to check if a is not equal to b
+if (operator.ne(a,b)):
+       print ("4 is not equal to 3")
+else : print ("4 is equal to 3")
+انتاج:
+
+4 أكبر من 3
+4 أكبر من أو يساوي 3
+4 لا يساوي 3

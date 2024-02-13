@@ -1,0 +1,321 @@
+
+مجموعات بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 02 فبراير 2022
+في Python ، Set هي مجموعة غير مرتبة من أنواع البيانات القابلة للتكرار والتغيير ولا تحتوي على عناصر مكررة. ترتيب العناصر في المجموعة غير محدد على الرغم من أنه قد يتكون من عناصر مختلفة.
+
+الميزة الرئيسية لاستخدام مجموعة ، على عكس القائمة ، هي أنها تحتوي على طريقة مُحسَّنة للغاية للتحقق مما إذا كان عنصر معين موجودًا في المجموعة.
+
+خلق مجموعة
+يمكن إنشاء المجموعات باستخدام وظيفة set () المضمنة مع كائن قابل للتكرار أو تسلسل عن طريق وضع التسلسل داخل أقواس معقوفة ، مفصولة بفاصلة.
+
+ملاحظة - لا يمكن أن تحتوي المجموعة على عناصر قابلة للتغيير مثل قائمة أو قاموس ، لأنها قابلة للتغيير.  
+
+
+# Python program to demonstrate 
+# Creation of Set in Python
+  
+# Creating a Set
+set1 = set()
+print("Initial blank Set: ")
+print(set1)
+  
+# Creating a Set with 
+# the use of a String
+set1 = set("GeeksForGeeks")
+print("\nSet with the use of String: ")
+print(set1)
+  
+# Creating a Set with
+# the use of Constructor
+# (Using object to Store String)
+String = 'GeeksForGeeks'
+set1 = set(String)
+print("\nSet with the use of an Object: " )
+print(set1)
+  
+# Creating a Set with
+# the use of a List
+set1 = set(["Geeks", "For", "Geeks"])
+print("\nSet with the use of List: ")
+print(set1)
+انتاج: 
+
+مجموعة فارغة أولية:
+تعيين()
+
+ضبط باستخدام String:
+{'e'، 'r'، 'k'، 'o'، 'G'، 's'، 'F'}
+
+تعيين باستخدام كائن:
+{'r'، 'o'، 'e'، 'F'، 's'، 'k'، 'G'}
+
+ضبط باستخدام القائمة:
+{'Geeks'، 'For'}
+تحتوي المجموعة على عناصر فريدة فقط ولكن في وقت إنشاء المجموعة ، يمكن أيضًا تمرير قيم مكررة متعددة. ترتيب العناصر في المجموعة غير محدد وغير قابل للتغيير. لا يلزم أن يكون نوع العناصر في المجموعة هو نفسه ، يمكن أيضًا تمرير قيم مختلفة لنوع البيانات المختلطة إلى المجموعة. 
+
+
+# Creating a Set with 
+# a List of Numbers
+# (Having duplicate values)
+set1 = set([1, 2, 4, 4, 3, 3, 3, 6, 5])
+print("\nSet with the use of Numbers: ")
+print(set1)
+  
+# Creating a Set with 
+# a mixed type of values
+# (Having numbers and strings)
+set1 = set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks'])
+print("\nSet with the use of Mixed Values")
+print(set1)
+انتاج: 
+
+ضبط باستخدام الأرقام:
+{1 ، 2 ، 3 ، 4 ، 5 ، 6}
+
+اضبط باستخدام قيم مختلطة
+{1، 2، 4، "المهوسون"، 6، "For"}
+إضافة عناصر إلى مجموعة
+باستخدام طريقة add ()
+يمكن إضافة العناصر إلى المجموعة باستخدام وظيفة add () المضمنة. يمكن إضافة عنصر واحد فقط في المرة الواحدة إلى المجموعة باستخدام طريقة add () ، وتستخدم الحلقات لإضافة عناصر متعددة في وقت واحد باستخدام طريقة add ().
+
+ملاحظة - لا يمكن إضافة القوائم إلى مجموعة كعناصر لأن القوائم غير قابلة للتجزئة في حين يمكن إضافة المجموعات لأن المجموعات غير قابلة للتغيير وبالتالي قابلة للتجزئة. 
+
+
+# Python program to demonstrate 
+# Addition of elements in a Set
+  
+# Creating a Set
+set1 = set()
+print("Initial blank Set: ")
+print(set1)
+  
+# Adding element and tuple to the Set
+set1.add(8)
+set1.add(9)
+set1.add((6,7))
+print("\nSet after Addition of Three elements: ")
+print(set1)
+  
+# Adding elements to the Set
+# using Iterator
+for i in range(1, 6):
+    set1.add(i)
+print("\nSet after Addition of elements from 1-5: ")
+print(set1)
+انتاج: 
+
+مجموعة فارغة أولية:
+تعيين()
+
+حدد بعد إضافة ثلاثة عناصر:
+{8، 9، (6، 7)}
+
+اضبط بعد إضافة العناصر من 1-5:
+{1 ، 2 ، 3 ، (6 ، 7) ، 4 ، 5 ، 8 ، 9}
+باستخدام طريقة () update
+لإضافة عنصرين أو أكثر ، يتم استخدام طريقة Update (). تقبل طريقة update () القوائم ، والسلاسل ، والمجموعات ، بالإضافة إلى المجموعات الأخرى كوسائط لها. في كل هذه الحالات ، يتم تجنب العناصر المكررة.
+
+
+# Python program to demonstrate 
+# Addition of elements in a Set
+  
+# Addition of elements to the Set
+# using Update function
+set1 = set([ 4, 5, (6, 7)])
+set1.update([10, 11])
+print("\nSet after Addition of elements using Update: ")
+print(set1)
+انتاج: 
+
+تعيين بعد إضافة العناصر باستخدام التحديث:
+{10 ، 11 ، 4 ، 5 ، (6 ، 7)}
+ 
+الوصول إلى مجموعة
+لا يمكن الوصول إلى عناصر المجموعة بالرجوع إلى فهرس ، نظرًا لأن المجموعات غير مرتبة لا تحتوي العناصر على فهرس. ولكن يمكنك إجراء تكرار عبر عناصر المجموعة باستخدام حلقة for ، أو السؤال عما إذا كانت هناك قيمة محددة موجودة في مجموعة ، باستخدام الكلمة الأساسية in.
+
+
+# Python program to demonstrate
+# Accessing of elements in a set
+  
+# Creating a set
+set1 = set(["Geeks", "For", "Geeks"])
+print("\nInitial set")
+print(set1)
+  
+# Accessing element using
+# for loop
+print("\nElements of set: ")
+for i in set1:
+    print(i, end=" ")
+  
+# Checking the element
+# using in keyword
+print("Geeks" in set1)
+انتاج: 
+
+المجموعة الأولية:
+{'Geeks'، 'For'}
+
+عناصر المجموعة:
+المهوسون
+
+صحيح
+إزالة العناصر من المجموعة
+باستخدام طريقة الإزالة () أو طريقة الإلغاء ()
+يمكن إزالة العناصر من المجموعة باستخدام وظيفة الإزالة المضمنة () ولكن ينشأ خطأ مفتاح إذا لم يكن العنصر موجودًا في المجموعة. لإزالة عناصر من مجموعة بدون KeyError ، استخدم disard () ، إذا لم يكن العنصر موجودًا في المجموعة ، فإنه يظل بدون تغيير.
+
+
+# Python program to demonstrate 
+# Deletion of elements in a Set
+  
+# Creating a Set
+set1 = set([1, 2, 3, 4, 5, 6, 
+            7, 8, 9, 10, 11, 12])
+print("Initial Set: ")
+print(set1)
+  
+# Removing elements from Set
+# using Remove() method
+set1.remove(5)
+set1.remove(6)
+print("\nSet after Removal of two elements: ")
+print(set1)
+  
+# Removing elements from Set
+# using Discard() method
+set1.discard(8)
+set1.discard(9)
+print("\nSet after Discarding two elements: ")
+print(set1)
+  
+# Removing elements from Set
+# using iterator method
+for i in range(1, 5):
+    set1.remove(i)
+print("\nSet after Removing a range of elements: ")
+print(set1)
+انتاج: 
+
+المجموعة الأولية:
+{1 ، 2 ، 3 ، 4 ، 5 ، 6 ، 7 ، 8 ، 9 ، 10 ، 11 ، 12}
+
+حدد بعد إزالة عنصرين:
+{1 ، 2 ، 3 ، 4 ، 7 ، 8 ، 9 ، 10 ، 11 ، 12}
+
+حدد بعد تجاهل عنصرين:
+{1 ، 2 ، 3 ، 4 ، 7 ، 10 ، 11 ، 12}
+
+اضبط بعد إزالة مجموعة من العناصر:
+{7 ، 10 ، 11 ، 12}
+باستخدام طريقة pop ()
+يمكن أيضًا استخدام وظيفة Pop () لإزالة عنصر من المجموعة وإعادته ، لكنها تزيل العنصر الأخير فقط من المجموعة. 
+ملاحظة - إذا كانت المجموعة غير مرتبة ، فلا توجد طريقة لتحديد العنصر المنبثق باستخدام وظيفة pop (). 
+
+
+# Python program to demonstrate 
+# Deletion of elements in a Set
+  
+# Creating a Set
+set1 = set([1, 2, 3, 4, 5, 6, 
+            7, 8, 9, 10, 11, 12])
+print("Initial Set: ")
+print(set1)
+  
+# Removing element from the 
+# Set using the pop() method
+set1.pop()
+print("\nSet after popping an element: ")
+print(set1)
+انتاج: 
+
+المجموعة الأولية:
+{1 ، 2 ، 3 ، 4 ، 5 ، 6 ، 7 ، 8 ، 9 ، 10 ، 11 ، 12}
+
+اضبط بعد ظهور عنصر:
+{2 ، 3 ، 4 ، 5 ، 6 ، 7 ، 8 ، 9 ، 10 ، 11 ، 12}
+باستخدام طريقة clear ()
+لإزالة جميع العناصر من المجموعة ، يتم استخدام وظيفة clear (). 
+
+
+#Creating a set
+set1 = set([1,2,3,4,5])
+print("\n Initial set: ")
+print(set1)
+  
+  
+# Removing all the elements from 
+# Set using clear() method
+set1.clear()
+print("\nSet after clearing all the elements: ")
+print(set1)
+انتاج: 
+
+المجموعة الأولية:
+{1 ، 2 ، 3 ، 4 ، 5}
+
+اضبط بعد مسح جميع العناصر:
+تعيين()
+المجموعات المجمدة في Python هي كائنات غير قابلة للتغيير تدعم فقط الطرق والمشغلين الذين ينتجون نتيجة دون التأثير على المجموعة أو المجموعات المجمدة التي يتم تطبيقها عليها. بينما يمكن تعديل عناصر المجموعة في أي وقت ، تظل عناصر المجموعة المجمدة كما هي بعد الإنشاء. 
+
+إذا لم يتم تمرير أي معلمات ، فإنها تُرجع مجموعة مجمد فارغة.  
+
+
+# Python program to demonstrate 
+# working of a FrozenSet 
+  
+# Creating a Set
+String = ('G', 'e', 'e', 'k', 's', 'F', 'o', 'r')
+  
+Fset1 = frozenset(String)
+print("The FrozenSet is: ")
+print(Fset1)
+  
+# To print Empty Frozen Set
+# No parameter is passed
+print("\nEmpty FrozenSet: ")
+print(frozenset())
+تعيين الأساليب
+دور	وصف
+يضيف()	يضيف عنصرًا إلى مجموعة
+إزالة()	يزيل عنصر من مجموعة. إذا لم يكن العنصر موجودًا في المجموعة ، فقم برفع KeyError
+صافي()	يزيل كل العناصر من مجموعة
+ينسخ()	إرجاع نسخة ضحلة من مجموعة
+البوب ​​()	يزيل ويعيد عنصر مجموعة عشوائية. رفع KeyError إذا كانت المجموعة فارغة
+تحديث()	يحدّث مجموعة مع اتحاد نفسه والآخرين
+اتحاد()	تُرجع اتحاد المجموعات في مجموعة جديدة
+اختلاف()	تُرجع الفرق بين مجموعتين أو أكثر كمجموعة جديدة
+الفرق_تحديث ()	يزيل كل عناصر مجموعة أخرى من هذه المجموعة
+تجاهل()	يزيل عنصرًا من المجموعة إذا كان عضوًا. (لا تفعل شيئًا إذا لم يكن العنصر في مجموعة)
+تداخل()	تُرجع تقاطع مجموعتين كمجموعة جديدة
+intersection_update ()	يحدّث المجموعة بتقاطع نفسها مع أخرى
+isdisjoint ()	إرجاع True إذا كان هناك تقاطع فارغ بين مجموعتين
+ISSUBSET ()	إرجاع صحيح إذا كانت مجموعة أخرى تحتوي على هذه المجموعة
+ISSuperset ()	إرجاع صحيح إذا كانت هذه المجموعة تحتوي على مجموعة أخرى
+متماثل_الفرق ()	تُرجع الفرق المتماثل لمجموعتين كمجموعة جديدة
+symmetric_difference_update ()	يحدّث مجموعة مع الاختلاف المتماثل لنفسها وآخر
+المقالات الأخيرة حول مجموعات بايثون
+تعيين البرامج
+برنامج لقبول السلاسل التي تحتوي على جميع أحرف العلة
+برنامج Python للعثور على العناصر المشتركة في ثلاث قوائم باستخدام المجموعات
+البحث عن القيم المفقودة والإضافية في قائمتين
+أزواج من الأوتار الكاملة في مجموعتين
+تحقق مما إذا كانت سلسلة معينة هي Heterogram أم لا
+الحد الأقصى والحد الأدنى في المجموعة
+إزالة العناصر من المجموعة
+بايثون اضبط الاختلاف للعثور على عنصر مفقود من مصفوفة مكررة
+الحد الأدنى لعدد المجموعات الفرعية ذات العناصر المميزة باستخدام العداد
+تحقق مما إذا كانت قائمتين تحتويان على عنصر واحد مشترك على الأقل
+برنامج لحساب عدد حروف العلة باستخدام مجموعات في سلسلة معينة
+الفرق بين قائمتين
+تم تعيين Python للتحقق مما إذا كانت السلسلة عبارة عن صورة بانورامية
+عمليات مجموعة بايثون (الاتحاد والتقاطع والاختلاف والاختلاف المتماثل)
+سلسلة متسلسلة بأحرف غير شائعة في Python
+قاموس Python ، اضبطه وعداده للتحقق مما إذا كانت الترددات يمكن أن تصبح هي نفسها
+باستخدام Set () في Python Pangram Checking
+عيّن update () في Python لعمل اتحاد مصفوفات n
+روابط مفيدة
+إخراج برامج بايثون - مجموعات
+المقالات الأخيرة حول مجموعات بايثون
+أسئلة الاختيار من متعدد - بايثون
+جميع المقالات في فئة بايثون

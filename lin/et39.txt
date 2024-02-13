@@ -1,0 +1,627 @@
+
+الافتراضي في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ٢٧ يناير ٢٠٢٢
+القاموس في Python عبارة عن مجموعة غير مرتبة من قيم البيانات المستخدمة لتخزين قيم البيانات مثل الخريطة. على عكس أنواع البيانات الأخرى التي تحتوي على قيمة واحدة فقط كعنصر ، يحتفظ القاموس بزوج من قيم المفاتيح. في القاموس ، يجب أن يكون المفتاح فريدًا وغير قابل للتغيير. هذا يعني أن Python Tuple يمكن أن يكون مفتاحًا بينما لا يمكن لقائمة Python. يمكن إنشاء قاموس بوضع تسلسل من العناصر داخل أقواس متعرجة {} ، مفصولة بفاصلة. 
+مثال:
+
+
+# Python program to demonstrate
+# dictionary
+  
+  
+Dict = {1: 'Geeks', 2: 'For', 3: 'Geeks'} 
+print("Dictionary:") 
+print(Dict)
+print(Dict[1])
+  
+# Uncommenting this print(Dict[4])
+# will raise a KeyError as the
+# 4 is not present in the dictionary
+انتاج:
+
+قاموس:
+{1: "المهوسون" ، 2: "For" ، 3: "المهوسون"}
+المهوسون
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/1ca83108cc81344dc7137900693ced08.py" ، سطر 11 ، في
+    طباعة (ديكت [4])
+KeyError: 4
+في بعض الأحيان ، عند ظهور KeyError ، قد تصبح مشكلة. للتغلب على هذا ، تقدم Python قاموسًا آخر مثل الحاوية المعروفة باسم Defaultdict والموجودة داخل وحدة المجموعات.
+ملاحظة: لمزيد من المعلومات ، راجع قاموس Python .
+ 
+
+DefaultDict
+Defaultdict عبارة عن حاوية مثل القواميس الموجودة في مجموعات الوحدات النمطية . Defaultdict هي فئة فرعية من فئة القاموس التي تقوم بإرجاع كائن يشبه القاموس. وظائف كل من القواميس والقاموس الافتراضي هي نفسها تقريبًا باستثناء حقيقة أن الإفتراضي لا يُثير خطأ KeyError. يوفر قيمة افتراضية للمفتاح غير موجود.
+
+بناء الجملة: defaultdict (default_factory)
+المعلمات:  
+
+default_factory: دالة تعيد القيمة الافتراضية للقاموس المحدد. إذا كانت هذه الوسيطة غائبة ، فإن القاموس يثير خطأ KeyError.
+مثال:
+
+
+# Python program to demonstrate
+# defaultdict
+  
+  
+from collections import defaultdict
+  
+  
+# Function to return a default
+# values for keys that is not
+# present
+def def_value():
+    return "Not Present"
+      
+# Defining the dict
+d = defaultdict(def_value)
+d["a"] = 1
+d["b"] = 2
+  
+print(d["a"])
+print(d["b"])
+print(d["c"])
+انتاج:
+
+1
+2
+غير موجود
+العمل الداخلي للديكت الافتراضي
+يضيف Defaultdict متغير حالة واحدًا قابلًا للكتابة وطريقة واحدة بالإضافة إلى عمليات القاموس القياسية. متغير المثيل هو معامل المصنع الافتراضي والطريقة المقدمة هي __مفقودة__.
+
+Default_factory: هي وظيفة تعيد القيمة الافتراضية للقاموس المحدد. إذا كانت هذه الوسيطة غائبة ، فإن القاموس يثير خطأ KeyError.
+مثال:
+
+# Python program to demonstrate
+# default_factory argument of 
+# defaultdict
+  
+  
+from collections import defaultdict
+  
+      
+# Defining the dict and passing 
+# lambda as default_factory argument
+d = defaultdict(lambda: "Not Present")
+d["a"] = 1
+d["b"] = 2
+  
+print(d["a"])
+print(d["b"])
+print(d["c"])
+انتاج:
+
+1
+2
+غير موجود
+__missing __ (): تُستخدم هذه الوظيفة لتوفير القيمة الافتراضية للقاموس. تأخذ هذه الوظيفة default_factory كوسيطة وإذا كانت هذه الوسيطة هي None ، فسيتم رفع KeyError وإلا فإنها توفر قيمة افتراضية للمفتاح المحدد. يتم استدعاء هذه الطريقة بشكل أساسي بواسطة طريقة __getitem __ () لفئة dt عندما لا يتم العثور على المفتاح المطلوب. __getitem __ () ترفع أو تعيد القيمة التي تم إرجاعها بواسطة __missing __ (). طريقة.
+مثال:
+
+# Python program to demonstrate
+# defaultdict
+  
+  
+from collections import defaultdict
+  
+      
+# Defining the dict
+d = defaultdict(lambda: "Not Present")
+d["a"] = 1
+d["b"] = 2
+  
+# Provides the default value 
+# for the key
+print(d.__missing__('a'))
+print(d.__missing__('d'))
+انتاج:
+
+غير موجود
+غير موجود
+استخدام List as default_factory
+عندما يتم تمرير فئة القائمة على أنها وسيطة default_factory ، يتم إنشاء نص افتراضي باستخدام القيم الموجودة في القائمة.
+مثال:
+
+
+# Python program to demonstrate
+# defaultdict
+  
+  
+from collections import defaultdict
+  
+  
+# Defining a dict
+d = defaultdict(list)
+  
+for i in range(5):
+    d[i].append(i)
+      
+print("Dictionary with values as list:")
+print(d)
+انتاج:
+
+قاموس مع القيم كقائمة:
+defaultdict (<class 'list'> ، {0: [0] ، 1: [1] ، 2: [2] ، 3: [3] ، 4: [4]})
+استخدام int كـ default_factory
+عندما يتم تمرير الفئة int على أنها وسيطة default_factory ، يتم إنشاء نص افتراضي بقيمة افتراضية مثل الصفر.
+مثال:
+
+
+# Python program to demonstrate
+# defaultdict
+   
+   
+from collections import defaultdict
+   
+   
+# Defining the dict
+d = defaultdict(int)
+   
+L = [1, 2, 3, 4, 2, 4, 1, 2]
+   
+# Iterate through the list
+# for keeping the count
+for i in L:
+       
+    # The default value is 0
+    # so there is no need to 
+    # enter the key first
+    d[i] += 1
+       
+print(d)
+انتاج:
+
+defaultdict (<class 'int'> ، {1: 2 ، 2: 3 ، 3: 1 ، 4: 2})
+<<<<<<<<<<<<<<<<<<<
+ChainMap في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ٢٨ يونيو ٢٠٢١
+تحتوي لغة Python على حاوية تسمى " ChainMap " والتي تضم العديد من القواميس في وحدة واحدة. ChainMap عضو في " مجموعات " الوحدة النمطية .
+
+مثال:
+
+
+# Python program to demonstrate  
+# ChainMap  
+       
+       
+from collections import ChainMap  
+       
+       
+d1 = {'a': 1, 'b': 2} 
+d2 = {'c': 3, 'd': 4} 
+d3 = {'e': 5, 'f': 6} 
+    
+# Defining the chainmap  
+c = ChainMap(d1, d2, d3)  
+       
+print(c)
+انتاج:
+
+ChainMap ({'a': 1، 'b': 2}، {'c': 3، 'd': 4}، {'e': 5، 'f': 6})
+دعونا نرى العمليات المختلفة على ChainMap
+
+عمليات الوصول
+keys (): - تُستخدم هذه الوظيفة لعرض جميع مفاتيح جميع القواميس في ChainMap.
+
+القيم (): - تُستخدم هذه الوظيفة لعرض قيم جميع القواميس في ChainMap.
+
+Maps (): - تُستخدم هذه الوظيفة لعرض المفاتيح مع القيم المقابلة لجميع القواميس في ChainMap.
+
+# Please select Python 3 for running this code in IDE
+# Python code to demonstrate ChainMap and
+# keys(), values() and maps
+  
+# importing collections for ChainMap operations
+import collections
+  
+# initializing dictionaries
+dic1 = { 'a' : 1, 'b' : 2 }
+dic2 = { 'b' : 3, 'c' : 4 }
+  
+# initializing ChainMap
+chain = collections.ChainMap(dic1, dic2)
+  
+# printing chainMap using maps
+print ("All the ChainMap contents are : ")
+print (chain.maps)
+  
+# printing keys using keys()
+print ("All keys of ChainMap are : ")
+print (list(chain.keys()))
+  
+# printing keys using keys()
+print ("All values of ChainMap are : ")
+print (list(chain.values()))
+انتاج :
+
+جميع محتويات ChainMap هي:
+[{'b': 2، 'a': 1}، {'c': 4، 'b': 3}]
+جميع مفاتيح ChainMap هي:
+["أ" ، "ج" ، "ب"]
+جميع قيم ChainMap هي:
+[1، 4، 2]
+ 
+
+ملاحظة: لاحظ أن المفتاح المسمى "b" موجود في كلا القواميس ، ولكن يتم أخذ مفتاح القاموس الأول فقط كقيمة رئيسية لـ "b". يتم الترتيب عندما يتم تمرير القواميس في الوظيفة.
+
+معالجة العمليات
+new_child (): - تضيف هذه الوظيفة قاموسًا جديدًا في بداية ChainMap.
+
+عكس (): - تعكس هذه الوظيفة الترتيب النسبي للقواميس في ChainMap.
+
+# Please select Python 3 for running this code in IDE
+# Python code to demonstrate ChainMap and
+# reversed() and new_child()
+  
+# importing collections for ChainMap operations
+import collections
+  
+# initializing dictionaries
+dic1 = { 'a' : 1, 'b' : 2 }
+dic2 = { 'b' : 3, 'c' : 4 }
+dic3 = { 'f' : 5 }
+  
+# initializing ChainMap
+chain = collections.ChainMap(dic1, dic2)
+  
+# printing chainMap using map
+print ("All the ChainMap contents are : ")
+print (chain.maps)
+  
+# using new_child() to add new dictionary
+chain1 = chain.new_child(dic3)
+  
+# printing chainMap using map
+print ("Displaying new ChainMap : ")
+print (chain1.maps)
+  
+# displaying value associated with b before reversing
+print ("Value associated with b before reversing is : ",end="")
+print (chain1['b'])
+  
+# reversing the ChainMap
+chain1.maps = reversed(chain1.maps)
+  
+# displaying value associated with b after reversing
+print ("Value associated with b after reversing is : ",end="")
+print (chain1['b'])
+انتاج :
+
+جميع محتويات ChainMap هي:
+[{'b': 2، 'a': 1}، {'b': 3، 'c': 4}]
+عرض ChainMap الجديد:
+[{'f': 5}، {'b': 2، 'a': 1}، {'b': 3، 'c': 4}]
+القيمة المرتبطة بـ b قبل الانعكاس هي: 2
+القيمة المرتبطة بـ b بعد الانعكاس هي: 3
+ 
+
+ساهم مانجيت سينغ في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+<<<<<<<<<<<<<<<<<<<
+
+Namedtuple في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ٢٥ يناير ٢٠٢٢
+تدعم Python نوعًا من الحاويات مثل القواميس التي تسمى " namedtuple () " الموجودة في الوحدة النمطية ، " المجموعات ". مثل القواميس ، فهي تحتوي على مفاتيح مجزأة إلى قيمة معينة. ولكن على العكس من ذلك ، فهي تدعم كلاً من الوصول من قيمة المفتاح والتكرار ، وهي الوظيفة التي تفتقر إليها القواميس.
+
+مثال: 
+
+
+# Python code to demonstrate namedtuple()
+ 
+from collections import namedtuple
+ 
+# Declaring namedtuple()
+Student = namedtuple('Student', ['name', 'age', 'DOB'])
+ 
+# Adding values
+S = Student('Nandini', '19', '2541997')
+ 
+# Access using index
+print("The Student age using index is : ", end="")
+print(S[1])
+ 
+# Access using name
+print("The Student name using keyname is : ", end="")
+print(S.name)
+انتاج:
+
+عمر الطالب باستخدام الفهرس هو: 19
+اسم الطالب الذي يستخدم keyname هو: Nandini
+دعونا نرى عمليات مختلفة على namedtuple () 
+عمليات الوصول
+الوصول عن طريق الفهرس: يتم ترتيب قيم السمات الخاصة بـ namedtuple () ويمكن الوصول إليها باستخدام رقم الفهرس بخلاف القواميس التي لا يمكن الوصول إليها بواسطة الفهرس.
+الوصول حسب اسم المفتاح: يُسمح أيضًا بالوصول بواسطة اسم المفتاح كما هو الحال في القواميس.
+باستخدام getattr (): هذه طريقة أخرى للوصول إلى القيمة من خلال إعطاء اسمي مضاعفة وقيمة مفتاح كوسيطة لها.
+
+# Python code to demonstrate namedtuple() and
+# Access by name, index and getattr()
+ 
+# importing "collections" for namedtuple()
+import collections
+ 
+# Declaring namedtuple()
+Student = collections.namedtuple('Student', ['name', 'age', 'DOB'])
+ 
+# Adding values
+S = Student('Nandini', '19', '2541997')
+ 
+# Access using index
+print("The Student age using index is : ", end="")
+print(S[1])
+ 
+# Access using name
+print("The Student name using keyname is : ", end="")
+print(S.name)
+ 
+# Access using getattr()
+print("The Student DOB using getattr() is : ", end="")
+print(getattr(S, 'DOB'))
+انتاج : 
+
+عمر الطالب باستخدام الفهرس هو: 19
+اسم الطالب الذي يستخدم keyname هو: Nandini
+DOB للطالب باستخدام getattr () هو: 2541997
+عمليات التحويل
+_make (): - تُستخدم هذه الوظيفة لإرجاع namedtuple () من العنصر القابل للتكرار الذي تم تمريره كوسيطة.
+_asdict (): - تقوم هذه الوظيفة بإرجاع OrderedDict () كما تم إنشاؤه من القيم المعينة لـ namedtuple ().
+باستخدام عامل التشغيل "**" (نجمة مزدوجة) : - تُستخدم هذه الوظيفة لتحويل قاموس إلى الاسم ().
+
+# Python code to demonstrate namedtuple() and
+# _make(), _asdict() and "**" operator
+ 
+# importing "collections" for namedtuple()
+import collections
+ 
+# Declaring namedtuple()
+Student = collections.namedtuple('Student',
+                                 ['name', 'age', 'DOB'])
+ 
+# Adding values
+S = Student('Nandini', '19', '2541997')
+ 
+# initializing iterable
+li = ['Manjeet', '19', '411997']
+ 
+# initializing dict
+di = {'name': "Nikhil", 'age': 19, 'DOB': '1391997'}
+ 
+# using _make() to return namedtuple()
+print("The namedtuple instance using iterable is  : ")
+print(Student._make(li))
+ 
+# using _asdict() to return an OrderedDict()
+print("The OrderedDict instance using namedtuple is  : ")
+print(S._asdict())
+ 
+# using ** operator to return namedtuple from dictionary
+print("The namedtuple instance from dict is  : ")
+print(Student(**di))
+انتاج : 
+
+المثال الذي يحمل الاسم الذي يستخدمه القابل للتكرار هو:
+الطالب (الاسم = 'Manjeet' ، العمر = '19 '، DOB =' 411997 ')
+مثيل OrderedDict الذي يستخدم اسمهtuple هو:
+OrderedDict ([('name'، 'Nandini')، ('age'، '19')، ('DOB'، '2541997')])
+إن مثيل اسمهtuple من dict هو:
+الطالب (الاسم = 'نيخيل' ، العمر = 19 ، DOB = '1391997')
+عملية إضافية 
+_fields: تُستخدم هذه الوظيفة لإرجاع جميع أسماء المفاتيح الخاصة بمساحة الاسم المعلنة.
+_replace (): _replace () يشبه str.replace () ولكنه يستهدف الحقول المسماة (لا يعدل القيم الأصلية)
+
+# Python code to demonstrate namedtuple() and
+# _fields and _replace()
+ 
+# importing "collections" for namedtuple()
+import collections
+ 
+# Declaring namedtuple()
+Student = collections.namedtuple('Student', ['name', 'age', 'DOB'])
+ 
+# Adding values
+S = Student('Nandini', '19', '2541997')
+ 
+# using _fields to display all the keynames of namedtuple()
+print("All the fields of students are : ")
+print(S._fields)
+ 
+# ._replace returns a new namedtuple, it does not modify the original
+print("returns a new namedtuple : ")
+print(S._replace(name='Manjeet'))
+# original namedtuple
+print(S)
+انتاج : 
+
+جميع مجالات الطلاب هي:
+("الاسم" ، "العمر" ، "DOB")
+الاسم المعدل هو:
+الطالب (الاسم = 'Manjeet' ، العمر = '19 '، DOB =' 2541997 ')
+
+
+ساهم مانجيت سينغ في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه. 
+
+
+<<<<<<<<<<<<<<<<<<<
+Deque في بايثون
+مستوى الصعوبة: متوسط
+آخر تحديث: ٢٧ ديسمبر ٢٠٢١
+يتم تنفيذ Deque (Doubly Ended Queue) في Python باستخدام " مجموعات " الوحدة النمطية . يُفضل Deque على القائمة في الحالات التي نحتاج فيها إلى عمليات إلحاق وانبثاق أسرع من طرفي الحاوية ، حيث يوفر deque تعقيدًا زمنيًا O (1) لعمليات الإلحاق والانبثاق مقارنة بالقائمة التي توفر O (n) تعقيد الوقت.
+
+مثال:
+
+
+# Python code to demonstrate deque
+     
+   
+from collections import deque
+     
+# Declaring deque
+queue = deque(['name','age','DOB']) 
+     
+print(queue)
+انتاج: 
+
+deque (['name'، 'age'، 'DOB'])
+دعونا نرى عمليات مختلفة على deque: 
+
+append () : - تُستخدم هذه الوظيفة لإدخال القيمة في الوسيطة الخاصة بها إلى الطرف الأيمن من deque.
+appendleft () : - تُستخدم هذه الوظيفة لإدخال القيمة في الوسيطة الخاصة بها إلى الطرف الأيسر من deque.
+pop () : - تُستخدم هذه الوظيفة لحذف وسيطة من الطرف الأيمن من deque.
+popleft () : - تُستخدم هذه الوظيفة لحذف وسيطة من الطرف الأيسر من deque. 
+
+# Python code to demonstrate working of
+# append(), appendleft(), pop(), and popleft()
+ 
+# importing "collections" for deque operations
+import collections
+ 
+# initializing deque
+de = collections.deque([1,2,3])
+ 
+# using append() to insert element at right end
+# inserts 4 at the end of deque
+de.append(4)
+ 
+# printing modified deque
+print ("The deque after appending at right is : ")
+print (de)
+ 
+# using appendleft() to insert element at left end
+# inserts 6 at the beginning of deque
+de.appendleft(6)
+ 
+# printing modified deque
+print ("The deque after appending at left is : ")
+print (de)
+ 
+# using pop() to delete element from right end
+# deletes 4 from the right end of deque
+de.pop()
+ 
+# printing modified deque
+print ("The deque after deleting from right is : ")
+print (de)
+ 
+# using popleft() to delete element from left end
+# deletes 6 from the left end of deque
+de.popleft()
+ 
+# printing modified deque
+print ("The deque after deleting from left is : ")
+print (de)
+انتاج: 
+
+الدقه بعد الحاقه على اليمين هو:
+دق ([1، 2، 3، 4])
+إن deque بعد الإلحاق على اليسار هو:
+دق ([6 ، 1 ، 2 ، 3 ، 4])
+إن deque بعد الحذف من اليمين هو:
+دق ([6، 1، 2، 3])
+إن deque بعد الحذف من اليسار هو:
+دق ([1، 2، 3])
+index (ele، beg، end) : - تُرجع هذه الدالة الفهرس الأول للقيمة المذكورة في الوسيطات ، بدءًا من البحث حتى فهرس النهاية.
+insert (i، a) : - تقوم هذه الوظيفة بإدراج القيمة المذكورة في الوسيطات (أ) في الفهرس (i) المحدد في الوسيطات.
+remove () : - تزيل هذه الوظيفة التكرار الأول للقيمة المذكورة في الوسائط.
+count () : - تحسب هذه الوظيفة عدد تكرارات القيمة المذكورة في الوسيطات.
+
+# Python code to demonstrate working of
+# insert(), index(), remove(), count()
+ 
+# importing "collections" for deque operations
+import collections
+ 
+# initializing deque
+de = collections.deque([1, 2, 3, 3, 4, 2, 4])
+ 
+# using index() to print the first occurrence of 4
+print ("The number 4 first occurs at a position : ")
+print (de.index(4,2,5))
+ 
+# using insert() to insert the value 3 at 5th position
+de.insert(4,3)
+ 
+# printing modified deque
+print ("The deque after inserting 3 at 5th position is : ")
+print (de)
+ 
+# using count() to count the occurrences of 3
+print ("The count of 3 in deque is : ")
+print (de.count(3))
+ 
+# using remove() to remove the first occurrence of 3
+de.remove(3)
+ 
+# printing modified deque
+print ("The deque after deleting first occurrence of 3 is : ")
+print (de)
+انتاج:  
+
+يظهر الرقم 4 أولاً في موضع ما:
+4
+الدق بعد إدخال 3 في المركز الخامس هو:
+دق ([1، 2، 3، 3، 3، 4، 2، 4])
+عدد 3 في deque هو:
+3
+إن deque بعد حذف أول ظهور لـ 3 هو:
+دق ([1، 2، 3، 3، 4، 2، 4])
+extension (iterable) : - تُستخدم هذه الوظيفة لإضافة قيم متعددة في الطرف الأيمن من deque. الحجة التي تم تمريرها قابلة للتكرار.
+Extendedleft (iterable) : - تُستخدم هذه الوظيفة لإضافة قيم متعددة في الطرف الأيسر من deque. الحجة التي تم تمريرها قابلة للتكرار. تم عكس الطلب كنتيجة للملاحق اليسرى.
+reverse () : - تُستخدم هذه الوظيفة لعكس ترتيب عناصر deque.
+rotate () : - تقوم هذه الوظيفة بتدوير deque بالرقم المحدد في الوسائط. إذا كان الرقم المحدد سالبًا ، يحدث الاستدارة إلى اليسار. التناوب الآخر على اليمين.
+
+# Python code to demonstrate working of
+# extend(), extendleft(), rotate(), reverse()
+ 
+# importing "collections" for deque operations
+import collections
+ 
+# initializing deque
+de = collections.deque([1, 2, 3,])
+ 
+# using extend() to add numbers to right end
+# adds 4,5,6 to right end
+de.extend([4,5,6])
+ 
+# printing modified deque
+print ("The deque after extending deque at end is : ")
+print (de)
+ 
+# using extendleft() to add numbers to left end
+# adds 7,8,9 to right end
+de.extendleft([7,8,9])
+ 
+# printing modified deque
+print ("The deque after extending deque at beginning is : ")
+print (de)
+ 
+# using rotate() to rotate the deque
+# rotates by 3 to left
+de.rotate(-3)
+ 
+# printing modified deque
+print ("The deque after rotating deque is : ")
+print (de)
+ 
+# using reverse() to reverse the deque
+de.reverse()
+ 
+# printing modified deque
+print ("The deque after reversing deque is : ")
+print (de)
+انتاج : 
+
+إن deque بعد تمديد deque في النهاية هو:
+دق ([1، 2، 3، 4، 5، 6])
+إن deque بعد تمديد deque في البداية هو:
+دق ([9 ، 8 ، 7 ، 1 ، 2 ، 3 ، 4 ، 5 ، 6])
+إن deque بعد تدوير deque هو:
+دق ([1 ، 2 ، 3 ، 4 ، 5 ، 6 ، 9 ، 8 ، 7])
+إن deque بعد عكس deque هو:
+دق ([7 ، 8 ، 9 ، 6 ، 5 ، 4 ، 3 ، 2 ، 1])
+ 

@@ -1,0 +1,434 @@
+
+دروس مجردة في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 19 مارس 2021
+يمكن اعتبار فئة مجردة بمثابة مخطط للفئات الأخرى. يسمح لك بإنشاء مجموعة من الطرق التي يجب إنشاؤها داخل أي فئات فرعية مبنية من فئة مجردة. يطلق على الفئة التي تحتوي على واحد أو أكثر من العمليات المجردة فئة مجردة. الطريقة المجردة هي طريقة لها تصريح ولكن ليس لها تطبيق. أثناء تصميم وحدات وظيفية كبيرة ، نستخدم فئة مجردة. عندما نريد توفير واجهة مشتركة لتطبيقات مختلفة للمكون ، فإننا نستخدم فئة مجردة. 
+  
+لماذا تستخدم فئات القاعدة المجردة: 
+من خلال تحديد فئة أساسية مجردة ، يمكنك تحديد واجهة برمجة تطبيقات مشتركة (API) لمجموعة من الفئات الفرعية. هذه الإمكانية مفيدة بشكل خاص في المواقف التي ستوفر فيها جهة خارجية تطبيقات ، مثل المكونات الإضافية ، ولكن يمكنها أيضًا مساعدتك عند العمل في فريق كبير أو مع قاعدة رمز كبيرة حيث يصعب الاحتفاظ بجميع الفئات في ذهنك أو غير ممكن. 
+  
+كيف تعمل فئات Abstract Base: 
+بشكل افتراضي ، لا تقدم Python فئات مجردة. تأتي لغة Python مع وحدة نمطية توفر الأساس لتعريف فئات Base Abstract (ABC) واسم الوحدة هو ABC. ABCيعمل عن طريق تزيين طرق الفئة الأساسية على أنها مجردة ثم تسجيل الفئات الخرسانية كتطبيقات للقاعدة المجردة. تصبح الطريقة مجردة عند تزيينها بالكلمة الأساسيةabstractmethod. فمثلا -
+ 
+
+الكود 1:
+
+
+# Python program showing
+# abstract base class work
+ 
+from abc import ABC, abstractmethod
+ 
+class Polygon(ABC):
+ 
+    @abstractmethod
+    def noofsides(self):
+        pass
+ 
+class Triangle(Polygon):
+ 
+    # overriding abstract method
+    def noofsides(self):
+        print("I have 3 sides")
+ 
+class Pentagon(Polygon):
+ 
+    # overriding abstract method
+    def noofsides(self):
+        print("I have 5 sides")
+ 
+class Hexagon(Polygon):
+ 
+    # overriding abstract method
+    def noofsides(self):
+        print("I have 6 sides")
+ 
+class Quadrilateral(Polygon):
+ 
+    # overriding abstract method
+    def noofsides(self):
+        print("I have 4 sides")
+ 
+# Driver code
+R = Triangle()
+R.noofsides()
+ 
+K = Quadrilateral()
+K.noofsides()
+ 
+R = Pentagon()
+R.noofsides()
+ 
+K = Hexagon()
+K.noofsides()
+انتاج: 
+ 
+
+لدي 3 جوانب
+لدي 4 جوانب
+لدي 5 جوانب
+لدي 6 جوانب
+  
+الكود 2: 
+
+
+# Python program showing
+# abstract base class work
+ 
+from abc import ABC, abstractmethod
+class Animal(ABC):
+ 
+    def move(self):
+        pass
+ 
+class Human(Animal):
+ 
+    def move(self):
+        print("I can walk and run")
+ 
+class Snake(Animal):
+ 
+    def move(self):
+        print("I can crawl")
+ 
+class Dog(Animal):
+ 
+    def move(self):
+        print("I can bark")
+ 
+class Lion(Animal):
+ 
+    def move(self):
+        print("I can roar")
+         
+# Driver code
+R = Human()
+R.move()
+ 
+K = Snake()
+K.move()
+ 
+R = Dog()
+R.move()
+ 
+K = Lion()
+K.move()
+انتاج: 
+ 
+
+أستطيع المشي والركض
+يمكنني الزحف
+أستطيع النباح
+استطيع الزئير
+  
+التنفيذ من خلال التصنيف الفرعي: 
+من خلال التصنيف الفرعي مباشرة من القاعدة ، يمكننا تجنب الحاجة إلى تسجيل الفصل بشكل صريح. في هذه الحالة ، يتم استخدام إدارة فئة Python للتعرف على PluginImplementation باعتباره تطبيق PluginBase المجرد. 
+ 
+
+
+# Python program showing
+# implementation of abstract
+# class through subclassing
+ 
+import abc
+ 
+class parent:      
+    def geeks(self):
+        pass
+ 
+class child(parent):
+    def geeks(self):
+        print("child class")
+ 
+# Driver code
+print( issubclass(child, parent))
+print( isinstance(child(), parent))
+انتاج: 
+ 
+
+صحيح
+صحيح
+أحد الآثار الجانبية لاستخدام التصنيف الفرعي المباشر هو أنه من الممكن العثور على جميع تطبيقات المكون الإضافي الخاص بك عن طريق سؤال الفئة الأساسية عن قائمة الفئات المعروفة المشتقة منها. 
+  
+طرق الخرسانة في فئات الأساس المجردة: 
+تحتوي الفئات الخرسانية على طرق محددة (عادية) فقط بينما قد تحتوي الفئات المجردة على طرق ملموسة وطرق مجردة. توفر الفئة الملموسة تنفيذًا للطرق المجردة ، كما يمكن للفئة الأساسية المجردة أن توفر تنفيذًا عن طريق استدعاء الطرق عبر super (). 
+ 
+
+دعنا نلقي نظرة على المثال لاستدعاء الطريقة باستخدام super ():  
+
+
+# Python program invoking a
+# method using super()
+ 
+import abc
+from abc import ABC, abstractmethod
+ 
+class R(ABC):
+    def rk(self):
+        print("Abstract Base Class")
+ 
+class K(R):
+    def rk(self):
+        super().rk()
+        print("subclass ")
+ 
+# Driver code
+r = K()
+r.rk()
+انتاج: 
+ 
+
+فئة قاعدة مجردة
+فئة فرعية
+في البرنامج أعلاه ، يمكننا استدعاء العمليات في الفئات المجردة باستخدام super (). 
+  
+خصائص الخلاصة: 
+تتضمن فئات الملخص سمات بالإضافة إلى الطرق ، يمكنك طلب السمات في الفئات الملموسة بتعريفها باستخدامabstractproperty. 
+ 
+
+
+# Python program showing
+# abstract properties
+ 
+import abc
+from abc import ABC, abstractmethod
+ 
+class parent(ABC):
+    @abc.abstractproperty
+    def geeks(self):
+        return "parent class"
+class child(parent):
+      
+    @property
+    def geeks(self):
+        return "child class"
+  
+  
+try:
+    r =parent()
+    print( r.geeks)
+except Exception as err:
+    print (err)
+  
+r = child()
+print (r.geeks)
+انتاج: 
+ 
+
+لا يمكن إنشاء مثيل للفئة المجردة مع المهووسين بالأساليب المجردة
+فئة الطفل
+في المثال أعلاه ، لا يمكن إنشاء مثيل للفئة الأساسية لأنها تحتوي فقط على نسخة مجردة من أسلوب getter للخاصية. 
+  
+تجسيد فئة مجردة: 
+فئات الملخص غير مكتملة لأنها تحتوي على طرق لا يوجد بها أحد. إذا كانت لغة python تسمح بإنشاء كائن لفئات مجردة ، فعندئذٍ استخدم هذا الكائن إذا قام أي شخص باستدعاء الطريقة abstract ، ولكن لا يوجد تنفيذ فعلي للاستدعاء. لذلك نستخدم فئة مجردة كقالب ووفقًا للحاجة ، نقوم بتوسيعها والبناء عليها قبل أن نتمكن من استخدامها. نظرًا للحقيقة ، فإن الفئة المجردة ليست فئة محددة ، ولا يمكن إنشاء مثيل لها. عندما نقوم بإنشاء كائن للفئة المجردة ، فإنه يثير خطأ . 
+ 
+
+# Python program showing
+# abstract class cannot
+# be an instantiation
+from abc import ABC,abstractmethod
+ 
+class Animal(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+class Human(Animal):
+    def move(self):
+        print("I can walk and run")
+ 
+class Snake(Animal):
+    def move(self):
+        print("I can crawl")
+ 
+class Dog(Animal):
+    def move(self):
+        print("I can bark")
+ 
+class Lion(Animal):
+    def move(self):
+        print("I can roar")
+ 
+c=Animal()
+انتاج: 
+ 
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/ffe4267d930f204512b7f501bb1bc489.py" ، السطر 19 ، في
+    ج = حيوان ()
+TypeError: لا يمكن إنشاء مثيل لفئة مجردة Animal باستخدام طرق مجردة تتحرك
+ 
+
+
+<<<<<<<<<<<<<<<<<<<
+عدد مؤشرات الترابط في بايثون | مجموعة 1
+مستوى الصعوبة: سهل
+آخر تحديث: 15 ديسمبر 2021
+تتناول هذه المقالة أساسيات تعدد مؤشرات الترابط في لغة برمجة بايثون. تمامًا مثل المعالجة المتعددة ، يعد تعدد العمليات وسيلة لتحقيق تعدد المهام. في multithreading ، يتم استخدام مفهوم الخيوط .
+
+دعونا نفهم أولاً مفهوم الخيط في هندسة الكمبيوتر.
+
+خيط
+
+في الحوسبة ، العملية هي مثيل لبرنامج كمبيوتر يتم تنفيذه. أي عملية لها 3 مكونات أساسية:
+
+برنامج قابل للتنفيذ.
+البيانات المرتبطة التي يحتاجها البرنامج (المتغيرات ، مساحة العمل ، المخازن المؤقتة ، إلخ)
+سياق تنفيذ البرنامج (حالة العملية)
+الخيط هو كيان داخل عملية يمكن جدولتها للتنفيذ. وهي أيضًا أصغر وحدة معالجة يمكن إجراؤها في نظام التشغيل OS (نظام التشغيل).
+
+بكلمات بسيطة ، الخيط عبارة عن سلسلة من هذه التعليمات داخل برنامج يمكن تنفيذها بشكل مستقل عن التعليمات البرمجية الأخرى. للتبسيط ، يمكنك افتراض أن الخيط هو مجرد مجموعة فرعية من العملية!
+
+يحتوي الخيط على كل هذه المعلومات في كتلة التحكم في مؤشر الترابط (TCB) :
+
+معرف الموضوع: يتم تعيين معرف فريد (TID) لكل موضوع جديد
+مؤشر المكدس: يشير إلى مكدس الخيط في العملية. يحتوي Stack على المتغيرات المحلية ضمن نطاق مؤشر الترابط.
+عداد البرنامج: سجل يخزن عنوان التعليمات التي يتم تنفيذها حاليًا عن طريق الموضوع.
+حالة الخيط: يمكن أن تكون قيد التشغيل ، أو جاهزة ، أو تنتظر ، أو تبدأ أو تم الانتهاء منها.
+مجموعة سجل الموضوع: التسجيلات المخصصة للموضوع من أجل العمليات الحسابية.
+مؤشر العملية الأصلية: مؤشر إلى كتلة التحكم في العملية (PCB) للعملية التي يعيش عليها مؤشر الترابط.
+ضع في اعتبارك الرسم البياني أدناه لفهم العلاقة بين العملية وخيطها:
+
+
+
+تعدد
+
+يمكن أن توجد خيوط متعددة في عملية واحدة حيث:
+
+يحتوي كل خيط على مجموعة التسجيل الخاصة به والمتغيرات المحلية (المخزنة في المكدس) .
+تشترك كل خيوط العملية في المتغيرات العامة (المخزنة في كومة) ورمز البرنامج .
+ضع في اعتبارك الرسم البياني أدناه لفهم كيفية وجود خيوط متعددة في الذاكرة:
+
+
+
+يُعرّف تعدد مؤشرات الترابط بأنه قدرة المعالج على تنفيذ خيوط متعددة بشكل متزامن.
+
+في وحدة المعالجة المركزية البسيطة أحادية النواة ، يتم تحقيق ذلك باستخدام التبديل المتكرر بين الخيوط. هذا يسمى تبديل السياق . في تبديل السياق ، يتم حفظ حالة مؤشر الترابط وتحميل حالة مؤشر ترابط آخر عند حدوث أي مقاطعة (بسبب الإدخال / الإخراج أو الضبط يدويًا). يحدث تبديل السياق بشكل متكرر لدرجة أن جميع سلاسل الرسائل تبدو وكأنها تعمل بشكل متوازي (يُطلق على ذلك تعدد المهام ).
+
+ضع في اعتبارك الرسم التخطيطي أدناه حيث تحتوي العملية على خيطين نشطين:
+
+
+
+تعدد العمليات في بايثون
+
+في Python ، توفر وحدة مؤشرات الترابط واجهة برمجة تطبيقات بسيطة جدًا وبديهية لإنتاج سلاسل رسائل متعددة في أحد البرامج.
+
+دعونا نفكر في مثال بسيط باستخدام وحدة الترابط:
+
+
+# Python program to illustrate the concept
+# of threading
+# importing the threading module
+import threading
+  
+def print_cube(num):
+    """
+    function to print cube of given num
+    """
+    print("Cube: {}".format(num * num * num))
+  
+def print_square(num):
+    """
+    function to print square of given num
+    """
+    print("Square: {}".format(num * num))
+  
+if __name__ == "__main__":
+    # creating thread
+    t1 = threading.Thread(target=print_square, args=(10,))
+    t2 = threading.Thread(target=print_cube, args=(10,))
+  
+    # starting thread 1
+    t1.start()
+    # starting thread 2
+    t2.start()
+  
+    # wait until thread 1 is completely executed
+    t1.join()
+    # wait until thread 2 is completely executed
+    t2.join()
+  
+    # both threads completely executed
+    print("Done!")
+مربع: 100
+المكعب: 1000
+فعله!
+دعونا نحاول فهم الكود أعلاه:
+
+لاستيراد وحدة الخيوط ، نقوم بما يلي:
+استيراد خيوط
+لإنشاء موضوع جديد ، نقوم بإنشاء كائن من فئة Thread . يأخذ الحجج التالية:
+الهدف : الوظيفة التي سيتم تنفيذها بواسطة الخيط
+args : الوسيطات التي سيتم تمريرها إلى الوظيفة الهدف
+في المثال أعلاه ، أنشأنا موضوعين لهما وظائف مستهدفة مختلفة:
+
+t1 = خيوط المعالجة (الهدف = print_square ، args = (10،))
+t2 = خيوط المعالجة (الهدف = print_cube ، args = (10،))
+لبدء موضوع ، نستخدم طريقة بدء فئة الموضوع .
+t1.start ()
+t2.start ()
+بمجرد أن تبدأ المواضيع ، فإن البرنامج الحالي (يمكنك التفكير في الأمر كسلسلة رئيسية) يستمر أيضًا في التنفيذ. لإيقاف تنفيذ البرنامج الحالي حتى يكتمل الخيط ، نستخدم طريقة الانضمام .
+t1.join ()
+t2.join ()
+نتيجة لذلك ، سينتظر البرنامج الحالي أولاً اكتمال t1 ثم t2 . بمجرد الانتهاء ، يتم تنفيذ البيانات المتبقية من البرنامج الحالي.
+
+ضع في اعتبارك الرسم البياني أدناه للحصول على فهم أفضل لكيفية عمل البرنامج أعلاه:
+
+
+
+ضع في اعتبارك برنامج python الموضح أدناه والذي نطبع فيه اسم الخيط والعملية المقابلة لكل مهمة:
+
+
+# Python program to illustrate the concept
+# of threading
+import threading
+import os
+  
+def task1():
+    print("Task 1 assigned to thread: {}".format(threading.current_thread().name))
+    print("ID of process running task 1: {}".format(os.getpid()))
+  
+def task2():
+    print("Task 2 assigned to thread: {}".format(threading.current_thread().name))
+    print("ID of process running task 2: {}".format(os.getpid()))
+  
+if __name__ == "__main__":
+  
+    # print ID of current process
+    print("ID of process running main program: {}".format(os.getpid()))
+  
+    # print name of main thread
+    print("Main thread name: {}".format(threading.current_thread().name))
+  
+    # creating threads
+    t1 = threading.Thread(target=task1, name='t1')
+    t2 = threading.Thread(target=task2, name='t2')  
+  
+    # starting threads
+    t1.start()
+    t2.start()
+  
+    # wait until all threads finish
+    t1.join()
+    t2.join()
+معرف عملية تشغيل البرنامج الرئيسي: 11758
+اسم الموضوع الرئيسي: MainThread
+المهمة 1 المخصصة للموضوع: t1
+معرف عملية تشغيل المهمة 1: 11758
+المهمة 2 المخصصة للموضوع: t2
+معرف عملية تشغيل المهمة 2: 11758
+دعونا نحاول فهم الكود أعلاه:
+
+نستخدم الدالة os.getpid () للحصول على معرف العملية الحالية.
+طباعة ("معرف عملية تشغيل البرنامج الرئيسي: {}". تنسيق (os.getpid ()))
+كما هو واضح من الإخراج ، يظل معرف العملية كما هو لجميع سلاسل العمليات.
+
+نستخدم الدالة threading.main_thread () للحصول على كائن الخيط الرئيسي. في الظروف العادية ، يكون الخيط الرئيسي هو الخيط الذي بدأ منه مترجم بايثون. يتم استخدام سمة اسم كائن مؤشر الترابط للحصول على اسم الموضوع.
+طباعة ("اسم الموضوع الرئيسي: {}". تنسيق (threading.main_thread (). name))
+نستخدم الدالة threading.current_thread () للحصول على كائن مؤشر الترابط الحالي.
+طباعة ("المهمة الأولى المعينة لمؤشر الترابط: {}". تنسيق (threading.current_thread (). name))
+يوضح الرسم البياني أدناه المفهوم أعلاه:
+
+
+لذلك ، كانت هذه مقدمة موجزة لتعدد مؤشرات الترابط في بايثون. تتناول المقالة التالية في هذه السلسلة التزامن بين خيوط متعددة .
+
+تعدد مؤشرات الترابط في بايثون | المجموعة 2 (التزامن)

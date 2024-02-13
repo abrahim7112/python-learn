@@ -1,0 +1,168 @@
+
+كيف تطبع بدون سطر جديد في بايثون؟
+مستوى الصعوبة: أساسي
+آخر تحديث: 09 أغسطس 2021
+بشكل عام ، يتساءل الأشخاص الذين يتحولون من C / C ++ إلى Python عن كيفية طباعة متغيرين أو أكثر من المتغيرات أو العبارات دون الدخول في سطر جديد في Python. نظرًا لأن وظيفة python print () تنتهي افتراضيًا بسطر جديد. تحتوي لغة Python على تنسيق محدد مسبقًا إذا كنت تستخدم print (a_variable) ، فستنتقل إلى السطر التالي تلقائيًا. 
+ 
+
+فمثلا: 
+
+
+print("geeks")
+print("geeksforgeeks")
+سينتج عن هذا: 
+
+المهوسون
+geeksforgeeks
+لكن في بعض الأحيان قد يحدث أننا لا نريد الانتقال إلى السطر التالي ولكننا نريد الطباعة على نفس السطر. ذلك ما يمكن أن نفعله؟ 
+ 
+
+فمثلا: 
+
+الإدخال: print ("geeks") print ("geeksforgeeks")
+الإخراج: geeks geeksforgeeks
+
+الإدخال: أ = [1 ، 2 ، 3 ، 4]
+الخرج: 1 2 3 4
+الحل الذي تمت مناقشته هنا يعتمد كليًا على إصدار python الذي تستخدمه. 
+ 
+
+اطبع بدون سطر جديد في Python 2.x
+
+# Python 2 code for printing
+# on the same line printing
+# geeks and geeksforgeeks
+# in the same line
+ 
+print("geeks"),
+print("geeksforgeeks")
+ 
+# array
+a = [1, 2, 3, 4]
+ 
+# printing a element in same
+# line
+for i in range(4):
+    print(a[i]),
+انتاج: 
+
+المهوسون geeksforgeeks
+1 2 3 4
+اطبع بدون سطر جديد في Python 3.x
+
+# Python 3 code for printing
+# on the same line printing
+# geeks and geeksforgeeks
+# in the same line
+ 
+print("geeks", end =" ")
+print("geeksforgeeks")
+ 
+# array
+a = [1, 2, 3, 4]
+ 
+# printing a element in same
+# line
+for i in range(4):
+    print(a[i], end =" ")
+انتاج: 
+
+المهوسون geeksforgeeks
+1 2 3 4
+اطبع بدون سطر جديد في Python 3.x دون استخدام حلقة for
+
+# Print without newline in Python 3.x without using for loop
+ 
+l=[1,2,3,4,5,6]
+ 
+# using * symbol prints the list
+# elements in a single line
+print(*l)
+ 
+#This code is contributed by anuragsingh1022
+انتاج:
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+معلمة نهاية Python في الطباعة ()
+مستوى الصعوبة: أساسي
+آخر تحديث: 17 مارس 2021
+بشكل افتراضي تنتهي وظيفة python print () بسطر جديد. قد يتساءل المبرمج ذو الخلفية C / C ++ عن كيفية الطباعة بدون سطر جديد.
+
+تأتي وظيفة طباعة Python مع معلمة تسمى "end". بشكل افتراضي ، قيمة هذه المعلمة هي '\ n' ، أي حرف السطر الجديد. يمكنك إنهاء جملة print بأي حرف / سلسلة باستخدام هذه المعلمة.
+
+
+# This Python program must be run with
+# Python 3 as it won't work with 2.7.
+  
+# ends the output with a <space> 
+print("Welcome to" , end = ' ') 
+print("GeeksforGeeks", end = ' ')
+انتاج :
+
+مرحبًا بكم في GeeksforGeeks
+برنامج آخر لإثبات عمل المعلمة النهائية.
+
+
+# This Python program must be run with
+# Python 3 as it won't work with 2.7.
+  
+# ends the output with '@'
+print("Python" , end = '@') 
+print("GeeksforGeeks")
+انتاج :
+
+بيثون @ GeeksforGeeks
+هذا المقال من مساهمة عنكيت بيندال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال وإرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه
+
+>>>>>>>>>>>>>>>>>>>>>>>>
+بايثون | معلمة sep في الطباعة ()
+مستوى الصعوبة: سهل
+آخر تحديث: 21 كانون الثاني (يناير) 2021
+الفاصل بين الوسيطات الخاصة بوظيفة print () في Python هو المسافة افتراضيًا (ميزة softspace) ، والتي يمكن تعديلها ويمكن إجراؤها على أي حرف أو عدد صحيح أو سلسلة حسب اختيارنا. يتم استخدام معلمة 'sep' لتحقيق نفس الشيء ، فهي موجودة فقط في python 3.x أو أحدث. يتم استخدامه أيضًا لتنسيق سلاسل الإخراج.
+ 
+
+أمثلة:
+
+
+#code for disabling the softspace feature
+print('G','F','G', sep='')
+ 
+#for formatting a date
+print('09','12','2016', sep='-')
+ 
+#another example
+print('pratik','geeksforgeeks', sep='@')
+انتاج: 
+ 
+
+GFG
+09-12-2016
+هههههههههههههههه
+عند استخدام المعلمة sep مع معلمة النهاية ، فإنها تنتج نتائج رائعة. بعض الأمثلة عن طريق الجمع بين معلمات sep و end .
+ 
+
+
+print('G','F', sep='', end='')
+print('G')
+#\n provides new line after printing the year
+print('09','12','2016', sep='-', end='\n')
+ 
+print('prtk','agarwal', sep='', end='@')
+print('geeksforgeeks')
+انتاج: 
+ 
+
+GFG
+09-12-2016
+هههههههههههههههههه
+ملاحظة: يرجى تغيير اللغة من Python إلى Python 3 في بيئة تطوير متكاملة عبر الإنترنت. انتقل إلى أداة python التفاعلية الخاصة بك عن طريق كتابة python في cmd (windows) أو المحطة الطرفية (linux) 
+
+ 
+
+
+#import the below module and see what happens
+import antigravity
+#NOTE - it wont work on online ide
+هذا المقال من مساهمة براتيك أغاروال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.

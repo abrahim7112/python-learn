@@ -1,0 +1,822 @@
+
+قائمة انتظار الكومة (أو heapq) في Python
+مستوى الصعوبة: سهل
+آخر تحديث: 11 سبتمبر 2020
+تُستخدم بنية بيانات الكومة بشكل أساسي لتمثيل قائمة انتظار ذات أولوية . في Python ، يتوفر باستخدام الوحدة النمطية " heapq ". تتمثل خاصية بنية البيانات هذه في Python في أنه في كل مرة يتم فيها ظهور أصغر عنصر كومة (min heap) . عندما يتم دفع العناصر أو تفرقعها ، يتم الحفاظ على بنية الكومة . يقوم عنصر الكومة [0] أيضًا بإرجاع أصغر عنصر في كل مرة.
+
+دعونا نرى عمليات مختلفة على الكومة:
+
+heapify (متكرر) : - تُستخدم هذه الوظيفة لتحويل ما يمكن تكراره إلى بنية بيانات كومة . أي بترتيب كومة.
+
+heappush (heap، ele) : - تُستخدم هذه الوظيفة لإدراج العنصر المذكور في وسيطاته في الكومة. يتم تعديل الأمر ، بحيث يتم الحفاظ على بنية الكومة .
+
+heappop (heap) : - تُستخدم هذه الوظيفة لإزالة أصغر عنصر من الكومة وإعادتها . يتم تعديل الأمر ، بحيث يتم الحفاظ على بنية الكومة .
+
+# Python code to demonstrate working of 
+# heapify(), heappush() and heappop()
+  
+# importing "heapq" to implement heap queue
+import heapq
+  
+# initializing list
+li = [5, 7, 9, 1, 3]
+  
+# using heapify to convert list into heap
+heapq.heapify(li)
+  
+# printing created heap
+print ("The created heap is : ",end="")
+print (list(li))
+  
+# using heappush() to push elements into heap
+# pushes 4
+heapq.heappush(li,4)
+  
+# printing modified heap
+print ("The modified heap after push is : ",end="")
+print (list(li))
+  
+# using heappop() to pop smallest element
+print ("The popped and smallest element is : ",end="")
+print (heapq.heappop(li))
+انتاج :
+
+الكومة التي تم إنشاؤها هي: [1 ، 3 ، 9 ، 7 ، 5]
+الكومة المعدلة بعد الدفع هي: [1 ، 3 ، 4 ، 7 ، 5 ، 9]
+العنصر المنبثق والأصغر هو: 1
+heappushpop (heap، ele) : - تجمع هذه الوظيفة بين كل من عمليات الدفع والفرقعة في بيان واحد ، مما يؤدي إلى زيادة الكفاءة. يتم الاحتفاظ بترتيب الكومة بعد هذه العملية.
+
+heapreplace (heap، ele) : - تقوم هذه الوظيفة أيضًا بإدراج عنصر و pops في عبارة واحدة ، ولكنها تختلف عن الوظيفة أعلاه. في هذا ، يتم تفرقع العنصر أولاً ، ثم يتم دفع العنصر.ie ، يمكن إرجاع القيمة الأكبر من القيمة المدفوعة. heapreplace()إرجاع أصغر قيمة في الأصل في كومة بغض النظر عن العنصر المدفوع بدلاً من heappushpop().
+
+# Python code to demonstrate working of 
+# heappushpop() and heapreplce()
+  
+# importing "heapq" to implement heap queue
+import heapq
+  
+# initializing list 1
+li1 = [5, 7, 9, 4, 3]
+  
+# initializing list 2
+li2 = [5, 7, 9, 4, 3]
+  
+# using heapify() to convert list into heap
+heapq.heapify(li1)
+heapq.heapify(li2)
+  
+# using heappushpop() to push and pop items simultaneously
+# pops 2
+print ("The popped item using heappushpop() is : ",end="")
+print (heapq.heappushpop(li1, 2))
+  
+# using heapreplace() to push and pop items simultaneously
+# pops 3
+print ("The popped item using heapreplace() is : ",end="")
+print (heapq.heapreplace(li2, 2))
+انتاج :
+
+العنصر المنبثق باستخدام heappushpop () هو: 2
+العنصر المنبثق باستخدام heapreplace () هو: 3
+nlargest (k، iterable، key = fun) : - تُستخدم هذه الوظيفة لإرجاع أكبر عناصر k من العناصر القابلة للتكرار المحددة وتلبية المفتاح إذا تم ذكره.
+
+nsmallest (k، iterable، key = fun) : - تُستخدم هذه الوظيفة لإرجاع أصغر عناصر k من العناصر المحددة القابلة للتكرار وتلبية المفتاح إذا تم ذكره.
+
+# Python code to demonstrate working of 
+# nlargest() and nsmallest()
+  
+# importing "heapq" to implement heap queue
+import heapq
+  
+# initializing list 
+li1 = [6, 7, 9, 4, 3, 5, 8, 10, 1]
+  
+# using heapify() to convert list into heap
+heapq.heapify(li1)
+  
+# using nlargest to print 3 largest numbers
+# prints 10, 9 and 8
+print("The 3 largest numbers in list are : ",end="")
+print(heapq.nlargest(3, li1))
+  
+# using nsmallest to print 3 smallest numbers
+# prints 1, 3 and 4
+print("The 3 smallest numbers in list are : ",end="")
+print(heapq.nsmallest(3, li1))
+انتاج :
+
+أكبر ثلاثة أرقام في القائمة هي: [10 ، 9 ، 8]
+أصغر 3 أرقام في القائمة هي: [1 ، 3 ، 4]
+
+ساهم مانجيت سينغ في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+<<<<<<<<<<<<<<<<<<<
+المجموعات.ديكت المستخدم في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 01 أكتوبر 2021
+تُعرف المجموعة غير المرتبة من قيم البيانات المستخدمة لتخزين قيم البيانات مثل الخريطة باسم Dictionary in Python . بخلاف أنواع البيانات الأخرى التي تحتوي على قيمة واحدة فقط كعنصر ، يحتفظ القاموس بالمفتاح: زوج القيمة. يتم توفير قيمة المفتاح في القاموس لجعله أكثر أمثلية.
+
+ملاحظة: لمزيد من المعلومات ، راجع قاموس Python
+
+المجموعات
+تدعم Python قاموسًا مثل الحاوية المسماة UserDict الموجودة في وحدة المجموعات . تعمل هذه الفئة كفئة مجمعة حول كائنات القاموس. هذه الفئة مفيدة عندما يريد المرء إنشاء قاموس خاص به مع بعض الوظائف المعدلة أو ببعض الوظائف الجديدة. يمكن اعتباره وسيلة لإضافة سلوكيات جديدة إلى القاموس. تأخذ هذه الفئة مثيل القاموس كوسيطة وتحاكي قاموسًا يتم الاحتفاظ به في قاموس عادي. يمكن الوصول إلى القاموس من خلال سمة البيانات الخاصة بهذه الفئة.
+
+بناء الجملة: 
+
+collections.UserDict ([البيانات الأولية])
+مثال 1:
+
+
+# Python program to demonstrate
+# userdict
+ 
+ 
+from collections import UserDict
+ 
+ 
+d = {'a':1,
+    'b': 2,
+    'c': 3}
+ 
+# Creating an UserDict
+userD = UserDict(d)
+print(userD.data)
+ 
+ 
+# Creating an empty UserDict
+userD = UserDict()
+print(userD.data)
+انتاج:
+
+{'أ': 1 ، 'ب': 2 ، 'ج': 3}
+{}
+مثال 2: لنقم بإنشاء فئة موروثة من UserDict لتنفيذ قاموس مخصص.
+
+
+# Python program to demonstrate
+# userdict
+  
+ 
+from collections import UserDict
+  
+ 
+# Creating a Dictionary where
+# deletion is not allowed
+class MyDict(UserDict):
+     
+    # Function to stop deletion
+    # from dictionary
+    def __del__(self):
+        raise RuntimeError("Deletion not allowed")
+         
+    # Function to stop pop from
+    # dictionary
+    def pop(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+         
+    # Function to stop popitem
+    # from Dictionary
+    def popitem(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+     
+# Driver's code
+d = MyDict({'a':1,
+    'b': 2,
+    'c': 3})
+ 
+print("Original Dictionary")
+print(d)
+ 
+d.pop(1)
+انتاج:
+
+القاموس الأصلي
+{'أ': 1 ، 'ج': 3 ، 'ب': 2}
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/3ce2f334f5d25a3e24d10d567c705ce6.py" ، السطر 35 ، في
+    دي بي بوب (1)
+  ملف "/home/3ce2f334f5d25a3e24d10d567c705ce6.py" ، سطر 20 ، في pop
+    رفع RuntimeError ("الحذف غير مسموح به")
+خطأ وقت التشغيل: الحذف غير مسموح به
+تم تجاهل الاستثناء في:
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/3ce2f334f5d25a3e24d10d567c705ce6.py" ، السطر 15 ، في __del__
+خطأ وقت التشغيل: الحذف غير مسموح به
+ 
+
+
+<<<<<<<<<<<<<<<<<<<
+المجموعات.قائمة المستخدمين في بايثون
+مستوى الصعوبة: أساسي
+آخر تحديث: ٢٤ يونيو ٢٠٢١
+قوائم Python هي بنية بيانات شبيهة بالصفيف ولكن على عكس ما يمكن أن تكون متجانسة. قد تحتوي قائمة واحدة على أنواع البيانات مثل الأعداد الصحيحة والسلاسل النصية وكذلك الكائنات. القائمة في بايثون مرتبة ولها عدد محدد. تتم فهرسة العناصر الموجودة في القائمة وفقًا لتسلسل محدد ويتم فهرسة القائمة بحيث يكون الرقم 0 هو الفهرس الأول. 
+ملاحظة: لمزيد من المعلومات ، راجع قائمة بايثون
+ 
+
+المجموعات
+تدعم Python قائمة مثل الحاوية المسماة UserList الموجودة في وحدة المجموعات . تعمل هذه الفئة كفئة مجمعة حول كائنات القائمة. هذه الفئة مفيدة عندما يريد المرء إنشاء قائمة خاصة به مع بعض الوظائف المعدلة أو ببعض الوظائف الجديدة. يمكن اعتباره وسيلة لإضافة سلوكيات جديدة للقائمة. يأخذ هذا الفصل مثيل القائمة كوسيطة ويحاكي قائمة يتم الاحتفاظ بها في قائمة عادية. يمكن الوصول إلى القائمة من خلال سمة البيانات الخاصة بهذه الفئة.
+بناء الجملة:
+ 
+
+Collections.UserList ([قائمة])
+مثال 1:
+ 
+
+
+# Python program to demonstrate
+# userlist
+ 
+ 
+from collections import UserList
+ 
+ 
+L = [1, 2, 3, 4]
+ 
+# Creating a userlist
+userL = UserList(L)
+print(userL.data)
+ 
+ 
+# Creating empty userlist
+userL = UserList()
+print(userL.data)
+انتاج:
+ 
+
+[1 ، 2 ، 3 ، 4]
+[]
+المثال 2:
+ 
+
+
+# Python program to demonstrate
+# userlist
+  
+ 
+from collections import UserList
+  
+ 
+# Creating a List where
+# deletion is not allowed
+class MyList(UserList):
+     
+    # Function to stop deletion
+    # from List
+    def remove(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+         
+    # Function to stop pop from
+    # List
+    def pop(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+     
+# Driver's code
+L = MyList([1, 2, 3, 4])
+ 
+print("Original List")
+ 
+# Inserting to List"
+L.append(5)
+print("After Insertion")
+print(L)
+ 
+# Deleting From List
+L.remove()
+انتاج:
+ 
+
+القائمة الأصلية
+بعد الإدخال
+[1 ، 2 ، 3 ، 4 ، 5]
+ 
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/9399c9e865a7493dce58e88571472d23.py" ، السطر 33 ، in
+    إل.ريموف ()
+  ملف "/home/9399c9e865a7493dce58e88571472d23.py" ، سطر 15 ، في الإزالة
+    رفع RuntimeError ("الحذف غير مسموح به")
+خطأ وقت التشغيل: الحذف غير مسموح به
+ 
+
+
+<<<<<<<<<<<<<<<<<<<
+المجموعات .UserString في Python
+مستوى الصعوبة: أساسي
+آخر تحديث: 31 أغسطس 2021
+السلاسل هي مصفوفات البايت التي تمثل أحرف Unicode. ومع ذلك ، لا تدعم Python نوع بيانات الحرف. الحرف هو سلسلة طولها واحد. 
+مثال:
+
+
+# Python program to demonstrate
+# string
+ 
+# Creating a String 
+# with single Quotes
+String1 = 'Welcome to the Geeks World'
+print("String with the use of Single Quotes: ")
+print(String1)
+   
+# Creating a String
+# with double Quotes
+String1 = "I'm a Geek"
+print("\nString with the use of Double Quotes: ")
+print(String1)
+انتاج:
+
+سلسلة باستخدام اقتباسات مفردة:
+مرحبًا بكم في عالم Geeks World
+
+سلسلة باستخدام علامات الاقتباس المزدوجة:
+أنا المهوس
+ملاحظة: لمزيد من المعلومات ، راجع Python String
+ 
+
+المجموعات
+تدعم Python سلسلة مثل الحاوية المسماة UserString الموجودة في وحدة المجموعات. تعمل هذه الفئة كفئة مجمعة حول كائنات السلسلة. هذه الفئة مفيدة عندما يريد المرء إنشاء سلسلة خاصة به مع بعض الوظائف المعدلة أو مع بعض الوظائف الجديدة. يمكن اعتباره طريقة لإضافة سلوكيات جديدة للسلسلة. تأخذ هذه الفئة أي وسيطة يمكن تحويلها إلى سلسلة وتحاكي سلسلة يتم الاحتفاظ بمحتواها في سلسلة عادية. يمكن الوصول إلى السلسلة بواسطة سمة البيانات الخاصة بهذه الفئة.
+بناء الجملة: 
+
+المجموعات .UserString (seq)
+مثال 1:
+
+
+# Python program to demonstrate
+# userstring
+ 
+ 
+from collections import UserString
+ 
+ 
+d = 12344
+ 
+# Creating an UserDict
+userS = UserString(d)
+print(userS.data)
+ 
+ 
+# Creating an empty UserDict
+userS = UserString("")
+print(userS.data)
+انتاج: 
+
+12344
+المثال 2:
+
+
+# Python program to demonstrate
+# userstring
+  
+ 
+from collections import UserString
+  
+ 
+# Creating a Mutable String
+class Mystring(UserString):
+     
+    # Function to append to
+    # string
+    def append(self, s):
+        self.data += s
+         
+    # Function to remove from
+    # string
+    def remove(self, s):
+        self.data = self.data.replace(s, "")
+     
+# Driver's code
+s1 = Mystring("Geeks")
+print("Original String:", s1.data)
+ 
+# Appending to string
+s1.append("s")
+print("String After Appending:", s1.data)
+ 
+# Removing from string
+s1.remove("e")
+print("String after Removing:", s1.data)
+انتاج:
+
+السلسلة الأصلية: المهوسون
+السلسلة بعد الإلحاق: المهوسون
+السلسلة بعد الإزالة: Gkss
+
+<<<<<<<<<<<<<<<<<<<
+وحدة نظام التشغيل في بايثون مع أمثلة
+مستوى الصعوبة: سهل
+آخر تحديث: ٢٥ يناير ٢٠٢٢
+توفر وحدة نظام التشغيل في Python وظائف للتفاعل مع نظام التشغيل. يأتي نظام التشغيل ضمن وحدات المرافق القياسية في Python. توفر هذه الوحدة طريقة محمولة لاستخدام الوظائف المعتمدة على نظام التشغيل. تتضمن الوحدات النمطية * os * و * os.path * العديد من الوظائف للتفاعل مع نظام الملفات.
+ 
+
+التعامل مع دليل العمل الحالي
+ضع في اعتبارك دليل العمل الحالي (CWD) كمجلد ، حيث تعمل Python. عندما يتم استدعاء الملفات باسمها فقط ، تفترض Python أنها تبدأ في CWD مما يعني أن مرجع الاسم فقط لن يكون ناجحًا إلا إذا كان الملف في Python CWD.
+ملاحظة: يُعرف المجلد الذي يعمل فيه البرنامج النصي Python بالدليل الحالي. هذا ليس المسار حيث يوجد نص بايثون.
+الحصول على دليل العمل الحالي
+للحصول على موقع دليل العمل الحالي ، يتم استخدام os.getcwd () .
+ 
+
+مثال:
+
+# Python program to explain os.getcwd() method
+         
+# importing os module
+import os
+     
+# Get the current working
+# directory (CWD)
+cwd = os.getcwd()
+     
+# Print the current working
+# directory (CWD)
+print("Current working directory:", cwd)
+انتاج:
+
+دليل العمل الحالي: / home / nikhil / Desktop / gfg
+تغيير دليل العمل الحالي
+
+لتغيير دليل العمل الحالي (CWD) يتم استخدام طريقة os.chdir () . هذه الطريقة تغير CWD إلى مسار محدد. لا يتطلب الأمر سوى وسيطة واحدة كمسار دليل جديد.
+ 
+
+ملاحظة: دليل العمل الحالي هو المجلد الذي يعمل فيه برنامج Python النصي.
+ 
+
+مثال:
+
+# Python program to change the
+# current working directory
+   
+   
+import os
+   
+# Function to Get the current 
+# working directory
+def current_path():
+    print("Current working directory before")
+    print(os.getcwd())
+    print()
+   
+   
+# Driver's code
+# Printing CWD before
+current_path()
+   
+# Changing the CWD
+os.chdir('../')
+   
+# Printing CWD after
+current_path()
+انتاج:
+
+دليل العمل الحالي من قبل
+C: \ Users \ Nikhil Aggarwal \ Desktop \ gfg
+
+دليل العمل الحالي بعد
+C: \ Users \ Nikhil Aggarwal \ Desktop
+ 
+
+إنشاء دليل
+هناك طرق مختلفة متاحة في وحدة نظام التشغيل لإنشاء دليل. هؤلاء هم -
+
+os.mkdir ()
+os.makedirs ()
+باستخدام os.mkdir ()
+يتم استخدام طريقة () os.mkdir في بايثون لإنشاء مسار مسمى بالدليل باستخدام الوضع الرقمي المحدد. تثير هذه الطريقة FileExistsError إذا كان الدليل المراد إنشاؤه موجودًا بالفعل.
+ 
+
+مثال: 
+
+# Python program to explain os.mkdir() method
+ 
+# importing os module
+import os
+ 
+# Directory
+directory = "GeeksforGeeks"
+ 
+# Parent Directory path
+parent_dir = "D:/Pycharm projects/"
+ 
+# Path
+path = os.path.join(parent_dir, directory)
+ 
+# Create the directory
+# 'GeeksForGeeks' in
+# '/home / User / Documents'
+os.mkdir(path)
+print("Directory '% s' created" % directory)
+ 
+# Directory
+directory = "Geeks"
+ 
+# Parent Directory path
+parent_dir = "D:/Pycharm projects"
+ 
+# mode
+mode = 0o666
+ 
+# Path
+path = os.path.join(parent_dir, directory)
+ 
+# Create the directory
+# 'GeeksForGeeks' in
+# '/home / User / Documents'
+# with mode 0o666
+os.mkdir(path, mode)
+print("Directory '% s' created" % directory)
+انتاج:
+
+تم إنشاء دليل "GeeksforGeeks"
+تم إنشاء دليل "المهوسون"
+باستخدام os.makedirs ()
+يتم استخدام طريقة os.makedirs () في Python لإنشاء دليل بشكل متكرر. هذا يعني أنه أثناء إنشاء دليل طرفية إذا كان أي دليل متوسط ​​المستوى مفقودًا ، فإن طريقة os.makedirs () ستنشئها جميعًا.
+ 
+
+مثال: 
+
+# Python program to explain os.makedirs() method
+     
+# importing os module
+import os
+     
+# Leaf directory
+directory = "Nikhil"
+     
+# Parent Directories
+parent_dir = "D:/Pycharm projects/GeeksForGeeks/Authors"
+     
+# Path
+path = os.path.join(parent_dir, directory)
+     
+# Create the directory
+# 'Nikhil'
+os.makedirs(path)
+print("Directory '% s' created" % directory)
+     
+# Directory 'GeeksForGeeks' and 'Authors' will
+# be created too
+# if it does not exists
+     
+     
+     
+# Leaf directory
+directory = "c"
+     
+# Parent Directories
+parent_dir = "D:/Pycharm projects/GeeksforGeeks/a/b"
+     
+# mode
+mode = 0o666
+     
+path = os.path.join(parent_dir, directory)
+     
+# Create the directory 'c'
+     
+os.makedirs(path, mode)
+print("Directory '% s' created" % directory)
+     
+     
+# 'GeeksForGeeks', 'a', and 'b'
+# will also be created if
+# it does not exists
+     
+# If any of the intermediate level
+# directory is missing
+# os.makedirs() method will
+# create them
+     
+# os.makedirs() method can be
+# used to create a directory tree
+انتاج:
+
+تم إنشاء دليل "نيخيل"
+تم إنشاء الدليل "ج"
+سرد الملفات والدلائل باستخدام بايثون
+يتم استخدام طريقة () os.listdir في بايثون للحصول على قائمة بجميع الملفات والأدلة في الدليل المحدد. إذا لم نحدد أي دليل ، فسيتم إرجاع قائمة الملفات والأدلة الموجودة في دليل العمل الحالي.
+ 
+
+مثال:
+
+# Python program to explain os.listdir() method
+     
+# importing os module
+import os
+ 
+# Get the list of all files and directories
+# in the root directory
+path = "/"
+dir_list = os.listdir(path)
+ 
+print("Files and directories in '", path, "' :")
+ 
+# print the list
+print(dir_list)
+انتاج:
+
+الملفات والأدلة في '/':
+['sys'، 'run'، 'tmp'، 'boot'، 'mnt'، 'dev'، 'proc'، 'var'، 'bin'، 'lib64'، 'usr'،
+'lib'، 'srv'، 'home'، 'etc'، 'opt'، 'sbin'، 'media']
+ 
+
+حذف الدليل أو الملفات باستخدام بايثون
+تثبت وحدة OS طرقًا مختلفة لإزالة الدلائل والملفات في Python. هؤلاء هم - 
+
+باستخدام os.remove ()
+باستخدام os.rmdir ()
+باستخدام os.remove ()
+يتم استخدام طريقة () os.remove في بايثون لإزالة أو حذف مسار الملف. لا يمكن لهذه الطريقة إزالة أو حذف دليل. إذا كان المسار المحدد عبارة عن دليل ، فسيتم إظهار خطأ OSE بواسطة الطريقة.
+ 
+
+مثال: افترض أن الملف الموجود في المجلد هو:
+ 
+
+
+
+# Python program to explain os.remove() method
+     
+# importing os module
+import os
+     
+# File name
+file = 'file1.txt'
+     
+# File location
+location = "D:/Pycharm projects/GeeksforGeeks/Authors/Nikhil/"
+     
+# Path
+path = os.path.join(location, file)
+     
+# Remove the file
+# 'file.txt'
+os.remove(path)
+e)
+انتاج:
+
+
+
+باستخدام os.rmdir ()
+يتم استخدام طريقة () os.rmdir في بايثون لإزالة أو حذف دليل فارغ. سيظهر خطأ OSE إذا لم يكن المسار المحدد دليلاً فارغًا.
+ 
+
+مثال: افترض أن الدلائل 
+
+
+
+# Python program to explain os.rmdir() method
+     
+# importing os module
+import os
+     
+# Directory name
+directory = "Geeks"
+     
+# Parent Directory
+parent = "D:/Pycharm projects/"
+     
+# Path
+path = os.path.join(parent, directory)
+     
+# Remove the Directory
+# "Geeks"
+os.rmdir(path)
+انتاج:
+
+
+
+ 
+
+الوظائف شائعة الاستخدام
+1. os.name: تعطي هذه الوظيفة اسم الوحدة المعتمدة على نظام التشغيل المستوردة. الأسماء التالية مسجلة حاليًا: "posix" و "nt" و "os2" و "ce" و "java" و "riscos".
+
+
+import os
+ 
+print(os.name)
+انتاج:
+
+بوسيكس
+ملاحظة: قد يعطي مخرجات مختلفة على مترجمين مختلفين ، مثل "posix" عند تشغيل الكود هنا.
+ 
+
+2. os.error: تثير جميع الوظائف في هذه الوحدة النمطية "خطأ OSE" في حالة أسماء ومسارات الملفات غير الصالحة أو التي يتعذر الوصول إليها ، أو الوسائط الأخرى التي لها النوع الصحيح ، ولكن لا يقبلها نظام التشغيل. os.error هو اسم مستعار لاستثناء خطأ OSE المضمن. 
+
+import os
+ 
+ 
+try:
+    # If the file does not exist,
+    # then it would throw an IOError
+    filename = 'GFG.txt'
+    f = open(filename, 'rU')
+    text = f.read()
+    f.close()
+ 
+# Control jumps directly to here if
+# any of the above lines throws IOError.   
+except IOError:
+ 
+    # print(os.error) will <class 'OSError'>
+    print('Problem reading: ' + filename)
+     
+# In any case, the code then continues with
+# the line after the try/except
+انتاج: 
+
+قراءة مشكلة: GFG.txt
+ 
+3. os.popen (): تفتح هذه الطريقة أنبوبًا إلى أو من الأمر. يمكن قراءة القيمة المعادة أو كتابتها اعتمادًا على ما إذا كان الوضع "r" أو "w". 
+بناء الجملة: 
+
+os.popen (الأمر [، الوضع [، bufsize]])
+وضع المعلمات & bufsize ليسا معلمات ضرورية ، إذا لم يتم توفيرهما ، يتم أخذ "r" الافتراضي للوضع. 
+
+import os
+fd = "GFG.txt"
+ 
+# popen() is similar to open()
+file = open(fd, 'w')
+file.write("Hello")
+file.close()
+file = open(fd, 'r')
+text = file.read()
+print(text)
+ 
+# popen() provides a pipe/gateway and accesses the file directly
+file = os.popen(fd, 'w')
+file.write("Hello")
+# File not closed, shown in next function.
+انتاج: 
+
+مرحبا
+ملاحظة: لن يتم عرض إخراج popen () ، ستكون هناك تغييرات مباشرة في الملف.
+ 
+
+4. os.close (): إغلاق واصف الملف fd. ملف مفتوح باستخدام open () ، يمكن إغلاقه بالإغلاق () فقط. لكن الملف المفتوح من خلال os.popen () ، يمكن إغلاقه بإغلاق () أو os.close (). إذا حاولنا إغلاق ملف مفتوح بفتح () ، باستخدام os.close () ، فإن Python ستلقي بـ TypeError. 
+
+import os
+ 
+ 
+fd = "GFG.txt"
+file = open(fd, 'r')
+text = file.read()
+print(text)
+os.close(file)
+انتاج: 
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "C: \ Users \ GFG \ Desktop \ GeeksForGeeksOSFile.py" ، السطر 6 ، في
+    os.close (ملف)
+TypeError: مطلوب عدد صحيح (حصلت على النوع _io.TextIOWrapper)
+ملاحظة: قد لا يتم إلقاء نفس الخطأ ، بسبب عدم وجود ملف أو امتياز إذن.
+ 
+
+5. os.rename (): يمكن إعادة تسمية ملف old.txt إلى new.txt باستخدام الوظيفة os.rename (). يتغير اسم الملف فقط إذا كان الملف موجودًا وكان لدى المستخدم إذن امتياز كافٍ لتغيير الملف.
+
+import os
+ 
+ 
+fd = "GFG.txt"
+os.rename(fd,'New.txt')
+os.rename(fd,'New.txt')
+انتاج:
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "C: \ Users \ GFG \ Desktop \ ModuleOS \ GeeksForGeeksOSFile.py" ، السطر 3 ، في
+    os.rename (fd، "New.txt")
+FileNotFoundError: [WinError 2] لا يمكن للنظام العثور على ملف
+الملف المحدد: "GFG.txt" -> "New.txt"
+فهم الإخراج: اسم الملف "GFG.txt" موجود ، وبالتالي عند استخدام os.rename () في المرة الأولى ، تتم إعادة تسمية الملف. عند استدعاء الدالة os.rename () للمرة الثانية ، يكون الملف "New.txt" موجودًا وليس "GFG.txt" ، 
+وبالتالي فإن Python ترمي FileNotFoundError. 
+ 
+
+6. os.remove (): باستخدام وحدة Os يمكننا إزالة ملف في نظامنا باستخدام طريقة remove (). لإزالة ملف ، نحتاج إلى تمرير اسم الملف كمعامل. 
+
+
+import os #importing os module.
+ 
+os.remove("file_name.txt") #removing the file.
+توفر لنا وحدة نظام التشغيل طبقة من التجريد بيننا وبين نظام التشغيل. عندما نعمل مع وحدة نظام التشغيل ، حدد دائمًا المسار المطلق اعتمادًا على نظام التشغيل ، يمكن تشغيل الكود على أي نظام تشغيل ولكننا نحتاج إلى تغيير المسار تمامًا. إذا حاولت إزالة ملف غير موجود ، فستحصل على FileNotFoudError . 
+
+7. os.path.exists (): ستتحقق هذه الطريقة مما إذا كان الملف موجودًا أم لا عن طريق تمرير اسم الملف كمعامل. تحتوي وحدة OS النمطية على وحدة فرعية تسمى PATH من خلالها يمكننا أداء العديد من الوظائف. 
+
+
+import os
+#importing os module
+ 
+result = os.path.exists("file_name") #giving the name of the file as a parameter.
+ 
+print(result)
+انتاج |
+خطأ شنيع
+كما في الكود أعلاه ، الملف غير موجود سيعطي ناتج خطأ. إذا كان الملف موجودًا ، فسيعطينا الناتج صحيحًا. 
+
+8. os.path.getsize (): في هذه الطريقة ، ستعطينا python حجم الملف بالبايت. لاستخدام هذه الطريقة ، نحتاج إلى تمرير اسم الملف كمعامل.
+
+
+import os #importing os module
+ 
+size = os.path.getsize("filename")
+ 
+print("Size of the file is", size," bytes.")
+انتاج:
+
+حجم الملف 192 بايت.

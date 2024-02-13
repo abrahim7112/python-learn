@@ -1,0 +1,205 @@
+
+مستوى الصعوبة: سهل
+آخر تحديث: 20 نوفمبر 2020
+تم تطوير Python بواسطة Guido van Rossum في أوائل التسعينيات وإصداره الأخير هو 3.7.1 ، ويمكننا ببساطة تسميته Python3. تم إصدار Python 3.0 في عام 2008. وهي لغة مفسرة ، أي لم يتم تجميعها وسيتحقق المترجم الشفوي من رمز سطرًا سطرًا. يمكن استخدام هذه المقالة لتعلم أساسيات لغة برمجة بايثون .
+
+لذا قبل المضي قدمًا .. دعنا نقوم بأشهر تقاليد "HelloWorld" ومن ثم نقارن Python Syntax مع C و C ++ و Java (لقد أخذت هذه الثلاثة لأنها الأكثر شهرة واللغات المستخدمة في الغالب).
+
+
+# Python code for "Hello World"
+# nothing else to type...see how simple is the syntax.
+  
+print("Hello World")      
+ملاحظة: يرجى ملاحظة أن Python لنطاقها لا تعتمد على الأقواس ({}) ، بل تستخدم المسافة البادئة لنطاقها.
+ننتقل الآن لنبدأ أساسيات بايثون . سأغطي الأساسيات في بعض الأقسام الصغيرة. فقط قم بالاطلاع عليهم وثق بي ، سوف تتعلم أساسيات بايثون بسهولة بالغة.
+
+المقدمة والإعداد
+
+إذا كنت تستخدم نظام التشغيل Windows ، فقم بتنزيل Python بالنقر هنا والآن قم بالتثبيت من الإعداد وفي قائمة البداية اكتب IDLE.IDLE ، يمكنك التفكير فيه على أنه IDE لـ Python لتشغيل Python Scripts.
+سيبدو بطريقة ما هذا:
+
+
+إذا كنت تستخدم نظام التشغيل Linux / Unix ، فافتح المحطة الطرفية وعلى نظام التشغيل Linux 99٪ يأتي Python مثبتًا مسبقًا مع نظام التشغيل ، فقط اكتب python3 في الجهاز وستكون جاهزًا للانطلاق.
+سيبدو مثل هذا:
+
+يمثل ">>>" قشرة الثعبان وجاهزة لأخذ أوامر وكود بيثون.
+
+المتغيرات وهياكل البيانات
+
+في لغات البرمجة الأخرى مثل C و C ++ و Java ، ستحتاج إلى تحديد نوع المتغيرات ولكن في Python لن تحتاج إلى القيام بذلك. ما عليك سوى كتابة المتغير وعندما يتم إعطاء القيم له ، فسوف يعرف تلقائيًا ما إذا كانت القيمة المعطاة ستكون int ، أو float ، أو char أو حتى سلسلة.
+
+
+# Python program to declare variables
+myNumber = 3
+print(myNumber)
+  
+myNumber2 = 4.5
+print(myNumber2)
+  
+myNumber ="helloworld"
+print(myNumber)
+انتاج:
+
+3
+4.5
+مرحبا بالعالم
+انظر ، كم هو بسيط ، ما عليك سوى إنشاء متغير وتخصيص أي قيمة تريدها ثم استخدام وظيفة الطباعة لطباعتها. تحتوي Python على 4 أنواع من هياكل البيانات المضمنة وهي القائمة والقاموس و Tuple و Set.
+
+القائمة هي أبسط بنية بيانات في لغة بيثون. القائمة عبارة عن هيكل بيانات قابل للتغيير ، أي يمكن إضافة عناصر إلى القائمة لاحقًا بعد إنشاء القائمة. يبدو الأمر كما لو كنت ستتسوق في السوق المحلي وقمت بعمل قائمة ببعض العناصر ، وبعد ذلك يمكنك إضافة المزيد والمزيد من العناصر إلى القائمة.
+تُستخدم الوظيفة append () لإضافة البيانات إلى القائمة.
+
+
+# Python program to illustrate a list 
+  
+# creates a empty list
+nums = [] 
+  
+# appending data in list
+nums.append(21)
+nums.append(40.5)
+nums.append("String")
+  
+print(nums)
+انتاج:
+
+[21، 40.5، سلسلة]
+تعليقات:
+
+# يستخدم للتعليق المفرد في بايثون
+"" هذا تعليق يستخدم "" للتعليقات متعددة الأسطر
+المدخلات والمخرجات
+
+في هذا القسم ، سوف نتعلم كيفية أخذ المدخلات من المستخدم ومن ثم معالجتها أو عرضها ببساطة. يتم استخدام وظيفة الإدخال () لأخذ المدخلات من المستخدم.
+
+# Python program to illustrate
+# getting input from user
+name = input("Enter your name: ") 
+  
+# user entered the name 'harssh'
+print("hello", name)
+انتاج:
+
+مرحبا قاسية   
+# Python3 program to get input from user
+  
+# accepting integer from the user
+# the return type of input() function is string ,
+# so we need to convert the input to integer
+num1 = int(input("Enter num1: "))
+num2 = int(input("Enter num2: "))
+  
+num3 = num1 * num2
+print("Product is: ", num3)
+انتاج:
+
+أدخل رقم 1: 8 أدخل رقم 2: 6 ("المنتج هو:" ، 48)
+اختيار
+
+يتم التحديد في Python باستخدام الكلمتين الرئيسيتين "if" و "elif" و else (elseif)
+
+
+# Python program to illustrate
+# selection statement
+  
+num1 = 34
+if(num1>12):
+    print("Num1 is good")
+elif(num1>35):
+    print("Num2 is not gooooo....")
+else:
+    print("Num2 is great")
+انتاج:
+
+Num1 جيد
+المهام
+
+يمكنك التفكير في وظائف مثل مجموعة من التعليمات البرمجية التي تهدف إلى القيام بمهمة معينة في نص Python النصي بأكمله. استخدمت Python الكلمة الأساسية 'def' لتعريف الوظيفة.
+بناء الجملة:
+
+def اسم الوظيفة (الوسائط):
+            # هيئة وظيفية
+
+# Python program to illustrate
+# functions
+def hello():
+    print("hello")
+    print("hello again")
+hello()
+  
+# calling function
+hello()               
+انتاج:
+
+مرحبا
+مرحبا مجددا
+مرحبا
+مرحبا مجددا
+الآن كما نعلم أن أي برنامج يبدأ من وظيفة "رئيسية" ... يتيح إنشاء وظيفة رئيسية كما هو الحال في العديد من لغات البرمجة الأخرى.
+
+
+# Python program to illustrate 
+# function with main
+def getInteger():
+    result = int(input("Enter integer: "))
+    return result
+  
+def Main():
+    print("Started")
+  
+    # calling the getInteger function and 
+    # storing its returned value in the output variable
+    output = getInteger()     
+    print(output)
+  
+# now we are required to tell Python 
+# for 'Main' function existence
+if __name__=="__main__":
+    Main()
+انتاج:
+
+بدأت
+أدخل عددًا صحيحًا: 5
+التكرار (التكرار)
+
+كما يوحي الاسم ، فإنه يدعو إلى تكرار الأشياء مرارًا وتكرارًا. سنستخدم حلقة "for" الأكثر شيوعًا هنا.
+
+
+# Python program to illustrate
+# a simple for loop
+  
+for step in range(5):    
+    print(step)
+انتاج:
+
+0
+1
+2
+3
+4
+الوحدات
+
+تمتلك Python مكتبة وحدات غنية جدًا بها العديد من الوظائف للقيام بالعديد من المهام. يمكنك قراءة المزيد عن مكتبة Python القياسية عن طريق النقر هنا
+تُستخدم الكلمة الرئيسية "استيراد" لاستيراد وحدة نمطية معينة إلى كود Python الخاص بك. على سبيل المثال ضع في اعتبارك البرنامج التالي.
+
+
+# Python program to illustrate
+# math module
+import math
+  
+def Main():
+    num = -85
+  
+    # fabs is used to get the absolute 
+    # value of a decimal
+    num = math.fabs(num) 
+    print(num)
+      
+      
+if __name__=="__main__":
+    Main()
+انتاج:
+
+85.0
+هذه بعض من أساسيات لغة برمجة Python وسأغطي موضوعات Python ذات المستوى المتوسط ​​والمتقدم في مقالاتي القادمة.
+
+هذا المقال بقلم هارش واردان تشودري . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين. سيراجع فريق Geeks for Geeks مقالتك أولاً قبل النشر.

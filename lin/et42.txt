@@ -1,0 +1,297 @@
+
+Metaprogramming مع Metaclasses في بايثون
+مستوى الصعوبة: خبير
+آخر تحديث: 11 أكتوبر 2021
+في البداية ، تبدو كلمة Metaprogramming شيئًا غريبًا وغير تقليدي للغاية ، ولكن إذا كنت قد عملت مع مصممي الديكور أو الفوقية ، فأنت تقوم بعمل metaprogramming هناك طوال الوقت. باختصار ، يمكننا القول أن البرمجة الوصفية هي الكود الذي يعالج الكود.
+في هذه المقالة ، سنناقش Metaclasses ولماذا ومتى يجب أن نستخدمها وما هي البدائل. هذا موضوع متقدم إلى حد ما في Python ومن المتوقع أن يكون الشرط الأساسي التالي - 
+
+مفهوم OOP في Python
+مصممون في بايثون
+ملاحظة: تتناول هذه المقالة بايثون 3.3 وما فوق 
+
+الفوقية
+
+في بايثون ، كل شيء له نوع مرتبط به. على سبيل المثال ، إذا كان لدينا متغير له قيمة عددية ، فإن نوعه يكون int. يمكنك الحصول على نوع أي شيء باستخدام وظيفة type () . 
+
+
+num = 23
+print("Type of num is:", type(num))
+ 
+lst = [1, 2, 4]
+print("Type of lst is:", type(lst))
+ 
+name = "Atul"
+print("Type of name is:", type(name))
+انتاج: 
+
+نوع الأسطوانات هو: <class 'int'>
+نوع lst هو: <class 'list'>
+نوع الاسم هو: <class 'str'>
+يتم تحديد كل نوع في Python بواسطة Class . لذلك في المثال أعلاه ، على عكس C ++ أو Java حيث تكون int و char و float من أنواع البيانات الأساسية ، في Python تكون كائنات من فئة int أو فئة str. حتى نتمكن من صنع نوع جديد عن طريق إنشاء فئة من هذا النوع. على سبيل المثال ، يمكننا إنشاء نوع جديد من الطلاب من خلال إنشاء فصل  للطلاب .
+
+
+class Student:
+    pass
+stu_obj = Student()
+ 
+# Print type of object of Student class
+print("Type of stu_obj is:", type(stu_obj))
+انتاج: 
+
+نوع stu_obj هو: <class '__main __. Student'>
+الفئة هي أيضًا كائن ، ومثل أي كائن آخر ، فهي مثيل لشيء يسمى Metaclass . يقوم نوع فئة خاص بإنشاء كائنات الفئة هذه. فئة النوع هي metaclass الافتراضية المسؤولة عن تكوين الفئات. في المثال أعلاه ، إذا حاولنا معرفة نوع فصل الطالب ، فسيكون من النوع . 
+
+
+class Student:
+    pass
+ 
+# Print type of Student class
+print("Type of Student class is:", type(Student))
+انتاج: 
+
+نوع فئة الطالب هو: <class 'type'>
+نظرًا لأن الفئات هي أيضًا كائن ، فيمكن تعديلها بنفس الطريقة. يمكننا إضافة أو طرح الحقول أو الطرق في الفصل بنفس الطريقة التي فعلنا بها مع الكائنات الأخرى. فمثلا - 
+
+
+# Defined class without any
+# class methods and variables
+class test:pass
+ 
+# Defining method variables
+test.x = 45
+ 
+# Defining class methods
+test.foo = lambda self: print('Hello')
+ 
+# creating object
+myobj = test()
+ 
+print(myobj.x)
+myobj.foo()
+انتاج: 
+
+45
+مرحبا
+يمكن تلخيص هذا الشيء الفوقي بأكمله على النحو التالي - تنشئ Metaclass فئات و Classes تنشئ كائنات 
+ 
+
+
+
+يعد metaclass مسؤولاً عن إنشاء الفئات ، لذا يمكننا كتابة الفئات الوصفية المخصصة لتعديل الطريقة التي يتم بها إنشاء الفئات عن طريق تنفيذ إجراءات إضافية أو عن طريق حقن التعليمات البرمجية. عادة ، لا نحتاج إلى فئات وصفية مخصصة ولكن في بعض الأحيان يكون ذلك ضروريًا. 
+توجد مشاكل تتوافر لها الحلول القائمة على الطبقة الفوقية وغير القائمة على الطبقة الوصفية (والتي غالبًا ما تكون أبسط) ولكن في بعض الحالات ، يمكن فقط للفئة الوصفية حل المشكلة. سنناقش مثل هذه المشكلة في هذه المقالة.
+
+إنشاء Metaclass مخصص
+
+لإنشاء metaclass المخصص ، يجب أن يرث metaclass المخصص نوع metaclass وعادة ما يتجاوز - 
+
+__new __ (): هي طريقة يتم استدعاؤها قبل __init __ (). يقوم بإنشاء الكائن وإعادته. يمكننا تجاوز هذه الطريقة للتحكم في كيفية إنشاء الكائنات.
+__init __ (): تقوم هذه الطريقة فقط بتهيئة الكائن المُنشأ الذي تم تمريره كمعامل
+يمكننا إنشاء فئات باستخدام دالة type () مباشرة. يمكن استدعاؤها بالطرق التالية - 
+
+عندما يتم استدعاؤها باستخدام وسيطة واحدة فقط ، فإنها ترجع النوع. لقد رأينا ذلك من قبل في الأمثلة المذكورة أعلاه.
+عندما يتم استدعاؤها بثلاث معاملات ، فإنها تنشئ فئة. يتم تمرير الحجج التالية إليه - 
+اسم الفصل
+Tuple الذي يحتوي على فئات أساسية موروثة بواسطة الفئة
+قاموس الفصل: يعمل كمساحة اسم محلية للفصل ، مليئة بالطرق والمتغيرات الخاصة بالفئة
+ضع في اعتبارك هذا المثال -  
+
+
+def test_method(self):
+    print("This is Test class method!")
+ 
+# creating a base class
+class Base:
+    def myfun(self):
+        print("This is inherited method!")
+ 
+# Creating Test class dynamically using
+# type() method directly
+Test = type('Test', (Base, ), dict(x="atul", my_method=test_method))
+ 
+# Print type of Test
+print("Type of Test class: ", type(Test))
+ 
+# Creating instance of Test class
+test_obj = Test()
+print("Type of test_obj: ", type(test_obj))
+ 
+# calling inherited method
+test_obj.myfun()
+ 
+# calling Test class method
+test_obj.my_method()
+ 
+# printing variable
+print(test_obj.x)
+انتاج: 
+
+نوع فئة الاختبار: <class 'type'>
+نوع test_obj: <class '__main __. Test'>
+هذه طريقة موروثة!
+هذه هي طريقة فئة الاختبار!
+أتول
+لنقم الآن بإنشاء metaclass بدون استخدام النوع () مباشرة. في المثال التالي ، سننشئ metaclass MultiBases والذي سيتحقق مما إذا كانت الفئة التي يتم إنشاؤها قد ورثت من أكثر من فئة أساسية واحدة. إذا كان الأمر كذلك ، فسيحدث خطأ. 
+
+
+# our metaclass
+class MultiBases(type):
+    # overriding __new__ method
+    def __new__(cls, clsname, bases, clsdict):
+        # if no of base classes is greater than 1
+        # raise error
+        if len(bases)>1:
+            raise TypeError("Inherited multiple base classes!!!")
+         
+        # else execute __new__ method of super class, ie.
+        # call __init__ of type class
+        return super().__new__(cls, clsname, bases, clsdict)
+ 
+# metaclass can be specified by 'metaclass' keyword argument
+# now MultiBase class is used for creating classes
+# this will be propagated to all subclasses of Base
+class Base(metaclass=MultiBases):
+    pass
+ 
+# no error is raised
+class A(Base):
+    pass
+ 
+# no error is raised
+class B(Base):
+    pass
+ 
+# This will raise an error!
+class C(A, B):
+    pass
+انتاج: 
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "<stdin>" ، السطر 2 ، في <module>
+  ملف "<stdin>" ، السطر 8 ، في __new__
+TypeError: وراثة عدة فئات أساسية !!!
+حل المشاكل مع ميتاكلاس
+
+هناك بعض المشاكل التي يمكن حلها عن طريق المصممين (بسهولة) وكذلك عن طريق metaclasses. ولكن هناك بعض المشاكل التي لا يمكن تحقيق نتائجها إلا من خلال metaclasses. على سبيل المثال ، ضع في اعتبارك مشكلة بسيطة جدًا تتعلق بتكرار الكود. 
+نريد تصحيح أخطاء عمليات الصنف ، ما نريده هو أنه كلما تم تنفيذ طريقة الصنف ، يجب أن تطبع اسمها المؤهل بالكامل قبل تنفيذ جسمها.
+
+الحل الأول الذي يتبادر إلى أذهاننا هو استخدام أسلوب الزخرفة ، وفيما يلي نموذج التعليمات البرمجية - 
+
+
+from functools import wraps
+ 
+def debug(func):
+    '''decorator for debugging passed function'''
+     
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        print("Full name of this method:", func.__qualname__)
+        return func(*args, **kwargs)
+    return wrapper
+ 
+def debugmethods(cls):
+    '''class decorator make use of debug decorator
+       to debug class methods '''
+     
+    # check in class dictionary for any callable(method)
+    # if exist, replace it with debugged version
+    for key, val in vars(cls).items():
+        if callable(val):
+            setattr(cls, key, debug(val))
+    return cls
+ 
+# sample class
+@debugmethods
+class Calc:
+    def add(self, x, y):
+        return x+y
+    def mul(self, x, y):
+        return x*y
+    def div(self, x, y):
+        return x/y
+     
+mycal = Calc()
+print(mycal.add(2, 3))
+print(mycal.mul(5, 2))
+انتاج: 
+
+الاسم الكامل لهذه الطريقة: Calc.add
+5
+الاسم الكامل لهذه الطريقة: Calc.mul
+10
+يعمل هذا الحل بشكل جيد ولكن هناك مشكلة واحدة ، ماذا لو أردنا تطبيق مصمم الطريقة هذا على جميع الفئات الفرعية التي ترث فئة Calc هذه . في هذه الحالة ، يتعين علينا تطبيق مصمم الطريقة بشكل منفصل على كل فئة فرعية تمامًا كما فعلنا مع فئة Calc .
+تكمن المشكلة في أنه إذا كان لدينا العديد من هذه الفئات الفرعية ، فلن نرغب في هذه الحالة في إضافة مصمم إلى كل فئة على حدة. إذا علمنا مسبقًا أن كل فئة فرعية يجب أن تحتوي على خاصية التصحيح هذه ، فيجب أن نبحث عن الحل القائم على metaclass.
+ألقِ نظرة على هذا الحل القائم على metaclass ، الفكرة هي أنه سيتم إنشاء الفصول بشكل طبيعي ثم يتم تغليفها فورًا بواسطة مصمم طريقة التصحيح - 
+
+
+from functools import wraps
+ 
+def debug(func):
+    '''decorator for debugging passed function'''
+     
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        print("Full name of this method:", func.__qualname__)
+        return func(*args, **kwargs)
+    return wrapper
+ 
+def debugmethods(cls):
+    '''class decorator make use of debug decorator
+       to debug class methods '''
+     
+    for key, val in vars(cls).items():
+        if callable(val):
+            setattr(cls, key, debug(val))
+    return cls
+ 
+class debugMeta(type):
+    '''meta class which feed created class object
+       to debugmethod to get debug functionality
+       enabled objects'''
+     
+    def __new__(cls, clsname, bases, clsdict):
+        obj = super().__new__(cls, clsname, bases, clsdict)
+        obj = debugmethods(obj)
+        return obj
+     
+# base class with metaclass 'debugMeta'
+# now all the subclass of this
+# will have debugging applied
+class Base(metaclass=debugMeta):pass
+ 
+# inheriting Base
+class Calc(Base):
+    def add(self, x, y):
+        return x+y
+     
+# inheriting Calc
+class Calc_adv(Calc):
+    def mul(self, x, y):
+        return x*y
+ 
+# Now Calc_adv object showing
+# debugging behaviour
+mycal = Calc_adv()
+print(mycal.mul(2, 3))
+انتاج: 
+
+الاسم الكامل لهذه الطريقة: Calc_adv.mul
+6
+متى تستخدم Metaclasses
+
+في معظم الأوقات لا نستخدم metaclasses ، وعادة ما يتم استخدامها لشيء معقد ، ولكن في بعض الحالات التي نستخدم فيها metaclasses ، 
+
+كما رأينا في المثال أعلاه ، تنتشر الطبقات الوصفية أسفل التسلسلات الهرمية للميراث. سيؤثر على جميع الفئات الفرعية أيضًا. إذا كان لدينا مثل هذا الموقف ، فيجب علينا استخدام metaclasses.
+إذا أردنا تغيير الفصل تلقائيًا ، فعند إنشائه ، نستخدم metaclasses
+لتطوير API ، قد نستخدم metaclasses
+كما نقل عن تيم بيترز 
+
+تعد Metaclass سحرًا أعمق يجب ألا يقلق بشأنه 99٪ من المستخدمين. إذا كنت تتساءل عما إذا كنت في حاجة إليها ، فأنت لست (الأشخاص الذين يحتاجون إليها بالفعل يعرفون يقينًا أنهم بحاجة إليهم ، ولا يحتاجون إلى توضيح لماذا). 
+
+مراجع
+
+http://www.dabeaz.com/py3meta/Py3Meta.pdf
+https://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
+هذا المقال من مساهمة أتول كومار . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+ 
+

@@ -1,0 +1,229 @@
+
+عدادات في بايثون | المجموعة 1 (التهيئة والتحديث)
+مستوى الصعوبة: سهل
+آخر تحديث: 11 سبتمبر 2020
+العداد عبارة عن حاوية مضمنة في وحدة المجموعات . الآن يجب أن تتساءلوا جميعًا ما هي الحاوية. لا تقلق أولاً دعنا نناقش الحاوية.
+
+ما هي الحاوية؟
+الحاويات هي كائنات تحتوي على أشياء. أنها توفر وسيلة للوصول إلى الكائنات المضمنة وتكرارها. أمثلة على الحاويات المضمنة هي Tuple ، و List ، و Dictionary. يتم تضمين الآخرين في وحدة المجموعات .
+
+العداد هو فئة فرعية للديكت. لذلك فهي مجموعة غير مرتبة حيث يتم تخزين العناصر وعدد كل منها كقاموس. هذا يعادل حقيبة أو مجموعة لغات أخرى.
+
+بناء الجملة :
+
+مجموعات الصنف.Counter ([iterable-or-mapping])
+التهيئة:
+يمكن استدعاء مُنشئ العداد بأي من الطرق التالية:
+
+مع تسلسل العناصر
+مع قاموس يحتوي على مفاتيح وأعداد
+باستخدام وسيطات الكلمات الأساسية ، يتم تعيين أسماء السلاسل إلى الأعداد
+مثال على كل نوع من أنواع التهيئة:
+
+
+# A Python program to show different ways to create
+# Counter
+from collections import Counter
+  
+# With sequence of items 
+print(Counter(['B','B','A','B','C','A','B','B','A','C']))
+  
+# with dictionary
+print(Counter({'A':3, 'B':5, 'C':2}))
+  
+# with keyword arguments
+print(Counter(A=3, B=5, C=2))
+إخراج جميع الخطوط الثلاثة هو نفسه:
+
+عداد ({'B': 5، 'A': 3، 'C': 2})
+عداد ({'B': 5، 'A': 3، 'C': 2})
+عداد ({'B': 5، 'A': 3، 'C': 2})
+التحديث:
+يمكننا أيضًا إنشاء عداد فارغ بالطريقة التالية:
+
+coun = المجموعات.
+ويمكن تحديثه عبر طريقة التحديث (). بناء الجملة لنفسه:
+
+coun.update (البيانات)
+
+# A Python program to demonstrate update()
+from collections import Counter
+coun = Counter()
+  
+coun.update([1, 2, 3, 1, 2, 1, 1, 2])
+print(coun)
+  
+coun.update([1, 2, 4])
+print(coun)
+انتاج :
+
+عداد ({1: 4 ، 2: 3 ، 3: 1})
+عداد ({1: 5 ، 2: 4 ، 3: 1 ، 4: 1})
+يمكن توفير البيانات بأي من الطرق الثلاث كما هو مذكور في التهيئة وسيتم زيادة بيانات العداد ولن يتم استبدالها.
+يمكن أن تكون الأعداد صفرًا وسالبة أيضًا.
+
+# Python program to demonstrate that counts in 
+# Counter can be 0 and negative
+from collections import Counter
+  
+c1 = Counter(A=4,  B=3, C=10)
+c2 = Counter(A=10, B=3, C=4)
+  
+c1.subtract(c2)
+print(c1)
+انتاج :
+
+عداد ({'c': 6، 'B': 0، 'A': -6})
+يمكننا استخدام العداد لحساب العناصر المميزة لقائمة أو مجموعات أخرى.
+
+# An example program where different list items are
+# counted using counter
+from collections import Counter
+  
+# Create a list
+z = ['blue', 'red', 'blue', 'yellow', 'blue', 'red']
+  
+# Count distinct elements and print Counter aboject
+print(Counter(z))
+انتاج:
+
+عداد ({'blue': 3، 'red': 2، 'yellow': 1})
+
+
+ساهم Mayank Rawat في هذه المقالة . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، يمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+<<<<<<<<<<<<<<<<<<<
+OrderedDict في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 22 كانون الثاني (يناير) 2022
+OrderedDict هي فئة فرعية من القاموس تتذكر الترتيب الذي تم إدخال المفاتيح فيه لأول مرة. الفرق الوحيد بين dict () و OrderedDict () هو أن:
+
+يحافظ OrderedDict على الترتيب الذي تم إدخال المفاتيح به. لا يتتبع الإملاء العادي ترتيب الإدراج ويعطي التكرار القيم بترتيب عشوائي. على النقيض من ذلك ، يتم تذكر ترتيب إدراج العناصر بواسطة OrderedDict.
+
+
+# A Python program to demonstrate working of OrderedDict
+from collections import OrderedDict
+ 
+print("This is a Dict:\n")
+d = {}
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+ 
+for key, value in d.items():
+    print(key, value)
+ 
+print("\nThis is an Ordered Dict:\n")
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+ 
+for key, value in od.items():
+    print(key, value)
+انتاج: 
+
+هذا ديكت:
+أ 1
+ج 3
+ب 2
+د 4
+
+هذا إملاء مرتب:
+أ 1
+ب 2
+ج 3
+د 4
+نقاط مهمة: 
+
+1. تغيير قيمة المفتاح: إذا تم تغيير قيمة مفتاح معين ، فإن موضع المفتاح يظل دون تغيير في OrderedDict.
+
+# A Python program to demonstrate working of key
+# value change in OrderedDict
+from collections import OrderedDict
+ 
+print("Before:\n")
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+for key, value in od.items():
+    print(key, value)
+ 
+print("\nAfter:\n")
+od['c'] = 5
+for key, value in od.items():
+    print(key, value)
+انتاج: 
+
+قبل:
+
+أ 1
+ب 2
+ج 3
+د 4
+
+بعد:
+
+أ 1
+ب 2
+ج 5
+د 4
+2. الحذف وإعادة الإدراج : سيؤدي حذف نفس المفتاح وإعادة إدخاله إلى دفعه إلى الخلف حيث يحافظ OrderedDict على ترتيب الإدخال.
+
+
+# A Python program to demonstrate working of deletion
+# re-insertion in OrderedDict
+from collections import OrderedDict
+ 
+print("Before deleting:\n")
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+ 
+for key, value in od.items():
+    print(key, value)
+ 
+print("\nAfter deleting:\n")
+od.pop('c')
+for key, value in od.items():
+    print(key, value)
+ 
+print("\nAfter re-inserting:\n")
+od['c'] = 3
+for key, value in od.items():
+    print(key, value)
+انتاج: 
+
+قبل الحذف:
+
+أ 1
+ب 2
+ج 3
+د 4
+
+بعد الحذف:
+
+أ 1
+ب 2
+د 4
+
+بعد إعادة الإدخال:
+
+أ 1
+ب 2
+د 4
+ج 3
+اعتبارات أخرى :  
+
+الأمر الذي تم طلبه في الإصدار 2.7 من Python يستهلك ذاكرة أكبر من تلك التي يستخدمها dict العادي. هذا يرجع إلى تنفيذ Doubly Linked List الأساسي للحفاظ على النظام. في Python 2.7 Ordered Dict ليس فئة subclass ، إنه حاوية متخصصة من وحدة المجموعات.
+بدءًا من Python 3.7 ، يتم ضمان ترتيب إدراج قواميس Python.
+يمكن استخدام Ordered Dict كمكدس بمساعدة وظيفة popitem . حاول تنفيذ ذاكرة التخزين المؤقت LRU باستخدام الأمر Dict.

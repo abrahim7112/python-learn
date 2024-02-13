@@ -1,0 +1,1084 @@
+
+التعبيرات العادية في Python - المجموعة 2 (بحث ومطابقة والبحث عن الكل)
+مستوى الصعوبة: سهل
+آخر تحديث: ١٤ ديسمبر ٢٠٢١
+التعبير العادي في بايثون مع أمثلة | المجموعة 1
+توفر الوحدة النمطية re دعمًا للتعبيرات العادية في Python. فيما يلي الطرق الرئيسية في هذه الوحدة.
+
+البحث عن حدوث نمط 
+
+re.search (): تقوم هذه الطريقة إما بإرجاع None (إذا كان النمط غير متطابق) ، أو re.MatchObject الذي يحتوي على معلومات حول الجزء المطابق من السلسلة. تتوقف هذه الطريقة بعد التطابق الأول ، لذا فهي الأنسب لاختبار تعبير عادي أكثر من استخراج البيانات.
+
+
+# A Python program to demonstrate working of re.match(). 
+import re 
+   
+# Lets use a regular expression to match a date string 
+# in the form of Month name followed by day number 
+regex = r"([a-zA-Z]+) (\d+)"
+   
+match = re.search(regex, "I was born on June 24") 
+   
+if match != None: 
+   
+    # We reach here when the expression "([a-zA-Z]+) (\d+)" 
+    # matches the date string. 
+   
+    # This will print [14, 21), since it matches at index 14 
+    # and ends at 21. 
+    print ("Match at index %s, %s" % (match.start(), match.end())) 
+   
+    # We us group() method to get all the matches and 
+    # captured groups. The groups contain the matched values. 
+    # In particular: 
+    # match.group(0) always returns the fully matched string 
+    # match.group(1) match.group(2), ... return the capture 
+    # groups in order from left to right in the input string 
+    # match.group() is equivalent to match.group(0) 
+   
+    # So this will print "June 24" 
+    print ("Full match: %s" % (match.group(0))) 
+   
+    # So this will print "June" 
+    print ("Month: %s" % (match.group(1))) 
+   
+    # So this will print "24" 
+    print ("Day: %s" % (match.group(2)))
+   
+else: 
+    print ("The regex pattern does not match.")
+انتاج : 
+
+تطابق في الفهرس 14 و 21
+المباراة الكاملة: 24 يونيو
+الشهر: يونيو
+اليوم: 24
+مطابقة النمط مع النص 
+
+re.match (): تحاول هذه الوظيفة مطابقة النمط مع السلسلة بأكملها. تقوم الدالة re.match بإرجاع كائن تطابق عند النجاح ، ولا شيء عند الفشل. 
+
+re.match (النمط ، السلسلة ، الأعلام = 0)
+
+نمط: التعبير العادي المطلوب مطابقته.
+السلسلة: سلسلة حيث يتم البحث عن النمط
+الأعلام: يمكننا تحديد أعلام مختلفة
+        باستخدام أحادي المعامل OR (|).
+
+# A Python program to demonstrate working
+# of re.match().
+import re
+    
+# a sample function that uses regular expressions
+# to find month and day of a date.
+def findMonthAndDate(string):
+        
+    regex = r"([a-zA-Z]+) (\d+)"
+    match = re.match(regex, string)
+        
+    if match == None: 
+        print ("Not a valid date")
+        return
+    
+    print ("Given Data: %s" % (match.group()))
+    print ("Month: %s" % (match.group(1)))
+    print ("Day: %s" % (match.group(2)))
+    
+        
+# Driver Code
+findMonthAndDate("Jun 24")
+print("")
+findMonthAndDate("I was born on June 24")
+انتاج: 
+
+البيانات المقدمة: 24 يونيو
+الشهر: يونيو
+اليوم: 24
+
+تاريخ غير صالح
+إيجاد كل تكرارات النمط 
+
+re.findall (): إرجاع جميع التطابقات غير المتداخلة للنمط في السلسلة ، كقائمة من السلاسل. يتم فحص السلسلة من اليسار إلى اليمين ، ويتم إرجاع التطابقات بالترتيب الموجود (المصدر: Python Docs ). 
+
+
+# A Python program to demonstrate working of
+# findall()
+import re
+   
+# A sample text string where regular expression 
+# is searched.
+string  = """Hello my Number is 123456789 and
+             my friend's number is 987654321"""
+   
+# A sample regular expression to find digits.
+regex = '\d+'            
+   
+match = re.findall(regex, string)
+print(match)
+   
+# This example is contributed by Ayush Saluja.
+انتاج : 
+
+['123456789'، '987654321']
+التعبير العادي موضوع واسع. إنها مكتبة كاملة. يمكن للتعبيرات العادية أن تفعل الكثير من الأشياء. يمكنك مطابقة الكثير من البيانات والبحث عنها واستبدالها واستخراجها. على سبيل المثال ، يعد الرمز الصغير أدناه قويًا للغاية بحيث يمكنه استخراج عنوان البريد الإلكتروني من النص. حتى نتمكن من صنع برامج زحف الويب وأدوات الكشط الخاصة بنا في لغة بيثون بكل سهولة. 
+
+# استخراج جميع عناوين البريد الإلكتروني وإضافتها إلى المجموعة الناتجة
+new_emails = مجموعة (re.findall (r "[a-z0-9 \. \ - + _] + @ [a-z0-9 \. \ - + _] + \. [az] +"،
+                           نص ، re.I))
+سنناقش قريبًا المزيد من الأساليب على التعبيرات النمطية.
+
+ساهم شويتانشو روهاتجي في كتابة هذا المقال . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال وإرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه
+
+
+<<<<<<<<<<<<<<<<<<<
+Python Regex: re.search () مقابل re.findall ()
+مستوى الصعوبة: سهل
+آخر تحديث: 11 كانون الثاني (يناير) 2022
+المتطلب الأساسي: التعبير العادي بأمثلة | بايثون
+
+التعبير العادي ( يسمى أحيانًا التعبير العقلاني) هو سلسلة من الأحرف التي تحدد نمط البحث ، وذلك بشكل أساسي للاستخدام في مطابقة النمط مع السلاسل ، أو مطابقة السلسلة ، أي عمليات شبيهة بـ "البحث والاستبدال". التعبيرات العادية هي طريقة عامة لمطابقة الأنماط مع تسلسل الأحرف.
+
+تحدد Module Regular Expressions (RE) مجموعة من السلاسل (النمط) التي تطابقها. لفهم تشبيه الطاقة المتجددة ، MetaCharacters تعتبر مفيدة ومهمة وستستخدم في وظائف الوحدة re.
+
+يوجد إجمالي 14 حرفًا أوليًا وستتم مناقشتها لأنها تتبع في الوظائف:
+
+\ يستخدم لإسقاط المعنى الخاص للحرف
+    متابعته (كما هو موضح أدناه)
+[] تمثل فئة الشخصية
+^ يطابق البداية
+$ يطابق النهاية
+. تتطابق مع أي حرف باستثناء السطر الجديد
+؟ يطابق الصفر أو مرة واحدة.
+| يعني OR (يتطابق مع أي من الشخصيات
+    مفصولة به.
+* أي عدد من التكرارات (بما في ذلك 0 تكرارات)
++ تكرار واحد أو أكثر
+{} حدد عدد مرات حدوث عنصر RE سابق
+    كثيرا.
+() أرفق مجموعة من مصادر الطاقة المتجددة
+ابحاث()
+re.search()تقوم الطريقة إما بإرجاع بلا (إذا كان النمط غير متطابق) ، أو re.MatchObjectالذي يحتوي على معلومات حول الجزء المطابق من السلسلة. تتوقف هذه الطريقة بعد التطابق الأول ، لذا فهي الأنسب لاختبار تعبير عادي أكثر من استخراج البيانات.
+
+مثال:
+
+
+# A Python program to demonstrate working of re.match(). 
+import re 
+    
+# Lets use a regular expression to match a date string 
+# in the form of Month name followed by day number 
+regex = r"([a-zA-Z]+) (\d+)"
+    
+match = re.search(regex, "I was born on June 24") 
+    
+if match != None: 
+    
+    # We reach here when the expression "([a-zA-Z]+) (\d+)" 
+    # matches the date string. 
+    
+    # This will print [14, 21), since it matches at index 14 
+    # and ends at 21.  
+    print("Match at index % s, % s" % (match.start(), match.end()))
+    
+    # We us group() method to get all the matches and 
+    # captured groups. The groups contain the matched values. 
+    # In particular: 
+    # match.group(0) always returns the fully matched string 
+    # match.group(1) match.group(2), ... return the capture 
+    # groups in order from left to right in the input string 
+    # match.group() is equivalent to match.group(0) 
+    
+    # So this will print "June 24" 
+    print("Full match: % s" % (match.group(0)))
+    
+    # So this will print "June" 
+    print("Month: % s" % (match.group(1)))
+    
+    # So this will print "24" 
+    print("Day: % s" % (match.group(2)))
+    
+else: 
+    print("The regex pattern does not match.")
+انتاج:
+
+تطابق في الفهرس 14 و 21
+المباراة الكاملة: 24 يونيو
+الشهر: يونيو
+اليوم: 24
+re.findall ()
+إرجاع جميع التطابقات غير المتداخلة للنمط في السلسلة ، كقائمة من السلاسل. يتم فحص السلسلة من اليسار إلى اليمين ، ويتم إرجاع التطابقات بالترتيب الذي تم العثور عليه.
+
+مثال:
+
+
+# A Python program to demonstrate working of 
+# findall() 
+import re 
+    
+# A sample text string where regular expression  
+# is searched. 
+string = """Hello my Number is 123456789 and 
+             my friend's number is 987654321"""
+    
+# A sample regular expression to find digits. 
+regex = '\d+'             
+    
+match = re.findall(regex, string) 
+print(match) 
+انتاج:
+
+['123456789'، '987654321']
+
+<<<<<<<<<<<<<<<<<<<
+
+مطول في Python Regex
+مستوى الصعوبة: متوسط
+تاريخ التحديث الأخير: 19 يوليو 2019
+في هذه المقالة سوف نتعرف على علم VERBOSE لحزمة re وكيفية استخدامها.
+
+re.VERBOSE: تتيح لك هذه العلامة كتابة تعبيرات عادية تبدو أجمل وأكثر قابلية للقراءة من خلال السماح لك بفصل الأقسام المنطقية للنمط بصريًا وإضافة تعليقات.
+يتم تجاهل المسافة البيضاء داخل النمط ، إلا في فئة الأحرف ، أو عندما تسبقها شرطة مائلة للخلف لا مفر منها ، أو داخل الرموز المميزة مثل *?, (?: or (?P. عندما يحتوي السطر على # غير موجود في فئة الأحرف ولا يسبقه خط مائل عكسي غير مهذب ، يتم تجاهل جميع الأحرف من أقصى اليسار مثل # حتى نهاية السطر.
+
+# Without Using VERBOSE
+regex_email = re.compile(r'^([a-z0-9_\.-]+)@([0-9a-z\.-]+)\.([a-z\.]{2, 6})$',
+              re.IGNORECASE)
+   
+# Using VERBOSE
+regex_email = re.compile(r"""
+            ^([a-z0-9_\.-]+)              # local Part
+            @                             # single @ sign
+            ([0-9a-z\.-]+)                # Domain name
+            \.                            # single Dot .
+            ([a-z]{2,6})$                 # Top level Domain  
+             """,re.VERBOSE | re.IGNORECASE)   
+تم تمريره كوسيطة إلى re.compile()ie re.compile (تعبير عادي ، re.VERBOSE) . re.compile()إرجاع RegexObject والذي يتم مطابقته بعد ذلك بالسلسلة المحددة.
+
+دعنا نفكر في مثال حيث يُطلب من المستخدم إدخال معرف البريد الإلكتروني الخاص به وعلينا التحقق من صحته باستخدام RegEx. تنسيق البريد الإلكتروني هو كما يلي:
+
+التفاصيل الشخصية / الجزء المحلي مثل john123
+غير مرتبطة @
+اسم المجال مثل gmail / yahoo وما إلى ذلك
+نقطة واحدة (.)
+نطاق المستوى الأعلى مثل .com / .org / .net
+أمثلة:
+
+المُدخَلات : يتوقعopatronum@gmail.com
+ الإخراج : صالح
+
+
+الإدخال : avadakedavra @ yahoo.com @
+ الإخراج : غير صالح
+هذا غير صالح لأن هناك @ بعد اسم مجال المستوى الأعلى.
+فيما يلي تطبيق Python -
+
+
+# Python3 program to show the Implementation of VERBOSE in RegEX
+import re
+  
+def validate_email(email):
+  
+    # RegexObject = re.compile( Regular expression, flag )
+    # Compiles a regular expression pattern into 
+    # a regular expression object
+    regex_email=re.compile(r"""
+                           ^([a-z0-9_\.-]+)                 # local Part
+                           @                             # single @ sign
+                            ([0-9a-z\.-]+)                 # Domain name
+                           \.                             # single Dot .
+                            ([a-z]{2,6})$                 # Top level Domain     
+                           """,re.VERBOSE | re.IGNORECASE)
+  
+    # RegexObject is matched with the desired
+    # string using fullmatch function
+    # In case a match is found, search()
+    # returns a MatchObject Instance
+    res=regex_email.fullmatch(email)
+  
+    #If match is found, the string is valid
+    if res:
+        print("{} is Valid. Details are as follow:".format(email))
+          
+        #prints first part/personal detail of Email Id
+        print("Local:{}".format(res.group(1)))
+          
+        #prints Domain Name of Email Id
+        print("Domain:{}".format(res.group(2)))
+          
+        #prints Top Level Domain Name of Email Id
+        print("Top Level domain:{}".format(res.group(3)))
+        print()
+          
+    else:
+        #If match is not found,string is invalid
+        print("{} is Invalid".format(email))
+  
+# Driver Code
+validate_email("expectopatronum@gmail.com")
+validate_email("avadakedavra@yahoo.com@")
+validate_email("Crucio@.com")
+انتاج:
+
+توقعopatronum@gmail.com صالح. التفاصيل كالتالي:
+محلي: يتوقع الباترون
+المجال: gmail
+نطاق المستوى الأعلى: com
+
+avadakedavra @ yahoo.com @ غير صالح
+Crucio @ .com غير صالح
+
+
+<<<<<<<<<<<<<<<<<<<
+التحقق من صحة كلمة المرور في Python
+مستوى الصعوبة: سهل
+آخر تحديث: 29 ديسمبر 2020
+لنأخذ كلمة المرور كمجموعة من الأحرف الأبجدية الرقمية جنبًا إلى جنب مع الأحرف الخاصة ، ونتحقق مما إذا كانت كلمة المرور صالحة أم لا بمساعدة بعض الشروط.
+
+شروط كلمة المرور الصالحة هي:
+
+يجب أن يكون لديك رقم واحد على الأقل.
+يجب أن تحتوي على حرف كبير واحد وحرف صغير واحد على الأقل.
+يجب أن يحتوي على رمز خاص واحد على الأقل.
+يجب أن يكون طوله من 6 إلى 20 حرفًا.
+الإدخال:   Geek12 #
+ الإخراج: كلمة المرور صالحة.
+
+الإدخال:   asd123
+ الإخراج: كلمة مرور غير صالحة !!
+يمكننا التحقق مما إذا كانت سلسلة معينة مؤهلة لتكون كلمة مرور أم لا باستخدام طرق متعددة.
+
+الطريقة رقم 1: الطريقة الساذجة (بدون استخدام Regex).
+
+
+# Password validation in Python
+# using naive method
+  
+# Function to validate the password
+def password_check(passwd):
+      
+    SpecialSym =['$', '@', '#', '%']
+    val = True
+      
+    if len(passwd) < 6:
+        print('length should be at least 6')
+        val = False
+          
+    if len(passwd) > 20:
+        print('length should be not be greater than 8')
+        val = False
+          
+    if not any(char.isdigit() for char in passwd):
+        print('Password should have at least one numeral')
+        val = False
+          
+    if not any(char.isupper() for char in passwd):
+        print('Password should have at least one uppercase letter')
+        val = False
+          
+    if not any(char.islower() for char in passwd):
+        print('Password should have at least one lowercase letter')
+        val = False
+          
+    if not any(char in SpecialSym for char in passwd):
+        print('Password should have at least one of the symbols $@#')
+        val = False
+    if val:
+        return val
+  
+# Main method
+def main():
+    passwd = 'Geek12@'
+      
+    if (password_check(passwd)):
+        print("Password is valid")
+    else:
+        print("Invalid Password !!")
+          
+# Driver Code        
+if __name__ == '__main__':
+    main()
+انتاج:
+كلمة المرور صالحة
+استخدم هذا الرمز وظائف منطقية للتحقق مما إذا كانت جميع الشروط مستوفاة أم لا. نرى أنه على الرغم من أن تعقيد الكود أساسي ، إلا أن الطول كبير.
+ 
+الطريقة الثانية: استخدام regex
+
+compile()طريقة الوحدة النمطية Regex تجعل كائن Regex ، مما يجعل من الممكن تنفيذ وظائف regex على متغير pat . ثم نتحقق مما إذا كان النمط المحدد بواسطة pat متبوعًا بسلسلة الإدخال passwd . إذا كان الأمر كذلك ، فإن طريقة البحث ترجع صحيحة ، مما سيسمح لكلمة المرور بأن تكون صالحة.
+
+
+# importing re library
+import re
+  
+def main():
+    passwd = 'Geek12@'
+    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,20}$"
+      
+    # compiling regex
+    pat = re.compile(reg)
+      
+    # searching regex                 
+    mat = re.search(pat, passwd)
+      
+    # validating conditions
+    if mat:
+        print("Password is valid.")
+    else:
+        print("Password invalid !!")
+  
+# Driver Code     
+if __name__ == '__main__':
+    main()
+انتاج:
+كلمة المرور صالحة.
+
+
+<<<<<<<<<<<<<<<<<<<
+وحدة مجموعات بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 19 تشرين الثاني (نوفمبر) 2021
+توفر وحدة التجميع في Python أنواعًا مختلفة من الحاويات. الحاوية عبارة عن كائن يتم استخدامه لتخزين كائنات مختلفة وتوفير طريقة للوصول إلى الكائنات المضمنة وتكرارها. بعض الحاويات المدمجة هي Tuple ، و List ، و Dictionary ، وما إلى ذلك. في هذه المقالة ، سنناقش الحاويات المختلفة التي توفرها وحدة المجموعات.
+
+قائمة المحتويات:
+
+عدادات
+أمر ديكت
+DefaultDict
+سلسلة خريطة
+مسمى
+ديكيو
+UserDict
+قائمة المستخدم
+UserString
+عدادات
+العداد هو فئة فرعية من القاموس. يتم استخدامه للاحتفاظ بعدد العناصر في التكرار في شكل قاموس غير مرتب حيث يمثل المفتاح العنصر في العنصر القابل للتكرار وتمثل القيمة عدد هذا العنصر في العنصر القابل للتكرار.
+
+ملحوظة: إنه يعادل حقيبة أو عدة لغات أخرى.
+
+بناء الجملة:
+
+مجموعات الصنف.Counter ([iterable-or-mapping])
+تهيئة كائنات العداد
+يمكن تهيئة كائن العداد باستخدام وظيفة counter () ويمكن استدعاء هذه الوظيفة بإحدى الطرق التالية:
+
+مع تسلسل العناصر
+مع قاموس يحتوي على مفاتيح وأعداد
+باستخدام وسيطات الكلمات الأساسية ، يتم تعيين أسماء السلاسل إلى الأعداد
+مثال:
+
+بايثون 3
+
+# A Python program to show different
+# ways to create Counter
+from collections import Counter
+   
+# With sequence of items 
+print(Counter(['B','B','A','B','C','A','B',
+               'B','A','C']))
+   
+# with dictionary
+print(Counter({'A':3, 'B':5, 'C':2}))
+   
+# with keyword arguments
+print(Counter(A=3, B=5, C=2))
+انتاج:
+
+عداد ({'B': 5، 'A': 3، 'C': 2})
+عداد ({'B': 5، 'A': 3، 'C': 2})
+عداد ({'B': 5، 'A': 3، 'C': 2})
+ملاحظة: لمزيد من المعلومات ، راجع   العدادات في بايثون.
+
+أمر ديكت
+يعتبر OrderedDict أيضًا فئة فرعية من القاموس ولكن بخلاف القاموس ، فإنه يتذكر الترتيب الذي تم إدخال المفاتيح به. 
+
+بناء الجملة:
+
+مجموعات الفصل.
+مثال:
+
+بايثون 3
+
+# A Python program to demonstrate working
+# of OrderedDict
+ 
+from collections import OrderedDict
+   
+print("This is a Dict:\n")
+d = {}
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+   
+for key, value in d.items():
+    print(key, value)
+   
+print("\nThis is an Ordered Dict:\n")
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+   
+for key, value in od.items():
+    print(key, value)
+انتاج:
+
+هذا ديكت:
+
+أ 1
+ب 2
+ج 3
+د 4
+
+هذا إملاء مرتب:
+
+أ 1
+ب 2
+ج 3
+د 4
+بينما يؤدي حذف نفس المفتاح وإعادة إدخاله إلى دفع المفتاح إلى الأخير للحفاظ على ترتيب إدخال المفتاح.
+
+مثال:
+
+بايثون 3
+
+# A Python program to demonstrate working
+# of OrderedDict
+ 
+from collections import OrderedDict
+ 
+ 
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+   
+print('Before Deleting')
+for key, value in od.items():
+    print(key, value)
+     
+# deleting element
+od.pop('a')
+ 
+# Re-inserting the same
+od['a'] = 1
+ 
+print('\nAfter re-inserting')
+for key, value in od.items():
+    print(key, value)
+انتاج:
+
+قبل الحذف
+أ 1
+ب 2
+ج 3
+د 4
+
+بعد إعادة الإدخال
+ب 2
+ج 3
+د 4
+أ 1
+ملاحظة: لمزيد من المعلومات ، راجع OrderedDict في Python
+
+DefaultDict
+DefaultDict هو أيضًا فئة فرعية للقاموس. يتم استخدامه لتوفير بعض القيم الافتراضية للمفتاح غير الموجود ولا يرفع خطأ KeyError مطلقًا.
+
+بناء الجملة:
+
+مجموعات فئة. الافتراضي (default_factory)
+Default_factory هي وظيفة توفر القيمة الافتراضية للقاموس الذي تم إنشاؤه. إذا كانت هذه المعلمة غائبة ، فسيتم رفع خطأ KeyError.
+
+تهيئة كائنات DefaultDict
+يمكن تهيئة كائنات DefaultDict باستخدام طريقة DefaultDict () بتمرير نوع البيانات كوسيطة.
+
+مثال:
+
+بايثون 3
+
+# Python program to demonstrate
+# defaultdict
+    
+    
+from collections import defaultdict
+    
+    
+# Defining the dict
+d = defaultdict(int)
+    
+L = [1, 2, 3, 4, 2, 4, 1, 2]
+    
+# Iterate through the list
+# for keeping the count
+for i in L:
+        
+    # The default value is 0
+    # so there is no need to 
+    # enter the key first
+    d[i] += 1
+        
+print(d)
+انتاج:
+
+defaultdict (<class 'int'> ، {1: 2 ، 2: 3 ، 3: 1 ، 4: 2})
+المثال 2:
+
+بايثون 3
+
+# Python program to demonstrate
+# defaultdict
+   
+   
+from collections import defaultdict
+   
+   
+# Defining a dict
+d = defaultdict(list)
+   
+for i in range(5):
+    d[i].append(i)
+       
+print("Dictionary with values as list:")
+print(d)
+انتاج:
+
+قاموس يحتوي على قيم كقائمة: 
+defaultdict (<class 'list'> ، {0: [0] ، 1: [1] ، 2: [2] ، 3: [3] ، 4: [4]})
+
+ملاحظة: لمزيد من المعلومات ، راجع Defaultdict في Python
+
+سلسلة خريطة
+تقوم ChainMap بتغليف العديد من القواميس في وحدة واحدة وإرجاع قائمة القواميس.
+
+بناء الجملة:
+
+مجموعات الصفوف. ChainMap (
+مثال:
+
+بايثون 3
+
+# Python program to demonstrate
+# ChainMap
+    
+    
+from collections import ChainMap
+    
+    
+d1 = {'a': 1, 'b': 2}
+d2 = {'c': 3, 'd': 4}
+d3 = {'e': 5, 'f': 6}
+ 
+# Defining the chainmap
+c = ChainMap(d1, d2, d3)
+    
+print(c)
+انتاج:
+
+ChainMap ({'a': 1، 'b': 2}، {'c': 3، 'd': 4}، {'e': 5، 'f': 6})
+الوصول إلى المفاتيح والقيم من ChainMap
+يمكن الوصول إلى القيم من ChainMap باستخدام اسم المفتاح. يمكن الوصول إليها أيضًا باستخدام طريقة المفاتيح () والقيم ().
+
+مثال:
+
+بايثون 3
+
+# Python program to demonstrate
+# ChainMap
+    
+    
+from collections import ChainMap
+    
+    
+d1 = {'a': 1, 'b': 2}
+d2 = {'c': 3, 'd': 4}
+d3 = {'e': 5, 'f': 6}
+ 
+# Defining the chainmap
+c = ChainMap(d1, d2, d3)
+    
+# Accessing Values using key name
+print(c['a'])
+ 
+# Accessing values using values()
+# method
+print(c.values())
+ 
+# Accessing keys using keys()
+# method
+print(c.keys())
+انتاج:
+
+1 
+ValuesView (ChainMap ({'a': 1، 'b': 2}، {'c': 3، 'd': 4}، {'e': 5، 'f': 6})) 
+KeysView ( ChainMap ({'a': 1، 'b': 2}، {'c': 3، 'd': 4}، {'e': 5، 'f': 6}))
+
+إضافة قاموس جديد
+يمكن إضافة قاموس جديد باستخدام طريقة new_child () . تتم إضافة القاموس المضاف حديثًا في بداية ChainMap.
+
+مثال:
+
+بايثون 3
+
+# Python code to demonstrate ChainMap and
+# new_child()
+   
+import collections
+   
+# initializing dictionaries
+dic1 = { 'a' : 1, 'b' : 2 }
+dic2 = { 'b' : 3, 'c' : 4 }
+dic3 = { 'f' : 5 }
+   
+# initializing ChainMap
+chain = collections.ChainMap(dic1, dic2)
+   
+# printing chainMap
+print ("All the ChainMap contents are : ")
+print (chain)
+   
+# using new_child() to add new dictionary
+chain1 = chain.new_child(dic3)
+   
+# printing chainMap
+print ("Displaying new ChainMap : ")
+print (chain1)
+انتاج:
+
+جميع محتويات ChainMap هي:
+ChainMap ({'a': 1، 'b': 2}، {'b': 3، 'c': 4})
+عرض ChainMap الجديد:
+ChainMap ({'f': 5}، {'a': 1، 'b': 2}، {'b': 3، 'c': 4})
+ملاحظة: لمزيد من المعلومات ، راجع ChainMap في Python
+
+مسمى
+يقوم NamedTuple بإرجاع كائن tuple بأسماء لكل موضع تفتقر إليه المجموعات العادية. على سبيل المثال ، ضع في اعتبارك طالب أسماء tuple حيث يمثل العنصر الأول fname ، ويمثل العنصر الثاني lname ويمثل العنصر الثالث DOB. لنفترض أنه عند استدعاء fname بدلاً من تذكر موضع الفهرس ، يمكنك بالفعل استدعاء العنصر باستخدام وسيطة fname ، فسيكون من السهل حقًا الوصول إلى عنصر tuples. يتم توفير هذه الوظيفة بواسطة NamedTuple.
+
+بناء الجملة:
+
+مجموعات الفئة.
+مثال:
+
+بايثون 3
+
+# Python code to demonstrate namedtuple()
+   
+from collections import namedtuple
+   
+# Declaring namedtuple()
+Student = namedtuple('Student',['name','age','DOB'])
+   
+# Adding values
+S = Student('Nandini','19','2541997')
+   
+# Access using index
+print ("The Student age using index is : ",end ="")
+print (S[1])
+   
+# Access using name 
+print ("The Student name using keyname is : ",end ="")
+print (S.name)
+انتاج:
+
+عمر الطالب باستخدام الفهرس هو: 19
+اسم الطالب الذي يستخدم keyname هو: Nandini
+عمليات التحويل 
+1. _make (): تُستخدم هذه الوظيفة لإرجاع namedtuple () من العنصر التكراري الذي تم تمريره كوسيطة.
+
+2. _asdict (): تقوم هذه الوظيفة بإرجاع OrdereDict () كما تم إنشاؤها من القيم المعينة لـ namedtuple ().
+
+مثال:
+
+بايثون 3
+
+# Python code to demonstrate namedtuple() and
+# _make(), _asdict()
+   
+ 
+from collections import namedtuple
+   
+# Declaring namedtuple()
+Student = namedtuple('Student',['name','age','DOB'])
+   
+# Adding values
+S = Student('Nandini','19','2541997')
+   
+# initializing iterable 
+li = ['Manjeet', '19', '411997' ]
+   
+# initializing dict
+di = { 'name' : "Nikhil", 'age' : 19 , 'DOB' : '1391997' }
+   
+# using _make() to return namedtuple()
+print ("The namedtuple instance using iterable is  : ")
+print (Student._make(li))
+   
+# using _asdict() to return an OrderedDict()
+print ("The OrderedDict instance using namedtuple is  : ")
+print (S._asdict())
+انتاج:
+
+المثال الذي يحمل الاسم الذي يستخدمه القابل للتكرار هو:
+الطالب (الاسم = 'Manjeet' ، العمر = '19 '، DOB =' 411997 ')
+مثيل OrderedDict الذي يستخدم اسمهtuple هو:
+OrderedDict ([('name'، 'Nandini')، ('age'، '19')، ('DOB'، '2541997')])
+ملاحظة: لمزيد من المعلومات ، راجع NamedTuple في Python
+
+ديكي
+Deque (Doubly Ended Queue) هي قائمة محسّنة لعمليات إلحاق وفرقعة أسرع من كلا جانبي الحاوية. إنه يوفر تعقيدًا زمنيًا O (1) لعمليات الإلحاق والانبثاق مقارنة بالقائمة ذات التعقيد الزمني O (n).
+
+بناء الجملة:
+
+مجموعات الفصل.
+هذه الوظيفة تأخذ القائمة كوسيطة.
+
+مثال:
+
+بايثون 3
+
+# Python code to demonstrate deque
+   
+ 
+from collections import deque
+   
+# Declaring deque
+queue = deque(['name','age','DOB'])
+   
+print(queue)
+انتاج:
+
+deque (['name'، 'age'، 'DOB'])
+إدخال العناصر
+يمكن إدراج العناصر الموجودة في deque من كلا الطرفين. لإدراج العناصر من اليمين ، يتم استخدام طريقة () ولإدراج العناصر من طريقة appendleft () اليسرى.
+
+مثال:
+
+بايثون 3
+
+# Python code to demonstrate working of 
+# append(), appendleft()
+   
+ 
+from collections import deque
+   
+# initializing deque
+de = deque([1,2,3])
+   
+# using append() to insert element at right end 
+# inserts 4 at the end of deque
+de.append(4)
+   
+# printing modified deque
+print ("The deque after appending at right is : ")
+print (de)
+   
+# using appendleft() to insert element at right end 
+# inserts 6 at the beginning of deque
+de.appendleft(6)
+   
+# printing modified deque
+print ("The deque after appending at left is : ")
+print (de)
+انتاج:
+
+الدقه بعد الحاقه على اليمين هو:
+دق ([1، 2، 3، 4])
+إن deque بعد الإلحاق على اليسار هو:
+دق ([6 ، 1 ، 2 ، 3 ، 4])
+إزالة العناصر
+يمكن أيضًا إزالة العناصر من deque من كلا الطرفين. لإزالة عناصر من اليمين استخدم طريقة pop () ولإزالة العناصر من اليسار استخدم طريقة popleft ().
+
+مثال:
+
+بايثون 3
+
+# Python code to demonstrate working of 
+# pop(), and popleft()
+ 
+from collections import deque
+ 
+# initializing deque
+de = deque([6, 1, 2, 3, 4])
+ 
+# using pop() to delete element from right end 
+# deletes 4 from the right end of deque
+de.pop()
+   
+# printing modified deque
+print ("The deque after deleting from right is : ")
+print (de)
+   
+# using popleft() to delete element from left end 
+# deletes 6 from the left end of deque
+de.popleft()
+   
+# printing modified deque
+print ("The deque after deleting from left is : ")
+print (de)
+انتاج:
+
+إن deque بعد الحذف من اليمين هو:
+دق ([6، 1، 2، 3])
+إن deque بعد الحذف من اليسار هو:
+دق ([1، 2، 3])
+ملاحظة: لمزيد من المعلومات ، راجع Deque في Python.
+
+UserDict
+UserDict عبارة عن حاوية تشبه القاموس تعمل كغلاف حول كائنات القاموس. يتم استخدام هذه الحاوية عندما يريد شخص ما إنشاء قاموس خاص به مع بعض الوظائف المعدلة أو الجديدة. 
+
+بناء الجملة:
+
+مجموعات فئة .UserDict ([البيانات الأولية])
+مثال:
+
+بايثون 3
+
+# Python program to demonstrate
+# userdict
+    
+   
+from collections import UserDict
+    
+   
+# Creating a Dictionary where
+# deletion is not allowed
+class MyDict(UserDict):
+       
+    # Function to stop deletion
+    # from dictionary
+    def __del__(self):
+        raise RuntimeError("Deletion not allowed")
+           
+    # Function to stop pop from 
+    # dictionary
+    def pop(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+           
+    # Function to stop popitem 
+    # from Dictionary
+    def popitem(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+       
+# Driver's code
+d = MyDict({'a':1,
+    'b': 2,
+    'c': 3})
+   
+d.pop(1)
+انتاج:
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/f8db849e4cf1e58177983b2b6023c1a3.py" ، السطر 32 ، في <module>
+    دي بي بوب (1)
+  ملف "/home/f8db849e4cf1e58177983b2b6023c1a3.py" ، السطر 20 ، في pop
+    رفع RuntimeError ("الحذف غير مسموح به")
+خطأ وقت التشغيل: الحذف غير مسموح به
+تم تجاهل الاستثناء في: <طريقة ملزمة MyDict .__ del__ من {'a': 1، 'b': 2، 'c': 3}>
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/f8db849e4cf1e58177983b2b6023c1a3.py" ، السطر 15 ، في __del__
+خطأ وقت التشغيل: الحذف غير مسموح به
+ملاحظة: لمزيد من المعلومات ، راجع UserDict في Python
+
+قائمة المستخدم
+UserList عبارة عن قائمة مثل الحاوية التي تعمل كغلاف حول كائنات القائمة. يكون هذا مفيدًا عندما يريد شخص ما إنشاء قائمته الخاصة مع بعض الوظائف المعدلة أو الإضافية.
+
+بناء الجملة:
+
+مجموعات الفصل الدراسي. قائمة المستخدمين ([قائمة])
+مثال:
+
+بايثون 3
+
+# Python program to demonstrate
+# userlist
+    
+   
+from collections import UserList
+    
+   
+# Creating a List where
+# deletion is not allowed
+class MyList(UserList):
+       
+    # Function to stop deletion
+    # from List
+    def remove(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+           
+    # Function to stop pop from 
+    # List
+    def pop(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+       
+# Driver's code
+L = MyList([1, 2, 3, 4])
+   
+print("Original List")
+   
+# Inserting to List"
+L.append(5)
+print("After Insertion")
+print(L)
+   
+# Deleting From List
+L.remove()
+انتاج:
+
+القائمة الأصلية
+بعد الإدخال
+[1 ، 2 ، 3 ، 4 ، 5]
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/c90487eefa7474c0566435269f50a52a.py" ، السطر 33 ، في <module>
+    إل.ريموف ()
+  ملف "/home/c90487eefa7474c0566435269f50a52a.py" ، السطر 15 ، في الإزالة
+    رفع RuntimeError ("الحذف غير مسموح به")
+خطأ وقت التشغيل: الحذف غير مسموح به
+ملاحظة: لمزيد من المعلومات ، راجع UserList في Python
+
+UserString
+UserString عبارة عن سلسلة مثل الحاوية وهي تمامًا مثل UserDict و UserList تعمل كغلاف حول كائنات السلسلة. يتم استخدامه عندما يريد شخص ما إنشاء سلاسل خاصة به مع بعض الوظائف المعدلة أو الإضافية. 
+
+بناء الجملة:
+
+مجموعات فئة .UserString (seq)
+مثال:
+
+بايثون 3
+
+# Python program to demonstrate
+# userstring
+    
+   
+from collections import UserString
+    
+   
+# Creating a Mutable String
+class Mystring(UserString):
+       
+    # Function to append to
+    # string
+    def append(self, s):
+        self.data += s
+           
+    # Function to remove from 
+    # string
+    def remove(self, s):
+        self.data = self.data.replace(s, "")
+       
+# Driver's code
+s1 = Mystring("Geeks")
+print("Original String:", s1.data)
+   
+# Appending to string
+s1.append("s")
+print("String After Appending:", s1.data)
+   
+# Removing from string
+s1.remove("e")
+print("String after Removing:", s1.data)
+انتاج:
+
+السلسلة الأصلية: المهوسون
+السلسلة بعد الإلحاق: المهوسون
+السلسلة بعد الإزالة: Gkss
+ملاحظة: لمزيد من المعلومات ، راجع UserString في Python
+

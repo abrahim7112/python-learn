@@ -1,0 +1,1582 @@
+
+
+آخر تحديث: ٢٨ مارس ٢٠٢١
+MongoDB هي واحدة من أكثر قواعد بيانات NoSQL شيوعًا. إنها قاعدة بيانات متعددة المنصات وموجهة للكائنات. تعني NoSQL أساسًا أن MongoDB لا تخزن البيانات في الجدول أو التنسيق العلائقي بدلاً من توفير آلية مختلفة لتخزين واسترجاع البيانات. هذا يسمى BSON وهو مشابه لـ JSON. لهذا السبب تقدم MongoDB سرعة عالية وتوافرًا عاليًا وقابلية تطوير عالية.
+
+سيساعدك هذا البرنامج التعليمي MongoDB على تعلم تفاعل قاعدة بيانات MongoDB مع Python من الأساسيات إلى Advance باستخدام مجموعة ضخمة من برامج ومشاريع Python MongoDB.
+
+دروس بايثون MongoDB
+
+قائمة المحتويات:
+
+مقدمة
+ابدء
+استعلامات MongoDB
+العمل مع المجموعات والمستندات في MongoDB
+الفهرسة في MongoDB
+التحويل بين بيانات MongoDB والبيانات المنظمة
+أسئلة عن MongoDB
+المقالات الأخيرة عن Python MongoDB !!
+
+مقدمة
+MongoDB: مقدمة
+MongoDB و Python
+دليل تثبيت MongoDB مع Python | شبابيك
+ابدء
+كيف تعمل قواعد بيانات المستندات؟
+ما هو مؤشر PyMongo؟
+قم بإنشاء قاعدة بيانات في MongoDB باستخدام بايثون
+استعلامات MongoDB
+ما هو استعلام MongoDB؟
+استعلام ادراج وتحديث البيانات
+استعلام insert_one
+استعلام insert_many
+الفرق بين استعلامات insert و insert_one و insert_many في Pymongo
+استعلام Update_one
+Update_many استعلام
+إدراج واستبدال واحد واستبدال العديد من الاستعلامات
+حذف البيانات وإفلات المجموعة
+استعلام Delete_one
+استعلام Delete_many
+البحث عن الاستعلام
+استعلام find_one
+استعلام find_one_and_update
+استعلام find_one_and_delete
+استعلام find_one_and_replace
+فرز الاستعلام
+استعلام مميز
+إعادة تسمية الاستعلام
+استعلام عن السائبة
+مجموعة $ (التجميع) العملية
+استعلام محدد
+استعلامات متداخلة في PyMongo
+العمل مع المجموعات والمستندات في MongoDB
+كيفية الوصول إلى مجموعة في MongoDB باستخدام Python؟
+احصل على أسماء جميع المجموعات باستخدام PyMongo
+Drop Collection إذا كان موجودًا بالفعل في MongoDB باستخدام Python
+كيفية تحديث البيانات في مجموعة باستخدام Python؟
+احصل على جميع مستندات المجموعة باستخدام PyMongo
+احسب عدد المستندات في MongoDB باستخدام Python
+قم بتحديث جميع المستندات في مجموعة باستخدام PyMongo
+التجميع في MongoDB باستخدام Python
+الفهرسة في MongoDB
+الفهرسة في MongoDB باستخدام بايثون
+Python MongoDB - استعلام create_index
+كيفية إنشاء فهرس لمجموعة MongoDB باستخدام بايثون؟
+احصل على جميع المعلومات الخاصة بفهارس المجموعة باستخدام PyMongo
+استعلام drop_index
+كيفية حذف جميع الفهارس في مجموعة باستخدام PyMongo؟
+كيفية إعادة بناء جميع فهارس مجموعة باستخدام PyMongo؟
+التحويل بين بيانات MongoDB والبيانات المنظمة
+كيفية استيراد ملف JSON في MongoDB باستخدام Python؟
+تحويل مؤشر PyMongo إلى JSON
+تحويل مؤشر PyMongo إلى Dataframe
+أسئلة عن MongoDB
+كيفية التحقق مما إذا كان مؤشر PyMongo فارغًا؟
+كيف تجلب البيانات من MongoDB باستخدام بايثون؟
+الاستعلامات الجغرافية المكانية باستخدام Python MongoDB
+نموذج تخطيط ثلاثي الأبعاد لبيانات من MongoDB Atlas باستخدام Python
+ 
+<<<<<<<<<<<<<<<<<<<<<<
+تثبيت برنامج MongoDB على نظام ويندوز ببايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 06 أكتوبر 2021
+سنشرح تثبيت MongoDB في خطوات. قبل التثبيت ، أود أن أقترح على الجميع استخدام بيئة تطوير متكاملة ، أناكوندا.
+
+الخطوة 1 -> قم بتثبيت رابط تثبيت إصدار المجتمع
+
+الخطوة 2 -> قم بتشغيل حزمة برنامج تثبيت MongoDB windows التي قمت بتنزيلها للتو.
+
+يتم تثبيت MongoDB هنا->
+
+C: \ Program Files \ MongoDB \ Server \ 3.4 \
+الخطوة 3 -> دعونا نضبط بيئة MongoDB
+
+(أ) إنشاء دليل البيانات حيث يتم تخزين جميع البيانات.
+على محرك الأقراص C: قم بإنشاء مجلد بيانات بداخله ، قم بإنشاء مجلد db
+أو
+Run
+md ج: \ بيانات \ ديسيبل
+(ب) لبدء تشغيل MongoDB
+->
+"C: \ Program Files \ MongoDB \ Server \ 3.4 \ bin \ mongod.exe"
+انتظر حتى تظهر رسالة الاتصال
+
+(ج) تحقق من مسار البيئة أو قم بتعيين المسار إذا لم يتم تعيين
+متغيرات البيئة المفتوحة بشكل صحيح ، يمكنك البحث عن طريق بحث windows.
+
+
+افتح متغير البيئة تحت قسم متغيرات النظام ، افتح المسار.
+هذا سيبدو مثل هذا.
+
+أضف مسار مجلد bin كما هو موضح في الصورة أعلاه.
+
+(د) للاتصال بـ MongoDB
+افتح موجه الأوامر الآخر وقم بتشغيل->
+
+"C: \ Program Files \ MongoDB \ Server \ 3.4 \ bin \ mongo.exe
+الخطوة 4-> Ready MongoDB
+Open Command Prompt (وضع المسؤول) type->
+
+منجود
+
+
+ملاحظة: حتى الخطوة 4 ، سيعمل MongoDB فقط عندما يكون موجه الأوامر مفتوحًا ويستمع.
+الآن سنرى ملحق لجعله أفضل.
+
+الخطوات أدناه من الخطوة 5 إلى الخطوة 8 اختيارية:
+الخطوة 5 -> افتح موجه الأوامر وقم بتشغيل-
+
+مكدير ج: \ بيانات \ ديسيبل
+mkdir ج: \ بيانات \ سجل
+الخطوة 6- > قم بإنشاء ملف تكوين في C: \ Program Files \ MongoDB \ Server \ 3.4 \ mongod.cfg (اسم الملف mongod.cfg)
+
+سجل النظام:
+    الملف الوجهة
+    المسار: c: \ data \ log \ mongod.log
+تخزين:
+    dbPath: ج: \ بيانات \ ديسيبل
+يمكن إنشاء هذا وحفظه في وضع المسؤول في Notepad أو Notepad ++ أو أي محرر آخر لتشغيل وضع مسؤول المفكرة ، اضغط على Ctrl + Shift + Enter . سيتيح لك وضع إدارة المفكرة إنشاء mongod.cfg وحفظ الملف النصي أعلاه.
+
+الخطوة 7 -> قم بتثبيت خدمة MongoDB عن طريق بدء تشغيل mongod.exe بخيار –install وخيار -config لتحديد ملف التكوين الذي تم إنشاؤه مسبقًا.
+الآن قم بتشغيل هذا الأمر في موجه الأوامر
+
+"C: \ Program Files \ MongoDB \ Server \ 3.4 \ bin \ mongod.exe"
+--config "C: \ Program Files \ MongoDB \ Server \ 3.4 \ mongod.cfg" - التثبيت
+الخطوة 8 -> لبدء تشغيل MongoDB وإيقافه
+للبدء:
+
+بداية net MongoDB
+للتوقف :
+
+صافي توقف MongoDB
+
+
+ملاحظة: يتم تشغيل جميع الأوامر في وضع مسؤول موجه الأوامر ، لفتح وضع المسؤول في موجه الأوامر ، افتح موجه الأوامر العادي واضغط على Ctrl + Shift + Enter أو انقر بزر الماوس الأيمن على زر بدء رمز النوافذ الأيسر حيث يمكنك رؤية الخيارات.
+
+الخطوة 9 -> افتح Anaconda Command Prompt كما هو موضح في الصورة.
+
+
+الخطوة 10 -> تثبيت الحزمة لاستخدام MongoDB
+لتثبيت هذه الحزمة مع conda run:
+
+تركيب Conda -c اناكوندا بيمونجو 
+
+
+تهانينا!! اكتمل التثبيت. (يعمل Pymongo فقط عند بدء تشغيل MongoDB ، استخدم net start MongoDB لبدء تشغيله ثم العمل على spyder)
+يمكنك دراسة وفهم MongoDB في لغة python هنا .
+
+هذا المقال من مساهمة SHAURYA UPPAL . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام write.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+C:\Program Files\MongoDB\Server\3.4\
+md C:\data\db
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
+"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe
+mongod
+mkdir c:\data\db
+mkdir c:\data\log
+systemLog:
+    destination: file
+    path: c:\data\log\mongod.log
+storage:
+    dbPath: c:\data\db
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" 
+--config "C:\Program Files\MongoDB\Server\3.4\mongod.cfg" --install
+net start MongoDB
+net stop MongoDB
+conda install -c anaconda pymongo 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+MongoDB و Python
+مستوى الصعوبة: متوسط
+تاريخ التحديث الأخير: 20 إبريل 2018
+المتطلبات المسبقة: MongoDB: مقدمة
+MongoDB عبارة عن قاعدة بيانات متعددة المنصات وموجهة نحو المستندات تعمل على مفهوم المجموعات والوثائق. يوفر MongoDB سرعة عالية وتوافرًا عاليًا وقابلية تطوير عالية.
+السؤال التالي الذي يطرح في أذهان الناس هو "لماذا MongoDB"؟
+أسباب اختيار MongoDB:
+
+يدعم هيكل البيانات الهرمي (يرجى الرجوع إلى المستندات للحصول على التفاصيل)
+وهو يدعم المصفوفات المرتبطة مثل القواميس في بايثون.
+برامج تشغيل Python مدمجة لربط تطبيق python بقاعدة البيانات. مثال- PyMongo
+تم تصميمه للبيانات الضخمة.
+إن نشر MongoDB سهل للغاية.
+MongoDB مقابل RDBMS
+
+
+
+دليل تثبيت MongoDB و PyMongo
+
+ابدأ تشغيل MongoDB أولاً من موجه الأوامر باستخدام:
+الطريقة الأولى:
+منجود
+أو
+الطريقة الثانية:
+
+بداية net MongoDB
+
+انظر رقم المنفذ بشكل افتراضي هو ضبط 27017 (السطر الأخير في الصورة أعلاه).
+لغة Python لديها مكتبة أصلية لـ MongoDB. اسم المكتبة المتاحة هو "PyMongo". لاستيراد هذا ، قم بتنفيذ الأمر التالي:
+
+from pymongo import MongoClient
+إنشاء اتصال: أول ما بعد استيراد الوحدة هو إنشاء MongoClient.
+from pymongo import MongoClient
+client = MongoClient()
+بعد ذلك ، اتصل بالمضيف والمنفذ الافتراضيين. يتم الاتصال بالمضيف والمنفذ بشكل صريح. يتم استخدام الأمر التالي لتوصيل MongoClient على المضيف المحلي الذي يعمل على المنفذ رقم 27017.
+
+client = MongoClient(‘host’, port_number)
+example:- client = MongoClient(‘localhost’, 27017)
+يمكن القيام بذلك أيضًا باستخدام الأمر التالي:
+
+client = MongoClient(“mongodb://localhost:27017/”)
+الوصول إلى كائنات قاعدة البيانات: لإنشاء قاعدة بيانات أو للتبديل إلى قاعدة بيانات موجودة ، نستخدم:
+الطريقة الأولى: نمط القاموس
+mydatabase = client[‘name_of_the_database’]
+الطريقة 2:
+
+mydatabase = client.name_of_the_database
+إذا لم تكن هناك قاعدة بيانات تم إنشاؤها مسبقًا بهذا الاسم ، فسيقوم MongoDB ضمنيًا بإنشاء واحدة للمستخدم.
+ملاحظة: اسم تعبئة قاعدة البيانات لن يتسامح مع أي شرطة (-) مستخدمة فيه. ستثير الأسماء مثل my-Table خطأ. لذلك ، يُسمح باستخدام الشرطة السفلية في الاسم.
+
+الوصول إلى المجموعة: المجموعات تعادل الجداول في RDBMS. نحن نصل إلى مجموعة في PyMongo بنفس الطريقة التي نصل بها إلى الجداول في RDBMS. للوصول إلى الجدول ، قل اسم الجدول "myTable" لقاعدة البيانات ، قل "mydatabase".
+طريقة 1:
+
+الطريقة الثانية:
+
+mycollection = mydatabase.myTable
+> يقوم MongoDB بتخزين قاعدة البيانات في شكل قواميس كما هو موضح:>
+
+سجل = {
+العنوان: "MongoDB و Python" ،
+الوصف: "MongoDB ليست قاعدة بيانات SQL" ،
+العلامات: ['mongodb'، 'database'، 'NoSQL']،
+المشاهدون: 104
+}
+'_id' هو المفتاح الخاص الذي يتم إضافته تلقائيًا إذا نسي المبرمج الإضافة بشكل صريح. _id هو الرقم السداسي العشري البالغ 12 بايت والذي يضمن تفرد كل مستند مدرج.
+_هوية شخصية
+
+أدخل البيانات داخل مجموعة:
+الأساليب المستخدمة:
+insert_one () أو insert_many ()
+نستخدم عادةً مستند أسلوب insert_one () في مجموعاتنا. لنفترض أننا نرغب في إدخال البيانات المسماة كسجل في "myTable" في "قاعدة بياناتي".
+
+rec = myTable.insert_one(record)
+يبدو الرمز بالكامل مثل هذا عند الحاجة إلى تنفيذه.
+
+# importing module
+from pymongo import MongoClient
+  
+# creation of MongoClient
+client=MongoClient()
+  
+# Connect with the portnumber and host
+client = MongoClient(“mongodb://localhost:27017/”)
+  
+# Access database
+mydatabase = client[‘name_of_the_database’]
+  
+# Access collection of the database
+mycollection=mydatabase[‘myTable’]
+  
+# dictionary to be added in the database
+rec={
+title: 'MongoDB and Python', 
+description: 'MongoDB is no SQL database', 
+tags: ['mongodb', 'database', 'NoSQL'], 
+viewers: 104 
+}
+  
+# inserting the data in the database
+rec = mydatabase.myTable.insert(record)
+الاستعلام في MongoDB: هناك وظائف استعلام معينة تُستخدم لترتيب البيانات في قاعدة البيانات. الوظيفتان الأكثر استخدامًا هما:
+تستخدم find ()
+find () للحصول على أكثر من مستند واحد كنتيجة للاستعلام.
+for i in mydatabase.myTable.find({title: 'MongoDB and Python'})
+    print(i)
+سيؤدي هذا إلى إخراج جميع المستندات الموجودة في myTable الخاصة بقاعدة بياناتي بعنوان "MongoDB and Python".
+
+يُستخدم count ()
+count () للحصول على أرقام المستندات التي تحمل الاسم كما تم تمريره إلى المعلمات.
+print(mydatabase.myTable.count({title: 'MongoDB and Python'}))
+سيؤدي هذا إلى إخراج عدد المستندات الموجودة في myTable لقاعدة بياناتي بعنوان "MongoDB و Python".
+
+يمكن تلخيص وظيفتي الاستعلام هاتين لإعطاء النتيجة الأكثر تصفية كما هو موضح أدناه.
+
+print(mydatabase.myTable.find({title: 'MongoDB and Python'}).count())
+لطباعة جميع المستندات / الإدخالات داخل 'myTable' لقاعدة البيانات 'mydatabase': استخدم الكود التالي:
+from pymongo import MongoClient
+  
+try:
+    conn = MongoClient()
+    print("Connected successfully!!!")
+except:  
+    print("Could not connect to MongoDB")
+  
+# database name: mydatabase
+db = conn.mydatabase
+  
+# Created or Switched to collection names: myTable
+collection = db.myTable
+  
+# To find() all the entries inside collection name 'myTable'
+cursor = collection.find()
+for record in cursor:
+    print(record)
+هذا المقال من كتابة ريشابه بانسال وشوريا أوبال .
+
+إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى Contrib@geeksforgeeks.org . شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+قم بإنشاء قاعدة بيانات في MongoDB باستخدام بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 10 مايو 2020
+MongoDB هي قاعدة بيانات موزعة للأغراض العامة وقائمة على المستندات ومصممة لمطوري التطبيقات الحديثة والسحابة. إنها قاعدة بيانات مستندات ، مما يعني أنها تخزن البيانات في مستندات تشبه JSON. هذه طريقة فعالة للتفكير في البيانات وهي أكثر تعبيرًا وقوة من نموذج الجدول التقليدي.
+
+لا يوجد لدى MongoDB أمر منفصل لإنشاء قاعدة بيانات. بدلاً من ذلك ، يستخدم الأمر use لإنشاء قاعدة بيانات. يتم استخدام الأمر use للتبديل إلى قاعدة البيانات المحددة. إذا كان اسم قاعدة البيانات المحدد بعد الكلمة الأساسية للاستخدام غير موجود ، فسيتم إنشاء قاعدة بيانات جديدة بالاسم المحدد.
+
+إنشاء قاعدة بيانات باستخدام لغة Python في MongoDB
+لاستخدام Python في MongoDB ، سنقوم باستيراد PyMongo. من ذلك ، يمكن استيراد MongoClient الذي يستخدم لإنشاء عميل لقاعدة البيانات. باستخدام العميل ، يمكن إنشاء قاعدة بيانات جديدة.
+
+مثال:
+
+قائمة قواعد البيانات باستخدام MongoDB shell (قبل):
+
+python-create-database-mongodb1
+
+# import MongoClient
+from pymongo import MongoClient
+  
+  
+# Creating a client
+client = MongoClient('localhost', 27017)
+  
+# Greating a database name GFG
+db = client['GFG']
+print("Database is created !!")
+انتاج:
+
+تم إنشاء قاعدة البيانات !!
+في المثال أعلاه ، يتضح بوضوح كيف يتم إنشاء قاعدة البيانات. عند إنشاء عميل ، يتم تمرير المضيف المحلي مع رقم المنفذ الخاص به ، وهو 27017 هنا ، إلى MongoClient. ثم ، باستخدام العميل ، يتم إنشاء قاعدة بيانات جديدة باسم "GFG".
+
+يمكننا التحقق مما إذا كانت قاعدة البيانات موجودة في قائمة قواعد البيانات باستخدام الكود التالي:
+
+list_of_db = client.list_database_names()
+  
+if "mydbase" in list_of_db:
+    print("Exists !!")
+انتاج:
+
+موجود !!
+قائمة قواعد البيانات في MongoDB shell (بعد):
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - استعلام insert_one
+آخر تحديث: 26 مايو 2020
+MongoDB هو برنامج قاعدة بيانات متعدد المنصات وموجه للمستندات وغير علائقية (أي NoSQL). إنها قاعدة بيانات وثيقة مفتوحة المصدر ، تخزن البيانات في شكل أزواج من المفاتيح والقيمة. تم تطوير MongoDB بواسطة شركة MongoDB Inc. وتم إصداره في البداية في 11 فبراير 2009. تمت كتابته بلغات C ++ و Go و JavaScript و Python. يوفر MongoDB سرعة عالية وتوافرًا عاليًا وقابلية تطوير عالية.
+
+إدراج واحد () 
+هذه طريقة يمكننا بواسطتها إدراج إدخال واحد داخل المجموعة أو قاعدة البيانات في MongoDB. في حالة عدم وجود المجموعة ، تُنشئ هذه الطريقة مجموعة جديدة وتُدخل البيانات فيها. يأخذ القاموس كمعامل يحتوي على اسم وقيمة كل حقل في المستند الذي تريد إدراجه في المجموعة. 
+تقوم هذه الطريقة بإرجاع مثيل للفئة "~ pymongo.results.InsertOneResult" التي تحتوي على حقل "_id" الذي يحمل معرف المستند المُدرج. إذا لم يحدد المستند حقل "_id" ، فسيقوم MongoDB بإضافة الحقل "_id" وتعيين معرف كائن فريد للمستند قبل الإدراج.
+
+بناء الجملة:  collection.insert_one (document، bypass_document_validation = False، session = None)
+
+حدود: 
+
+"المستند": المستند المطلوب إدراجه. يجب أن يكون نوع تعيين قابل للتغيير. إذا لم يكن المستند يحتوي على حقل _id ، فسيتم إضافة حقل واحد تلقائيًا.
+"bypass_document_validation" (اختياري): إذا كان "True" ، يسمح للكتابة بإلغاء الاشتراك في التحقق من مستوى المستند. الافتراضي هو "خطأ".
+"جلسة" (اختياري): فئة "~ pymongo.client_session.ClientSession".
+مثال 1: 
+
+نموذج قاعدة بيانات:
+
+
+
+ 
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient 
+  
+# Making Connection
+myclient = MongoClient("mongodb://localhost:27017/") 
+  
+# database 
+db = myclient["GFG"]
+  
+# Created or Switched to collection 
+# names: GeeksForGeeks
+collection = db["Student"]
+  
+# Creating Dictionary of records to be 
+# inserted
+record = { "_id": 5,
+          "name": "Raju",
+          "Roll No": "1005",
+          "Branch": "CSE"}
+  
+  
+  
+# Inserting the record1 in the collection 
+# by using collection.insert_one()
+rec_id1 = collection.insert_one(record)
+انتاج: 
+ 
+
+
+
+المثال 2: إدخال قيم متعددة
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient 
+  
+  
+# Making Connection
+myclient = MongoClient("mongodb://localhost:27017/") 
+  
+# database 
+db = myclient["GFG"]
+  
+# Created or Switched to collection 
+# names: GeeksForGeeks
+collection = db["Student"]
+  
+# Creating Dictionary of records to be 
+# inserted
+records = {
+    "record1": { "_id": 6,
+    "name": "Anshul",
+    "Roll No": "1006",
+    "Branch": "CSE"},
+  
+    "record2": { "_id": 7,
+    "name": "Abhinav",
+    "Roll No": "1007",
+    "Branch": "ME"}
+}
+  
+  
+# Inserting the records in the collection 
+# by using collection.insert_one()
+for record in records.values():
+    collection.insert_one(record)
+انتاج: 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - استعلام insert_many
+آخر تحديث: 19 كانون الثاني (يناير) 2022
+MongoDB هو برنامج قاعدة بيانات متعدد المنصات وموجه للمستندات وغير علائقية (أي NoSQL). إنها قاعدة بيانات وثيقة مفتوحة المصدر ، تخزن البيانات في شكل أزواج من المفاتيح والقيمة. تم تطوير MongoDB بواسطة شركة MongoDB Inc. وتم إصداره في البداية في 11 فبراير 2009. تمت كتابته بلغات C ++ و Go و JavaScript و Python. يوفر MongoDB سرعة عالية وتوافرًا عاليًا وقابلية تطوير عالية.
+ 
+
+insert_many ()
+تُستخدم هذه الطريقة لإدراج عدة إدخالات في مجموعة أو قاعدة بيانات في MongoDB. معلمة هذه الطريقة هي قائمة تحتوي على قواميس للبيانات التي نريد إدراجها في المجموعة.
+تقوم هذه الطريقة بإرجاع مثيل للفئة "~ pymongo.results.InsertManyResult" التي تحتوي على حقل "_id" الذي يحمل معرف المستندات المدرجة. إذا لم يحدد المستند حقل "_id" ، فسيقوم MongoDB بإضافة الحقل "_id" إلى جميع البيانات في القائمة وتعيين معرف كائن فريد للمستندات قبل الإدراج.
+ 
+
+بناء الجملة: collection.insert_many (documents، order = True، bypass_document_validation = False، session = None)
+المعلمات: 
+ 
+
+"documents" : المستندات المراد إدراجها.
+"أمر" (اختياري): إذا تم إدراج المستندات "True" (الافتراضية) على الخادم بشكل تسلسلي ، بالترتيب المقدم. في حالة حدوث خطأ ، يتم إحباط كافة الإدخالات المتبقية. إذا كانت الحالة "خطأ" ، فسيتم إدراج المستندات على الخادم بترتيب عشوائي ، وربما بالتوازي ، وستتم محاولة إدخال كافة المستندات.
+"bypass_document_validation" (اختياري): إذا كان "True" ، يسمح للكتابة بإلغاء الاشتراك في التحقق من مستوى المستند. الافتراضي هو "خطأ".
+"جلسة" (اختياري): فئة "~ pymongo.client_session.ClientSession".
+ 
+
+المثال 1: في هذا المثال ، تم توفير _id. 
+ 
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient
+ 
+ 
+myclient = MongoClient("mongodb://localhost:27017/")
+ 
+# database
+db = myclient["GFG"]
+ 
+# Created or Switched to collection
+# names: GeeksForGeeks
+collection = db["Student"]
+ 
+# Creating a list of records which we
+# insert in the collection using the
+# update_many() method.
+mylist = [
+  { "_id": 1, "name": "Vishwash", "Roll No": "1001", "Branch":"CSE"},
+  { "_id": 2, "name": "Vishesh", "Roll No": "1002", "Branch":"IT"},
+  { "_id": 3, "name": "Shivam", "Roll No": "1003", "Branch":"ME"},
+  { "_id": 4, "name": "Yash", "Roll No": "1004", "Branch":"ECE"},
+]
+ 
+# In the above list _id field is provided so it inserted in
+# the collection as specified.
+ 
+# Inserting the entire list in the collection
+collection.insert_many(mylist)
+انتاج:
+ 
+
+python-mongodb-insert-many
+
+المثال 2: في هذا المثال لم يتم توفير _id ، يتم تخصيصه تلقائيًا بواسطة MongoDB. 
+ 
+
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient
+ 
+ 
+myclient = MongoClient("mongodb://localhost:27017/")
+ 
+# database
+db = myclient["GFG"]
+ 
+# Created or Switched to collection
+# names: GeeksForGeeks
+collection = db["Geeks"]
+ 
+# Creating a list of records which we
+# insert in the collection using the
+# update_many() method.
+mylist = [
+  {"Manufacturer":"Honda", "Model":"City", "Color":"Black"},
+  {"Manufacturer":"Tata", "Model":"Altroz", "Color":"Golden"},
+  {"Manufacturer":"Honda", "Model":"Civic", "Color":"Red"},
+  {"Manufacturer":"Hyundai", "Model":"i20", "Color":"white"},
+  {"Manufacturer":"Maruti", "Model":"Swift", "Color":"Blue"},
+]
+# In the above list we do not specify the _id, the MongoDB assigns
+# a unique id to all the records in the collection by default.
+ 
+# Inserting the entire list in the collection
+collection.insert_many(mylist)
+انتاج :
+ 
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - البحث عن
+آخر تحديث: 14 سبتمبر 2021
+MongoDB هو برنامج قاعدة بيانات متعدد المنصات موجه نحو المستندات وهو أشهر برنامج قاعدة بيانات NoSQL. مصطلح NoSQL يعني غير العلائقية. يقوم MongoDB بتخزين البيانات في شكل أزواج مفتاح - قيمة. إنها قاعدة بيانات مستندات مفتوحة المصدر توفر أداءً عاليًا وقابلية للتوسع جنبًا إلى جنب مع نمذجة البيانات وإدارة البيانات لمجموعات ضخمة من البيانات في تطبيق المؤسسة. يوفر MongoDB أيضًا ميزة التحجيم التلقائي. يستخدم JSON مثل المستندات ، مما يجعل قاعدة البيانات مرنة للغاية وقابلة للتطوير.
+
+البحث عن البيانات من المجموعة أو قاعدة البيانات
+في MongoDB ، هناك وظيفتان تستخدمان للعثور على البيانات من المجموعة أو قاعدة البيانات.
+
+find_one ()
+تجد()
+Find_one ()
+في MongoDB ، لتحديد البيانات من المجموعة نستخدم find_one()الطريقة. تقوم بإرجاع المعلومات الأولى التي حدثت في التحديد وإعادتها كإخراج. في find_one()الطريقة لا توجد معلمات مطلوبة لأنها تجلب التواجد الأول للمعلومات من قاعدة البيانات.
+
+مثال 1: ابحث عن المستند الأول من مجموعة / قاعدة بيانات الطالب.
+
+لنفترض أن قاعدة البيانات تبدو هكذا -
+
+python-mongodb-db1
+
+# Python program to demonstrate
+# find_one()
+  
+  
+import pymongo
+  
+  
+mystudent = pymongo.MongoClient('localhost', 27017)
+  
+# Name of the database
+mydb = mystudent["gfg"]
+  
+# Name of the collection
+mycol = mydb["names"]
+  
+x = mycol.find_one()
+  
+print(x)
+انتاج :
+
+python-mongodb-find-one1
+
+يجد()
+find()الطريقة المستخدمة لتحديد البيانات من قاعدة البيانات. تقوم بإرجاع جميع تكرارات المعلومات المخزنة في المجموعة. لديها نوعان من المعلمات ، المعلمة الأولى find()للأسلوب هي كائن الاستعلام. في المثال أدناه ، سنستخدم كائن Query فارغًا ، والذي سيحدد جميع المعلومات من المجموعة.
+
+ملاحظة: يعمل بنفس طريقة SELECT * بدون أي معلمة.
+
+مثال:
+
+import pymongo
+  
+  
+# establishing connection
+# to the database
+my_client = pymongo.MongoClient('localhost', 27017)
+  
+# Name of the database
+mydb = my_client["gfg"]
+  
+# Name of the collection
+mynew = mydb["names"]
+  
+for x in mycol.find():
+    print(x)
+انتاج :
+
+python-mongodb-find-2
+
+المعلمة الثانية لأسلوب find () هي أنه يمكنك تحديد الحقل المراد تضمينه في النتيجة. المعلمة الثانية التي تم تمريرها في طريقة find () هي من نوع الكائن الذي يصف الحقل. وبالتالي ، هذه المعلمة اختيارية.
+
+إذا تم حذفها ، فسيتم عرض جميع الحقول من المجموعة / قاعدة البيانات في النتيجة.
+لتضمين الحقل في النتيجة ، يجب أن تكون قيمة المعلمة التي تم تمريرها 1 ، إذا كانت القيمة 0 فسيتم استبعادها من النتيجة.
+
+مثال: قم بإرجاع الأسماء والعنوان فقط ، وليس المعرف:
+
+import pymongo
+  
+  
+# establishing connection
+# to the database
+my_client = pymongo.MongoClient('localhost', 27017)
+  
+# Name of the database
+mydb = my_client["gfg"]
+  
+# Name of the collection
+mynew = mydb["names"]
+  
+  
+for x in mycol.find({}, {"_id":0, "name": 1, "address": 1 }):
+    print(x)
+انتاج:
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - الاستعلام
+آخر تحديث: ٠٨ يونيو ٢٠٢٠
+MongoDB هو برنامج قاعدة بيانات متعدد المنصات وموجه للمستندات وغير علائقية (أي NoSQL). إنها قاعدة بيانات وثيقة مفتوحة المصدر ، تخزن البيانات في شكل أزواج من المفاتيح والقيمة.
+
+ما هو استعلام MongoDB؟
+يتم استخدام استعلام MongoDB لتحديد مرشح التحديد باستخدام عوامل تشغيل الاستعلام أثناء استرداد البيانات من المجموعة حسب db.find()الطريقة. يمكننا بسهولة تصفية المستندات باستخدام كائن الاستعلام. لتطبيق عامل التصفية على المجموعة ، يمكننا تمرير الاستعلام الذي يحدد شرط المستندات المطلوبة كمعامل لهذه الطريقة ، وهي معلمة اختيارية db.find()للطريقة.
+
+محددات الاستعلام:
+
+فيما يلي قائمة ببعض العوامل المستخدمة في الاستعلامات في MongoDB.
+
+عملية	بناء الجملة	وصف
+المساواة	{"مفتاح": "القيمة"}	يطابق القيم التي تساوي قيمة محددة.
+أقل من	{“key”: {$ lt: ”value”}}	تتطابق مع القيم الأقل من قيمة محددة.
+أكثر من	{“key”: {$ gt: ”value”}}	يطابق القيم الأكبر من قيمة محددة.
+أقل من يساوي	{“key”: {$ lte: ”value”}}	تتطابق مع القيم التي تكون أقل من أو تساوي قيمة محددة.
+أكبر من يساوي	{“key”: {$ lte: ”value”}}	تتطابق مع القيم الأكبر من أو المساوية لقيمة محددة.
+لا يساوي	{“مفتاح”: {$ ne: “value”}}	تطابق جميع القيم التي لا تساوي قيمة محددة.
+المنطقية AND	{“$ and”: [{exp1}، {exp2}،…، {expN}]}	يؤدي ربط جمل الاستعلام باستخدام AND المنطقية إلى إرجاع جميع المستندات التي تطابق شروط كلتا الجملتين.
+منطقي أو	{“$ or”: [{exp1}، {<exp2}، ...، {expN}]}	يؤدي ربط جمل الاستعلام باستخدام OR المنطقي إلى إرجاع جميع المستندات التي تطابق شروط أي من الجملتين.
+المنطقي لا	{“$ not”: [{exp1}، {exp2}،…، {expN}]}	يعكس تأثير تعبير الاستعلام ويعيد المستندات التي لا تتطابق مع تعبير الاستعلام.
+قاعدة البيانات أو المجموعة التي نعمل عليها:
+
+
+مثال 1:
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient 
+  
+  
+# Making Connection
+myclient = MongoClient("mongodb://localhost:27017/") 
+   
+# database 
+db = myclient["mydatabase"]
+   
+# Created or Switched to collection
+# names: GeeksForGeeks
+Collection = db["GeeksForGeeks"]
+  
+# Filtering the Quantities greater
+# than 40 using query.
+cursor = Collection.find({"Quantity":{"$gt":40}})
+  
+# Printing the filterd data.
+print("The data having Quantity greater than 40 is:")
+for record in cursor: 
+    print(record) 
+      
+# Filtering the Quantities less 
+# than 40 using query.
+cursor = Collection.find({"Quantity":{"$lt":40}})
+  
+# Printing the filterd data.
+print("\nThe data having Quantity less than 40 is:")
+for record in cursor: 
+    print(record) 
+انتاج:
+
+
+
+المثال 2:
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient 
+  
+  
+# Making Connection
+myclient = MongoClient("mongodb://localhost:27017/") 
+   
+# database 
+db = myclient["mydatabase"]
+   
+# Created or Switched to collection 
+# names: GeeksForGeeks
+Collection = db["GeeksForGeeks"]
+  
+# Filtering the (Quantities greater than
+# 40 AND greater than 40) using AND query.
+cursor = Collection.find({"$and":[{"Quantity":{"$gt":40}},
+                                  {"Quantity":{"$gt":50}}]})
+  
+# Printing the filterd data.
+print("Quantities greater than 40 AND\
+Quantities greater than 40 :")
+for record in cursor: 
+    print(record) 
+  
+# Filtering the (Quantities greater than
+# 40 OR greater than 40) using OR query.
+cursor = Collection.find({"$or":[{"Quantity":{"$gt":40}},
+                                 {"Quantity":{"$gt":50}}]})
+  
+# Printing the filterd data.
+print()
+print("Quantities greater than 40 OR\
+Quantities greater than 40 :")
+for record in cursor: 
+    print(record) 
+انتاج:
+
+<<<<<<<<<<<<<<<<<<<<<<
+
+آخر تحديث: ١٢ أكتوبر ٢٠٢١
+MongoDB هو برنامج قاعدة بيانات متعدد المنصات موجه نحو المستندات وهو أشهر برنامج قاعدة بيانات NoSQL. مصطلح NoSQL يعني غير العلائقية . يقوم MongoDB بتخزين البيانات في شكل أزواج مفتاح - قيمة. إنها قاعدة بيانات مستندات مفتوحة المصدر توفر أداءً عاليًا وقابلية للتوسع جنبًا إلى جنب مع نمذجة البيانات وإدارة البيانات لمجموعات ضخمة من البيانات في تطبيق المؤسسة. يوفر MongoDB أيضًا ميزة التحجيم التلقائي. يستخدم JSON مثل المستندات ، مما يجعل قاعدة البيانات مرنة للغاية وقابلة للتطوير.
+
+ملاحظة: لمزيد من المعلومات ، راجع MongoDB و Python
+
+فرز وثائق MongoDB
+sort()الطريقة المستخدمة لفرز قاعدة البيانات في بعض الترتيب. تقبل هذه الطريقة معلمتين ، الأولى هي اسم المجال والثانية لاتجاه الفرز. (بشكل افتراضي ، يقوم بالفرز بترتيب تصاعدي)
+
+بناء الجملة:
+
+فرز (اسم المجال ، الاتجاه)
+ملحوظة: 1 حيث يتم استخدام الاتجاه للترتيب التصاعدي و -1 حيث يتم استخدام الاتجاه للترتيب التنازلي
+
+مثال 1: استخدام دالة sort () لفرز النتيجة أبجديًا حسب الاسم.
+
+لنفترض أن قاعدة البيانات تبدو هكذا -
+
+python-mongodb-db
+
+# python code to sort elements
+# alphabetically in ascending order
+   
+import pymongo
+  
+  
+# establishing connection
+# to the database
+my_client = pymongo.MongoClient('localhost', 27017)
+  
+# Name of the database
+mydb = my_client["gfg"]
+  
+# Name of the collection
+mynew = mydb["names"]
+   
+# sorting function 
+mydoc = mynew.find().sort("name")
+   
+for x in mydoc:
+    print(x)
+انتاج :
+
+python-mongodb-Sort-1
+
+مثال 2: الفرز بترتيب تنازلي
+
+import pymongo
+  
+  
+# establishing connection 
+# to the database
+my_client = pymongo.MongoClient('localhost', 27017)
+  
+# Name of the database
+mydb = my_client["gfg"]
+  
+# Name of the collection
+mynew = mydb["names"]
+   
+# sorting function with -1 
+# as direction
+mydoc = mynew.find().sort("name", -1)
+   
+for x in mydoc:
+    print(x)
+انتاج :
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+
+آخر تحديث: 20 مارس 2020
+المتطلب السابق: أساسيات MongoDB ، إدراج وتحديث
+
+الهدف: لحذف إدخالات / وثائق مجموعة في قاعدة بيانات. افترض اسم المجموعة "my_collection".
+الطريقة المستخدمة: delete_one () أو delete_many ()
+
+إزالة كافة المستندات التي تطابق الشرط: تؤدي العملية التالية إلى إزالة كافة المستندات التي تطابق الشرط المحدد.
+النتيجة = my_collection.delete_many ({"name": "Mr.Geek"})
+لمعرفة عدد المستندات المحذوفة:
+طباعة (result.deleted_count)
+إزالة كافة المستندات:
+الطريقة الأولى: إزالة كافة المستندات باستخدام delete_many ()
+النتيجة = my_collection.delete_many ({})
+الطريقة 2: حذف كافة المستندات باستخدام collection.remove ()
+
+النتيجة = my_collection.remove ()
+أفضل طريقة للإزالة هي إسقاط المجموعة بحيث يتم أيضًا إزالة فهارس البيانات ثم إنشاء مجموعة جديدة في تلك البيانات المدرجة.
+
+لإسقاط مجموعة:
+db.my_collection.drop ()
+نقوم أولاً بإدخال مستند في المجموعة ثم حذف المستندات وفقًا للاستعلام.
+
+
+# Python program to illustrate 
+# delete, drop and remove
+from pymongo import MongoClient
+  
+try:
+    conn = MongoClient()
+    print("Connected successfully!!!")
+except:  
+    print("Could not connect to MongoDB")
+  
+# database
+db = conn.database
+  
+# Created or Switched to collection names: my_gfg_collection
+collection = db.my_gfg_collection
+  
+emp_rec1 = {
+        "name":"Mr.Geek",
+        "eid":24,
+        "location":"delhi"
+        }
+emp_rec2 = {
+        "name":"Mr.Shaurya",
+        "eid":14,
+        "location":"delhi"
+        }
+emp_rec3 = {
+        "name":"Mr.Coder",
+        "eid":14,
+        "location":"gurugram"
+        } 
+  
+# Insert Data
+rec_id1 = collection.insert_one(emp_rec1)
+rec_id2 = collection.insert_one(emp_rec2)
+rec_id3 = collection.insert_one(emp_rec3)
+print("Data inserted with record ids",rec_id1," ",rec_id2,rec_id3)
+  
+# Printing the document before deletion
+cursor = collection.find()
+for record in cursor:
+    print(record)
+  
+# Delete Document with name : Mr Coder
+result = collection.delete_one({"name":"Mr.Coder"})
+  
+# If query would have been delete all entries with eid:14
+# use this
+# result = collection.delete_many("eid":14})
+   
+cursor = collection.find()
+for record in cursor:
+print(record)
+الإخراج (سطر التعليق المشار إليه بعلامة #)
+
+تم الاتصال بنجاح !!!
+تم إدراج البيانات مع معرفات التسجيل     
+# إدراج البيانات
+{'_id': ObjectId ('5a02227c37b8552becf5ed2b')، "الاسم":
+'Mr.GfG'، 'eid': 45، 'location': 'noida'}
+{'_id': ObjectId ('5a0c734937b8551c1cd03349')، "الاسم":
+"السيد شوريا"، "عيد": 14، "الموقع": "دلهي"}
+{'_id': ObjectId ('5a0c734937b8551c1cd0334a') ، "الاسم":
+'Mr.Coder'، 'eid': 14، 'location': 'gurugram'}
+# تم حذف السيد كودر
+{'_id': ObjectId ('5a02227c37b8552becf5ed2b')، "الاسم":
+'Mr.GfG'، 'eid': 45، 'location': 'noida'}
+{'_id': ObjectId ('5a0c734937b8551c1cd03349')، "الاسم":
+"السيد شوريا"، "عيد": 14، "الموقع": "دلهي"}
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python Mongodb - Delete_one ()
+آخر تحديث: 30 سبتمبر 2021
+Mongodb هو برنامج قاعدة بيانات NoSQL (ليس فقط SQL ") ، وهو برنامج قاعدة بيانات مشهور جدًا عبر الأنظمة الأساسية ، وهو مكتوب بلغة C ++. يقوم بتخزين البيانات بتنسيق JSON (كأزواج مفتاح - قيمة) ، مما يجعله سهل الاستخدام. يمكن تشغيل MongoDB عبر خوادم متعددة ، مما يؤدي إلى موازنة الحمل للحفاظ على النظام وتشغيله في حالة فشل الأجهزة.
+
+الاتصال بقاعدة بيانات
+الخطوة 1 - إنشاء الاتصال: رقم المنفذ الافتراضي: 27017  
+
+conn = MongoClient (مضيف محلي ، رقم المنفذ)
+في حالة استخدام رقم المنفذ الافتراضي ، مثل 27017. طريقة التوصيل البديلة: 
+
+conn = MongoClient ()
+الخطوة 2 - إنشاء قاعدة بيانات أو التبديل إلى قاعدة بيانات موجودة:  
+
+db = conn.dabasename
+إنشاء مجموعة أو التبديل إلى مجموعة موجودة: 
+
+المجموعة = db.collection_name
+حذف المستند من المجموعة أو قاعدة البيانات
+في MongoDB ، يمكن حذف مستند واحد بطريقة delete_one (). سيكون المعامل الأول للطريقة عبارة عن كائن استعلام يحدد المستند المراد حذفه. إذا كان هناك تكرار لنفس المستند ، فسيتم حذف أول مستند ظهر فقط. 
+
+ملاحظة: حذف مستند هو نفس حذف سجل في حالة SQL.
+
+ضع في اعتبارك نموذج قاعدة البيانات: 
+
+python-delte-one-mongodb
+
+أمثلة:  
+
+
+# Python program to demonstrate
+# delete_one
+ 
+ 
+import pymongo
+ 
+ 
+# creating Mongoclient object to
+# create database with the specified
+# connection URL
+students = pymongo.MongoClient('localhost', 27017)
+ 
+# connecting to a database with
+# name GFG
+Db = students["GFG"]
+ 
+# connecting to a collection with
+# name Geeks
+coll = Db["Geeks"]
+ 
+# creating query object
+myQuery ={'Class':'2'}
+coll.delete_one(myQuery)
+ 
+# print collection after deletion:
+for x in coll.find():
+    print(x)
+انتاج : 
+
+'_id': 2.0، 'Name': 'Golu'، 'Class': '3'}
+{'_id': 3.0، 'Name': 'Raja'، 'Class': '4'}
+{'_id': 4.0، 'Name': 'Moni'، 'Class': '5'}
+شل MongoDB: 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python Mongodb - Delete_many ()
+آخر تحديث: 10 مايو 2020
+MongoDB هي قاعدة بيانات موزعة للأغراض العامة وقائمة على المستندات ومصممة لمطوري التطبيقات الحديثة والسحابة. إنها قاعدة بيانات مستندات ، مما يعني أنها تخزن البيانات في مستندات تشبه JSON. هذه طريقة فعالة للتفكير في البيانات وهي أكثر تعبيرًا وقوة من نموذج الجدول التقليدي.
+
+Delete_many ()
+Delete_many()يستخدم عندما يحتاج المرء إلى حذف أكثر من وثيقة. يتم تكوين كائن الاستعلام الذي يحتوي على المستند المطلوب حذفه ويتم تمريره باعتباره المعامل الأول إلى delete_many ().
+
+نموذج قاعدة بيانات:
+
+python-mongodb-delete-many-1
+
+مثال 1: حذف جميع المستندات التي يبدأ اسمها بحرف "أ".
+
+import pymongo
+  
+  
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+  
+# Connecting to the database
+mydb = client["GFG"]
+  
+# Connecting the to collection
+col = mydb["Geeks"]
+  
+query = {"Name": {"$regex": "^A"}}
+d = col.delete_many(query)
+  
+print(d.deleted_count, " documents deleted !!")
+انتاج:
+
+2 وثائق محذوفة !!
+شل MongoDB:
+
+python-mongodb-delet-many-2
+
+المثال 2:
+
+import pymongo
+  
+  
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+  
+# Connecting to the database
+mydb = client["GFG"]
+  
+# Connecting the to collection
+col = mydb["Geeks"]
+  
+query = {"Class": '3'}
+d = col.delete_many(query)
+  
+print(d.deleted_count, " documents deleted !!")
+انتاج:
+
+1 وثائق تم حذفها !!
+شل MongoDB:
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+
+مستوى الصعوبة: سهل
+آخر تحديث: ١٣ يناير ٢٠٢٢
+MongoDB هو برنامج قاعدة بيانات متعدد المنصات وموجه للمستندات وغير علائقية (أي NoSQL). إنها قاعدة بيانات وثيقة مفتوحة المصدر ، تخزن البيانات في شكل أزواج من المفاتيح والقيمة.
+قم أولاً بإنشاء قاعدة بيانات نقوم عليها بتنفيذ عملية update_one (): 
+ 
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient
+  
+try:
+    conn = MongoClient()  # Making connection
+ 
+except:
+    print("Could not connect to MongoDB")
+  
+# database
+db = conn.database
+  
+# Created or Switched to collection
+# names: GeeksForGeeks
+collection = db.GeeksForGeeks
+  
+# Creating Records:
+record1 = { "appliance":"fan",
+           "quantity":10,
+           "rating":"3 stars",
+           "company":"havells"}
+record2 = { "appliance":"cooler",
+           "quantity":15,
+           "rating":"4 stars",
+           "company":"symphony"}
+record3 = { "appliance":"ac",
+           "quantity":20,
+           "rating":"5 stars",
+           "company":"voltas"}
+record4 = { "appliance":"tv",
+           "quantity":12,
+           "rating":"3 stars",
+           "company":"samsung"}
+  
+# Inserting the Data
+rec_id1 = collection.insert_one(record1)
+rec_id2 = collection.insert_one(record2)
+rec_id3 = collection.insert_one(record3)
+rec_id4 = collection.insert_one(record4)
+  
+# Printing the data inserted
+print("The data in the database is:")
+cursor = collection.find()
+for record in cursor:
+    print(record)
+انتاج :
+ 
+
+python-mongodb-update-one-1
+
+شل MongoDB:
+ 
+
+python-update-one-mongodb-1
+
+ 
+
+updateOne ()
+إنها وظيفة يمكننا من خلالها تحديث سجل في قاعدة بيانات أو مجموعة MongoDB. تركز هذه الطريقة بشكل أساسي على وسيطين مررنا إحداهما وهما الاستعلام (أي عامل التصفية) الذي يحدد المستند الذي يجب تحديثه والثاني هو كائن يحدد القيم الجديدة للمستند (أي new_values) والوسيطات الباقية اختيارية سنقوم بها مناقشة في قسم النحو. تقوم هذه الوظيفة بالعثور على أول مستند يتطابق مع الاستعلام وتحديثه بكائن يحدد القيم الجديدة للمستند ، أي تحديث مستند واحد ضمن المجموعة بناءً على عامل التصفية. 
+بناء الجملة:
+ 
+
+collection.update_one (filter، new_values، upert = False، bypass_document_validation = False، collation = None، array_filters = None، session = None)
+المعلمات: 
+ 
+
+"عامل التصفية": استعلام يطابق المستند المراد تحديثه.
+"new_values" : التعديلات المطلوب تطبيقها.
+"upert" (اختياري): إذا كان "True" ، فقم بإجراء إدخال إذا لم تتطابق أي مستندات مع الفلتر.
+"bypass_document_validation" (اختياري): إذا كان "True" ، يسمح للكتابة بإلغاء الاشتراك في التحقق من مستوى المستند. الافتراضي هو "خطأ".
+"الترتيب" (اختياري): مثيل للفئة: "~ pymongo.collation.Collation". هذا الخيار مدعوم فقط في MongoDB 3.4 والإصدارات الأحدث.
+"array_filters" (اختياري): قائمة من المرشحات تحدد عناصر المصفوفة التي يجب أن يطبقها التحديث. يتطلب MongoDB 3.6+.
+"جلسة" (اختياري): فئة: "~ pymongo.client_session.ClientSession".
+ 
+
+مثال 1: في هذا المثال ، سنقوم بتحديث كمية المروحة من 10 إلى 25. 
+ 
+
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient
+ 
+conn = MongoClient('localhost', 27017)
+# database
+db = conn.database
+ 
+# Created or Switched to collection
+# names: GeeksForGeeks
+collection = db.GeeksForGeeks
+ 
+# Updating fan quantity form 10 to 25.
+filter = { 'appliance': 'fan' }
+ 
+# Values to be updated.
+newvalues = { "$set": { 'quantity': 25 } }
+ 
+# Using update_one() method for single
+# updation.
+collection.update_one(filter, newvalues)
+ 
+# Printing the updated content of the
+# database
+cursor = collection.find()
+for record in cursor:
+    print(record)
+انتاج :
+ 
+
+python-momgodb-update-one-2
+
+شل MongoDB:
+ 
+
+python-mongodb-update-one-3
+
+مثال 2: في هذا المثال نقوم بتغيير اسم شركة التلفزيون من "samsung" إلى "sony" باستخدام update_one (): 
+ 
+
+
+# importing Mongoclient from pymongo
+from pymongo import MongoClient
+ 
+ 
+conn = MongoClient('localhost', 27017)
+ 
+# database
+db = conn.database
+ 
+# Created or Switched to collection
+# names: GeeksForGeeks
+collection = db.GeeksForGeeks
+ 
+# Updating the tv company name from
+# 'samsung' to 'sony'.
+filter = { 'appliance': 'tv' }
+ 
+# Values to be updated.
+newvalues = { "$set": { 'company': "sony" } }
+ 
+# Using update_one() method for single updation.
+collection.update_one(filter, newvalues)
+ 
+# Printing the updated content of the database
+cursor = collection.find()
+for record in cursor:
+    print(record)
+انتاج :
+ 
+
+python-mongodb-update-one-5
+
+شل MongoDB: 
+ 
+
+python-mongodb-update-one-5
+
+ملاحظة: عامل التشغيل “$ set” يستبدل قيمة الحقل بالقيمة المحددة. في حالة عدم وجود الحقل ، ستضيف "$ set" حقلاً جديدًا بالقيمة المحددة ، بشرط ألا ينتهك الحقل الجديد قيد النوع.
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - استعلام Update_many
+آخر تحديث: 26 مايو 2020
+MongoDB هو نظام إدارة قاعدة بيانات NoSQL. على عكس MySQL ، لا يتم تخزين البيانات في MongoDB كعلاقات أو جداول. يتم تخزين البيانات في mongoDB كمستندات. المستندات هي Javascript / JSON مثل الكائنات. المزيد من الوثائق الرسمية في MongoDB تستخدم BSON. PyMongo هي واجهة برمجة تطبيقات MongoDB للبيثون. يسمح بقراءة البيانات وكتابتها من قاعدة بيانات MongoDB باستخدام برنامج نصي بيثون. يحتاج إلى تثبيت كل من python و mongoDB على النظام.
+
+Update_many ()
+تم إهمال وظيفة التحديث في الإصدارات الأحدث من MongoDB (3.xx وما فوق). يمكن استخدام وظيفة التحديث السابقة لكل من التحديثات الفردية والمتعددة باستخدام "multi = true". ولكن في الإصدارات الأحدث من mongoDB يوصى باستخدام update_many () و update_one (). 
+
+يتمثل الاختلاف الرئيسي في أن المستخدم يحتاج إلى التخطيط مسبقًا إذا كان الاستعلام سيحدث مستندات فردية أو متعددة.
+
+بناء الجملة:
+
+db.collection.updateMany (
+   <مرشح> ،
+   <تحديث> ،
+   {
+     upert: <منطقي> ،
+     قلق الكتابة: <مستند> ،
+     الترتيب: <مستند> ،
+     arrayFilters: [<filterdocument1> ، ...] ،
+     تلميح: < مستند | سلسلة>
+   }
+)
+تحديث عوامل التشغيل في MongoDB
+
+تحديد القيم:
+
+$ set: يُستخدم لتعيين قيمة الحقول.
+setOnInsert $: تحديث القيمة فقط في حالة إدراج مستند جديد.
+unset $: قم بإزالة الحقل وقيمته.
+عوامل التشغيل الرقمية:
+
+$ inc: زيادة القيمة بمقدار معين.
+$ min / $ max: إرجاع الحد الأدنى أو الحد الأقصى للقيمة.
+$ mul: يضرب القيم بمقدار معين.
+مشغلي متنوعون:
+
+currentDate $: يحدّث قيمة الحقل إلى التاريخ الحالي.
+rename $ : يعيد تسمية حقل
+نموذج قاعدة بيانات:
+
+
+بعض حالات الاستخدام التي سنراها في هذه المقالة حيث يمكن أن يكون تحديث العديد من السجلات مفيدًا: 
+
+تغيير أو زيادة عدة عناصر بناءً على شرط.
+إدراج حقل جديد في العديد من المستندات أو جميعها.
+مثال 1: تم اجتياز جميع الطلاب الحاصلين على درجات أكبر من 35.
+
+from pymongo import MongoClient
+  
+  
+# Creating an instance of MongoClient 
+# on default localhost
+client = MongoClient('mongodb://localhost:27017')
+  
+# Accessing desired database and collection
+db = client.gfg
+collection = db["classroom"]
+  
+# Update passed field to be true for all
+# students with marks greater than 35
+collection.update_many(
+    {"marks": { "$gt": "35" } },
+        {
+            "$set": { "passed" : "True" }
+        }
+)
+قاعدة البيانات بعد الاستعلام: 
+
+
+مثال 2: تمت إضافة حقل جديد يسمى العنوان إلى جميع المستندات
+
+from pymongo import MongoClient
+  
+  
+# Creating an instance of MongoClient 
+# on default localhost
+client = MongoClient('mongodb://localhost:27017')
+  
+# Accessing desired database and collection
+db = client.gfg
+collection = db["classroom"]
+  
+# Address filed to be added to all documents
+collection.update_many(
+        {},
+        {"$set":
+            {
+                "Address": "value"
+            }
+        },
+    
+   # don't insert if no document found
+   upsert=False,
+   array_filters=None
+   )
+قاعدة البيانات بعد الاستعلام: 
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - استعلام حد
+آخر تحديث: 26 مايو 2020
+MongoDB هي واحدة من أكثر قواعد البيانات استخدامًا حيث يتم تخزين المستندات الخاصة بها كمجموعات. يمكن مقارنة هذه المستندات بكائنات JSON. عند استخدام MongoDB مع Python ، يُطلق على المجموعة اسم PyMongo .
+
+حد()
+تقوم الوظيفة limit()بما يوحي به اسمها - تحديد عدد المستندات التي سيتم إرجاعها. توجد وسيطة واحدة فقط في المعلمة وهي رقم يشير إلى عدد المستندات التي يجب إرجاعها.
+
+بناء الجملة:
+
+coll.find (). limit (n)
+أين،
+
+coll- اسم المجموعة
+ن- الرقم الذي يجب إعادته
+مثال 1:
+
+نموذج قاعدة بيانات:
+
+Python-mongodb-sample-database2
+
+from pymongo import MongoClient
+  
+# Create a pymongo client
+client = MongoClient('localhost', 27017)
+  
+# database instance
+db = client['GFG']
+  
+# collection instance
+doc = db['Student']
+  
+# Retrieving first 3 documents using the
+# find() and limit() methods
+print("First 3 docs in the collection are: ")
+  
+for doc1 in doc.find().limit(3):
+    print(doc1)
+انتاج:
+
+أول 3 مستندات في المجموعة هي:
+{'_id': 1، 'name': 'Vishwash'، 'Roll No': '1001'، 'Branch': 'CSE'}
+{'_id': 2، 'name' : 'Vishesh'، 'Roll No': '1002'، 'Branch': 'IT'}
+{'_id': 3، 'name': 'Shivam'، 'Roll No': '1003'، 'Branch': 'أنا'}
+
+أثناء limit()وضع قيود على عدد المستندات التي يتم جلبها ، يمكن استخدام find () للعثور على المستندات وفقًا لبعض معايير التحديد.
+
+المثال 2:
+
+from pymongo import MongoClient
+  
+# Create a pymongo client
+client = MongoClient('localhost', 27017)
+  
+# database instance
+db = client['GFG']
+  
+# collection instance
+doc = db['Student']
+  
+# Printing documents of only those having
+# branch as CSE and limiting the document 
+# to 1
+for doc1 in doc.find({'Branch': 'CSE'}).limit(1):
+    print(doc1)
+انتاج:
+
+{'_id': 1، 'name': 'Vishwash'، 'Roll No': '1001'، 'Branch': 'CSE'}
+
+لتخطي بعض الملفات قبل جلب الكمية المذكورة من المستندات skip()يمكن استخدامها معlimit()
+
+المثال 3:
+
+from pymongo import MongoClient
+  
+# Create a pymongo client
+client = MongoClient('localhost', 27017)
+  
+# database instance
+db = client['GFG']
+  
+# collection instance
+doc = db['Student']
+  
+# Retrieving 3 documents using the
+# find() and limit() methods
+print("3 docs in the collection are: ")
+  
+for doc1 in doc.find().limit(3).skip(2):
+    print(doc1)
+انتاج:
+
+3 مستندات في المجموعة هي:
+{'_id': 3، 'name': 'Shivam'، 'Roll No': '1003'، 'Branch': 'ME'}
+{'_id': 4، 'name': 'Yash'، 'Roll No': '1004'، 'Branch': 'ECE'}
+{'_id': 5، 'name': 'Raju'، 'Roll No': '1005'، 'Branch': ' محرك البحث المخصص "}
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - استعلام create_index
+آخر تحديث: 01 يونيو 2020
+MongoDB هي قاعدة بيانات مفتوحة المصدر موجهة نحو المستندات. يقوم MongoDB بتخزين البيانات في شكل أزواج ذات قيمة مفتاح وهو برنامج قاعدة بيانات NoSQL. مصطلح NoSQL يعني غير العلائقية.
+
+الفهرسة 
+تساعد الفهرسة في الاستعلام عن المستندات بكفاءة. يخزن قيمة حقل معين أو مجموعة من الحقول مرتبة حسب قيمة الحقل كما هو محدد في الفهرس  .
+
+يحتوي PyMongo على دالة create_index () لإنشاء فهرس بشكل صريح. افتراضيًا ، يكون _id هو الفهرس الوحيد الموجود في المستند. يمكن أن تقبل هذه الوظيفة إما مفتاح أو قائمة أزواج (مفتاح ، اتجاه).
+
+بناء الجملة: 
+
+create_index ( keys، session = None، ** kwargs)
+لنلق نظرة على بعض الأمثلة.
+
+مثال 1:
+
+نموذج قاعدة بيانات:
+
+
+
+from pymongo import MongoClient 
+    
+      
+# creation of MongoClient 
+client = MongoClient() 
+    
+# Connect with the portnumber and host 
+client = MongoClient("mongodb://localhost:27017/") 
+    
+# Access database 
+mydatabase = client['GFG'] 
+    
+# Access collection of the database 
+mycollection = mydatabase['College'] 
+  
+# Before Creating index
+index_list = sorted(list(mycollection.index_information()))
+print("Before Creating index")
+print(index_list)
+  
+# Creating index
+mycollection.create_index("student_id", unique = True)
+  
+# After Creating index
+index_list = sorted(list(mycollection.index_information()))
+print("\nAfter Creating index")
+print(index_list)
+انتاج:
+
+قبل إنشاء الفهرس
+['_هوية شخصية_']
+
+بعد إنشاء الفهرس
+['_id_'، 'student_id_1']
+هنا ، نقوم بإنشاء فهرس باسم student_id باستخدام طريقة create_index (). ينتج عن هذا فهرسين في الوثيقتين _id و student_id .
+باستخدام طريقة index_information () ، نحصل على جميع الفهارس في المجموعة ،
+المثال 2:
+
+from pymongo import MongoClient 
+    
+      
+# creation of MongoClient 
+client = MongoClient() 
+    
+# Connect with the portnumber and host 
+client = MongoClient("mongodb://localhost:27017/") 
+    
+# Access database 
+mydatabase = client['GFG'] 
+    
+# Access collection of the database 
+mycollection = mydatabase['College'] 
+  
+record = {'_id': 4, 
+          "student_id": 873,
+          "name": "John",
+          "section": "A"}
+  
+mycollection.insert_one(record)
+انتاج:
+
+DuplicateKeyError                         Traceback (آخر مكالمة أخيرة)
+<ipython-input-62-264f0e13db93> في <module>
+    16 سجل = {'_id': 4 ، “student_id”: 873 ، “name”: “John”، “section”: “ أ ”}
+    17
+-> 18 mycollection . insert_one ( سجل )
+
+DuplicateKeyError: E11000 مجموعة أخطاء المفتاح المكرر: GFG.College index: student_id_1 المفتاح المزدوج: {: 873}
+
+يؤدي هذا إلى رفع خطأ DuplicateKeyError نظرًا لوجود مستند موجود بالفعل مع معرف الطالب 873 ونحاول إدراج مستند آخر بنفس معرف الطالب. يحدث هذا الخطأ لأننا أنشأنا فهرسًا في الحقل student_id وقمنا بتمييزه على أنه فريد.
+
+
+<<<<<<<<<<<<<<<<<<<<<<
+Python MongoDB - استعلام drop_index
+آخر تحديث: ٠٨ يونيو ٢٠٢٠
+تُستخدم وظيفة مكتبة drop_index () في PyMongo لإسقاط الفهرس من مجموعة في قاعدة البيانات ، كما يوحي الاسم. في هذه المقالة ، سنناقش كيفية إزالة فهرس من مجموعة باستخدام تطبيق python الخاص بنا مع PyMongo.
+
+التركيب: drop_index (index_or_name، session = None، ** kwargs
+)
+
+index_or_name : اسم الفهرس الذي تم إنشاؤه عن طريق استدعاء طريقة create_index () أو insurance_index () في مجموعة. إذا تم إنشاء اسم فهرس مخصص من خلال معلمة الاسم ، فيجب إذن تمرير الاسم المخصص هنا.
+الجلسة: هذه وسيطة اختيارية تحدد جلسة العميل (من الفئة pymongo.client_session).
+kwargs: هذه هي وسيطات الكلمات الرئيسية الإضافية (اختياري).
+ما هي الفهارس؟
+الفهارس هي بنية بيانات خاصة مستخدمة في MongoDB لزيادة كفاءة تنفيذ الاستعلام. يتم تحديدها على مستوى المجموعة وتسمح لـ MongoDB بتحديد عدد المستندات التي تبحث عنها. تُستخدم هياكل بيانات B-Tree للفهرسة في MongoDB. هناك أنواع مختلفة من الفهارس مثل فهارس الحقل الفردي والفهارس المركبة والفهارس متعددة المفاتيح. من أجل الفهم ، في هذه المقالة ، سنستخدم فهارس ذات حقل واحد.
+
+على خادم Mongo المستضاف محليًا ، دعنا ننشئ اختبار قاعدة بيانات مع مجموعة من الطلاب . ستحتوي قاعدة البيانات على المعلومات التالية عن الطلاب -
+
+
+
+بشكل افتراضي ، تحتوي كل مجموعة على فهرس _id . جميع المجموعات لديها فهرس واحد على الأقل بشكل إلزامي. إذا تمت إزالة جميع الفهارس ، فسيتم إنشاء فهرس جديد تلقائيًا. يمكننا رؤية الفهارس عن طريق تشغيل الأمر التالي -
+
+
+
+الآن ، يمكننا تشغيل الكود التالي لإضافة فهرس جديد يسمى newIndex إلى مجموعة الطلاب ، بالنظر إلى أن خادم mongo قيد التشغيل:
+
+مثال 1: إضافة فهرس إلى المجموعة
+
+import pprint
+import pymongo
+  
+# connection
+try:
+    client = pymongo.MongoClient()
+    db = client['test']
+    print('connection to the server established')
+      
+except Exception:
+    print('Failed to Connect to server')
+  
+collection = db.students
+  
+  
+# creating an index
+resp = collection.create_index("newIndex")
+  
+# printing the auto generated name 
+# returned by MongoDB
+print(resp)
+  
+# index_information() is analogous 
+# to getIndexes
+pprint.pprint(collection.index_information())
+انتاج:
+
+
+كما نرى ، الاسم المُنشأ تلقائيًا هو newIndex_1.
+
+مثال 2: حذف الفهرس من المجموعة
+
+import pprint
+import pymongo
+  
+  
+try:
+    client = pymongo.MongoClient()
+    db = client['test']
+    print('connection to the server established')
+  
+except Exception:
+    print('Failed to Connect to server')
+  
+collection = db.students
+  
+# dropping the index using autogenerated
+# name from MongoDB
+collection.drop_index("newIndex_1")
+  
+# printing the indexes present on the collection
+pprint.pprint(collection.index_information())
+انتاج:
+
+
+يُظهر الناتج أن الفهرس المُدرج حديثًا المسمى newIndex قد تم إسقاطه وبقي مؤشر _id الأصلي فقط. هذا هو تطبيق drop_index ().

@@ -1,0 +1,207 @@
+
+فئات وكائنات بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: ١٠ يونيو ٢٠٢١
+الفئة عبارة عن مخطط أو نموذج أولي يتم تحديده بواسطة المستخدم يتم إنشاء الكائنات منه. توفر الفصول وسيلة لتجميع البيانات والوظائف معًا. يؤدي إنشاء فئة جديدة إلى إنشاء نوع جديد من الكائنات ، مما يسمح بعمل مثيلات جديدة من هذا النوع. يمكن أن يكون لكل مثيل فئة سمات مرتبطة به للحفاظ على حالته. يمكن أن تحتوي مثيلات الفئة أيضًا على طرق (محددة بواسطة فئتها) لتعديل حالتها.
+
+لفهم الحاجة إلى إنشاء فصل دراسي ، دعنا نفكر في مثال ، لنفترض أنك أردت تتبع عدد الكلاب التي قد يكون لها سمات مختلفة مثل السلالة والعمر. إذا تم استخدام قائمة ، يمكن أن يكون العنصر الأول هو سلالة الكلب بينما يمكن أن يمثل العنصر الثاني عمره. لنفترض أن هناك 100 كلب مختلف ، فكيف تعرف أي عنصر من المفترض أن يكون أي منها؟ ماذا لو أردت إضافة خصائص أخرى لهذه الكلاب؟ هذا يفتقر إلى التنظيم وهو الحاجة الدقيقة للفصول. 
+
+يُنشئ الفصل بنية بيانات محددة بواسطة المستخدم ، والتي تحتوي على أعضاء البيانات ووظائف الأعضاء الخاصة بها ، والتي يمكن الوصول إليها واستخدامها من خلال إنشاء مثيل لتلك الفئة. الطبقة هي بمثابة مخطط لكائن ما.
+
+بعض النقاط في فئة بايثون:  
+
+يتم إنشاء الفئات عن طريق فئة الكلمات الرئيسية.
+السمات هي المتغيرات التي تنتمي إلى فئة.
+تكون السمات عامة دائمًا ويمكن الوصول إليها باستخدام عامل تشغيل النقطة (.). على سبيل المثال: Myclass
+صيغة تعريف الفئة:
+
+فئة ClassName:
+    # البيان -1
+    .
+    .
+    .
+    # بيان- N
+تحديد فئة - 
+
+
+# Python3 program to
+# demonstrate defining
+# a class
+ 
+class Dog:
+    pass
+في المثال أعلاه ، تشير الكلمة الأساسية للفصل إلى أنك تقوم بإنشاء فئة متبوعة باسم الفصل (الكلب في هذه الحالة).
+ 
+
+كائنات الفئة
+الكائن هو مثيل للفئة. الفئة تشبه مخططًا بينما المثال هو نسخة من الفئة بقيم فعلية . لم تعد فكرة ، إنها كلب حقيقي ، مثل كلب من الصلصال يبلغ من العمر سبع سنوات. يمكن أن يكون لديك العديد من الكلاب لإنشاء العديد من الحالات المختلفة ، ولكن بدون الفصل كدليل ، ستضيع ، ولا تعرف المعلومات المطلوبة.
+يتكون الكائن من: 
+
+الدولة: يتم تمثيلها بسمات الكائن. كما أنه يعكس خصائص الكائن.
+السلوك: يتم تمثيله بطرق الكائن. كما يعكس أيضًا استجابة كائن ما لأشياء أخرى.
+الهوية: تعطي اسمًا فريدًا للكائن وتمكن كائنًا واحدًا من التفاعل مع الكائنات الأخرى.
+فئة الثعبان
+
+تعريف الكائنات (يسمى أيضًا إنشاء فئة)
+عندما يتم إنشاء كائن من فئة ، يُقال أن الفصل يتم تكوينه. تشترك جميع الأمثلة في سمات وسلوك الفصل. لكن قيم تلك الصفات ، أي الحالة فريدة لكل كائن. قد يكون للفصل الواحد أي عدد من الأمثلة.
+
+مثال:
+ 
+
+بيثون تعلن عن كائن
+
+التصريح عن شيء - 
+
+
+# Python3 program to
+# demonstrate instantiating
+# a class
+ 
+ 
+class Dog:
+     
+    # A simple class
+    # attribute
+    attr1 = "mammal"
+    attr2 = "dog"
+ 
+    # A sample method 
+    def fun(self):
+        print("I'm a", self.attr1)
+        print("I'm a", self.attr2)
+ 
+# Driver code
+# Object instantiation
+Rodger = Dog()
+ 
+# Accessing class attributes
+# and method through objects
+print(Rodger.attr1)
+Rodger.fun()
+انتاج: 
+
+الحيوان الثديي
+أنا من الثدييات
+أنا كلب
+في المثال أعلاه ، يتم إنشاء كائن وهو في الأساس كلب اسمه Rodger. يحتوي هذا الفصل على سمتين دراسيتين فقط تخبرنا أن روجر هو كلب وثديي.
+ 
+
+الذات
+يجب أن تحتوي طرق الفئة على معلمة أولية إضافية في تعريف الطريقة. لا نعطي قيمة لهذه المعلمة عندما نسمي الطريقة ، توفرها Python.
+إذا كانت لدينا طريقة لا تأخذ أي حجج ، فلا يزال لدينا حجة واحدة.
+هذا مشابه لهذا المؤشر في C ++ وهذا المرجع في Java.
+عندما نطلق على طريقة من هذا الكائن اسم myobject.method (arg1، arg2) ، يتم تحويل هذا تلقائيًا بواسطة Python إلى MyClass.method (الكائن myobject ، arg1 ، arg2) - هذا هو كل ما تدور حوله الذات الخاصة.
+ 
+
+طريقة __init__
+طريقة __init__ مشابهة للمُنشئين في C ++ و Java. تُستخدم المنشئات لتهيئة حالة الكائن. مثل الأساليب ، يحتوي المنشئ أيضًا على مجموعة من العبارات (أي التعليمات) التي يتم تنفيذها في وقت إنشاء الكائن. يتم تشغيله بمجرد إنشاء كائن من فئة. هذه الطريقة مفيدة للقيام بأي تهيئة تريد القيام بها مع الكائن الخاص بك.
+
+
+# A Sample class with init method
+class Person:
+   
+    # init method or constructor 
+    def __init__(self, name):
+        self.name = name
+   
+    # Sample Method 
+    def say_hi(self):
+        print('Hello, my name is', self.name)
+   
+p = Person('Nikhil')
+p.say_hi()
+انتاج: 
+
+مرحبا اسمي نيخيل
+ 
+
+متغيرات الفئة والمثال
+متغيرات المثيل مخصصة للبيانات ، وهي فريدة لكل مثيل ومتغيرات الفئة مخصصة للسمات والطرق المشتركة بواسطة جميع مثيلات الفئة. متغيرات المثيل هي متغيرات يتم تعيين قيمتها داخل مُنشئ أو طريقة ذاتية بينما متغيرات الفئة هي متغيرات يتم تعيين قيمتها في الفصل.
+
+تحديد متغير المثيل باستخدام المُنشئ. 
+
+
+# Python3 program to show that the variables with a value 
+# assigned in the class declaration, are class variables and
+# variables inside methods and constructors are instance
+# variables.
+    
+# Class for Dog
+class Dog:
+   
+    # Class Variable
+    animal = 'dog'            
+   
+    # The init method or constructor
+    def __init__(self, breed, color):
+     
+        # Instance Variable    
+        self.breed = breed
+        self.color = color       
+    
+# Objects of Dog class
+Rodger = Dog("Pug", "brown")
+Buzo = Dog("Bulldog", "black")
+ 
+print('Rodger details:')  
+print('Rodger is a', Rodger.animal)
+print('Breed: ', Rodger.breed)
+print('Color: ', Rodger.color)
+ 
+print('\nBuzo details:')  
+print('Buzo is a', Buzo.animal)
+print('Breed: ', Buzo.breed)
+print('Color: ', Buzo.color)
+ 
+# Class variables can be accessed using class
+# name also
+print("\nAccessing class variable using class name")
+print(Dog.animal)       
+انتاج: 
+
+تفاصيل رودجر:
+روجر كلب
+السلالة: الصلصال
+اللون: بني
+
+تفاصيل Buzo:
+بوزو كلب
+السلالة: البلدغ
+لون أسود
+
+الوصول إلى متغير الصنف باستخدام اسم الصنف
+كلب
+تحديد متغير حالة باستخدام الطريقة العادية.
+
+
+# Python3 program to show that we can create 
+# instance variables inside methods
+    
+# Class for Dog
+class Dog:
+       
+    # Class Variable
+    animal = 'dog'     
+       
+    # The init method or constructor
+    def __init__(self, breed):
+           
+        # Instance Variable
+        self.breed = breed            
+   
+    # Adds an instance variable 
+    def setColor(self, color):
+        self.color = color
+       
+    # Retrieves instance variable    
+    def getColor(self):    
+        return self.color   
+   
+# Driver Code
+Rodger = Dog("pug")
+Rodger.setColor("brown")
+print(Rodger.getColor()) 
+انتاج:  
+
+بني
+ 

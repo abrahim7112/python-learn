@@ -1,0 +1,62 @@
+
+كيفية تعيين قيم للمتغيرات في بايثون ولغات أخرى
+مستوى الصعوبة: سهل
+آخر تحديث: 07 يوليو 2021
+تتناول هذه المقالة طرقًا لتعيين قيم للمتغيرات. 
+
+الطريقة الأولى: طريقة التهيئة المباشرة 
+
+// C++ code to demonstrate variable assignment
+// upon condition using Direct Initialisation Method
+ 
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    // initialising variables directly
+    int a = 5;
+ 
+    // printing value of a
+    cout << "The value of a is: " << a;
+}
+انتاج: 
+قيمة a هي: 5
+ 
+
+الطريقة الثانية: استخدام عامل التشغيل الشرطي (؟ :)
+يوجد أدناه بناء الجملة باللغات الشائعة الأخرى.
+
+
+// C++ code to demonstrate variable assignment
+// upon condition using Conditional Operator
+ 
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    // initialising variables using Conditional Operator
+    int a = 20 > 10 ? 1 : 0;
+ 
+    // printing value of a
+    cout << "The value of a is: " << a;
+}
+انتاج: 
+قيمة a هي: 1
+ 
+
+خط واحد if-else بدلاً من المشغل الشرطي (؟ :) في Python
+
+# Python 3 code to demonstrate variable assignment
+# upon condition using One liner if-else
+ 
+# initialising variable using Conditional Operator
+# a = 20 > 10 ? 1 : 0 is not possible in Python
+# Instead there is one liner if-else
+a = 1 if 20 > 10 else 0
+ 
+# printing value of a
+print ("The value of a is: " + str(a))
+انتاج: 
+قيمة a هي: 1

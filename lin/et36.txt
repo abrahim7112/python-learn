@@ -1,0 +1,636 @@
+
+
+مستوى الصعوبة: سهل
+تاريخ التحديث الأخير: 26 تشرين الثاني (نوفمبر) 2019
+المتطلبات الأساسية:
+
+أساسيات معالجة الملفات
+أوضاع الوصول
+أثناء القراءة أو الكتابة إلى ملف ، يتحكم وضع الوصول في نوع العمليات الممكنة في الملف المفتوح. يشير إلى كيفية استخدام الملف بمجرد فتحه. تحدد هذه الأوضاع أيضًا موقع مقبض الملف في الملف. يشبه مقبض الملف المؤشر ، الذي يحدد من أين يجب قراءة البيانات أو كتابتها في الملف.
+
+لإلحاق سطر جديد بالملف الموجود ، افتح الملف في وضع الإلحاق ، باستخدام أحد 'a'أو 'a+'كوضع الوصول. تعريف أوضاع الوصول هذه كما يلي:
+
+إلحاق فقط ("أ"): افتح الملف للكتابة. يتم إنشاء الملف إذا كان غير موجود. يتم وضع المقبض في نهاية الملف. سيتم إدخال البيانات التي تتم كتابتها في النهاية ، بعد البيانات الموجودة.
+إلحاق وقراءة ("a +"): افتح الملف للقراءة والكتابة. يتم إنشاء الملف إذا كان غير موجود. يتم وضع المقبض في نهاية الملف. سيتم إدخال البيانات التي تتم كتابتها في النهاية ، بعد البيانات الموجودة.
+عند فتح الملف في وضع الإلحاق ، يتم وضع المقبض في نهاية الملف. سيتم إدخال البيانات التي تتم كتابتها في النهاية ، بعد البيانات الموجودة. دعنا نرى المثال أدناه لتوضيح الفرق بين وضع الكتابة ووضع الإلحاق.
+
+مثال:
+
+
+# Python program to illustrate
+# Append vs write mode
+file1 = open("myfile.txt", "w")
+L = ["This is Delhi \n", "This is Paris \n", "This is London"]
+file1.writelines(L)
+file1.close()
+   
+# Append-adds at last
+file1 = open("myfile.txt", "a")  # append mode
+file1.write("Today \n")
+file1.close()
+   
+file1 = open("myfile.txt", "r")
+print("Output of Readlines after appending")
+print(file1.read())
+print()
+file1.close()
+   
+# Write-Overwrites
+file1 = open("myfile.txt", "w")  # write mode
+file1.write("Tomorrow \n")
+file1.close()
+   
+file1 = open("myfile.txt", "r")
+print("Output of Readlines after writing")
+print(file1.read())
+print()
+file1.close()
+انتاج:
+
+إخراج Readlines بعد الإلحاق 
+This is Delhi 
+This is Paris 
+This is LondonToday 
+
+
+Output of Readlines بعد الكتابة 
+غدًا
+إلحاق البيانات من سطر جديد
+في المثال أعلاه ، يمكن ملاحظة أن البيانات لم يتم إلحاقها من السطر الجديد. يمكن القيام بذلك عن طريق كتابة '\n'حرف السطر الجديد في الملف.
+
+ملاحظة: ‘\n’ يتم التعامل معها كحرف خاص مكون من وحدتي بايت.
+
+مثال:
+
+
+# Python program to illustrate
+# append from new line
+  
+file1 = open("myfile.txt", "w")
+L = ["This is Delhi \n", "This is Paris \n", "This is London"]
+file1.writelines(L)
+file1.close()
+  
+# Append-adds at last
+# append mode
+file1 = open("myfile.txt", "a")  
+  
+# writing newline character
+file1.write("\n")
+file1.write("Today")
+  
+# without newline character
+file1.write("Tomorrow")
+  
+  
+file1 = open("myfile.txt", "r")
+print("Output of Readlines after appending")
+print(file1.read())
+print()
+file1.close()
+انتاج:
+
+إخراج Readlines بعد الإلحاق 
+This is Delhi 
+This is Paris 
+This is London 
+TodayTomorrow
+مع البيان
+with يتم استخدام العبارة في Python في معالجة الاستثناءات لجعل الكود أكثر وضوحًا وقابلية للقراءة. يبسط إدارة الموارد المشتركة مثل تدفقات الملفات. على عكس التطبيقات المذكورة أعلاه ، ليست هناك حاجة للاتصال file.close()عند استخدام with البيان. يضمن withالبيان نفسه الحصول على الموارد والإفراج عنها بشكل صحيح.
+
+مثال:
+
+
+# Program to show various ways to
+# append data to a file using
+# with statement
+  
+L = ["This is Delhi \n", "This is Paris \n", "This is London \n"]
+  
+# Writing to file
+with open("myfile.txt", "w") as file1:
+    # Writing data to a file
+    file1.write("Hello \n")
+    file1.writelines(L)
+  
+# Appending to file
+with open("myfile.txt", 'a') as file1:
+    file1.write("Today")
+  
+  
+# Reading from file
+with open("myfile.txt", "r+") as file1:
+    # Reading form a file
+    print(file1.read())
+انتاج:
+
+مرحباً 
+، هذه دلهي 
+هذه باريس 
+هذه لندن 
+اليوم
+ملاحظة: لمعرفة المزيد عن البيان اضغط هنا .
+
+
+<<<<<<<<<<<<<<<<<<<
+لتعبير العادي في بايثون مع أمثلة | مجموعة 1
+مستوى الصعوبة: متوسط
+آخر تحديث: ١٠ فبراير ٢٠٢٢
+التعبيرات العادية (RegEx) هي سلسلة خاصة من الأحرف تستخدم نمط بحث للعثور على سلسلة أو مجموعة من السلاسل. يمكنه اكتشاف وجود أو عدم وجود نص عن طريق المطابقة مع نمط معين ، ويمكنه أيضًا تقسيم النمط إلى نمط فرعي واحد أو أكثر. توفر Python وحدة إعادة تدعم استخدام regex في Python. وتتمثل وظيفته الأساسية في تقديم بحث ، حيث يأخذ تعبيرًا عاديًا وسلسلة. هنا ، إما أن تقوم بإرجاع المباراة الأولى أو لا شيء.
+
+مثال:
+
+import re
+ 
+s = 'GeeksforGeeks: A computer science portal for geeks'
+ 
+match = re.search(r'portal', s)
+ 
+print('Start Index:', match.start())
+print('End Index:', match.end())
+انتاج |
+مؤشر البداية: 34
+فهرس النهاية: 40
+يعطي الكود أعلاه فهرس البداية وفهرس النهاية لبوابة السلسلة. 
+
+ملاحظة: هنا حرف r (r'portal ') يشير إلى خام وليس regex. تختلف السلسلة الأولية قليلاً عن السلسلة العادية ، ولن تفسر الحرف \ على أنه حرف هروب. هذا لأن محرك التعبير العادي يستخدم \ حرف لغرض الهروب الخاص به.
+
+قبل البدء بوحدة Python regex ، دعونا نرى كيفية كتابة regex فعليًا باستخدام أحرف أولية أو تسلسلات خاصة. 
+
+أحرف وصفية
+لفهم تشبيه RE ، تعد الأحرف الوصفية مفيدة ومهمة وستُستخدم في وظائف الوحدة النمطية re. يوجد أدناه قائمة بالحروف الأولية.
+
+أحرف وصفية	وصف
+\	يستخدم لإسقاط المعنى الخاص للحرف الذي يتبعه
+[]	تمثل فئة شخصية
+^	يطابق البداية
+$	تطابق النهاية
+.	تتطابق مع أي حرف باستثناء السطر الجديد
+|	يعني OR (يتطابق مع أي من الأحرف المفصولة به.
+؟	يطابق الصفر أو مرة واحدة
+*	أي عدد من التكرارات (بما في ذلك 0 تكرارات)
++	مرة واحدة أو أكثر
+{}	حدد عدد مرات حدوث regex السابق المطلوب مطابقته.
+()	أرفق مجموعة من Regex
+دعونا نناقش كل من هذه الأحرف الأولية بالتفصيل 
+
+\ - شرطة مائلة للخلف
+تتأكد الشرطة المائلة للخلف (\) من عدم معاملة الحرف بطريقة خاصة. يمكن اعتبار هذا وسيلة للهروب من الأحرف الأولية. على سبيل المثال ، إذا كنت تريد البحث عن النقطة (.) في السلسلة ، فستجد أن النقطة (.) ستعامل كحرف خاص كما هو الحال في أحد الأحرف الأولية (كما هو موضح في الجدول أعلاه). لذلك في هذه الحالة ، سنستخدم الشرطة المائلة للخلف (\) قبل النقطة (.) مباشرة حتى تفقد تخصصها. انظر المثال أدناه لفهم أفضل.
+
+مثال: 
+
+
+import re
+ 
+s = 'geeks.forgeeks'
+ 
+# without using \
+match = re.search(r'.', s)
+print(match)
+ 
+# using \
+match = re.search(r'\.', s)
+print(match)
+انتاج |
+كائن <_sre.SRE_Match ؛ span = (0، 1)، match = 'g'>
+كائن <_sre.SRE_Match ؛ تمتد = (5 ، 6) ، تطابق = ".">
+[] - أقواس مربعة
+تمثل Square Brackets ([]) فئة أحرف تتكون من مجموعة من الأحرف التي نرغب في مطابقتها. على سبيل المثال ، فئة الحرف [abc] ستطابق أي حرف a ، أو b ، أو c. 
+
+نحدد أيضًا مجموعة من الأحرف باستخدام - داخل الأقواس المربعة. فمثلا، 
+
+[0 ، 3] عينة كـ [0123]
+[ac] هو نفسه [abc]
+يمكننا أيضًا عكس فئة الحرف باستخدام رمز علامة الإقحام (^). فمثلا، 
+
+[^ 0-3] تعني أي رقم باستثناء 0 أو 1 أو 2 أو 3
+يعني [^ ac] أي حرف باستثناء a أو b أو c
+^ - علامة الإقحام
+يتطابق رمز علامة الإقحام (^) مع بداية السلسلة ، أي يتحقق مما إذا كانت السلسلة تبدأ بالحرف (الأحرف) المحدد أم لا. فمثلا -  
+
+سيتحقق ^ g مما إذا كانت السلسلة تبدأ بـ g مثل geeks و world و girl و g وما إلى ذلك.
+سيتحقق ^ ge مما إذا كانت السلسلة تبدأ بـ ge مثل geeks و geeksforgeeks وما إلى ذلك.
+$ - دولار
+يطابق رمز الدولار ($) نهاية السلسلة ، أي يتحقق مما إذا كانت السلسلة تنتهي بالحرف (الأحرف) المحدد أم لا. فمثلا - 
+
+سيتحقق s $ من السلسلة التي تنتهي بمثل geeks ، و end ، و s ، وما إلى ذلك.
+سيتحقق ks $ من السلسلة التي تنتهي بـ k مثل geeks و geeksforgeeks و ks وما إلى ذلك.
+. - نقطة
+يطابق رمز النقطة (.) حرفًا واحدًا فقط باستثناء حرف السطر الجديد (\ n). فمثلا -  
+
+سيتحقق ab من السلسلة التي تحتوي على أي حرف في مكان النقطة مثل acb و acbd و abbb وما إلى ذلك
+.. سيتحقق مما إذا كانت السلسلة تحتوي على حرفين على الأقل
+| - أو
+أو يعمل الرمز كـ or عامل تشغيل بمعنى أنه يتحقق مما إذا كان النمط الموجود قبل أو بعد الرمز أو الرمز موجودًا في السلسلة أم لا. فمثلا -  
+
+سيطابق a | b أي سلسلة تحتوي على a أو b مثل acd و bcd و abcd وما إلى ذلك.
+؟ - علامة استفهام
+تتحقق علامة الاستفهام (؟) مما إذا كانت السلسلة قبل علامة الاستفهام في التعبير العادي تحدث مرة واحدة على الأقل أم لا على الإطلاق. فمثلا -  
+
+سيتم مطابقة ab؟ c للسلسلة ac ، acb ، dabc ولكن لن يتم مطابقتها لـ abbc نظرًا لوجود اثنين من b. وبالمثل ، لن تتم مطابقته مع abdc لأن b لا يتبعه c.
+* - نجمة
+يطابق رمز النجمة (*) صفرًا أو أكثر من مرات ظهور التعبير العادي الذي يسبق الرمز *. فمثلا -  
+
+ستتم مطابقة ab * c للسلسلة ac ، و abc ، و abbbc ، و dabc ، وما إلى ذلك ، ولكن لن تتم مطابقتها لـ abdc لأن b لا يتبعها c.
++ - زائد
+يطابق رمز علامة الجمع (+) تكرارًا واحدًا أو أكثر للتعبير العادي الذي يسبق الرمز +. فمثلا -  
+
+ستتم مطابقة ab + c للسلسلة abc و abbc و dabc ، ولكن لن تتم مطابقتها لـ ac و abdc نظرًا لعدم وجود b في ac و b لا يتبعها c في abc.
+{m، n} - الأقواس
+تتطابق الأقواس مع أي عمليات تكرار تسبق التعبير العادي من m إلى n بشكل شامل. فمثلا -  
+
+ستتم مطابقة a {2، 4} للسلسلة aaab و baaaac و gaad ، لكن لن تتم مطابقتها لسلاسل مثل abc و bc نظرًا لوجود واحد فقط a أو لا a في كلتا الحالتين.
+(<regex>) - مجموعة
+يستخدم رمز المجموعة لتجميع الأنماط الفرعية. فمثلا -  
+
+(أ | ب) سيتطابق القرص المضغوط مع سلاسل مثل acd و abcd و gacd وما إلى ذلك.
+التسلسلات الخاصة
+لا تتطابق التسلسلات الخاصة مع الحرف الفعلي في السلسلة بدلاً من ذلك فهي تخبر الموقع المحدد في سلسلة البحث حيث يجب أن تحدث المطابقة. يسهل كتابة الأنماط شائعة الاستخدام.  
+
+قائمة التسلسلات الخاصة 
+تسلسل خاص	وصف	أمثلة
+\أ	يطابق إذا كانت السلسلة تبدأ بالحرف المحدد	\ بعد 	للمهوسين
+للعالم
+\ب	يطابق إذا كانت الكلمة تبدأ أو تنتهي بالحرف المحدد. \ b (سلسلة) ستتحقق من بداية الكلمة و (سلسلة) \ b ستتحقق من نهاية الكلمة.	\ bge	المهوسون
+احصل على
+\ب	إنه عكس \ b ، أي يجب ألا تبدأ السلسلة أو تنتهي بـ regex المحدد.	\ Bge	سويا
+تشكيل
+\د	يتطابق مع أي رقم عشري ، وهذا يكافئ الفئة المحددة [0-9]	\د	123
+gee1
+\د	يتطابق مع أي حرف غير رقمي ، وهذا يكافئ الفئة المحددة [^ 0-9]	\د	المهوسون
+المهوس 1
+\س	يطابق أي حرف مسافة بيضاء.	\س	جي كانساس
+أ قبل الميلاد أ
+\س	يتطابق مع أي حرف بخلاف المسافة البيضاء	\س	أ ب
+ا ب ت ث
+\ w	يتطابق مع أي حرف أبجدي رقمي ، وهذا يعادل الفئة [a-zA-Z0-9_].	\ w	123
+geeKs4
+\ دبليو	يتطابق مع أي حرف غير أبجدي رقمي.	\ دبليو	> دولار
+جي <>
+\ ض	يطابق إذا كانت السلسلة تنتهي بـ regex المحدد	أب \ Z	أبجداب
+ابباباب
+وحدة Regex في Python
+يوجد في Python وحدة تسمى re تُستخدم للتعبيرات العادية في Python. يمكننا استيراد هذه الوحدة باستخدام بيان الاستيراد .
+
+مثال: استيراد وحدة re في Python 
+
+import re
+دعونا نرى الوظائف المختلفة التي توفرها هذه الوحدة للعمل مع regex في Python. 
+
+re.findall ()
+إرجاع جميع التطابقات غير المتداخلة للنمط في السلسلة ، كقائمة من السلاسل. يتم فحص السلسلة من اليسار إلى اليمين ، ويتم إرجاع التطابقات بالترتيب الذي تم العثور عليه.
+
+مثال: إيجاد كل تكرارات النمط 
+
+
+# A Python program to demonstrate working of
+# findall()
+import re
+ 
+# A sample text string where regular expression
+# is searched.
+string = """Hello my Number is 123456789 and
+            my friend's number is 987654321"""
+ 
+# A sample regular expression to find digits.
+regex = '\d+'
+ 
+match = re.findall(regex, string)
+print(match)
+ 
+# This example is contributed by Ayush Saluja.
+انتاج |
+['123456789'، '987654321']
+re.compile () 
+يتم تجميع التعبيرات العادية في كائنات نمط ، والتي لها طرق لعمليات مختلفة مثل البحث عن تطابقات النمط أو إجراء استبدالات سلسلة. 
+
+مثال 1:
+
+
+# Module Regular Expression is imported
+# using __import__().
+import re
+ 
+# compile() creates regular expression
+# character class [a-e],
+# which is equivalent to [abcde].
+# class [abcde] will match with string with
+# 'a', 'b', 'c', 'd', 'e'.
+p = re.compile('[a-e]')
+ 
+# findall() searches for the Regular Expression
+# and return a list upon finding
+print(p.findall("Aye, said Mr. Gibenson Stark"))
+انتاج: 
+
+['e'، 'a'، 'd'، 'b'، 'e'، 'a']
+فهم الناتج: 
+
+أول ورود هو "e" في "Aye" وليس "A" ، لأنه حساس لحالة الأحرف.
+التكرار التالي هو "a" في "said" ، ثم "d" في "said" ، متبوعًا بـ "b" و "e" في "Gibenson" ، يتطابق الحرف "a" الأخير مع "Stark".
+الشرطة المائلة للخلف للأحرف الأولية '\' لها دور مهم للغاية لأنها تشير إلى تسلسلات مختلفة. إذا كان سيتم استخدام الشرطة المائلة للخلف بدون معناه الخاص كحرف أولي ، فاستخدم "\\"
+مثال 2: تعيين فئة [\ s ،.] سيتطابق مع أي حرف مسافة بيضاء ، "،" ، أو ، "." . 
+
+
+import re
+ 
+# \d is equivalent to [0-9].
+p = re.compile('\d')
+print(p.findall("I went to him at 11 A.M. on 4th July 1886"))
+ 
+# \d+ will match a group on [0-9], group
+# of one or greater size
+p = re.compile('\d+')
+print(p.findall("I went to him at 11 A.M. on 4th July 1886"))
+انتاج: 
+
+['1'، '1'، '4'، '1'، '8'، '8'، '6']
+['11'، '4'، '1886']
+المثال 3:
+
+
+import re
+ 
+# \w is equivalent to [a-zA-Z0-9_].
+p = re.compile('\w')
+print(p.findall("He said * in some_lang."))
+ 
+# \w+ matches to group of alphanumeric character.
+p = re.compile('\w+')
+print(p.findall("I went to him at 11 A.M., he \
+said *** in some_language."))
+ 
+# \W matches to non alphanumeric characters.
+p = re.compile('\W')
+print(p.findall("he said *** in some_language."))
+انتاج: 
+
+['H'، 'e'، 's'، 'a'، 'i'، 'd'، 'i'، 'n'، 's'، 'o'، 'm'، 'e'، ' _ '،' l '،' a '،' n '،' g ']
+["أنا" ، "ذهب" ، "إلى" ، "هو" ، "في" ، "11" ، "أ" ، "م" ، "قال" ، "في" ، "بعض_اللغة"]
+[''، ''، '*'، '*'، '*'، ''، ''، '.']
+المثال 4:
+
+
+import re
+ 
+# '*' replaces the no. of occurrence
+# of a character.
+p = re.compile('ab*')
+print(p.findall("ababbaabbb"))
+انتاج: 
+
+['ab'، 'abb'، 'a'، 'abbb']
+فهم الناتج: 
+
+RE الخاصة بنا هي ab * ، والتي تكون "a" مصحوبة بأي رقم. من 'b's ، بدءًا من 0.
+الإخراج 'ab' ، صالح بسبب 'a' مفرد مصحوب بـ 'b' مفرد.
+الإخراج 'abb' ، صالح بسبب 'a' مفرد مصحوب بـ 2 'b'.
+الإخراج 'a' ، صالح بسبب 'a' مفرد مصحوب بـ 0 'b'.
+الإخراج "abbb" ، صالح بسبب "a" المفردة مصحوبة بـ 3 "b".
+re.split () 
+قم بتقسيم السلسلة حسب تكرارات حرف أو نمط ، عند العثور على هذا النمط ، يتم إرجاع الأحرف المتبقية من السلسلة كجزء من القائمة الناتجة. 
+
+بناء الجملة : 
+
+re.split (نمط ، سلسلة ، maxsplit = 0 ، أعلام = 0)
+يشير المعامل الأول ، النمط إلى التعبير العادي ، والسلسلة هي السلسلة المحددة التي سيتم البحث عن النمط فيها وحدث التقسيم ، وإذا لم يتم توفير الحد الأقصى ، فسيتم اعتباره صفرًا '0' ، وإذا تم توفير أي قيمة غير صفرية ، على الأكثر أن العديد من الانقسامات تحدث. إذا كان maxsplit = 1 ، فسيتم تقسيم السلسلة مرة واحدة فقط ، مما ينتج عنه قائمة بالطول 2. العلامات مفيدة جدًا ويمكن أن تساعد في تقصير الكود ، فهي ليست معلمات ضرورية ، على سبيل المثال: flags = re.IGNORECASE ، في هذا التقسيم ، الحالة ، أي سيتم تجاهل الأحرف الصغيرة أو الأحرف الكبيرة.
+
+مثال 1:
+
+
+from re import split
+ 
+# '\W+' denotes Non-Alphanumeric Characters
+# or group of characters Upon finding ','
+# or whitespace ' ', the split(), splits the
+# string from that point
+print(split('\W+', 'Words, words , Words'))
+print(split('\W+', "Word's words Words"))
+ 
+# Here ':', ' ' ,',' are not AlphaNumeric thus,
+# the point where splitting occurs
+print(split('\W+', 'On 12th Jan 2016, at 11:02 AM'))
+ 
+# '\d+' denotes Numeric Characters or group of
+# characters Splitting occurs at '12', '2016',
+# '11', '02' only
+print(split('\d+', 'On 12th Jan 2016, at 11:02 AM'))
+انتاج: 
+
+["كلمات" ، "كلمات" ، "كلمات"]
+["الكلمات" ، "الكلمات" ، "الكلمات"]
+['On'، '12th'، 'Jan'، '2016'، 'at'، '11'، '02'، 'AM']
+['On'، 'th Jan'، '، at'، ':'، 'AM']
+المثال 2:
+
+
+import re
+ 
+# Splitting will occurs only once, at
+# '12', returned list will have length 2
+print(re.split('\d+', 'On 12th Jan 2016, at 11:02 AM', 1))
+ 
+# 'Boy' and 'boy' will be treated same when
+# flags = re.IGNORECASE
+print(re.split('[a-f]+', 'Aey, Boy oh boy, come here', flags=re.IGNORECASE))
+print(re.split('[a-f]+', 'Aey, Boy oh boy, come here'))
+انتاج: 
+
+['On'، 'th Jan 2016، at 11:02 AM']
+[''، 'y،'، 'oy oh'، 'oy،'، 'om'، 'h'، 'r'، '']
+['A'، 'y، Boy oh'، 'oy،'، 'om'، 'h'، 'r'، '']
+re.sub () 
+يرمز 'sub' في الوظيفة إلى SubString ، ويتم البحث عن نمط تعبير عادي معين في السلسلة المحددة (المعلمة الثالثة) ، وعند العثور على نمط السلسلة الفرعية يتم استبداله بـ repl (المعلمة الثانية) ، يتحقق العد ويحافظ على عدد المرات يحدث هذا. 
+
+بناء الجملة:
+
+re.sub (نمط ، رد ، سلسلة ، عدد = 0 ، أعلام = 0)
+مثال 1:
+
+
+import re
+ 
+# Regular Expression pattern 'ub' matches the
+# string at "Subject" and "Uber". As the CASE
+# has been ignored, using Flag, 'ub' should
+# match twice with the string Upon matching,
+# 'ub' is replaced by '~*' in "Subject", and
+# in "Uber", 'Ub' is replaced.
+print(re.sub('ub', '~*', 'Subject has Uber booked already',
+             flags=re.IGNORECASE))
+ 
+# Consider the Case Sensitivity, 'Ub' in
+# "Uber", will not be reaplced.
+print(re.sub('ub', '~*', 'Subject has Uber booked already'))
+ 
+# As count has been given value 1, the maximum
+# times replacement occurs is 1
+print(re.sub('ub', '~*', 'Subject has Uber booked already',
+             count=1, flags=re.IGNORECASE))
+ 
+# 'r' before the pattern denotes RE, \s is for
+# start and end of a String.
+print(re.sub(r'\sAND\s', ' & ', 'Baked Beans And Spam',
+             flags=re.IGNORECASE))
+انتاج | 
+
+S ~ * تم حجزه بالفعل
+S ~ * Ject حجزت بالفعل Uber
+S ~ * Ject حجزت بالفعل Uber
+الفاصوليا المطبوخة والبريد المزعج
+re.subn () 
+يشبه subn () الكلمة sub () من جميع النواحي ، باستثناء طريقة توفير المخرجات. تقوم بإرجاع tuple مع عدد إجمالي الاستبدال والسلسلة الجديدة بدلاً من السلسلة فقط. 
+
+بناء الجملة:
+
+re.subn (نمط ، رد ، سلسلة ، عدد = 0 ، أعلام = 0)
+مثال:
+
+
+import re
+ 
+print(re.subn('ub', '~*', 'Subject has Uber booked already'))
+ 
+t = re.subn('ub', '~*', 'Subject has Uber booked already',
+            flags=re.IGNORECASE)
+print(t)
+print(len(t))
+ 
+# This will give same output as sub() would have
+print(t[0])
+انتاج | 
+
+('S ~ * Ject قد حجزت بالفعل مع Uber' ، 1)
+(تم حجز "S ~ * Ject بالفعل" ، 2)
+طول Tuple: 2
+S ~ * تم حجزه بالفعل
+re.escape ()
+إرجاع سلسلة مع خط مائل عكسي غير أبجدي رقمي ، وهذا مفيد إذا كنت تريد مطابقة سلسلة حرفية عشوائية قد تحتوي على أحرف أولية للتعبير العادي.
+
+بناء الجملة:
+
+re.escape (سلسلة نصية)
+مثال:
+
+
+import re
+ 
+# escape() returns a string with BackSlash '\',
+# before every Non-Alphanumeric Character
+# In 1st case only ' ', is not alphanumeric
+# In 2nd case, ' ', caret '^', '-', '[]', '\'
+# are not alphanumeric
+print(re.escape("This is Awesome even 1 AM"))
+print(re.escape("I Asked what is this [a-9], he said \t ^WoW"))
+انتاج |
+هذا \ هو \ رائع \ حتى \ 1 \ صباحا
+لقد سألت ما هو هذا \ [أ \ -9 \] \ ، \ قال \ \ \ \ ^ واو
+ابحاث()
+تُرجع هذه الطريقة إما بلا (إذا كان النمط غير متطابق) ، أو أن re.MatchObject يحتوي على معلومات حول الجزء المطابق من السلسلة. تتوقف هذه الطريقة بعد التطابق الأول ، لذا فهي الأنسب لاختبار تعبير عادي أكثر من استخراج البيانات.
+
+مثال: البحث عن تكرار للنمط
+
+
+# A Python program to demonstrate working of re.match().
+import re
+ 
+# Lets use a regular expression to match a date string
+# in the form of Month name followed by day number
+regex = r"([a-zA-Z]+) (\d+)"
+ 
+match = re.search(regex, "I was born on June 24")
+ 
+if match != None:
+ 
+    # We reach here when the expression "([a-zA-Z]+) (\d+)"
+    # matches the date string.
+ 
+    # This will print [14, 21), since it matches at index 14
+    # and ends at 21.
+    print ("Match at index %s, %s" % (match.start(), match.end()))
+ 
+    # We us group() method to get all the matches and
+    # captured groups. The groups contain the matched values.
+    # In particular:
+    # match.group(0) always returns the fully matched string
+    # match.group(1) match.group(2), ... return the capture
+    # groups in order from left to right in the input string
+    # match.group() is equivalent to match.group(0)
+ 
+    # So this will print "June 24"
+    print ("Full match: %s" % (match.group(0)))
+ 
+    # So this will print "June"
+    print ("Month: %s" % (match.group(1)))
+ 
+    # So this will print "24"
+    print ("Day: %s" % (match.group(2)))
+ 
+else:
+    print ("The regex pattern does not match.")
+انتاج |
+تطابق في الفهرس 14 و 21
+المباراة الكاملة: 24 يونيو
+الشهر: يونيو
+اليوم: 24
+كائن المباراة
+يحتوي كائن Match على جميع المعلومات حول البحث والنتيجة وإذا لم يتم العثور على تطابق ، فلن يتم إرجاع أي شيء. دعونا نرى بعض الأساليب والسمات شائعة الاستخدام لكائن المطابقة.
+
+الحصول على السلسلة و regex
+تعرض السمة math.re التعبير العادي الذي تم تمريره وتعيد السمة match.string السلسلة التي تم تمريرها.
+
+مثال: الحصول على السلسلة والتعبير المعتاد للكائن المطابق
+
+
+import re
+ 
+s = "Welcome to GeeksForGeeks"
+ 
+# here x is the match object
+res = re.search(r"\bG", s)
+ 
+print(res.re)
+print(res.string)
+انتاج |
+re.compile ("\\ bG")
+مرحبًا بكم في GeeksForGeeks
+الحصول على فهرس الكائن المطابق
+طريقة start () ترجع فهرس البداية للسلسلة الفرعية المتطابقة
+تقوم طريقة end () بإرجاع فهرس النهاية للسلسلة الفرعية المتطابقة
+تقوم طريقة span () بإرجاع مجموعة تحتوي على فهرس البداية والنهاية للسلسلة الفرعية المتطابقة
+مثال: الحصول على فهرس الكائن المطابق 
+
+
+import re
+ 
+s = "Welcome to GeeksForGeeks"
+ 
+# here x is the match object
+res = re.search(r"\bGee", s)
+ 
+print(res.start())
+print(res.end())
+print(res.span())
+انتاج |
+11
+14
+(11 ، 14)
+الحصول على سلسلة فرعية متطابقة
+تعيد طريقة group () الجزء من السلسلة الذي تتطابق معه الأنماط. انظر المثال أدناه لفهم أفضل.
+
+مثال: الحصول على سلسلة فرعية مطابقة 
+
+
+import re
+ 
+s = "Welcome to GeeksForGeeks"
+ 
+# here x is the match object
+res = re.search(r"\D{2} t", s)
+ 
+print(res.group())
+انتاج |
+التقى
+في المثال أعلاه ، يحدد النمط الخاص بنا للسلسلة التي تحتوي على حرفين على الأقل متبوعين بمسافة ، ويتبع تلك المسافة حرف t. 
+
+

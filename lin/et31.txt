@@ -1,0 +1,196 @@
+
+معالجة استثناء بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 22 أكتوبر 2021
+لقد اكتشفنا بايثون الأساسي حتى الآن من المجموعة 1 إلى 4 ( المجموعة 1 | المجموعة 2 | المجموعة 3 | المجموعة 4 ). 
+
+في هذه المقالة ، سنناقش كيفية التعامل مع الاستثناءات في Python باستخدام try. catch ، وأخيراً بيان بمساعدة الأمثلة المناسبة. 
+
+يمكن أن يكون الخطأ في Python من نوعين ، أي أخطاء نحوية واستثناءات . الأخطاء هي المشاكل في البرنامج بسبب البرنامج الذي سيوقف التنفيذ. من ناحية أخرى ، تظهر الاستثناءات عند حدوث بعض الأحداث الداخلية التي تغير التدفق الطبيعي للبرنامج. 
+
+الفرق بين الخطأ النحوي والاستثناءات
+خطأ في بناء الجملة: كما يوحي الاسم ، فإن هذا الخطأ ناتج عن بناء جملة خاطئ في التعليمات البرمجية. يؤدي إلى إنهاء البرنامج. 
+
+مثال: 
+
+
+# initialize the amount variable
+amount = 10000
+ 
+# check that You are eligible to
+#  purchase Dsa Self Paced or not
+if(amount > 2999)
+print("You are eligible to purchase Dsa Self Paced")
+انتاج:
+
+
+
+الاستثناءات: تظهر الاستثناءات عندما يكون البرنامج صحيحًا نحويًا ، ولكن نتج عن الشفرة خطأ. لا يوقف هذا الخطأ تنفيذ البرنامج ، ولكنه يغير التدفق الطبيعي للبرنامج.
+
+مثال:
+
+
+# initialize the amount variable
+marks = 10000
+ 
+# perform division with 0
+a = marks / 0
+print(a)
+انتاج:
+
+
+
+في المثال أعلاه ، تم رفع خطأ ZeroDivisionError لأننا نحاول قسمة رقم على 0.
+
+ملاحظة: الاستثناء هو الفئة الأساسية لجميع الاستثناءات في Python. يمكنك التحقق من التسلسل الهرمي للاستثناءات هنا .  
+
+بيان المحاولة والاستثناءات - اصطياد الاستثناءات
+تُستخدم عبارات try and except للقبض على الاستثناءات والتعامل معها في Python. يتم الاحتفاظ بالعبارات التي يمكن أن تثير الاستثناءات داخل جملة try وتكتب العبارات التي تتعامل مع الاستثناء بداخلها ماعدا البند.
+
+مثال: دعنا نحاول الوصول إلى عنصر المصفوفة الذي يكون فهرسه خارج حدوده ونتعامل مع الاستثناء المقابل.
+
+
+# Python program to handle simple runtime error
+#Python 3
+ 
+a = [1, 2, 3]
+try:
+    print ("Second element = %d" %(a[1]))
+ 
+    # Throws error since there are only 3 elements in array
+    print ("Fourth element = %d" %(a[3]))
+ 
+except:
+    print ("An error occurred")
+انتاج |
+العنصر الثاني = 2
+حدث خطأ
+في المثال أعلاه ، يتم وضع العبارات التي يمكن أن تسبب الخطأ داخل جملة try (عبارة الطباعة الثانية في حالتنا). يحاول تعليمة الطباعة الثانية الوصول إلى العنصر الرابع من القائمة وهو غير موجود ويؤدي ذلك إلى استثناء. يتم بعد ذلك اكتشاف هذا الاستثناء بواسطة عبارة "except".
+
+اصطياد استثناء محدد
+يمكن أن تحتوي جملة try على أكثر من جملة ماعدا ، لتحديد معالجات للاستثناءات المختلفة. يرجى ملاحظة أنه سيتم تنفيذ معالج واحد على الأكثر. على سبيل المثال ، يمكننا إضافة IndexError في الكود أعلاه. الصيغة العامة لإضافة استثناءات محددة هي - 
+
+يحاول:
+    # صياغات)
+باستثناء خطأ الفهرس:
+    # صياغات)
+باستثناء ValueError:
+    # صياغات)
+مثال: اصطياد استثناء محدد في بايثون
+
+
+# Program to handle multiple errors with one
+# except statement
+# Python 3
+ 
+def fun(a):
+    if a < 4:
+ 
+        # throws ZeroDivisionError for a = 3
+        b = a/(a-3)
+ 
+    # throws NameError if a >= 4
+    print("Value of b = ", b)
+     
+try:
+    fun(3)
+    fun(5)
+ 
+# note that braces () are necessary here for
+# multiple exceptions
+except ZeroDivisionError:
+    print("ZeroDivisionError Occurred and Handled")
+except NameError:
+    print("NameError Occurred and Handled")
+انتاج |
+حدث خطأ صفري وتم التعامل معه
+إذا قمت بالتعليق على متعة الخط (3) ، فسيكون الناتج 
+
+حدث خطأ في الاسم وتم التعامل معه
+الناتج أعلاه هو كذلك لأنه بمجرد أن يحاول python الوصول إلى قيمة b ، يحدث NameError. 
+
+جرب مع شرط آخر
+في بايثون ، يمكنك أيضًا استخدام جملة else في كتلة try-except التي يجب أن تكون موجودة بعد كل فقرات ما عدا. يقوم الكود بإدخال كتلة else فقط إذا كانت جملة try لا تثير استثناءً.
+
+مثال: حاول مع شرط آخر
+
+
+# Program to depict else clause with try-except
+# Python 3
+# Function which returns a/b
+def AbyB(a , b):
+    try:
+        c = ((a+b) / (a-b))
+    except ZeroDivisionError:
+        print ("a/b result in 0")
+    else:
+        print (c)
+ 
+# Driver program to test above function
+AbyB(2.0, 3.0)
+AbyB(3.0, 3.0)
+انتاج:
+
+-5.0
+نتيجة أ / ب في 0
+أخيرًا الكلمة الرئيسية في بايثون
+توفر Python كلمة أساسية أخيرًا ، والتي يتم تنفيذها دائمًا بعد المحاولة واستثناء الكتل. يتم تنفيذ الكتلة النهائية دائمًا بعد الإنهاء العادي لكتلة المحاولة أو بعد إنهاء كتلة المحاولة بسبب بعض الاستثناءات.
+
+بناء الجملة:
+
+يحاول:
+    # بعض التعليمات البرمجية ....
+
+إلا:
+    # كتلة اختيارية
+    # معالجة الاستثناء (إذا لزم الأمر)
+
+آخر:
+    # تنفيذ إذا لم يكن هناك استثناء
+
+أخيرا:
+    # بعض الكود ..... (يتم تنفيذها دائمًا)
+مثال:
+
+
+# Python program to demonstrate finally
+ 
+# No exception Exception raised in try block
+try:
+    k = 5//0  # raises divide by zero exception.
+    print(k)
+ 
+# handles zerodivision exception
+except ZeroDivisionError:
+    print("Can't divide by zero")
+ 
+finally:
+    # this block is always executed
+    # regardless of exception generation.
+    print('This is always executed')
+انتاج:
+
+لا يمكن القسمة على الصفر
+يتم تنفيذ هذا دائما
+رفع الاستثناء
+تسمح تعليمة الارتفاع للمبرمج بفرض حدوث استثناء معين. الحجة الوحيدة في الارتفاع تشير إلى الاستثناء الذي سيتم رفعه. يجب أن يكون هذا إما حالة استثناء أو فئة استثناء (فئة مشتقة من استثناء).
+
+
+# Program to depict Raising Exception
+ 
+try:
+    raise NameError("Hi there")  # Raise Error
+except NameError:
+    print ("An exception")
+    raise  # To determine whether the exception was raised or not
+سيُطبع ناتج الكود أعلاه ببساطة على أنه "استثناء" ولكن خطأ وقت التشغيل سيحدث أيضًا في الأخير بسبب بيان الزيادة في السطر الأخير. لذلك ، سيبدو الإخراج في سطر الأوامر 
+
+Traceback (آخر مكالمة أخيرة):
+  ملف "/home/d6ec14ca595b97bff8d8034bbf212a9f.py" ، السطر 5 ، في <module>
+    رفع NameError ("مرحبًا") # رفع الخطأ
+NameError: مرحبًا بكم
+https://youtu.be/fCRB8ADbBSc
+
+هذا المقال من مساهمة نيخيل كومار سينغ (nickzuck_007) 
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.

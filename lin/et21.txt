@@ -1,0 +1,616 @@
+
+وظائف بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: ١٤ ديسمبر ٢٠٢١
+دوال بايثون عبارة عن كتلة من العبارات ذات الصلة المصممة لأداء مهمة حسابية أو منطقية أو تقييمية. الفكرة هي وضع بعض المهام التي يتم إجراؤها بشكل شائع أو بشكل متكرر معًا وإنشاء وظيفة بحيث بدلاً من كتابة نفس الرمز مرارًا وتكرارًا لمدخلات مختلفة ، يمكننا إجراء استدعاءات الوظائف لإعادة استخدام الكود الموجود فيه مرارًا وتكرارًا. 
+
+يمكن أن تكون الوظائف مدمجة أو معرفة من قبل المستخدم. يساعد البرنامج على أن يكون موجزًا ​​وغير متكرر ومنظمًا.
+
+بناء الجملة: 
+
+def function_name (المعلمات):
+    "" "docstring" ""
+    صياغات)
+    عودة التعبير
+خلق وظيفة
+يمكننا إنشاء دالة Python باستخدام الكلمة الأساسية def .
+
+مثال: دالة إنشاء لغة بايثون
+
+# A simple Python function
+ 
+def fun():
+  print("Welcome to GFG")
+استدعاء وظيفة
+بعد إنشاء دالة يمكننا تسميتها باستخدام اسم الوظيفة متبوعًا بقوس يحتوي على معلمات تلك الوظيفة المعينة.
+
+مثال: وظيفة استدعاء لغة Python
+
+# A simple Python function
+ 
+def fun():
+  print("Welcome to GFG")
+         
+# Driver code to call a function
+fun()
+انتاج |
+مرحبًا بك في GFG
+حجج الوظيفة
+الوسيطات هي القيم التي يتم تمريرها داخل أقواس الوظيفة. يمكن أن تحتوي الوظيفة على أي عدد من الوسائط مفصولة بفاصلة.
+
+مثال: دالة بايثون مع الوسائط
+في هذا المثال ، سننشئ دالة بسيطة للتحقق مما إذا كان الرقم الذي تم تمريره كوسيطة للدالة زوجيًا أم فرديًا.
+
+
+# A simple Python function to check
+# whether x is even or odd
+ 
+ 
+def evenOdd(x):
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+ 
+ 
+# Driver code to call the function
+evenOdd(2)
+evenOdd(3)
+انتاج |
+حتى
+الفردية
+أنواع الحجج
+تدعم Python أنواعًا مختلفة من الوسائط التي يمكن تمريرها في وقت استدعاء الوظيفة. دعونا نناقش كل نوع بالتفصيل.
+
+الوسائط الافتراضية
+الوسيطة الافتراضية هي معلمة تفترض قيمة افتراضية إذا لم يتم توفير قيمة في استدعاء الوظيفة لتلك الوسيطة. يوضح المثال التالي الوسائط الافتراضية. 
+
+
+# Python program to demonstrate
+# default arguments
+ 
+ 
+def myFun(x, y=50):
+    print("x: ", x)
+    print("y: ", y)
+ 
+ 
+# Driver code (We call myFun() with only
+# argument)
+myFun(10)
+انتاج |
+('x:'، 10)
+('y:'، 50)
+مثل وسيطات C ++ الافتراضية ، يمكن أن يكون لأي عدد من الوسائط في دالة قيمة افتراضية. ولكن بمجرد أن يكون لدينا حجة افتراضية ، يجب أن تحتوي جميع الحجج إلى اليمين أيضًا على قيم افتراضية.
+
+وسيطات الكلمات الرئيسية
+الفكرة هي السماح للمتصل بتحديد اسم الوسيطة بالقيم بحيث لا يحتاج المتصل إلى تذكر ترتيب المعلمات.
+
+
+# Python program to demonstrate Keyword Arguments
+def student(firstname, lastname):
+    print(firstname, lastname)
+ 
+ 
+# Keyword arguments
+student(firstname='Geeks', lastname='Practice')
+student(lastname='Practice', firstname='Geeks')
+انتاج |
+("المهوسون" ، "الممارسة")
+("المهوسون" ، "الممارسة")
+حجج متغيرة الطول
+في بايثون ، يمكننا تمرير عدد متغير من الوسيطات إلى دالة باستخدام رموز خاصة. هناك نوعان من الرموز الخاصة:
+
+* args (غير وسيطات الكلمات الرئيسية)
+** kwargs (حجج الكلمات الرئيسية)
+المثال 1: وسيطة ذات طول متغير بخلاف الكلمات الأساسية
+
+# Python program to illustrate
+# *args for variable number of arguments
+ 
+ 
+def myFun(*argv):
+    for arg in argv:
+        print(arg)
+ 
+ 
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+انتاج |
+مرحبا
+مرحبا
+ل
+GeeksforGeeks
+المثال 2: وسيطات الكلمات الأساسية ذات الطول المتغير
+
+# Python program to illustrate
+# *kwargs for variable number of keyword arguments
+ 
+ 
+def myFun(**kwargs):
+    for key, value in kwargs.items():
+        print("%s == %s" % (key, value))
+ 
+ 
+# Driver code
+myFun(first='Geeks', mid='for', last='Geeks')
+انتاج |
+الأول == المهوسون
+منتصف == ل
+الماضي == المهوسون
+وثائقي
+تسمى السلسلة الأولى بعد الوظيفة سلسلة المستند أو سلسلة Docstring باختصار. يستخدم هذا لوصف وظيفة الوظيفة. يعد استخدام docstring في الوظائف اختياريًا ولكنه يعتبر ممارسة جيدة.
+
+يمكن استخدام الصيغة التالية لطباعة سلسلة docstring لوظيفة ما:
+
+بناء الجملة: طباعة (function_name .__ doc__)
+مثال: إضافة Docstring إلى الوظيفة
+
+# A simple Python function to check
+# whether x is even or odd
+ 
+ 
+def evenOdd(x):
+    """Function to check if the number is even or odd"""
+     
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+ 
+ 
+# Driver code to call the function
+print(evenOdd.__doc__)
+انتاج |
+وظيفة للتحقق مما إذا كان الرقم زوجيًا أم فرديًا
+بيان العودة
+يتم استخدام عبارة إرجاع الدالة للخروج من دالة والعودة إلى متصل الدالة وإرجاع القيمة المحددة أو عنصر البيانات إلى المتصل.
+
+بناء الجملة: العودة [قائمة_تعبير]
+يمكن أن تتكون جملة الإرجاع من متغير أو تعبير أو ثابت يتم إرجاعه إلى نهاية تنفيذ الوظيفة. إذا لم يكن أي مما سبق موجودًا مع عبارة الإرجاع ، فسيتم إرجاع كائن لا شيء.
+
+مثال: بيان إرجاع دالة بايثون
+
+def square_value(num):
+    """This function returns the square
+    value of the entered number"""
+    return num**2
+ 
+ 
+print(square_value(2))
+print(square_value(-4))
+انتاج:
+
+4
+16
+هل يتم تمرير دالة بايثون بالمرجع أم تمرر بالقيمة؟ 
+شيء واحد مهم يجب ملاحظته هو أن كل اسم متغير في Python هو مرجع. عندما نقوم بتمرير متغير إلى دالة ، يتم إنشاء مرجع جديد للكائن. يتم تمرير المعلمة في Python مثل تمرير المرجع في Java.
+
+مثال:
+
+
+# Here x is a new reference to same list lst
+def myFun(x):
+    x[0] = 20
+ 
+ 
+# Driver Code (Note that lst is modified
+# after function call.
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
+انتاج |
+[20 ، 11 ، 12 ، 13 ، 14 ، 15]
+عندما نقوم بتمرير مرجع وتغيير المرجع المستلم إلى شيء آخر ، يتم قطع الاتصال بين المعلمة التي تم تمريرها والمتلقية. على سبيل المثال ، ضع في اعتبارك البرنامج أدناه.
+ 
+
+
+def myFun(x):
+ 
+    # After below line link of x with previous
+    # object gets broken. A new object is assigned
+    # to x.
+    x = [20, 30, 40]
+ 
+ 
+# Driver Code (Note that lst is not modified
+# after function call.
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
+انتاج |
+[10 ، 11 ، 12 ، 13 ، 14 ، 15]
+مثال آخر لإثبات أن الارتباط المرجعي معطل إذا قمنا بتعيين قيمة جديدة (داخل الوظيفة). 
+
+
+def myFun(x):
+ 
+    # After below line link of x with previous
+    # object gets broken. A new object is assigned
+    # to x.
+    x = 20
+ 
+ 
+# Driver Code (Note that lst is not modified
+# after function call.
+x = 10
+myFun(x)
+print(x)
+انتاج |
+10
+تمرين: حاول تخمين إخراج الكود التالي. 
+
+
+def swap(x, y):
+    temp = x
+    x = y
+    y = temp
+ 
+ 
+# Driver code
+x = 2
+y = 3
+swap(x, y)
+print(x)
+print(y)
+انتاج |
+2
+3
+وظائف مجهولة: 
+في Python ، تعني الوظيفة المجهولة أن الوظيفة بدون اسم. كما نعلم بالفعل ، يتم استخدام الكلمة الأساسية def لتحديد الوظائف العادية ويتم استخدام الكلمة الأساسية lambda لإنشاء وظائف مجهولة. يرجى الاطلاع على هذا لمزيد من التفاصيل.
+
+
+# Python code to illustrate the cube of a number
+# using lambda function
+ 
+ 
+def cube(x): return x*x*x
+ 
+cube_v2 = lambda x : x*x*x
+ 
+print(cube(7))
+print(cube_v2(7))
+انتاج |
+343
+وظيفة بايثون ضمن الوظائف
+تُعرف الوظيفة التي يتم تحديدها داخل دالة أخرى بالوظيفة الداخلية أو الوظيفة المتداخلة. الوظائف المتداخلة قادرة على الوصول إلى متغيرات النطاق المضمن. يتم استخدام الوظائف الداخلية بحيث يمكن حمايتها من كل ما يحدث خارج الوظيفة.
+
+
+# Python program to
+# demonstrate accessing of
+# variables of nested functions
+ 
+def f1():
+    s = 'I love GeeksforGeeks'
+     
+    def f2():
+        print(s)
+         
+    f2()
+ 
+# Driver's code
+f1()
+انتاج |
+أنا أحب GeeksforGeeks
+روابط سريعة : 
+مسابقة حول وظائف بايثون
+الفرق بين الطريقة والوظيفة في بايثون
+وظائف First Class في Python
+المقالات الأخيرة عن وظائف بايثون .
+
+<<<<<<<<<<<<<<<<<<<<<
+* args و ** kwargs في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 15 ديسمبر 2021
+في بايثون ، يمكننا تمرير عدد متغير من الوسيطات إلى دالة باستخدام رموز خاصة. هناك نوعان من الرموز الخاصة:
+
+
+
+الرموز الخاصة المستخدمة لتمرير الحجج: -
+
+1.) * args (غير حجج الكلمات الرئيسية)
+
+2.) ** kwargs (حجج الكلمات الرئيسية)
+
+ملاحظة: "نستخدم الترميز" wildcard "أو" * "مثل هذا - * args OR ** kwargs - كحجة لوظيفتنا عندما تكون لدينا شكوك حول عدد الوسائط التي يجب أن نمررها في دالة." 
+
+1.) * أرجس
+
+تُستخدم الصيغة الخاصة * args في تعريفات الوظائف في لغة python لتمرير عدد متغير من الوسائط إلى دالة. يتم استخدامه لتمرير قائمة وسيطات متغيرة الطول بدون مفتاح. 
+
+الصيغة هي استخدام الرمز * لأخذ عدد متغير من الوسائط ؛ حسب الاصطلاح ، غالبًا ما يتم استخدامه مع الكلمة args.
+ما تسمح لك * args بفعله هو أن تأخذ المزيد من الوسائط أكثر من عدد الحجج الرسمية التي حددتها مسبقًا. باستخدام * args ، يمكن ربط أي عدد من الوسائط الإضافية بالمعلمات الرسمية الحالية (بما في ذلك عدم وجود وسيطات إضافية).
+على سبيل المثال: نريد عمل دالة ضرب تأخذ أي عدد من الوسائط وقادرة على ضربها جميعًا معًا. يمكن عمل ذلك باستخدام * args.
+باستخدام * ، يصبح المتغير الذي نربطه بـ * معنى متكررًا ، مما يعني أنه يمكنك القيام بأشياء مثل التكرار فوقه ، وتشغيل بعض وظائف الترتيب الأعلى مثل الخريطة والتصفية ، وما إلى ذلك.
+ 
+
+# Python program to illustrate 
+# *args for variable number of arguments
+def myFun(*argv):
+    for arg in argv:
+        print (arg)
+   
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+انتاج: 
+مرحبا
+مرحبا
+ل
+GeeksforGeeks
+ 
+
+
+# Python program to illustrate
+# *args with first extra argument
+def myFun(arg1, *argv):
+    print ("First argument :", arg1)
+    for arg in argv:
+        print("Next argument through *argv :", arg)
+ 
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+انتاج: 
+الحجة الأولى: مرحبًا
+الحجة التالية من خلال * argv: مرحبًا
+الحجة التالية من خلال * argv: إلى
+الحجة التالية من خلال * argv: GeeksforGeeks
+ 
+
+ 
+
+2.) ** kwargs
+
+تُستخدم الصيغة الخاصة ** kwargs في تعريفات الوظائف في لغة python لتمرير قائمة وسيطات ذات كلمات رئيسية ومتغيرة الطول. نستخدم اسم kwargs مع النجمة المزدوجة. السبب هو أن النجمة المزدوجة تسمح لنا بالمرور عبر وسيطات الكلمات الرئيسية (وأي عدد منها).
+
+وسيطة الكلمة الأساسية هي المكان الذي تقدم فيه اسمًا للمتغير أثناء تمريره في الوظيفة.
+يمكن للمرء أن يفكر في kwargs على أنها قاموس يقوم بتعيين كل كلمة رئيسية إلى القيمة التي نمررها بجانبها. هذا هو السبب في أننا عندما نكرر على kwargs ، لا يبدو أن هناك أي ترتيب تم طباعته به.
+مثال لاستخدام ** kwargs: 
+
+
+# Python program to illustrate 
+# *kwargs for variable number of keyword arguments
+ 
+def myFun(**kwargs):
+    for key, value in kwargs.items():
+        print ("%s == %s" %(key, value))
+ 
+# Driver code
+myFun(first ='Geeks', mid ='for', last='Geeks')   
+انتاج: 
+الماضي == المهوسون
+منتصف == ل
+الأول == المهوسون
+ 
+
+
+# Python program to illustrate  **kwargs for
+# variable number of keyword arguments with
+# one extra argument.
+ 
+def myFun(arg1, **kwargs):
+    for key, value in kwargs.items():
+        print ("%s == %s" %(key, value))
+ 
+# Driver code
+myFun("Hi", first ='Geeks', mid ='for', last='Geeks')   
+انتاج: 
+الماضي == المهوسون
+منتصف == ل
+الأول == المهوسون
+ 
+
+استخدام * args و ** kwargs لاستدعاء دالة
+مثال:
+ 
+
+
+def myFun(arg1, arg2, arg3):
+    print("arg1:", arg1)
+    print("arg2:", arg2)
+    print("arg3:", arg3)
+     
+# Now we can use *args or **kwargs to
+# pass arguments to this function :
+args = ("Geeks", "for", "Geeks")
+myFun(*args)
+ 
+kwargs = {"arg1" : "Geeks", "arg2" : "for", "arg3" : "Geeks"}
+myFun(**kwargs)
+انتاج: 
+arg1: المهوسون
+arg2: ل
+arg3: المهوسون
+arg1: المهوسون
+arg2: ل
+arg3: المهوسون
+ 
+
+استخدام * args و ** kwargs في نفس السطر لاستدعاء دالة
+مثال:
+ 
+
+
+def myFun(*args,**kwargs):
+    print("args: ", args)
+    print("kwargs: ", kwargs)
+ 
+ 
+# Now we can use both *args ,**kwargs
+# to pass arguments to this function :
+myFun('geeks','for','geeks',first="Geeks",mid="for",last="Geeks")
+انتاج: 
+args: ('geeks'، 'for'، 'geeks')
+kwargs {'first': 'Geeks'، 'mid': 'for'، 'last': 'Geeks'}
+ 
+
+هذا المقال من مساهمة كيشلاي فيرما . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال باستخدام Contrib.geeksforgeeks.org أو إرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه.
+ 
+
+
+<<<<<<<<<<<<<<<<<<<<<
+متى تستخدم العائد بدلاً من العائد في بايثون؟
+مستوى الصعوبة: سهل
+تاريخ التحديث الأخير: 21 يوليو 2021
+يوقف بيان العائد تنفيذ الوظيفة ويرسل قيمة مرة أخرى إلى المتصل ، لكنه يحتفظ بحالة كافية لتمكين الوظيفة من استئناف العمل من حيث توقفت. عند الاستئناف ، تستمر الوظيفة في التنفيذ فورًا بعد آخر تشغيل للعائد. يسمح هذا للكود الخاص به بإنتاج سلسلة من القيم بمرور الوقت ، بدلاً من حسابها مرة واحدة وإرسالها مرة أخرى كقائمة.
+
+دعنا نرى بمثال:
+
+
+# A Simple Python program to demonstrate working
+# of yield
+  
+# A generator function that yields 1 for the first time,
+# 2 second time and 3 third time
+def simpleGeneratorFun():
+    yield 1
+    yield 2
+    yield 3
+  
+# Driver code to check above generator function
+for value in simpleGeneratorFun(): 
+    print(value)
+انتاج:
+
+1
+2
+3
+إرجاع يرسل قيمة محددة مرة أخرى إلى المتصل الخاص به بينما العائد يمكن أن ينتج سلسلة من القيم. يجب أن نستخدم العائد عندما نريد التكرار عبر تسلسل ، لكن لا نريد تخزين التسلسل بأكمله في الذاكرة.
+
+يتم استخدام العائد في مولدات بايثون . يتم تعريف وظيفة المولد على أنها وظيفة عادية ، ولكن كلما احتاجت إلى إنشاء قيمة ، فإنها تفعل ذلك باستخدام الكلمة الأساسية للإنتاجية بدلاً من العودة. إذا كان جسم def يحتوي على عائد ، فإن الوظيفة تصبح تلقائيًا وظيفة مولد.
+
+
+# A Python program to generate squares from 1
+# to 100 using yield and therefore generator
+  
+# An infinite generator function that prints
+# next square number. It starts with 1
+def nextSquare():
+    i = 1
+  
+    # An Infinite loop to generate squares 
+    while True:
+        yield i*i                
+        i += 1  # Next execution resumes 
+                # from this point     
+  
+# Driver code to test above generator 
+# function
+for num in nextSquare():
+    if num > 100:
+         break    
+    print(num)
+انتاج:
+
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+هذا المقال من مساهمة Arpit Agarwal . إذا كنت تحب GeeksforGeeks وترغب في المساهمة ، فيمكنك أيضًا كتابة مقال وإرسال مقالتك بالبريد إلى review-team@geeksforgeeks.org. شاهد مقالتك تظهر على صفحة GeeksforGeeks الرئيسية وساعد المهوسين الآخرين.
+
+يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه
+
+
+<<<<<<<<<<<<<<<<<<<<<
+المولدات في بايثون
+مستوى الصعوبة: سهل
+آخر تحديث: 31 مارس 2020
+المتطلبات الأساسية: إنتاج الكلمات الرئيسية والمكررات
+
+هناك نوعان من المصطلحات المتضمنة عندما نناقش المولدات.
+
+وظيفة المولد: يتم تعريف وظيفة المولد على أنها وظيفة عادية ، ولكن كلما احتاجت إلى إنشاء قيمة ، فإنها تفعل ذلك باستخدام الكلمة الأساسية للإنتاج بدلاً من العائد. إذا كان جسم def يحتوي على عائد ، فإن الوظيفة تصبح تلقائيًا وظيفة مولد.
+
+# A generator function that yields 1 for first time,
+# 2 second time and 3 third time
+def simpleGeneratorFun():
+    yield 1            
+    yield 2            
+    yield 3            
+   
+# Driver code to check above generator function
+for value in simpleGeneratorFun(): 
+    print(value)
+انتاج :
+
+1
+2
+3
+كائن المولد: تقوم وظائف المولد بإرجاع كائن المولد. يتم استخدام كائنات المولد إما عن طريق استدعاء الطريقة التالية على كائن المولد أو باستخدام كائن المولد في حلقة "for in" (كما هو موضح في البرنامج أعلاه).
+
+# A Python program to demonstrate use of 
+# generator object with next() 
+  
+# A generator function
+def simpleGeneratorFun():
+    yield 1
+    yield 2
+    yield 3
+   
+# x is a generator object
+x = simpleGeneratorFun()
+  
+# Iterating over the generator object using next
+print(x.next()) # In Python 3, __next__()
+print(x.next())
+print(x.next())
+انتاج :
+
+1
+2
+3
+لذا تقوم وظيفة المولد بإرجاع كائن منشئ قابل للتكرار ، أي يمكن استخدامه كمكرر .
+
+كمثال آخر ، يوجد أدناه مولد لأرقام فيبوناتشي.
+
+
+# A simple generator for Fibonacci Numbers
+def fib(limit):
+      
+    # Initialize first two Fibonacci Numbers 
+    a, b = 0, 1
+  
+    # One by one yield next Fibonacci Number
+    while a < limit:
+        yield a
+        a, b = b, a + b
+  
+# Create a generator object
+x = fib(5)
+  
+# Iterating over the generator object using next
+print(x.next()) # In Python 3, __next__()
+print(x.next())
+print(x.next())
+print(x.next())
+print(x.next())
+  
+# Iterating over the generator object using for
+# in loop.
+print("\nUsing for in loop")
+for i in fib(5): 
+    print(i)
+انتاج :
+
+0
+1
+1
+2
+3
+
+استخدام ل في حلقة
+0
+1
+1
+2
+3
+التطبيقات: لنفترض أننا أنشأنا دفقًا من أرقام فيبوناتشي ، فإن اعتماد نهج المولد يجعله تافهًا ؛ علينا فقط استدعاء (x) التالي للحصول على رقم فيبوناتشي التالي دون القلق بشأن مكان أو متى ينتهي تدفق الأرقام.
+هناك نوع عملي أكثر من معالجة الدفق وهو التعامل مع ملفات البيانات الكبيرة مثل ملفات السجل. توفر المولدات طريقة فعالة من حيث المساحة لمعالجة مثل هذه البيانات حيث يتم التعامل مع أجزاء فقط من الملف في وقت معين. يمكننا أيضًا استخدام التكرارات لهذه الأغراض ، لكن المُنشئ يوفر طريقة سريعة (لسنا بحاجة إلى كتابة أساليب __next__ و __iter__ هنا).
+
+راجع الرابط أدناه لمزيد من التطبيقات المتقدمة للمولدات في Python.
+http://www.dabeaz.com/finalgenerator/
+
+ساهم شويتانشو روهاتجي في كتابة هذا المقال . يرجى كتابة التعليقات إذا وجدت أي شيء غير صحيح ، أو إذا كنت ترغب في مشاركة المزيد من المعلومات حول الموضوع الذي تمت مناقشته أعلاه
